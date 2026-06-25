@@ -1,9 +1,4 @@
 {
-  "css": [
-    {
-      "src": "styles/home-page.css"
-    }
-  ],
   "navigation": {
     "tabs": [
       {
@@ -1016,7 +1011,7 @@
                 "method": "GET"
               },
               {
-                "title": "Get Customer\u2019s Earned and Expired Points by Year",
+                "title": "Get Customer’s Earned and Expired Points by Year",
                 "path": "reference/v1-get-expired-points-for-a-customer",
                 "openapi": "api-reference/v1-get-expired-points-for-a-customer.yaml GET /das/getExpiredPointsByCustomerIdAndYear",
                 "openapi-mode": "custom",
@@ -1723,5 +1718,10 @@
       "heading": "#f2f2f2",
       "text": "#c1c1c1"
     }
-  }
+  },
+  "customCss": [
+    {
+      "src": "styles/home-page.css"
+    }
+  ]
 }
