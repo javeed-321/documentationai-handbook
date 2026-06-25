@@ -352,6 +352,1430 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "v1 API Reference",
+        "groups": [
+          {
+            "group": "Audit & Workflows",
+            "pages": [
+              {
+                "title": "Get audit logs of entities",
+                "path": "reference/v1-get-entity-audit-logs",
+                "openapi": "api-reference/v1-get-entity-audit-logs.yaml GET /api_gateway/v2/audits",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Approve or reject a request",
+                "path": "reference/v1-approve-or-reject-a-request",
+                "openapi": "api-reference/v1-approve-or-reject-a-request.yaml PUT /api_gateway/v2/request-workflow/{requestType}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get details of all requests",
+                "path": "reference/v1-get-all-requests",
+                "openapi": "api-reference/v1-get-all-requests.yaml GET /api_gateway/v2/request-workflow/requests",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get details of a particular request",
+                "path": "reference/v1-get-request-info",
+                "openapi": "api-reference/v1-get-request-info.yaml GET /api_gateway/v2/request-workflow/requests/{requestId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              {
+                "title": "Change identifier on Auth engine",
+                "path": "reference/v1-change_identifier-on-auth-engine",
+                "openapi": "api-reference/v1-change_identifier-on-auth-engine.yaml POST /auth/v1/user/updateIdentifierValue",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Generate Authentication Token",
+                "path": "reference/v1-generate-authentication-tokenapi",
+                "openapi": "api-reference/v1-generate-authentication-tokenapi.yaml POST /auth/v1/web/token/generate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Generate OTP",
+                "path": "reference/v1-generate-otp-api",
+                "openapi": "api-reference/v1-generate-otp-api.yaml POST /auth/v1/web/otp/generate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Validate OTP",
+                "path": "reference/v1-validate-otp-api",
+                "openapi": "api-reference/v1-validate-otp-api.yaml POST /auth/v1/web/otp/validate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Validate Password",
+                "path": "reference/v1-validate-password",
+                "openapi": "api-reference/v1-validate-password.yaml POST /auth/v1/web/password/validate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Regenerate Authentication Token",
+                "path": "reference/v1-regenerate-authentication-token",
+                "openapi": "api-reference/v1-regenerate-authentication-token.yaml POST /auth/v1/web/token/regenerate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Change Password",
+                "path": "reference/v1-change-password",
+                "openapi": "api-reference/v1-change-password.yaml POST /auth/v1/web/password/change",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Forget Password",
+                "path": "reference/v1-forget-password",
+                "openapi": "api-reference/v1-forget-password.yaml POST /auth/v1/web/password/forget",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Generate MFA token",
+                "path": "reference/v1-generate-mfa-token",
+                "openapi": "api-reference/v1-generate-mfa-token.yaml POST /auth/v1/mfa/token/generate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Generate MFA OTP",
+                "path": "reference/v1-generate-otp-mfa",
+                "openapi": "api-reference/v1-generate-otp-mfa.yaml POST /auth/v1/mfa/otp/generate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Validate MFA OTP",
+                "path": "reference/v1-validate-mfa-otp",
+                "openapi": "api-reference/v1-validate-mfa-otp.yaml POST /auth/v1/mfa/otp/validate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Validate password",
+                "path": "reference/v1-validate-mfa-password",
+                "openapi": "api-reference/v1-validate-mfa-password.yaml POST /auth/v1/mfa/password/validate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Change password",
+                "path": "reference/v1-change-mfa-password",
+                "openapi": "api-reference/v1-change-mfa-password.yaml POST /auth/v1/mfa/password/change",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Forgot password",
+                "path": "reference/v1-mfa-forgot-password",
+                "openapi": "api-reference/v1-mfa-forgot-password.yaml POST /auth/v1/mfa/password/forget",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Regenerate token",
+                "path": "reference/v1-regenerate-token",
+                "openapi": "api-reference/v1-regenerate-token.yaml POST /auth/v1/mfa/token/regenerate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Delete token",
+                "path": "reference/v1-delete-token",
+                "openapi": "api-reference/v1-delete-token.yaml DELETE /auth/v1/mfa/token/expire",
+                "openapi-mode": "custom",
+                "method": "DELETE"
+              },
+              {
+                "title": "Regenerate Authentication Token",
+                "path": "reference/v1-regenerate-authentication-token-1",
+                "openapi": "api-reference/v1-regenerate-authentication-token-1.yaml POST /auth/v1/token/regenerate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Generate Authentication Token",
+                "path": "reference/v1-generate-authentication-token",
+                "openapi": "api-reference/v1-generate-authentication-token.yaml POST /auth/v1/token/generate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Generate OTP",
+                "path": "reference/v1-generate-otp-1-1",
+                "openapi": "api-reference/v1-generate-otp-1-1.yaml POST /auth/v1/otp/generate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Validate OTP",
+                "path": "reference/v1-validate-otp-2",
+                "openapi": "api-reference/v1-validate-otp-2.yaml POST /auth/v1/otp/validate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Validate Password",
+                "path": "reference/v1-validate-password-1",
+                "openapi": "api-reference/v1-validate-password-1.yaml POST /auth/v1/password/validate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Change Password",
+                "path": "reference/v1-change-password-1",
+                "openapi": "api-reference/v1-change-password-1.yaml POST /auth/v1/password/change",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Forget Password",
+                "path": "reference/v1-forget-password-1",
+                "openapi": "api-reference/v1-forget-password-1.yaml POST /auth/v1/password/forget",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Change identifier on Auth engine (COPY)",
+                "path": "reference/v1-change-identifier-on-auth-engine",
+                "openapi": "api-reference/v1-change-identifier-on-auth-engine.yaml POST /auth/v1/user/updateIdentifierValue (COPY)",
+                "openapi-mode": "custom",
+                "method": "POST"
+              }
+            ]
+          },
+          {
+            "group": "Badges",
+            "pages": [
+              {
+                "title": "Get badges org meta",
+                "path": "reference/v1-get-badges-org-meta",
+                "openapi": "api-reference/v1-get-badges-org-meta.yaml GET /api_gateway/v1/badges/orgMeta",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create badges org meta",
+                "path": "reference/v1-create-badges-org-meta",
+                "openapi": "api-reference/v1-create-badges-org-meta.yaml POST /api_gateway/v1/badges/orgMeta",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update badges org meta",
+                "path": "reference/v1-update-badges-org-meta",
+                "openapi": "api-reference/v1-update-badges-org-meta.yaml PUT /api_gateway/v1/badges/orgMeta",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get all badges",
+                "path": "reference/v1-get-all-badges",
+                "openapi": "api-reference/v1-get-all-badges.yaml GET /api_gateway/v1/badges/badgeMeta",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create badges",
+                "path": "reference/v1-create-badges-org",
+                "openapi": "api-reference/v1-create-badges-org.yaml POST /api_gateway/v1/badges/badgeMeta",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update badges",
+                "path": "reference/v1-update-badges",
+                "openapi": "api-reference/v1-update-badges.yaml PUT /api_gateway/v1/badges/badgeMeta",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get badge by ID",
+                "path": "reference/v1-get-badge-by-id",
+                "openapi": "api-reference/v1-get-badge-by-id.yaml GET /api_gateway/v1/badges/badgeMeta/{badgeId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Claim badge",
+                "path": "reference/v1-claim-badge",
+                "openapi": "api-reference/v1-claim-badge.yaml POST /api_gateway/v1/badges/badgeMeta/{badgeId}/claim",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Unclaim badge",
+                "path": "reference/v1-unclaim-badge",
+                "openapi": "api-reference/v1-unclaim-badge.yaml POST /api_gateway/v1/badges/badgeMeta/{badgeId}/unclaim",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update activation status of badge",
+                "path": "reference/v1-update-the-activation-status-of-badge",
+                "openapi": "api-reference/v1-update-the-activation-status-of-badge.yaml PUT /api_gateway/v1/badges/badgeMeta/{badgeId}/{activationStatus}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Enrol customers for badges",
+                "path": "reference/v1-enrol-customers-for-badges",
+                "openapi": "api-reference/v1-enrol-customers-for-badges.yaml POST /api_gateway/v1/badges/badgeMeta/customer/issueBulk",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Issue badge (earn)",
+                "path": "reference/v1-issue-badge-to-the-customer",
+                "openapi": "api-reference/v1-issue-badge-to-the-customer.yaml POST /api_gateway/v1/badges/customer/earn",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Issue badge to multiple customers",
+                "path": "reference/v1-issue-badge-to-multiple-customers",
+                "openapi": "api-reference/v1-issue-badge-to-multiple-customers.yaml POST /api_gateway/v1/badges/customer/earnBulk",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Import earned (issued) badges of customer",
+                "path": "reference/v1-import-earned-badges-of-customer",
+                "openapi": "api-reference/v1-import-earned-badges-of-customer.yaml POST /api_gateway/v1/badges/import/customerBadges",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Revoke enrolled badges",
+                "path": "reference/v1-revoke-enrolment-of-a-badge",
+                "openapi": "api-reference/v1-revoke-enrolment-of-a-badge.yaml POST /api_gateway/v1/badges/badgeMeta/customer/revokeIssue",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Revoke issued badge",
+                "path": "reference/v1-revoke-issual-of-a-badge",
+                "openapi": "api-reference/v1-revoke-issual-of-a-badge.yaml POST /badges/customer/revokeEarn",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get badges for customer",
+                "path": "reference/v1-get-badges-for-customer",
+                "openapi": "api-reference/v1-get-badges-for-customer.yaml GET /api_gateway/v1/badges/customer/{customerId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get all customer badges",
+                "path": "reference/v1-get-all-customer-badges",
+                "openapi": "api-reference/v1-get-all-customer-badges.yaml GET /api_gateway/v1/badges/management/{customerId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get individual badge details of a customer",
+                "path": "reference/v1-get-individual-badge-details-of-a-customer",
+                "openapi": "api-reference/v1-get-individual-badge-details-of-a-customer.yaml GET /api_gateway/v1/badges/management/{customerId}/badge/{badgeId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get all groups",
+                "path": "reference/v1-get-all-groups",
+                "openapi": "api-reference/v1-get-all-groups.yaml GET /api_gateway/v1/badges/group",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create badges group",
+                "path": "reference/v1-create-badges-group",
+                "openapi": "api-reference/v1-create-badges-group.yaml POST /api_gateway/v1/badges/group",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update badges group",
+                "path": "reference/v1-update-badges-group",
+                "openapi": "api-reference/v1-update-badges-group.yaml PUT /api_gateway/v1/badges/{groupid}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get group by ID",
+                "path": "reference/v1-get-group-by-id",
+                "openapi": "api-reference/v1-get-group-by-id.yaml GET /api_gateway/v1/badges/group/{groupId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get all badge custom fields",
+                "path": "reference/v1-get-all-custom-fields",
+                "openapi": "api-reference/v1-get-all-custom-fields.yaml GET /api_gateway/v1/badges/customField",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create custom field for badges",
+                "path": "reference/v1-create-custom-field",
+                "openapi": "api-reference/v1-create-custom-field.yaml POST /api_gateway/v1/badges/customField",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get badge custom field by ID",
+                "path": "reference/v1-get-custom-field-by-id",
+                "openapi": "api-reference/v1-get-custom-field-by-id.yaml GET /api_gateway/v1/badges/customField/{customFieldId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Update badge custom field",
+                "path": "reference/v1-update-custom-field-badge",
+                "openapi": "api-reference/v1-update-custom-field-badge.yaml PUT /api_gateway/v1/badges/customField/{customFieldId}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get fixed window details",
+                "path": "reference/v1-get-fixed-window-details",
+                "openapi": "api-reference/v1-get-fixed-window-details.yaml GET /api_gateway/v1/badges/badgeMeta/getFixedWindowDetails",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          },
+          {
+            "group": "Connected Orgs & Ledger",
+            "pages": [
+              {
+                "title": "Get Points Ledger Information in Connected Orgs",
+                "path": "reference/v1-connectedorgs-get-customer-ledger-info",
+                "openapi": "api-reference/v1-connectedorgs-get-customer-ledger-info.yaml GET /v2.1/pointsLedger/getCustomerLedgerInfo",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Points Ledger Explode Info in Connected Orgs",
+                "path": "reference/v1-connectedorgs-get-customer-ledger-explode-info",
+                "openapi": "api-reference/v1-connectedorgs-get-customer-ledger-explode-info.yaml GET /v2.1/pointsLedger/getLedgerExplodeInfo",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Enroll/Re-Enroll a Customer to a Milestone or Streak",
+                "path": "reference/v1-connectedorgs-enroll-customer-milestone-or-streak",
+                "openapi": "api-reference/v1-connectedorgs-enroll-customer-milestone-or-streak.yaml POST /api_gateway/intouch-api-v3/v3.1/targetGroups/{targetGroupId}/targets/{targetId}/enroll",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Unenroll a Customer to from Milestone or Streak",
+                "path": "reference/v1-connectedorgs-unenroll-customer-milestone-or-streak",
+                "openapi": "api-reference/v1-connectedorgs-unenroll-customer-milestone-or-streak.yaml POST /api_gateway/intouch-api-v3/v3.1/targetGroups/{targetGroupId}/targets/{targetId}/unEnroll",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get Associated Target Groups of a User",
+                "path": "reference/v1-connectedorgs-get-associated-target-groups-of-a-user",
+                "openapi": "api-reference/v1-connectedorgs-get-associated-target-groups-of-a-user.yaml GET /api_gateway/intouch-api-v3/v3.1/users/{userId}/targetGroups",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Loyalty Promotion List of a Customer (Connected Org)",
+                "path": "reference/v1-connectedorgs-get-promotion-list-for-a-customer",
+                "openapi": "api-reference/v1-connectedorgs-get-promotion-list-for-a-customer.yaml GET /v2.1/customers/lookup/promotionData",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Event Log IDs with Credit or Debit for Points",
+                "path": "reference/v1-get-event-log-ids-for-credit-debit",
+                "openapi": "api-reference/v1-get-event-log-ids-for-credit-debit.yaml GET /das/getLedgerEntriesWithEventId",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Event Log IDs with Credit or Debit for Alternate Currency",
+                "path": "reference/v1-get-event-log-ids-with-credit-or-debit-for-alternate-currency",
+                "openapi": "api-reference/v1-get-event-log-ids-with-credit-or-debit-for-alternate-currency.yaml GET /das/getACLedgerEntriesWithEventId",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Custom Field Values for TransactionAdd event",
+                "path": "reference/v1-get-custom-field-for-transaction-add-event",
+                "openapi": "api-reference/v1-get-custom-field-for-transaction-add-event.yaml GET /das/getTransactionAddExplodeLedger",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Point Redemption Details for Redemption Events",
+                "path": "reference/v1-get-point-redemption-details-for-redemption-events",
+                "openapi": "api-reference/v1-get-point-redemption-details-for-redemption-events.yaml GET /das/getPointsRedemptionExplodeLedger",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Target Completion Details",
+                "path": "reference/v1-get-target-completion-details",
+                "openapi": "api-reference/v1-get-target-completion-details.yaml GET /das/getTargetCompletedExplodeLedger",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Manual Points Adjustment Details",
+                "path": "reference/v1-get-manual-points-adjustment-details",
+                "openapi": "api-reference/v1-get-manual-points-adjustment-details.yaml GET /das/getManualPointsAdjustmentExplodeLedger",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Ledger Information for Event Log IDs",
+                "path": "reference/v1-get-ledger-information-for-event-log-ids",
+                "openapi": "api-reference/v1-get-ledger-information-for-event-log-ids.yaml GET /x/neo/customer/ledgerDetails",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          },
+          {
+            "group": "Coupons",
+            "pages": [
+              {
+                "title": "Upload Coupons (Batch)",
+                "path": "reference/v1-upload-coupons-batch",
+                "openapi": "api-reference/v1-upload-coupons-batch.yaml POST /coupon/api/v1/upload/file/{couponSeriedId}",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get Uploaded Coupons' Status",
+                "path": "reference/v1-get-uploaded-coupons-status-1",
+                "openapi": "api-reference/v1-get-uploaded-coupons-status-1.yaml GET /coupon/api/v1/upload/getUploadStatus/{couponSeriesId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Status of Redeemed Coupons (COPY)",
+                "path": "reference/v1-get-status-of-redeemed-coupons-copy-1",
+                "openapi": "api-reference/v1-get-status-of-redeemed-coupons-copy-1.yaml GET /coupon/api/v1/upload/getUploadRedeemedCouponStatus/{couponSeriesId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Status of Redeemed Coupons",
+                "path": "reference/v1-get-status-of-redeemed-coupons",
+                "openapi": "api-reference/v1-get-status-of-redeemed-coupons.yaml GET /upload/getUploadRedeemedCouponStatus/{couponSeriesId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Custom Fields Associated with Coupon Redemption",
+                "path": "reference/v1-get-custom-fields-associated-with-coupon-redemption-global",
+                "openapi": "api-reference/v1-get-custom-fields-associated-with-coupon-redemption-global.yaml GET /x/neo/couponRedemption/customFields",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Custom Fields Associated with Coupon Redemption",
+                "path": "reference/v1-get-custom-fields-associated-with-coupon-redemption",
+                "openapi": "api-reference/v1-get-custom-fields-associated-with-coupon-redemption.yaml GET /das/getCouponRedemptionCustomFieldsData",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Status of Redeemed Coupons",
+                "path": "reference/v1-get-status-of-redeemed-coupons-copy",
+                "openapi": "api-reference/v1-get-status-of-redeemed-coupons-copy.yaml GET /upload/getUploadRedeemedCouponStatus/{couponSeriesId} (COPY)",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Uploaded Coupons' Status",
+                "path": "reference/v1-get-uploaded-coupons-status-copy",
+                "openapi": "api-reference/v1-get-uploaded-coupons-status-copy.yaml GET /coupon/api/v1/upload/getUploadStatus/{couponSeriesId} (COPY)",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Upload Redeemed Coupons",
+                "path": "reference/v1-upload-redeemed-coupons-copy",
+                "openapi": "api-reference/v1-upload-redeemed-coupons-copy.yaml POST /upload/redeemFile (COPY)",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Upload Coupons (Batch)",
+                "path": "reference/v1-upload-coupons-batch-copy",
+                "openapi": "api-reference/v1-upload-coupons-batch-copy.yaml POST /upload/file/{couponSeriedId}",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Upload Redeemed Coupons",
+                "path": "reference/v1-upload-redeemed-coupons",
+                "openapi": "api-reference/v1-upload-redeemed-coupons.yaml POST /upload/redeemFile/{couponSeriesId}",
+                "openapi-mode": "custom",
+                "method": "POST"
+              }
+            ]
+          },
+          {
+            "group": "Customers",
+            "pages": [
+              {
+                "title": "Get all available rewards for user in connected orgs",
+                "path": "reference/v1-get-all-available-rewards-for-user-in-a-connected-org",
+                "openapi": "api-reference/v1-get-all-available-rewards-for-user-in-a-connected-org.yaml GET /api_gateway/rewards/core/v1.1/user/rewards?userId={customerId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Lock unlock -Pending carts (Cart Promotion)",
+                "path": "reference/v1-get-lock-unlock-pending-carts",
+                "openapi": "api-reference/v1-get-lock-unlock-pending-carts.yaml GET /v1/promotions/customer/{customerId}/evaluations/pending_carts",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Cancel Cart Evaluation - Cart Promotion",
+                "path": "reference/v1-post-cancel-cart-evaluation",
+                "openapi": "api-reference/v1-post-cancel-cart-evaluation.yaml PUT /v1/promotions/customer/{customerId}/evaluation/{evaluationId}/cancel",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get Cart Promotions for a Customer",
+                "path": "reference/v1-get-promotions-for-a-customer",
+                "openapi": "api-reference/v1-get-promotions-for-a-customer.yaml GET /api_gateway/v1/promotions/customer/109943742?includeRedemptions=true&includeSupplementaryPromotions=true",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          },
+          {
+            "group": "DAS",
+            "pages": [
+              {
+                "title": "Get Allocated Points Details with Expiry in Specified Date Range",
+                "path": "reference/v1-retrieve-pa-id-for-specified-data-range",
+                "openapi": "api-reference/v1-retrieve-pa-id-for-specified-data-range.yaml GET /das/getPAIdsForProvidedDateRange",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          },
+          {
+            "group": "Leaderboards",
+            "pages": [
+              {
+                "title": "Get user rank across target groups",
+                "path": "reference/v1-get-user-ranks-across-target-groups",
+                "openapi": "api-reference/v1-get-user-ranks-across-target-groups.yaml GET /api_gateway/intouch-api-v3/v3.1/leaderboards/user/{userID}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get top ranked users",
+                "path": "reference/v1-get-top-ranked-users",
+                "openapi": "api-reference/v1-get-top-ranked-users.yaml GET /api_gateway/intouch-api-v3/v3.1/leaderboards/targetGroups/{targetGroupId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          },
+          {
+            "group": "Loyalty",
+            "pages": [
+              {
+                "title": "Get Reward Currency Limits",
+                "path": "reference/v1-get-reward-currency-limits",
+                "openapi": "api-reference/v1-get-reward-currency-limits.yaml GET /api_gateway/loyalty/v1/programs/{programId}/cappings",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create Reward Currency Limits",
+                "path": "reference/v1-create-reward-currency-limits",
+                "openapi": "api-reference/v1-create-reward-currency-limits.yaml POST /api_gateway/loyalty/v1/programs/{programId}/cappings",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Generate Expression JSON",
+                "path": "reference/v1-post_loyalty-api-v1-workflows-expjson-programid-eventtype",
+                "openapi": "api-reference/v1-post_loyalty-api-v1-workflows-expjson-programid-eventtype.yaml POST /loyalty/api/v1/workflows/expJSON/{programId}/{eventType}",
+                "openapi-mode": "custom",
+                "method": "POST"
+              }
+            ]
+          },
+          {
+            "group": "Points & Loyalty",
+            "pages": [
+              {
+                "title": "Get Point Allocation Details by Event ID",
+                "path": "reference/v1-get-point-allocation-event-id-global",
+                "openapi": "api-reference/v1-get-point-allocation-event-id-global.yaml GET /x/neo/pointsAllocation/event",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Retrieve PointsAward Records Associated with a Specific Transaction ID",
+                "path": "reference/v1-retrieve-pointsaward-records-associated-with-a-specific-transaction-id",
+                "openapi": "api-reference/v1-retrieve-pointsaward-records-associated-with-a-specific-transaction-id.yaml GET /x/neo/pointsAllocationId/transactionId",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Allocated Points Details with Expiry in Specified Date Range",
+                "path": "reference/v1-get-allocated-points-details-with-expiry-in-specified-date-range-global",
+                "openapi": "api-reference/v1-get-allocated-points-details-with-expiry-in-specified-date-range-global.yaml GET /x/neo/pointsAllocation/dateRange",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Points - Get points constraints",
+                "path": "reference/v1-get-points-constraints",
+                "openapi": "api-reference/v1-get-points-constraints.yaml GET /api_gateway/rewards/core/v1/brand/constraints",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Points Restrictions - Create points restriction",
+                "path": "reference/v1-create-points-restriction",
+                "openapi": "api-reference/v1-create-points-restriction.yaml POST /api_gateway/rewards/core/v1/brand/constraints",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Points - Update points restriction",
+                "path": "reference/v1-update-points-restriction",
+                "openapi": "api-reference/v1-update-points-restriction.yaml PUT /api_gateway/rewards/core/v1/brand/constraints",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get Point Allocation Details by Event ID",
+                "path": "reference/v1-get-allocated-points-details-with-event-id",
+                "openapi": "api-reference/v1-get-allocated-points-details-with-event-id.yaml GET /das/getPaDetailsByEventId",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Customer\u2019s Earned and Expired Points by Year",
+                "path": "reference/v1-get-expired-points-for-a-customer",
+                "openapi": "api-reference/v1-get-expired-points-for-a-customer.yaml GET /das/getExpiredPointsByCustomerIdAndYear",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          },
+          {
+            "group": "Promotions",
+            "pages": [
+              {
+                "title": "Create catalog promotion",
+                "path": "reference/v1-post-create-catalog-promotion",
+                "openapi": "api-reference/v1-post-create-catalog-promotion.yaml POST /api_gateway/rewards/core/v1/promotion/create",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get catalog promotion details",
+                "path": "reference/v1-get-catalog-promotion-details",
+                "openapi": "api-reference/v1-get-catalog-promotion-details.yaml GET /api_gateway/rewards/core/v1/promotion/{promotion Id}/brand/{brandId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get list of Catalog promotions",
+                "path": "reference/v1-get-list-of-catalog-promotions",
+                "openapi": "api-reference/v1-get-list-of-catalog-promotions.yaml GET /api_gateway/rewards/core/v1/promotion/brand/{brand Id}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Disable Catalog promotion",
+                "path": "reference/v1-put-disable-catalog-promotion",
+                "openapi": "api-reference/v1-put-disable-catalog-promotion.yaml PUT /api_gateway/rewards/core/v1/promotion/{promotion Id}/status/false/brand/{brand Id}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Add Promotion : don't make it public",
+                "path": "reference/v1-add-promotion",
+                "openapi": "api-reference/v1-add-promotion.yaml POST /api_gateway/loyalty/v1/programs/{programId}/promotions/add/{promotion_type}",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Create Loyalty Promotion for UCC",
+                "path": "reference/v1-create-promotion-for-ucc",
+                "openapi": "api-reference/v1-create-promotion-for-ucc.yaml POST /api_gateway/loyalty/v1/programs/{programId}/createPromotion/{promotionType}",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get Details of all Loyalty Promotions",
+                "path": "reference/v1-get-promotion-details",
+                "openapi": "api-reference/v1-get-promotion-details.yaml GET /api_gateway/loyalty/v1/programs/promotions/list",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Loyalty Promotion List for a Program",
+                "path": "reference/v1-get-loyalty-promotion-list-for-a-program",
+                "openapi": "api-reference/v1-get-loyalty-promotion-list-for-a-program.yaml GET /api_gateway/loyalty/v1/programs/{programId}/promotionsV2?limit=100&offset=0&sourceType=USER_CREATED",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Loyalty Promotion by ID",
+                "path": "reference/v1-get-promotion-by-id",
+                "openapi": "api-reference/v1-get-promotion-by-id.yaml GET /api_gateway/loyalty/v1/programs/{programId}/promotions/{promotionId}/get",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Set Cart Promotion Settings",
+                "path": "reference/v1-set-promotion-settings",
+                "openapi": "api-reference/v1-set-promotion-settings.yaml POST /v1/management/promotions/settings/strategy",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Issue Cart Promotion",
+                "path": "reference/v1-issue-cart-promotion",
+                "openapi": "api-reference/v1-issue-cart-promotion.yaml POST /api_gateway/v1/promotions/{promotionId}/issueBulk",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Redeem Cart Promotion",
+                "path": "reference/v1-redeem-cart-promotion",
+                "openapi": "api-reference/v1-redeem-cart-promotion.yaml POST /api_gateway/v1/promotions/redemptions#",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get Cart Promotion Redemptions",
+                "path": "reference/v1-get-cart-promotion-redemptions",
+                "openapi": "api-reference/v1-get-cart-promotion-redemptions.yaml GET /api_gateway/v1/promotions/redemptions",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Add Promotion Redemption",
+                "path": "reference/v1-add-promotion-redemption",
+                "openapi": "api-reference/v1-add-promotion-redemption.yaml POST /api_gateway/v1/promotions/redemptions",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Evaluate Promotion",
+                "path": "reference/v1-evaluate-promotion",
+                "openapi": "api-reference/v1-evaluate-promotion.yaml POST /api_gateway/v1/promotions/evaluate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get Cart Promotions code API",
+                "path": "reference/v1-get-promotions-code-api",
+                "openapi": "api-reference/v1-get-promotions-code-api.yaml GET /api_gateway/v1/promotions/code",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Cart Promotions for a particular till",
+                "path": "reference/v1-get-promotions-for-a-particular-till",
+                "openapi": "api-reference/v1-get-promotions-for-a-particular-till.yaml GET /api_gateway/v1/promotions/till/{tillId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Cart Promotions Config API",
+                "path": "reference/v1-get-promotions-config-api",
+                "openapi": "api-reference/v1-get-promotions-config-api.yaml GET /api_gateway/v1/promotions/config",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Post Cart Promotions Code link API",
+                "path": "reference/v1-post-promotions-code-link-api",
+                "openapi": "api-reference/v1-post-promotions-code-link-api.yaml POST /api_gateway/v1/promotions/{code}/link",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Post Earn Cart Promotions in Bulk",
+                "path": "reference/v1-post-earn-promotions-in-bulk",
+                "openapi": "api-reference/v1-post-earn-promotions-in-bulk.yaml POST /api_gateway/v1/promotions/earn/bulk",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Earn Cart Promotion",
+                "path": "reference/v1-earn-promotion",
+                "openapi": "api-reference/v1-earn-promotion.yaml POST /api_gateway/v1/promotions/{promotionId}/earn",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Post Revoke Earned Cart Promotion",
+                "path": "reference/v1-post-revoke-earned-promotion",
+                "openapi": "api-reference/v1-post-revoke-earned-promotion.yaml POST /api_gateway/v1/promotions/revokeEarn",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update catalog promotion",
+                "path": "reference/v1-put-update-catalog-promotion",
+                "openapi": "api-reference/v1-put-update-catalog-promotion.yaml PUT /api_gateway/rewards/core/v1/promotion/{promotionId}/brand/{brand Id}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              }
+            ]
+          },
+          {
+            "group": "Recommendations",
+            "pages": [
+              {
+                "title": "Get User Recommendations",
+                "path": "reference/v1-get-user-recommendations",
+                "openapi": "api-reference/v1-get-user-recommendations.yaml GET /api_gateway/v1/recommendations/user",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Item Recommendations",
+                "path": "reference/v1-get-item-recommendations",
+                "openapi": "api-reference/v1-get-item-recommendations.yaml GET /api_gateway/v1/recommendations/item",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Cart Recommendations",
+                "path": "reference/v1-get-cart-recommendations",
+                "openapi": "api-reference/v1-get-cart-recommendations.yaml GET /api_gateway/v1/recommendations/cart",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          },
+          {
+            "group": "Rewards",
+            "pages": [
+              {
+                "title": "Create reward",
+                "path": "reference/v1-post-create-reward",
+                "openapi": "api-reference/v1-post-create-reward.yaml POST /api_gateway/rewards/core/v1/reward/create",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get reward details by ID",
+                "path": "reference/v1-get-reward-details-by-id",
+                "openapi": "api-reference/v1-get-reward-details-by-id.yaml GET /api_gateway/rewards/core/v1/reward/{rewardId}/brand/{brandId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Update Reward",
+                "path": "reference/v1-put-update-reward",
+                "openapi": "api-reference/v1-put-update-reward.yaml PUT /api_gateway/rewards/core/v1/reward/{rewardId}/brand/{brandId}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Create Reward Category",
+                "path": "reference/v1-create-reward-category",
+                "openapi": "api-reference/v1-create-reward-category.yaml POST /api_gateway/rewards/core/v1/metadata/category/create",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Enable or Disable Reward Categories",
+                "path": "reference/v1-enable-or-disable-reward-categories",
+                "openapi": "api-reference/v1-enable-or-disable-reward-categories.yaml PUT /api_gateway/rewards/core/v1/metadata/category/{categoryId}/status/{action}/brand/{brandId}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get Reward Category",
+                "path": "reference/v1-get-reward-category",
+                "openapi": "api-reference/v1-get-reward-category.yaml GET /api_gateway/rewards/core/v1/metadata/categories/brand/{brandId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get all Rich Text Content Metadata for specific brand",
+                "path": "reference/v1-get-all-rich-text-content-metadata-for-brand",
+                "openapi": "api-reference/v1-get-all-rich-text-content-metadata-for-brand.yaml GET /api_gateway/rewards/core/v1/brand/richContentMeta",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create Rich Text Content Metadata for Rewards",
+                "path": "reference/v1-create-rich-content-meta",
+                "openapi": "api-reference/v1-create-rich-content-meta.yaml POST /api_gateway/rewards/core/v1/brand/richContentMeta",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update Rich Text Content Metadata for Rewards",
+                "path": "reference/v1-update-rich-content",
+                "openapi": "api-reference/v1-update-rich-content.yaml PUT /api_gateway/rewards/core/v1/brand/richContentMeta/{RichcontentmetaID}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Issue single reward",
+                "path": "reference/v1-post-issue-user-reward",
+                "openapi": "api-reference/v1-post-issue-user-reward.yaml POST /api_gateway/rewards/core/v1/user/reward/{reward Id}/issue?username={store}&skip_validation=true",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Issue bulk reward",
+                "path": "reference/v1-issue-bulk-reward",
+                "openapi": "api-reference/v1-issue-bulk-reward.yaml POST /api_gateway/rewards/core/v1/user/rewards/issue?username={store}&skip_validation=true",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get Purchased Rewards for User (New API)",
+                "path": "reference/v1-get-rewards-for-user-new-api",
+                "openapi": "api-reference/v1-get-rewards-for-user-new-api.yaml GET /api_gateway/rewards/core/v1/user/userReward/brand/{BrandName}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get available reward details for user by id",
+                "path": "reference/v1-get-user-brand-specific-rewards",
+                "openapi": "api-reference/v1-get-user-brand-specific-rewards.yaml GET /api_gateway/rewards/core/v1/user/reward/{reward Id}/brand/{brand name}?userId={id}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get all brand rewards using Brand ID",
+                "path": "reference/v1-get-reward-list",
+                "openapi": "api-reference/v1-get-reward-list.yaml GET /api_gateway/rewards/core/v1/reward/list/brand/{BrandID}?ownerId={ownerId}&ownerType={ownerType}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get brand rewards",
+                "path": "reference/v1-get-brands-rewards",
+                "openapi": "api-reference/v1-get-brands-rewards.yaml GET /api_gateway/rewards/core/v1/reward/brand/{brand Id}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get available brand rewards",
+                "path": "reference/v1-get-available-brand-rewards",
+                "openapi": "api-reference/v1-get-available-brand-rewards.yaml GET /api_gateway/rewards/core/v1/reward/brand/{Brand ID}/available?startDate={YYYY-MM-DDTHH:MMZ}&endDate={YYYY-MM-DDTHH:MMZ}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get all custom fields",
+                "path": "reference/v1-get-custom-field",
+                "openapi": "api-reference/v1-get-custom-field.yaml GET /api_gateway/rewards/core/v1/brand/customfield",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create custom field for reward",
+                "path": "reference/v1-post-create-custom-field",
+                "openapi": "api-reference/v1-post-create-custom-field.yaml POST /api_gateway/rewards/core/v1/brand/customfield",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update reward custom field",
+                "path": "reference/v1-update-custom-field",
+                "openapi": "api-reference/v1-update-custom-field.yaml PUT /api_gateway/rewards/core/v1/brand/customfield/{id}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Groups - Get rewards group by ID",
+                "path": "reference/v1-get-rewards-group-by-id",
+                "openapi": "api-reference/v1-get-rewards-group-by-id.yaml GET /api_gateway/rewards/core/v1/group/{id}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Groups - Update rewards group",
+                "path": "reference/v1-update-group-reward",
+                "openapi": "api-reference/v1-update-group-reward.yaml PUT /api_gateway/rewards/core/v1/group/{id}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Organisation Level Configuration for Rewards Catalog",
+                "path": "reference/v1-organisation-level-configuration-for-rewards-catalog",
+                "openapi": "api-reference/v1-organisation-level-configuration-for-rewards-catalog.yaml POST /api_gateway/rewards/core/v1/brand/config",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get Organisation Level Configuration",
+                "path": "reference/v1-retrieve-organisation-level-configuration-for-rewards-catalog",
+                "openapi": "api-reference/v1-retrieve-organisation-level-configuration-for-rewards-catalog.yaml GET /api_gateway/rewards/core/v1/brand/{id}/getConfig",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create a Vendor",
+                "path": "reference/v1-createvendor",
+                "openapi": "api-reference/v1-createvendor.yaml POST /api_gateway/rewards/core/v1/vendor/create",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Enable or Disable a Vendor",
+                "path": "reference/v1-enable-disable-vendor",
+                "openapi": "api-reference/v1-enable-disable-vendor.yaml PUT /api_gateway/rewards/core/v1/vendor/{vendorId}/status/{action}/brand/{brandId}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get Vendor Details",
+                "path": "reference/v1-get-vendor-explode-info",
+                "openapi": "api-reference/v1-get-vendor-explode-info.yaml GET /api_gateway/rewards/core/v1/vendor/{VendorId}/details",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Vendor List for Specific Brand",
+                "path": "reference/v1-get-vendor-list-for-specific-brand",
+                "openapi": "api-reference/v1-get-vendor-list-for-specific-brand.yaml GET /api_gateway/rewards/core/v1/vendor/brand/{brandId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get all vendor redemptions",
+                "path": "reference/v1-get-vendor-redemptions-details",
+                "openapi": "api-reference/v1-get-vendor-redemptions-details.yaml GET /api_gateway/rewards/core/v1/vendor/redemptions",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Vendor Redemption Details by Redemption & Vendor ID",
+                "path": "reference/v1-get-list-of-vendor-redemption-details-by-vendor-id",
+                "openapi": "api-reference/v1-get-list-of-vendor-redemption-details-by-vendor-id.yaml GET /api_gateway/rewards/core/v1/vendor/{vendorid}/redemption/{redemptionid}/brand/{brandid}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Vendor Redemption Details by Brand ID and Vendor ID",
+                "path": "reference/v1-get-vendor-redemption-details-by-brand-id-and-vendor-id",
+                "openapi": "api-reference/v1-get-vendor-redemption-details-by-brand-id-and-vendor-id.yaml GET /api_gateway/rewards/core/v1/vendor/{vendorId}/redemption/brand/{brandId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Upload images to file service",
+                "path": "reference/v1-post-images-to-file-service",
+                "openapi": "api-reference/v1-post-images-to-file-service.yaml POST /api_gateway/file-service/rewards/{file name with extension}",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get fulfillment status",
+                "path": "reference/v1-get-fulfillment-status",
+                "openapi": "api-reference/v1-get-fulfillment-status.yaml GET /api_gateway/rewards/core/v1/fulfillmentStatus",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create fulfillment status",
+                "path": "reference/v1-create-fulfillment-status",
+                "openapi": "api-reference/v1-create-fulfillment-status.yaml POST /api_gateway/rewards/core/v1/fulfillmentStatus",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update fulfillment status",
+                "path": "reference/v1-update-fulfillment-status",
+                "openapi": "api-reference/v1-update-fulfillment-status.yaml PUT /api_gateway/rewards/core/v1/fulfillmentStatus",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get Reward Expiry Reminder",
+                "path": "reference/v1-get-reward-expiry-reminder",
+                "openapi": "api-reference/v1-get-reward-expiry-reminder.yaml GET /api_gateway/rewards/core/v1/reward/expiryReminder",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create Reward Expiry Reminder",
+                "path": "reference/v1-create-reward-expiry-reminder",
+                "openapi": "api-reference/v1-create-reward-expiry-reminder.yaml POST /api_gateway/rewards/core/v1/reward/expiryReminder",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update Reward Expiry Reminder",
+                "path": "reference/v1-update-reward-expiry-reminder",
+                "openapi": "api-reference/v1-update-reward-expiry-reminder.yaml PUT /api_gateway/rewards/core/v1/reward/expiryReminder/{rewardExpiryReminderid}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Issue Reward in connected orgs",
+                "path": "reference/v1-issue-bulk-reward-connected-org",
+                "openapi": "api-reference/v1-issue-bulk-reward-connected-org.yaml POST /v1.1/user/rewards/issue/?username={till}&skip_validation=true",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get reward details by ID in connected orgs",
+                "path": "reference/v1-get-reward-details-by-id-in-a-connected-org",
+                "openapi": "api-reference/v1-get-reward-details-by-id-in-a-connected-org.yaml GET /v1.1/user/rewards/{rewardId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Retrieve Brand ID",
+                "path": "reference/v1-retrieve-brand-id",
+                "openapi": "api-reference/v1-retrieve-brand-id.yaml POST /api_gateway/rewards/core/v1/brand/getAll",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get Brand Rewards",
+                "path": "reference/v1-get-brand-rewards",
+                "openapi": "api-reference/v1-get-brand-rewards.yaml GET /mobile/v2/api/marvel/reward/details",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get User Rewards",
+                "path": "reference/v1-get-user-rewards",
+                "openapi": "api-reference/v1-get-user-rewards.yaml GET /mobile/v2/api/marvel/r/vouchers/get",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Issue User Reward",
+                "path": "reference/v1-issue-user-reward",
+                "openapi": "api-reference/v1-issue-user-reward.yaml POST /mobile/v2/api/marvel/reward/issue",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get User Reward Merge Details",
+                "path": "reference/v1-get-user-rewards-merge-details",
+                "openapi": "api-reference/v1-get-user-rewards-merge-details.yaml GET /api_gateway/rewards/core/v1/user-merge",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Merge User Rewards",
+                "path": "reference/v1-merge-user-rewards",
+                "openapi": "api-reference/v1-merge-user-rewards.yaml POST /api_gateway/rewards/core/v1/user-merge",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get purchased reward details by id and user",
+                "path": "reference/v1-get-user-specific-reward-by-id",
+                "openapi": "api-reference/v1-get-user-specific-reward-by-id.yaml GET /api_gateway/rewards/core/v1/user/reward/{rewardId}/vouchers/brand/{brand name}?mobile={mobile}&username={store}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get purchased rewards for user (Old API)",
+                "path": "reference/v1-get-user-reward",
+                "openapi": "api-reference/v1-get-user-reward.yaml GET /api_gateway/rewards/core/v1/user/vouchers/brand/{brand name}?mobile={mobile}&username={store}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Claim Reward",
+                "path": "reference/v1-claim-reward",
+                "openapi": "api-reference/v1-claim-reward.yaml POST /api_gateway/rewards/core/v1/reward/claim",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Groups - Create reward group",
+                "path": "reference/v1-create-group-reward",
+                "openapi": "api-reference/v1-create-group-reward.yaml POST /api_gateway/rewards/core/v1/group/create",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Groups - Get all rewards group",
+                "path": "reference/v1-get-group-rewards",
+                "openapi": "api-reference/v1-get-group-rewards.yaml GET /api_gateway/rewards/core/v1/group",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Update Vendor Redemption",
+                "path": "reference/v1-update-vendor-redemption",
+                "openapi": "api-reference/v1-update-vendor-redemption.yaml PUT /api_gateway/rewards/core/v1/vendor/redemption/{redemptionId}/brand/{brandId}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              }
+            ]
+          },
+          {
+            "group": "Search & Cortex",
+            "pages": [
+              {
+                "title": "Create search criteria",
+                "path": "reference/v1-create-meta-search",
+                "openapi": "api-reference/v1-create-meta-search.yaml POST /api_gateway/cortex/v1/criteria",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Retrieve search criteria details",
+                "path": "reference/v1-get-meta",
+                "openapi": "api-reference/v1-get-meta.yaml GET /api_gateway/cortex/v1/criteria/{id}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Deactivate search criteria",
+                "path": "reference/v1-deactivate-search-criteria",
+                "openapi": "api-reference/v1-deactivate-search-criteria.yaml DELETE /api_gateway/cortex/v1/criteria/{id}",
+                "openapi-mode": "custom",
+                "method": "DELETE"
+              },
+              {
+                "title": "Enable search index of older data",
+                "path": "reference/v1-enable-bulk-trigger",
+                "openapi": "api-reference/v1-enable-bulk-trigger.yaml POST /api_gateway/cortex/v1/bulk/trigger/{id}",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Get Data Field Detail",
+                "path": "reference/v1-get-data-field-detail-api",
+                "openapi": "api-reference/v1-get-data-field-detail-api.yaml GET /api_gateway/cortex/v1/dataFields",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Create Data Field",
+                "path": "reference/v1-create-data-field",
+                "openapi": "api-reference/v1-create-data-field.yaml POST /api_gateway/cortex/v1/dataFields",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update Data Field",
+                "path": "reference/v1-put-data-field-api",
+                "openapi": "api-reference/v1-put-data-field-api.yaml PUT /api_gateway/cortex/v1/dataFields/{id}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Perform Search (Cortex API)",
+                "path": "reference/v1-search-api-cortex-api",
+                "openapi": "api-reference/v1-search-api-cortex-api.yaml POST /api_gateway/cortex/v1/search",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Retrieve Custom Event Config Details of Org",
+                "path": "reference/v1-retrieve-custom-event-config-details-of-org",
+                "openapi": "api-reference/v1-retrieve-custom-event-config-details-of-org.yaml GET /api_gateway/cortex/v1/neo-config",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Enable or Update Custom Event Tranformation",
+                "path": "reference/v1-enable-custom-event-for-cortex-search",
+                "openapi": "api-reference/v1-enable-custom-event-for-cortex-search.yaml POST /api_gateway/cortex/v1/neo-config",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Retrieve Custom Event Config Details for an Entity",
+                "path": "reference/v1-retrieve-custom-event-config-details-for-entity",
+                "openapi": "api-reference/v1-retrieve-custom-event-config-details-for-entity.yaml GET /api_gateway/cortex/v1/neo-config/entity/{entityType}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          },
+          {
+            "group": "Transactions",
+            "pages": [
+              {
+                "title": "Get customer reward transactions",
+                "path": "reference/v1-get-customer-reward-transactions",
+                "openapi": "api-reference/v1-get-customer-reward-transactions.yaml GET /api_gateway/rewards/core/v1/management/customer/{customerId}/issuals",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Reward Transaction Details using Reward Transaction ID",
+                "path": "reference/v1-get-transaction-details-by-reward-transaction-id",
+                "openapi": "api-reference/v1-get-transaction-details-by-reward-transaction-id.yaml GET /api_gateway/rewards/core/v1/reward-transactions/{rewardTransactionId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Transaction Details by Customer ID and Reward Transaction ID",
+                "path": "reference/v1-get-reward-issue-transaction-details",
+                "openapi": "api-reference/v1-get-reward-issue-transaction-details.yaml GET /api_gateway/rewards/core/v1/management/customer/{customerId}/issuals/{rewardTransactionId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Update fulfillment status and transaction custom fields for issued rewards",
+                "path": "reference/v1-update-fulfilment-status-and-txn-custom-fields",
+                "openapi": "api-reference/v1-update-fulfilment-status-and-txn-custom-fields.yaml PUT /api_gateway/rewards/core/v1/management/transactions?skip_validation=true",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get all reward transactions for a user in connected orgs",
+                "path": "reference/v1-get-all-reward-transactions-for-a-user-in-connected-orgs",
+                "openapi": "api-reference/v1-get-all-reward-transactions-for-a-user-in-connected-orgs.yaml GET /api_gateway/rewards/core/v1.1/reward-transactions?customerId={customerId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Transaction Details by Reward Transaction ID in Connected orgs",
+                "path": "reference/v1-get-transaction-details-by-reward-transaction-id-in-connected-orgs",
+                "openapi": "api-reference/v1-get-transaction-details-by-reward-transaction-id-in-connected-orgs.yaml GET /api_gateway/rewards/core/v1.1/reward-transactions/{rewardTransactionId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              }
+            ]
+          }
+        ]
       }
     ]
   },

@@ -1,0 +1,197 @@
+openapi: 3.1.0
+info:
+  title: Upload Coupons (Batch)
+  version: '1.0'
+servers:
+- url: https://{host}
+  variables:
+    host:
+      default: host
+security:
+- sec0: []
+paths:
+  /upload/file/{couponSeriedId}:
+    post:
+      summary: Upload Coupons (Batch)
+      description: ''
+      operationId: upload-coupons-batch-copy
+      parameters:
+      - name: couponSeriedId*
+        in: path
+        description: Unique ID of the coupon series for which you need to upload coupons.
+        schema:
+          type: integer
+          format: int64
+        required: true
+      - name: Content-Type
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - multipart/form-data
+      - name: x-cap-api-oauth-token
+        in: header
+        description: Access token generated
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - file
+              - customerIdentifier
+              - customerIdentifierColumn
+              properties:
+                file:
+                  type: string
+                  description: 'Name of the CSV file with customer and coupon details.
+                    Sample file content: File content sample for uploading the coupon
+                    code is as follows customer_identifier,coupon code value 1,ABCDEF1
+                    value 2,ABCDEF2 value 3,ABCDEF3 File content sample for uploading
+                    customer identifier: customerIdentifier value 1 value 2 value
+                    3 File content sample for uploading customer tagged coupons is
+                    as follows customerIdentifier,coupon code value 1,ABCDEF1 value
+                    2,ABCDEF2 value 3,ABCDEF3'
+                customerIdentifier:
+                  type: string
+                  description: Customer identifier type used in the CSV file. Use
+                    NOT_TAGGED as the identifier to upload only coupon codes.
+                  enum:
+                  - MOBILE
+                  - EXTERNAL_ID
+                  - EMAIL
+                  - USER_ID
+                  - NOT_TAGGED.
+                customerIdentifierColumn:
+                  type: string
+                  description: Column ID of the customer identifier in the uploaded
+                    CSV file. For example, If the first column of the file contains
+                    customer identification data, then the value of customerIdentifierColumn
+                    will be 0. If the second column of the file contains customer
+                    identification data, then the value of customerIdentifierColumn
+                    will be 1.
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Sample Response:
+                  value: "{\n   \"success\":true,\n   \"status\":200,\n   \"result\"\
+                    :{\n      \"orgId\":0,\n      \"couponSeriesId\":123,\n      \"\
+                    uploadJobStatuses\":[\n         {\n            \"jobId\":1,\n\
+                    \            \"uploadStatus\":\"STARTED\",\n            \"createdOn\"\
+                    :\"1601835836973\",\n            \"updatedOn\":\"1601835836973\"\
+                    ,\n            \"errorFileUrl\":null,\n            \"successFileUrl\"\
+                    :null,\n            \"uploadedFileUrl\":\"couponCode_1601835836573_123.csv\"\
+                    ,\n            \"totalUploadedCount\":0,\n            \"actualRowCount\"\
+                    :0,\n            \"errorCount\":0,\n            \"uploadTableName\"\
+                    :null,\n            \"uploadedFileName\":\"couponCode.csv\",\n\
+                    \            \"audienceGroupId\":0,\n            \"audienceGroupVersionId\"\
+                    :0\n         }\n      ],\n      \"fileName\":\"couponCode_1601835836573_123.csv\"\
+                    \n   }\n}"
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                    default: true
+                  status:
+                    type: integer
+                    example: 200
+                    default: 0
+                  result:
+                    type: object
+                    properties:
+                      orgId:
+                        type: integer
+                        example: 0
+                        default: 0
+                      couponSeriesId:
+                        type: integer
+                        example: 123
+                        default: 0
+                      uploadJobStatuses:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            jobId:
+                              type: integer
+                              example: 1
+                              default: 0
+                            uploadStatus:
+                              type: string
+                              example: STARTED
+                            createdOn:
+                              type: string
+                              example: '1601835836973'
+                            updatedOn:
+                              type: string
+                              example: '1601835836973'
+                            errorFileUrl: {}
+                            successFileUrl: {}
+                            uploadedFileUrl:
+                              type: string
+                              example: couponCode_1601835836573_123.csv
+                            totalUploadedCount:
+                              type: integer
+                              example: 0
+                              default: 0
+                            actualRowCount:
+                              type: integer
+                              example: 0
+                              default: 0
+                            errorCount:
+                              type: integer
+                              example: 0
+                              default: 0
+                            uploadTableName: {}
+                            uploadedFileName:
+                              type: string
+                              example: couponCode.csv
+                            audienceGroupId:
+                              type: integer
+                              example: 0
+                              default: 0
+                            audienceGroupVersionId:
+                              type: integer
+                              example: 0
+                              default: 0
+                      fileName:
+                        type: string
+                        example: couponCode_1601835836573_123.csv
+        '400':
+          description: '400'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{}'
+              schema:
+                type: object
+                properties: {}
+      deprecated: false
+      x-readme:
+        code-samples:
+        - language: curl
+          code: "curl -X POST \\\n  https://eu.intouch.capillarytech.com/coupon/api/v1/upload/file/311025\
+            \ \\\n  -H 'Content-Type: application/json' \\\n  -H 'Postman-Token: 3056825f-5e0d-411e-a83d-e6ce0e6da3d2'\
+            \ \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: multipart/form-data;\
+            \ boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \\\n  -H 'x-cap-api-oauth-token:\
+            \ eyJraWQiOiJrMSIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJDYXBpbGxhcnkiLCJleHAiOjE2MDE5ODY1NzUsImp0aSI6IllzQndtY20xbEh6OGlYNzQ4djI4QXciLCJpYXQiOjE2MDE5ODI5NzUsInN1YiI6IlRFU1RfQ09VUE9OUyIsImNsaWVudF9pZCI6NzgsIm9yZ19pZCI6NTAxMjgsInRva2VuX3VzZSI6InRva2VuX2FjY2VzcyIsImNsaWVudF9rZXkiOiJHY3dmdUFlaEVDOE02NmNBN1RWR05OQ1E0IiwiZGVmYXVsdF90aWxsIjo1MDAwNzM5Miwic2NvcGVzIjoiW3tcInBlcm1pc3Npb25cIjpcIlJFQURXUklURVwiLFwiZW50aXR5SWRcIjoxLFwicmVzb3VyY2VzXCI6W1wiLip2MS4xL2N1c3RvbWVyLy4qXCJdfSx7XCJwZXJtaXNzaW9uXCI6XCJSRUFEV1JJVEVcIixcImVudGl0eUlkXCI6MixcInJlc291cmNlc1wiOltcIi4qdjEuMS90cmFuc2FjdGlvbi8uKlwiXX0se1wicGVybWlzc2lvblwiOlwiUkVBRFdSSVRFXCIsXCJlbnRpdHlJZFwiOjMsXCJyZXNvdXJjZXNcIjpbXCIuKnYxLjEvcG9pbnRzLy4qXCJdfSx7XCJwZXJtaXNzaW9uXCI6XCJSRUFEV1JJVEVcIixcImVudGl0eUlkXCI6NCxcInJlc291cmNlc1wiOltcIi4qXCJdfV0ifQ.YVjVaOWDK_3G_B7TjPyy-QMNGpHbjev7Z_vmOCn07dJZ5sGeQcwUbYBi4RHdeNruggH7SyEKngBRAyFGot3ha3JkdJC1IV9ux6L6xwwfgqthavj6MTV0LhMEy6tRM06LEFtYrN5CuCllJ6yM3hUc25ZZKxyEGxYMflAt65TpK-A3EJDpo8RxrY-XHAitwL_R4m6kSZ2_rxyDC2qyRv6rdkjoLRzZ7urcPTOn37EGIe0TByFRa3LSPpywlMjkTX1wcFSW1z_2XgydfoqGfBAkf8Ng4db9gEr_pP96btnRm6fvoEg0RXdfsflp_LEsWUcExPFEiQvuC5wbo0TXHLOsgA'\
+            \ \\\n  -F 'file=@/Users/rajshekar.sv/Downloads/couponCode (10).csv' \\\
+            \n  -F customerIdentifier=USER_ID \\\n  -F customerIdentifierColumn=0"
+          name: Sample Request
+        samples-languages:
+        - curl
+components:
+  securitySchemes:
+    sec0:
+      type: http
+      scheme: basic
