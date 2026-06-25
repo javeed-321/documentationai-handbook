@@ -205,12 +205,10 @@ content-width: wide
     color: #85A1FF !important;
   }
 
-  /* User doc cards: subtle brightness lift on hover */
-  h3#user-documentation + [data-component="Columns"] [data-component="Card"] {
-    transition: filter 0.3s ease !important;
-  }
-  h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] {
-    filter: brightness(1.0) !important;
+  /* User doc cards: cancel shadow on hover — title color is the only hover signal */
+  h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"],
+  .dark h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] {
+    box-shadow: none !important;
   }
 
   /* ═══════════════════════════════════════════════════
