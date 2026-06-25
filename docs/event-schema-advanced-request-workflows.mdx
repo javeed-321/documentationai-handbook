@@ -10,7 +10,8 @@ title: Advanced Request Workflows
 
 ### Points redemption
 
-```json Pending
+<CodeGroup tabs={["Pending","Failed","Approved","Rejected"]}>
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "c5315714-90b0-4aaf-9a5c-19be8190edf3",
@@ -47,8 +48,9 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
-````
-```json Failed
+```
+
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "76a767ab-ba43-4ff8-b2bd-ce7c042430ed",
@@ -88,8 +90,9 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
-````
-```json Approved
+```
+
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "d6a4ef60-ce52-43d7-b6dd-4b883874123f",
@@ -129,8 +132,9 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
-````
-```json Rejected
+```
+
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "acb5d13c-d422-443d-982e-731b3e709f98",
@@ -170,11 +174,13 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
-````
+```
+</CodeGroup>
 
 ### Customer Status change
 
-```json Pending
+<CodeGroup tabs={["Pending","Failed","Approved"]}>
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "0df1a81f-b716-4ec0-b456-7ab5242c5ec8",
@@ -205,8 +211,9 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
-````
-```json Failed
+```
+
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "11fe28ab-5d4c-478a-906f-03fe7d7b25c6",
@@ -238,9 +245,9 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
+```
 
-````
-```json Approved
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "468a8fa7-f03e-4b7b-86b7-91eda4420af6",
@@ -272,15 +279,16 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
-
-````
+```
+</CodeGroup>
 
 ### Goodwill point request
 
 > [!NOTE]
 > To allocate Goodwill Request points in Member Care, you must turn on the Points Adjustment Settings toggle and configure a Default Till. If either setting is missing, the system approves the request but does not credit points to the customer. This happens because the points allocation step is skipped when the till cannot be resolved.
 
-```json Pending
+<CodeGroup tabs={["Pending","Approved"]}>
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "bbc13325-7b79-4bb7-b57f-4791db6f3871",
@@ -310,9 +318,9 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
+```
 
-````
-```json Approved
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "d2540d72-f62c-400e-ad2a-422e8c00f187",
@@ -345,12 +353,13 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
-
-````
+```
+</CodeGroup>
 
 ### Earn badge (Issue badge to customer)
 
-```json Pending
+<CodeGroup tabs={["Pending","Failed"]}>
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "32274496-3f73-483f-9743-2ab03ed74ecf",
@@ -378,8 +387,9 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
-````
-```json Failed
+```
+
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "7597f468-ebfc-4151-8b7a-6e5b2c3ef974",
@@ -410,11 +420,13 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
-````
+```
+</CodeGroup>
 
 ### Issue badge (Enrol customers to badge)
 
-```json Pending
+<CodeGroup tabs={["Pending","Failed"]}>
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "390a6575-cb60-4164-bd5d-2e06a421f3ba",
@@ -444,9 +456,9 @@ title: Advanced Request Workflows
   },
   "loyaltyEventId": null
 }
+```
 
-````
-```json Failed
+```json
 {
   "eventName": "requestWorkflowEvent",
   "eventId": "45bb68bc-29a4-4009-9337-72a7784fe189",
@@ -480,3 +492,4 @@ title: Advanced Request Workflows
   "loyaltyEventId": null
 }
 ```
+</CodeGroup>

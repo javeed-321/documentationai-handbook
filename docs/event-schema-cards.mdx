@@ -14,7 +14,8 @@ A card is a physical or digital identifier linked to a customer, enabling card-b
 
 Notifies when card details of a user is updated.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
   "eventId": "20384d37-3c03-4269-83c3-8f8585d8dd06",
   "eventType": "cardUpdated",
@@ -68,9 +69,9 @@ Notifies when card details of a user is updated.
     "orgId": 150060
   }
 }
+```
 
-````
-```json Non webhook payload
+```json
 {
   "eventName": "cardUpdated",
   "eventLogId": 6458,
@@ -118,6 +119,7 @@ Notifies when card details of a user is updated.
   },
   "orgId": 1668
 }
-````
+```
+</CodeGroup>
 
 <br />

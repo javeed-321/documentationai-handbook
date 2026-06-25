@@ -16,7 +16,8 @@ Rewards are incentives offered to customers as part of a loyalty program to enco
 
 Notifes when a reward has been created.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
         "eventName": "rewardCreated",
         "data": {
@@ -93,8 +94,9 @@ Notifes when a reward has been created.
             "XVECI": "ZMMFUDDDUU"
         }
     }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "rewardCreated",
   "eventLogId": 2542,
@@ -174,7 +176,8 @@ Notifes when a reward has been created.
   },
   "orgId": 5727
 }
-````
+```
+</CodeGroup>
 
 ### Reward Issued Event (rewardIssued)
 
@@ -210,7 +213,8 @@ Notifies when a reward is issued.
 | traceAttributes     | Object    | Metadata for tracing and debugging purposes.                         |
 | requestId           | String    | Request ID associated with the API call.                             |
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
   "eventName" : "rewardIssued",
   "data" : {
@@ -248,8 +252,9 @@ Notifies when a reward is issued.
     "requestId" : "1e802a0a-4a06-4e91-98fe-33c128b92bbb"
   }
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "rewardIssued",
   "eventLogId": 9938,
@@ -436,13 +441,15 @@ Notifies when a reward is issued.
   },
   "orgId": 8076
 }
-````
+```
+</CodeGroup>
 
 ### Reward Updated Event (rewardUpdated)
 
 Notifies when a reward configuration in the loyalty program has been updated. This could involve changes such as enabling/disabling the reward, altering redemption types, adjusting start/end dates, or modifying associated tiers, geographies, and reward details.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
     "data": {
         "eventName": "rewardUpdated",
@@ -522,7 +529,8 @@ Notifies when a reward configuration in the loyalty program has been updated. Th
     "errors": null,
     "warnings": null
 }
-````
+```
+</CodeGroup>
 
 ### Issue Reward Failure Event (issueRewardFailure)
 
@@ -562,7 +570,8 @@ Notifies when a reward issue fails.
 | apiRequestId        | String    | Unique identifier for the API request.                                                                                                                                                                |
 | orgId               | Integer   | Organization ID associated with the event.                                                                                                                                                            |
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
   "eventId": "a85bbecd-ac92-4893-8dda-a67c0433100c",
   "eventType": "issueRewardFailure",
@@ -606,8 +615,9 @@ Notifies when a reward issue fails.
     "orgId": 151197
   }
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "issueRewardFailure",
   "eventLogId": 6313,
@@ -793,13 +803,15 @@ Notifies when a reward issue fails.
   },
   "orgId": 659
 }
-````
+```
+</CodeGroup>
 
 ### Reward Expiry Reminder (rewardExpiryReminder)
 
 Notifies when a reward is about to expire.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
   "eventName": "rewardExpiryReminder",
   "eventId": "6b2584aa-8ebe-49de-9c1c-fcba7daed9e4",
@@ -909,7 +921,8 @@ Notifies when a reward is about to expire.
   },
   "loyaltyEventId": null
 }
-````
+```
+</CodeGroup>
 
 ### Update Reward Transaction (updateRewardTransaction)
 
@@ -931,7 +944,8 @@ Notifies when a reward transaction such as fulfilment status or transaction cust
 | transactionCustomFields | String           | Custom fields related to the transaction.                                                                                                                                                             |
 | loyaltyEventId          | String           | Identifier for the associated loyalty event.                                                                                                                                                          |
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
     "data": {
         "eventName": "updateRewardTransaction",
@@ -968,8 +982,9 @@ Notifies when a reward transaction such as fulfilment status or transaction cust
     "errors": null,
     "warnings": null
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "updateRewardTransaction",
   "eventLogId": 5847,
@@ -1001,7 +1016,8 @@ Notifies when a reward transaction such as fulfilment status or transaction cust
   },
   "orgId": 1390
 }
-````
+```
+</CodeGroup>
 
 ## Coupons
 
@@ -1011,7 +1027,8 @@ Coupons are store promotions or discounts created through the Offer Management S
 
 Notifies when a coupon has been issued to a user.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
    "eventName":"CouponIssue",
    "eventId":"78871533-bec4-457b-8dce-17bc38a5a2d1",
@@ -1049,8 +1066,9 @@ Notifies when a coupon has been issued to a user.
    },
    "loyaltyEventId":null
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "CouponIssue",
   "eventLogId": 7389,
@@ -1198,13 +1216,15 @@ Notifies when a coupon has been issued to a user.
   },
   "orgId": 9898
 }
-````
+```
+</CodeGroup>
 
 ### Coupon Redeem Event (CouponRedeem)
 
 Notifies when a user has redeemed a coupon.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
   "eventName": "CouponRedeem",
   "eventId": "edc7931a-c1f1-49a6-85f8-41878bbe20ee",
@@ -1243,8 +1263,9 @@ Notifies when a user has redeemed a coupon.
   },
   "loyaltyEventId": null
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "CouponRedeem",
   "eventLogId": 7631,
@@ -1445,13 +1466,15 @@ Notifies when a user has redeemed a coupon.
   },
   "orgId": 9757
 }
-````
+```
+</CodeGroup>
 
 ### Issue Bulk Coupon with Count (CouponIssue)
 
 Notifies when bulk coupons are issued
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
   "eventName": "CouponIssue",
   "eventId": "de068e40-06e0-4176-b876-ccd4b602347a",
@@ -1570,8 +1593,9 @@ Notifies when bulk coupons are issued
   },
   "loyaltyEventId": null
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "CouponIssue",
   "eventLogId": 6350,
@@ -1721,7 +1745,8 @@ Notifies when bulk coupons are issued
   },
   "orgId": 6192
 }
-````
+```
+</CodeGroup>
 
 ## Badges
 
@@ -1731,7 +1756,8 @@ A badge is a type of visual recognition used in loyalty programs to reward custo
 
 Notifies when a badge is earned by a user.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
     "eventName": "badgeEarned",
     "eventId": "72fe1900-a413-42d6-9582-f955474739aa",
@@ -1810,8 +1836,9 @@ Notifies when a badge is earned by a user.
     },
     "loyaltyEventId": null
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "badgeEarned",
   "eventLogId": 5458,
@@ -2023,4 +2050,5 @@ Notifies when a badge is earned by a user.
   },
   "orgId": 5848
 }
-````
+```
+</CodeGroup>

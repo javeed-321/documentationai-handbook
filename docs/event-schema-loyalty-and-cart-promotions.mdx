@@ -16,7 +16,7 @@ A loyalty promotion is a special program within a loyalty program that offers cu
 
 Notifies when a loyalty promotion is created. An event notification is triggered when a loyalty promotion is created. These event notifications are triggered when a loyalty promotion is created using the UI and the create loyalty promotion API.
 
-<CodeGroup tabs="Webhook payload-For Transaction Events, with custom fields,For Generic Events, (event name and id would be of generic event),For Target completed event, there will be xtra field named linkedTargetGroupVsTargetRuleIdMap,Non webhook payload">
+<CodeGroup tabs={["Webhook payload - Transaction events","Webhook payload - Generic events","Webhook payload - Target completed event","Non webhook payload"]}>
 
 ```json
 {
@@ -51,9 +51,9 @@ Notifies when a loyalty promotion is created. An event notification is triggered
         "updatedBy": 50685423
     }
 }
-````
+```
 
-```Text
+```json
 {
     "createdAt": 1738590476015,
     "loyaltyEventId": "8aa9e77ec84bb2ff00365a57fa761beb",
@@ -81,11 +81,9 @@ Notifies when a loyalty promotion is created. An event notification is triggered
         "updatedBy": 50685423
     }
 }
+```
 
-
-````
-
-```Text
+```json
 {
     "createdAt": 1738648339724,
     "loyaltyEventId": "793166e072ecfda8ed3d579937867777",
@@ -118,7 +116,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
         "updatedBy": 50685423
     }
 }
-````
+```
 
 ```json
 {
@@ -213,7 +211,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
   },
   "orgId": 9608
 }
-````
+```
 
 </CodeGroup>
 | Parameter           | Data Type | Description                                                 |
@@ -248,7 +246,8 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 
 Notifies when loyalty promotion metadata is updated. An event notification is triggered when a loyalty promotion is updated.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
     "createdAt": 1738589018782,
     "loyaltyEventId": "5b52badf5a5273ebf649a57aace392db",
@@ -286,8 +285,9 @@ Notifies when loyalty promotion metadata is updated. An event notification is tr
         "updatedBy": 50685423
     }
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "promotionUpdated",
   "eventLogId": 8272,
@@ -367,7 +367,8 @@ Notifies when loyalty promotion metadata is updated. An event notification is tr
   },
   "orgId": 9600
 }
-````
+```
+</CodeGroup>
 
 | Parameter           | Data Type | Description                                                 |
 | ------------------- | --------- | ----------------------------------------------------------- |
@@ -401,18 +402,8 @@ Notifies when loyalty promotion metadata is updated. An event notification is tr
 
 Notifies when a loyalty promotion is issued to a customer or user group. An event notification is triggered when a loyalty promotion is issued.
 
-```json Webhook payload
-Extensive detailing links 
-
-Promotion Issual and Earning - here
-
-Promotion Revokes - here
-
-Promotion Issued
-
-Payload
-
-
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
     "eventName": "promotionIssued",
     "data":
@@ -472,17 +463,9 @@ Payload
         "x-cap-lineage-start": "1762175962100"
     }
 }
-Promotion Earned
+```
 
-Payload
-Revoke Issued Promotion
-
-Payload
-Revoke Earned Promotion
-
-Payload
-````
-```json Non webhook payload
+```json
 {
   "eventName": "promotionIssued",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -729,7 +712,8 @@ Payload
   },
   "orgId": 9577
 }
-````
+```
+</CodeGroup>
 
 | Parameter                         | Data Type | Description                                                                                                                                                                                           |
 | --------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -774,7 +758,8 @@ Payload
 
 Notifies when a user earns a promotion.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
     "eventName": "promotionEarned",
     "data":
@@ -838,8 +823,9 @@ Notifies when a user earns a promotion.
         "x-cap-lineage-start": "1762178042548"
     }
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "promotionEarned",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1088,15 +1074,17 @@ Notifies when a user earns a promotion.
   },
   "orgId": 2490
 }
-````
+```
+</CodeGroup>
 
 ### Revoke issued loyalty promotion (revokeIssuedPromotion)
 
 Notifies when an issued promotion is revoked.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
-    "eventName": "revokeIssuedPromotion"
+    "eventName": "revokeIssuedPromotion",
     "data":
     {
         "customerIdentifiers":
@@ -1146,8 +1134,9 @@ Notifies when an issued promotion is revoked.
     "apiRequestId": "48f8c70757a83e94ad1b09a6c15422b3",
     "createdAt": 1762180332783
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "revokeIssuedPromotion",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1384,15 +1373,17 @@ Notifies when an issued promotion is revoked.
   },
   "orgId": 4811
 }
-````
+```
+</CodeGroup>
 
 ### Revoke earned loyalty promotion (revokeEarnedPromotion)
 
 Notifies when an earned loyalty promotion has been revoked for a user.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
-    "eventName": "revokeEarnedPromotion"
+    "eventName": "revokeEarnedPromotion",
     "data":
     {
         "customerIdentifiers":
@@ -1452,8 +1443,9 @@ Notifies when an earned loyalty promotion has been revoked for a user.
     "apiRequestId": "7d88e3e34de3c271e3f6cbb500952c59",
     "createdAt": 1762180658159
 }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "revokeEarnedPromotion",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1691,7 +1683,8 @@ Notifies when an earned loyalty promotion has been revoked for a user.
   },
   "orgId": 7175
 }
-````
+```
+</CodeGroup>
 
 ***
 
@@ -1703,7 +1696,8 @@ A cart promotion is a type of promotion or discount that is applied to products 
 
 Notifies when a cart promotion is issued.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
     "eventName": "cartPromotionIssued",
     "data":
@@ -1724,13 +1718,15 @@ Notifies when a cart promotion is issued.
     "apiRequestId": "50583_68dd0c3e9ec3df43fd1e275e_36492ee912835749000f0a5cc3f2cdeb",
     "createdAt": 1759317328518
 }
-````
+```
+</CodeGroup>
 
 ### Cart Promotion Redeemed Event (cartPromotionRedeemed)
 
 Notifies whenever a cart promotion is redeemed by the user.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
     "eventName": "cartPromotionRedeemed",
     "data":
@@ -1779,13 +1775,15 @@ Notifies whenever a cart promotion is redeemed by the user.
     "apiRequestId": "6318d49e7614c3908509c44a9896d89f",
     "createdAt": 1759236897389
 }
-````
+```
+</CodeGroup>
 
 ### Cart Promotion Revoked Event (cartPromotionRevoked)
 
 Notifies whenever a cart promotion is revoked from the user.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
         "eventName": "cartPromotionRevoked",
         "data": {
@@ -1950,13 +1948,15 @@ Notifies whenever a cart promotion is revoked from the user.
             "BKKS": "GYCDXOJBPM"
         }
     }
-````
+```
+</CodeGroup>
 
 ### Cart Promotion Earned Event (cartPromotionEarned)
 
 Notifies whenever the user earns the cart promotion on meeting the defined criteria for the promotion.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
     "eventName": "cartPromotionEarned",
     "data":
@@ -1978,4 +1978,5 @@ Notifies whenever the user earns the cart promotion on meeting the defined crite
     "apiRequestId": "31018fc36eeaef6fa94cdd7ab7149eff",
     "createdAt": 1759165512771
 }
-````
+```
+</CodeGroup>

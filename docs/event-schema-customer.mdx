@@ -31,7 +31,8 @@ Notifies when a user is added.
 | EnteredAt    | Integer  | The timestamp for when the customer was registered with the brand in milliseconds since the Unix epoch 1970-01-01T00:00:00Z, UTC. This value comes from the payload. If the brand does not provide it, the system sets it to the current time. |
 | createdAt    | Integer  | The system timestamp for when the event is received in milliseconds since the Unix epoch 1970-01-01T00:00:00Z, UTC. This value is always set to the current time when the event arrives.                                                       |
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
   "eventId": "81b1f0ce-8119-4826-9cca-610bd31d4038",
   "eventType": "150698_customerAdded",
@@ -75,8 +76,9 @@ Notifies when a user is added.
     "orgId": 150698
   }
 }
-````
-```json Non webhook payload 
+```
+
+```json
 {
   "eventName": "customerAdded",
   "eventLogId": 206,
@@ -275,7 +277,8 @@ Notifies when a user is added.
   },
   "orgId": 7236
 }
-````
+```
+</CodeGroup>
 
 ### Customer Updated Event (customerUpdated)
 
@@ -291,7 +294,8 @@ Notifies when details of a user are updated. For example, name, extended fields,
 | enteredAt    | Integer  | Unix timestamp in milliseconds when the event was stored in Capillary.                                                                            |
 | enteredBy    | String   | Source from which customer details are updated. Possible values: `FACEBOOK`, `WEB_ENGAGE`, `WECHAT`, `INSTORE`, `MARTJACK`, `TMALL`, `MOBILE_APP` |
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
   "data": {
     "eventName": "customerUpdated",
@@ -522,9 +526,9 @@ Notifies when details of a user are updated. For example, name, extended fields,
   "errors": null,
   "warnings": null
 }
+```
 
-````
-```json Non webhook payload
+```json
 {
   "eventName": "customerUpdated",
   "eventLogId": 6320,
@@ -746,13 +750,15 @@ Notifies when details of a user are updated. For example, name, extended fields,
   },
   "orgId": 4460
 }
-````
+```
+</CodeGroup>
 
 #### PII deletion Customer update
 
 Notifies when details of the customer is updated upon personally identifiable information (PII) deletion and the status changes from 'Pending Deletion' to 'Deleted'.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload"]}>
+```json
 {
   "eventId": "2ad748ac-f1f9-4bfa-8753-be57587b543d",
   "eventType": "customerUpdated",
@@ -849,13 +855,15 @@ Notifies when details of the customer is updated upon personally identifiable in
     "orgId": 2163
   }
 } 
-````
+```
+</CodeGroup>
 
 ### Customer Subscription Event (customerSubscription)
 
 Notifies when a user's subscription status changes for transactional or promotional messages.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
   "eventName": "customerSubscription",
   "data": {
@@ -1034,7 +1042,8 @@ Notifies when a user's subscription status changes for transactional or promotio
     "JQDQMWSEP": "HSNOC"
   }
 }
-````
+```
+</CodeGroup>
 
 ## Group
 
@@ -1044,7 +1053,8 @@ A user group is a collection of individuals (such as customers or contributors) 
 
 Notifies when a group has been created.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
         "eventName": "groupCreated",
         "data": {
@@ -1203,13 +1213,15 @@ Notifies when a group has been created.
             "QINZJNUJA": "XGIZAXNDQH"
         }
     }
-````
+```
+</CodeGroup>
 
 ### Group Updated Event (groupUpdated)
 
 Notifies when a group has been updated.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
         "eventName": "groupUpdated",
         "data": {
@@ -1370,13 +1382,15 @@ Notifies when a group has been updated.
             "EIS": "QFBLKTBB"
         }
     }
-````
+```
+</CodeGroup>
 
 ### Group Member Removed Event (groupMemberRemoved)
 
 Notifies when a member is removed from the group.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
         "eventName": "groupMemberRemoved",
         "data": {
@@ -1658,13 +1672,15 @@ Notifies when a member is removed from the group.
             "RPSEKXCVM": "ECMTTSEVND"
         }
     }
-````
+```
+</CodeGroup>
 
 ### Group Member Added Event (groupMemberAdded)
 
 Notifies when a user is added to the group.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
         "eventName": "groupMemberAdded",
         "data": {
@@ -1948,13 +1964,15 @@ Notifies when a user is added to the group.
             "OQKQ": "BFHHQBEUHC"
         }
     }
-````
+```
+</CodeGroup>
 
 ### Points Contribution to Group Event (pointsContributionToGroup)
 
 Notifies when points are contributed to the loyalty group.
 
-```json Non webhook payload
+<CodeGroup tabs={["Non webhook payload"]}>
+```json
 {
         "eventName": "pointsContributionToGroup",
         "data": {
@@ -2267,3 +2285,4 @@ Notifies when points are contributed to the loyalty group.
         }
     }
 ```
+</CodeGroup>

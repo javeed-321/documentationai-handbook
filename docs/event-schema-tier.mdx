@@ -14,7 +14,8 @@ A tier is a level or slab within a loyalty program that customers can move up, r
 
 Notifies when a user's tier is upgraded.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
     "eventName": "tierUpgraded",
     "eventId": "fac88937-7740-48a3-b34e-fcfedb1f57a0",
@@ -64,8 +65,9 @@ Notifies when a user's tier is upgraded.
     },
     "loyaltyEventId": "vdFdiTjSeg"
   }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "tierUpgraded",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -287,13 +289,15 @@ Notifies when a user's tier is upgraded.
   },
   "orgId": 6564
 }
-````
+```
+</CodeGroup>
 
 ### Tier Renewed Event (tierRenewed)
 
 Notifies when a user's tier has been renewed.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
     "eventName": "tierRenewed",
     "eventId": "b83dd0af-6035-48c0-9c69-87a31dd7c285",
@@ -334,8 +338,9 @@ Notifies when a user's tier has been renewed.
       "tierExpiryDate": "2024-10-19",
       "tierExpiryDateInMillis": 1729362599000 //Post timezone standardisation
     }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "tierRenewed",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -559,13 +564,15 @@ Notifies when a user's tier has been renewed.
   },
   "orgId": 933
 }
-````
+```
+</CodeGroup>
 
 ### Tier Downgraded Event (tierDowngraded)
 
 Notifies when a user's tier is downgraded. Includes the downgraded tier information.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
     "eventName": "tierDowngraded",
     "eventId": "647072c7-1ad5-4efe-9d03-a7c2ed41e07b",
@@ -609,8 +616,9 @@ Notifies when a user's tier is downgraded. Includes the downgraded tier informat
     },
     "loyaltyEventId": null
   }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "tierDowngraded",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -831,13 +839,15 @@ Notifies when a user's tier is downgraded. Includes the downgraded tier informat
   },
   "orgId": 3346
 }
-````
+```
+</CodeGroup>
 
 ### Tier Downgrade Reminder Event (tierDowngradeReminder)
 
 Notifies when a user is approaching a tier downgrade.
 
-```json Webhook payload
+<CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
+```json
 {
     "eventName": "tierDowngradeReminder",
     "eventId": "692e01a7-09ba-43fc-973e-1b7e3207273a",
@@ -879,8 +889,9 @@ Notifies when a user is approaching a tier downgrade.
     },
     "loyaltyEventId": null
   }
-````
-```json Non webhook payload
+```
+
+```json
 {
   "eventName": "tierDowngradeReminder",
   "eventLogId": 8730,
@@ -1099,4 +1110,5 @@ Notifies when a user is approaching a tier downgrade.
   },
   "orgId": 3405
 }
-````
+```
+</CodeGroup>
