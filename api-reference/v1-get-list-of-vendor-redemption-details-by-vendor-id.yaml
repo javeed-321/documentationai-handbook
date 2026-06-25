@@ -85,12 +85,12 @@ paths:
         samples-languages:
         - shell
       parameters:
-      - name: brandid
+      - name: vendorid
         in: path
         required: true
         schema:
           type: string
-      - name: vendorid
+      - name: brandid
         in: path
         required: true
         schema:

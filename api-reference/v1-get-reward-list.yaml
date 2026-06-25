@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/reward/list/brand/{BrandID}":
+  "/api_gateway/rewards/core/v1/reward/list/brand/{brandID}":
     get:
       summary: Get all brand rewards using Brand ID
       description: ''
@@ -59,7 +59,7 @@ paths:
           enum:
           - ''
           default: en
-      - name: BrandID
+      - name: brandID
         in: path
         required: true
         schema:

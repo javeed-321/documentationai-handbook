@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/promotion/{promotion Id}/status/false/brand/{brand Id}":
+  "/api_gateway/rewards/core/v1/promotion/{promotionId}/status/false/brand/{brandId}":
     put:
       summary: Disable Catalog promotion
       description: ''
@@ -29,12 +29,12 @@ paths:
         schema:
           type: integer
           format: int64
-      - name: promotion Id
+      - name: promotionId
         in: path
         required: true
         schema:
           type: string
-      - name: brand Id
+      - name: brandId
         in: path
         required: true
         schema:

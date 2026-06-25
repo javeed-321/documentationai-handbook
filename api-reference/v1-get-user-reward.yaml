@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/user/vouchers/brand/{brand name}":
+  "/api_gateway/rewards/core/v1/user/vouchers/brand/{brandName}":
     get:
       summary: Get purchased rewards for user (Old API)
       description: ''
@@ -61,11 +61,6 @@ paths:
         schema:
           type: string
           default: 'true'
-      - name: brand name
-        in: path
-        required: true
-        schema:
-          type: string
       - name: mobile
         in: query
         schema:

@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/user/reward/{reward Id}/issue":
+  "/api_gateway/rewards/core/v1/user/reward/{rewardId}/issue":
     post:
       summary: Issue single reward
       description: ''
@@ -29,11 +29,6 @@ paths:
       - name: username
         in: query
         description: Username here represents name of the store.
-        required: true
-        schema:
-          type: string
-      - name: reward Id
-        in: path
         required: true
         schema:
           type: string

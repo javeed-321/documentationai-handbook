@@ -10,13 +10,13 @@ servers:
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/user/reward/{rewardId}/vouchers/brand/{brand name}":
+  "/api_gateway/rewards/core/v1/user/reward/{rewardId}/vouchers/brand/{brandName}":
     get:
       summary: Get purchased reward details by id and user
       description: ''
       operationId: get-user-specific-reward-by-id
       parameters:
-      - name: mobile/ email/ externalId
+      - name: mobile/Email/Externalid
         in: query
         description: Mobile number/ email Id/ External Id of the customer
         schema:
@@ -39,7 +39,7 @@ paths:
         schema:
           type: string
         required: true
-      - name: brand name
+      - name: brandName
         in: path
         required: true
         schema:

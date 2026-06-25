@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  "/api_gateway/loyalty/v1/programs/{programId}/promotions/add/{promotion_type}":
+  "/api_gateway/loyalty/v1/programs/{programId}/promotions/add/{promotionType}":
     post:
       summary: "Add Promotion : don't make it public"
       description: Lets you create a promotion for a specific loyalty program.
@@ -33,11 +33,6 @@ paths:
           - RANGE
           - KEYWORD
         required: true
-      - name: promotion_type
-        in: path
-        required: true
-        schema:
-          type: string
       requestBody:
         content:
           application/json:

@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/brand/richContentMeta/{RichcontentmetaID}":
+  "/api_gateway/rewards/core/v1/brand/richContentMeta/{richcontentmetaID}":
     put:
       summary: Update Rich Text Content Metadata for Rewards
       description: ''
@@ -96,7 +96,7 @@ paths:
         samples-languages:
         - curl
       parameters:
-      - name: RichcontentmetaID
+      - name: richcontentmetaID
         in: path
         required: true
         schema:

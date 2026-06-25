@@ -10,14 +10,14 @@ servers:
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/promotion/{promotionId}/brand/{brand Id}":
+  "/api_gateway/rewards/core/v1/promotion/{promotionId}/brand/{brandId}":
     put:
       summary: Update catalog promotion
       description: ''
       operationId: put-update-catalog-promotion
       parameters:
       - in: path
-        name: brand Id
+        name: brandId
         schema:
           type: string
         required: true

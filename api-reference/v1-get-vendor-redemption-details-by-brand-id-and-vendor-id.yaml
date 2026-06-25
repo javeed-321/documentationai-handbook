@@ -244,12 +244,12 @@ paths:
         samples-languages:
         - shell
       parameters:
-      - name: vendorId
+      - name: brandId
         in: path
         required: true
         schema:
           type: string
-      - name: brandId
+      - name: vendorId
         in: path
         required: true
         schema:

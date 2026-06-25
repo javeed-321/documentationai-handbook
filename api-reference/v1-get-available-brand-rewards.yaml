@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/reward/brand/{Brand ID}/available":
+  "/api_gateway/rewards/core/v1/reward/brand/{brandId}/available":
     get:
       summary: Get available brand rewards
       description: ''
@@ -43,17 +43,12 @@ paths:
           enum:
           - ''
           default: en
-      - name: Brand ID
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: "YYYY-MM-DDTHH:MMZ"
+      - name: "yYYY-MM-DDTHH:MMZ"
         in: query
         schema:
           type: string
         required: false
-      - name: "YYYY-MM-DDTHH:MMZ"
+      - name: "yYYY-MM-DDTHH:MMZ"
         in: query
         schema:
           type: string

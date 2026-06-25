@@ -23,7 +23,7 @@ paths:
           type: integer
           format: int64
         required: true
-      - name: brand name
+      - name: brandName
         in: path
         description: Name of the brand for which you want to retrieve the reward categories.
         schema:
