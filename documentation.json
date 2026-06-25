@@ -1,6 +1,9 @@
 {
   "css": [
     {
+      "src": "styles/capillary.css"
+    },
+    {
       "src": "styles/home-page.css"
     }
   ],
@@ -851,27 +854,6 @@
                 "method": "POST"
               },
               {
-                "title": "Get Uploaded Coupons' Status",
-                "path": "reference/v1-get-uploaded-coupons-status-1",
-                "openapi": "api-reference/v1-get-uploaded-coupons-status-1.yaml GET /coupon/api/v1/upload/getUploadStatus/{couponSeriesId}",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Status of Redeemed Coupons",
-                "path": "reference/v1-get-status-of-redeemed-coupons-copy-1",
-                "openapi": "api-reference/v1-get-status-of-redeemed-coupons-copy-1.yaml GET /coupon/api/v1/upload/getUploadRedeemedCouponStatus/{couponSeriesId}",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Status of Redeemed Coupons",
-                "path": "reference/v1-get-status-of-redeemed-coupons",
-                "openapi": "api-reference/v1-get-status-of-redeemed-coupons.yaml GET /upload/getUploadRedeemedCouponStatus/{couponSeriesId}",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
                 "title": "Get Custom Fields Associated with Coupon Redemption",
                 "path": "reference/v1-get-custom-fields-associated-with-coupon-redemption-global",
                 "openapi": "api-reference/v1-get-custom-fields-associated-with-coupon-redemption-global.yaml GET /x/neo/couponRedemption/customFields",
@@ -884,34 +866,6 @@
                 "openapi": "api-reference/v1-get-custom-fields-associated-with-coupon-redemption.yaml GET /das/getCouponRedemptionCustomFieldsData",
                 "openapi-mode": "custom",
                 "method": "GET"
-              },
-              {
-                "title": "Get Status of Redeemed Coupons",
-                "path": "reference/v1-get-status-of-redeemed-coupons-copy",
-                "openapi": "api-reference/v1-get-status-of-redeemed-coupons-copy.yaml GET /upload/getUploadRedeemedCouponStatus/{couponSeriesId}",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Uploaded Coupons' Status",
-                "path": "reference/v1-get-uploaded-coupons-status-copy",
-                "openapi": "api-reference/v1-get-uploaded-coupons-status-copy.yaml GET /coupon/api/v1/upload/getUploadStatus/{couponSeriesId}",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Upload Redeemed Coupons",
-                "path": "reference/v1-upload-redeemed-coupons-copy",
-                "openapi": "api-reference/v1-upload-redeemed-coupons-copy.yaml POST /upload/redeemFile",
-                "openapi-mode": "custom",
-                "method": "POST"
-              },
-              {
-                "title": "Upload Coupons (Batch)",
-                "path": "reference/v1-upload-coupons-batch-copy",
-                "openapi": "api-reference/v1-upload-coupons-batch-copy.yaml POST /upload/file/{couponSeriedId}",
-                "openapi-mode": "custom",
-                "method": "POST"
               },
               {
                 "title": "Upload Redeemed Coupons",
@@ -1065,7 +1019,7 @@
                 "method": "GET"
               },
               {
-                "title": "Get Customer’s Earned and Expired Points by Year",
+                "title": "Get Customer\u2019s Earned and Expired Points by Year",
                 "path": "reference/v1-get-expired-points-for-a-customer",
                 "openapi": "api-reference/v1-get-expired-points-for-a-customer.yaml GET /das/getExpiredPointsByCustomerIdAndYear",
                 "openapi-mode": "custom",
