@@ -30,7 +30,7 @@ Notifies when a transaction is added. For example, a transaction is made by a us
 | currencyCode   | String   | ISO currency code that you want to update. For example EUR for Euro, SGD for the Singapore Dollar, CNY for China Yuan Renminbi, SAR Saudi Riyal. For more codes, see [ISO currency codes](https://docs.1010data.com/1010dataReferenceManual/DataTypesAndFormats/currencyUnitCodes.html). |
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
   "eventId": "7a2716a8-9cc7-4beb-999a-a8f02ad9f02d",
   "eventType": "transactionAdded",
@@ -95,7 +95,7 @@ Notifies when a transaction is added. For example, a transaction is made by a us
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "transactionAdded",
   "eventLogId": 3081,
@@ -327,7 +327,7 @@ Notifies when a transaction is updated. For example, a change to a line-item in 
 | currencyCode                                                                          | String   | ISO currency code that you want to update. For example EUR for Euro, SGD for Singapore Dollar, CNY for China Yuan Renminbi, SAR Saudi Riyal. For more codes, see [ISO currency codes.](https://docs.1010data.com/1010dataReferenceManual/DataTypesAndFormats/currencyUnitCodes.html) |
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
   "eventId": "b9383037-89ce-43a9-9db1-99c5ac96e2b9",
   "eventType": "transactionUpdated",
@@ -363,7 +363,7 @@ Notifies when a transaction is updated. For example, a change to a line-item in 
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "transactionUpdated",
   "eventLogId": 1127,
@@ -581,7 +581,7 @@ Notifies when a transaction is updated. For example, a change to a line-item in 
 Notifies when a non-loyalty transaction is made by a user. A non-loyalty or not-interested transaction refers to a purchase made by a user who is not interested in registering for the organisation's loyalty program.
 
 <CodeGroup tabs={["Non webhook payload"]}>
-```json
+```json "Non webhook payload"
 {
   "eventName": "notInterestedBillAdded",
   "data": {
@@ -796,7 +796,7 @@ Notifies when a non-loyalty transaction is made by a user. A non-loyalty or not-
 Notifies when a transaction is rejected.
 
 <CodeGroup tabs={["Non webhook payload"]}>
-```json
+```json "Non webhook payload"
 {
     "eventName": "transactionRejected",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -840,7 +840,7 @@ Notifies when a transaction is rejected.
 Notifies when a rejected transaction is attempted again.
 
 <CodeGroup tabs={["Non webhook payload"]}>
-```json
+```json "Non webhook payload"
 {
     "eventName": "rejectedTransactionRetrigger",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -885,7 +885,7 @@ Notifies when a rejected transaction is attempted again.
 Notifies when an older transaction is added against the user.
 
 <CodeGroup tabs={["Non webhook payload"]}>
-```json
+```json "Non webhook payload"
 {
         "eventName": "retroBillAdded",
         "data": {

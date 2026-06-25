@@ -15,7 +15,7 @@ A partner program in Capillary is a type of loyalty program that is created and 
 Notifies when a user is linked to a partner program.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "partnerProgramLinked",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -56,7 +56,7 @@ Notifies when a user is linked to a partner program.
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "partnerProgramLinked",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -244,7 +244,7 @@ Notifies when a user is linked to a partner program.
 Notifies when a partner program is updated.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "partnerProgramUpdated",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -286,7 +286,7 @@ Notifies when a partner program is updated.
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "partnerProgramUpdated",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -478,7 +478,7 @@ Notifies when a partner program is updated.
 Notifies when a partner program linked to a user's loyalty program is removed.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
   "createdAt": 1769680620075,
   "data": {
@@ -508,7 +508,7 @@ Notifies when a partner program linked to a user's loyalty program is removed.
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "partnerProgramDelinked",
   "eventLogId": 8456,
@@ -688,7 +688,7 @@ Notifies when a partner program linked to a user's loyalty program is removed.
 Notifies when a a supplementary membership linked to a loyalty program is about to expire. A supplementary loyalty program is a smaller program that operates alongside primary loyalty programs but runs for a shorter duration.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
    "eventName":"supplementaryMembershipExpiryReminder",
    "eventId":"e084e887-e1d5-45cf-b2bf-55024efeb8fe",
@@ -714,7 +714,7 @@ Notifies when a a supplementary membership linked to a loyalty program is about 
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "supplementaryMembershipExpiryReminder",
   "eventLogId": 4687,
@@ -892,7 +892,7 @@ Notifies when a a supplementary membership linked to a loyalty program is about 
 ### Supplementary Partner Program Renew (PP_EXPIRY_JOB)
 
 <CodeGroup tabs={["Non webhook payload"]}>
-```json
+```json "Non webhook payload"
 {
     "eventName": "PP_EXPIRY_JOB",
     "eventSearchKey": "data.customerIdentifiers.customerId",

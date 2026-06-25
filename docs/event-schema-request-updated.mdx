@@ -15,7 +15,7 @@ A request update refers to the process of changing the status or details of an e
 Notifies when a request is updated, such as a change in the status of a transaction request to "rejected" or "approved."
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
   "eventId": "0f5d96e4-f6ff-4a8a-8522-083dc0d2d0e5",
   "eventType": "requestUpdated",
@@ -63,7 +63,7 @@ Notifies when a request is updated, such as a change in the status of a transact
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "requestUpdated",
   "eventLogId": 8785,
@@ -277,7 +277,7 @@ Notifies when a user's personal identifiable information (PII) delete request ha
 Scenario 1: Change in the status of the request to "rejected" or "approved."
 
 <CodeGroup tabs={["Webhook payload"]}>
-```json
+```json "Webhook payload"
 "eventName": "requestUpdated",
 	"eventId": "48b6ad35-6232-45bf-bf41-deb77065b9e3",
 	"orgId": 781,
@@ -317,7 +317,7 @@ Scenario 1: Change in the status of the request to "rejected" or "approved."
 Scenario 2: Change in the status of the request from "Approved" to "Success" after successful deletion.
 
 <CodeGroup tabs={["Webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "requestUpdated",
     "eventId": "0ffb46d7-704c-4664-b815-24d4bb4ec51a",

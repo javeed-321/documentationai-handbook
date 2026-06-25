@@ -15,7 +15,7 @@ A tier is a level or slab within a loyalty program that customers can move up, r
 Notifies when a user's tier is upgraded.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "tierUpgraded",
     "eventId": "fac88937-7740-48a3-b34e-fcfedb1f57a0",
@@ -67,7 +67,7 @@ Notifies when a user's tier is upgraded.
   }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "tierUpgraded",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -297,7 +297,7 @@ Notifies when a user's tier is upgraded.
 Notifies when a user's tier has been renewed.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "tierRenewed",
     "eventId": "b83dd0af-6035-48c0-9c69-87a31dd7c285",
@@ -340,7 +340,7 @@ Notifies when a user's tier has been renewed.
     }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "tierRenewed",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -572,7 +572,7 @@ Notifies when a user's tier has been renewed.
 Notifies when a user's tier is downgraded. Includes the downgraded tier information.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "tierDowngraded",
     "eventId": "647072c7-1ad5-4efe-9d03-a7c2ed41e07b",
@@ -618,7 +618,7 @@ Notifies when a user's tier is downgraded. Includes the downgraded tier informat
   }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "tierDowngraded",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -847,7 +847,7 @@ Notifies when a user's tier is downgraded. Includes the downgraded tier informat
 Notifies when a user is approaching a tier downgrade.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "tierDowngradeReminder",
     "eventId": "692e01a7-09ba-43fc-973e-1b7e3207273a",
@@ -891,7 +891,7 @@ Notifies when a user is approaching a tier downgrade.
   }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "tierDowngradeReminder",
   "eventLogId": 8730,

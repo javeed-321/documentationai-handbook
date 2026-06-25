@@ -18,7 +18,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 
 <CodeGroup tabs={["Webhook payload - Transaction events","Webhook payload - Generic events","Webhook payload - Target completed event","Non webhook payload"]}>
 
-```json
+```json "Webhook payload - Transaction events"
 {
     "createdAt": 1738644477432,
     "loyaltyEventId": "567012971210e00eb9b4e80ded2d5e62",
@@ -53,7 +53,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 }
 ```
 
-```json
+```json "Webhook payload - Generic events"
 {
     "createdAt": 1738590476015,
     "loyaltyEventId": "8aa9e77ec84bb2ff00365a57fa761beb",
@@ -83,7 +83,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 }
 ```
 
-```json
+```json "Webhook payload - Target completed event"
 {
     "createdAt": 1738648339724,
     "loyaltyEventId": "793166e072ecfda8ed3d579937867777",
@@ -118,7 +118,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "promotionCreated",
   "eventLogId": 6729,
@@ -247,7 +247,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 Notifies when loyalty promotion metadata is updated. An event notification is triggered when a loyalty promotion is updated.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "createdAt": 1738589018782,
     "loyaltyEventId": "5b52badf5a5273ebf649a57aace392db",
@@ -287,7 +287,7 @@ Notifies when loyalty promotion metadata is updated. An event notification is tr
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "promotionUpdated",
   "eventLogId": 8272,
@@ -403,7 +403,7 @@ Notifies when loyalty promotion metadata is updated. An event notification is tr
 Notifies when a loyalty promotion is issued to a customer or user group. An event notification is triggered when a loyalty promotion is issued.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "promotionIssued",
     "data":
@@ -465,7 +465,7 @@ Notifies when a loyalty promotion is issued to a customer or user group. An even
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "promotionIssued",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -759,7 +759,7 @@ Notifies when a loyalty promotion is issued to a customer or user group. An even
 Notifies when a user earns a promotion.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "promotionEarned",
     "data":
@@ -825,7 +825,7 @@ Notifies when a user earns a promotion.
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "promotionEarned",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1082,7 +1082,7 @@ Notifies when a user earns a promotion.
 Notifies when an issued promotion is revoked.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "revokeIssuedPromotion",
     "data":
@@ -1136,7 +1136,7 @@ Notifies when an issued promotion is revoked.
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "revokeIssuedPromotion",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1381,7 +1381,7 @@ Notifies when an issued promotion is revoked.
 Notifies when an earned loyalty promotion has been revoked for a user.
 
 <CodeGroup tabs={["Webhook payload","Non webhook payload"]}>
-```json
+```json "Webhook payload"
 {
     "eventName": "revokeEarnedPromotion",
     "data":
@@ -1445,7 +1445,7 @@ Notifies when an earned loyalty promotion has been revoked for a user.
 }
 ```
 
-```json
+```json "Non webhook payload"
 {
   "eventName": "revokeEarnedPromotion",
   "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1697,7 +1697,7 @@ A cart promotion is a type of promotion or discount that is applied to products 
 Notifies when a cart promotion is issued.
 
 <CodeGroup tabs={["Non webhook payload"]}>
-```json
+```json "Non webhook payload"
 {
     "eventName": "cartPromotionIssued",
     "data":
@@ -1726,7 +1726,7 @@ Notifies when a cart promotion is issued.
 Notifies whenever a cart promotion is redeemed by the user.
 
 <CodeGroup tabs={["Non webhook payload"]}>
-```json
+```json "Non webhook payload"
 {
     "eventName": "cartPromotionRedeemed",
     "data":
@@ -1783,7 +1783,7 @@ Notifies whenever a cart promotion is redeemed by the user.
 Notifies whenever a cart promotion is revoked from the user.
 
 <CodeGroup tabs={["Non webhook payload"]}>
-```json
+```json "Non webhook payload"
 {
         "eventName": "cartPromotionRevoked",
         "data": {
@@ -1956,7 +1956,7 @@ Notifies whenever a cart promotion is revoked from the user.
 Notifies whenever the user earns the cart promotion on meeting the defined criteria for the promotion.
 
 <CodeGroup tabs={["Non webhook payload"]}>
-```json
+```json "Non webhook payload"
 {
     "eventName": "cartPromotionEarned",
     "data":
