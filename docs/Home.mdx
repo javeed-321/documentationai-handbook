@@ -192,14 +192,12 @@ content-width: wide
     color: #ffffff !important;
   }
 /* User doc cards: resting shadow in dark mode */
-.dark h3#user-documentation + [data-component="Columns"] [data-component="Card"] {
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.4) !important;
-}
-
-/* User doc cards: deeper shadow on hover in dark mode */
-.dark h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] {
-  box-shadow: 0 16px 48px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.55) !important;
-}
+  .dark h3#user-documentation + [data-component="Columns"] [data-component="Card"] .dai-card-description {
+    color: rgba(255,255,255,0.85) !important;
+  }
+  .dark h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
+    color: #ffffff !important;
+  }
 
 
   /* Colored cards: title stays the same on hover (no brand-blue shift) */
