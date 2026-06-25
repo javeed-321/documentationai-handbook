@@ -90,12 +90,12 @@ paths:
         required: true
         schema:
           type: string
-      - name: redemptionid
+      - name: vendorid
         in: path
         required: true
         schema:
           type: string
-      - name: vendorid
+      - name: redemptionid
         in: path
         required: true
         schema:

@@ -29,12 +29,12 @@ paths:
         schema:
           type: integer
           format: int64
-      - name: brandId
+      - name: promotion Id
         in: path
         required: true
         schema:
           type: string
-      - name: promotion Id
+      - name: brandId
         in: path
         required: true
         schema:

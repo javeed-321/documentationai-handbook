@@ -33,12 +33,12 @@ paths:
         description: Unique identifier of the user.
         schema:
           type: string
-      - name: brand name
+      - name: reward Id
         in: path
         required: true
         schema:
           type: string
-      - name: reward Id
+      - name: brand name
         in: path
         required: true
         schema:
