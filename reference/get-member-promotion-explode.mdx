@@ -5,9 +5,9 @@ title: 'Get Member Promotion Explode Details '
 
 Returns the full participation history for a specific promotion for a member, including enrollment and opt-in timeline details, promotion metadata, and promotion-level custom fields. Use the optional query parameter filters to narrow results by enrolment status, promotion identifier, or promotion ID.
 
-## Example request\\
+## Example request
 
-<CodeGroup default-tab="0" show-lines="true" tabs={["cURL"]}>
+<CodeGroup show-lines="true" tabs={["cURL"]}>
   ```bash wrap="true" cURL
   // Add your code herecurl -X GET "https://{host}/v3/members/388757266/promotions/1133608813?memberEnrollmentStatus=AVAILABLE_TO_REDEEM" \
     -H "Authorization: Basic dGlsbGhnXXXXXXXX"
@@ -83,7 +83,7 @@ GET /v3/members/{memberId}/promotions/{promotionId}
 
 ## Example response
 
-<CodeGroup default-tab="0" show-lines="true" tabs={["JSON"]}>
+<CodeGroup show-lines="true" tabs={["JSON"]}>
   ```json JSON
   {
       "memberId": 388757266,

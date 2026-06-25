@@ -92,20 +92,6 @@
                 "openapi": "api-reference/revoke-a-loyalty-promotion.yaml POST /v3/promotions/revoke",
                 "openapi-mode": "custom",
                 "method": "POST"
-              },
-              {
-                "title": "Activate Promotion for Customer",
-                "path": "reference/activate-promotion-for-customer",
-                "openapi": "api-reference/activate-promotion-for-customer.yaml POST /api_gateway/v1/promotions/{promotionId}/activate",
-                "openapi-mode": "custom",
-                "method": "POST"
-              },
-              {
-                "title": "Deactivate Promotion for Customer",
-                "path": "reference/deactivate-promotion-for-customer",
-                "openapi": "api-reference/deactivate-promotion-for-customer.yaml POST /api_gateway/v1/promotions/{promotionId}/deactivate",
-                "openapi-mode": "custom",
-                "method": "POST"
               }
             ]
           }
@@ -1089,7 +1075,7 @@
                 "method": "GET"
               },
               {
-                "title": "Get Customer\u2019s Earned and Expired Points by Year",
+                "title": "Get Customer’s Earned and Expired Points by Year",
                 "path": "reference/v1-get-expired-points-for-a-customer",
                 "openapi": "api-reference/v1-get-expired-points-for-a-customer.yaml GET /das/getExpiredPointsByCustomerIdAndYear",
                 "openapi-mode": "custom",
