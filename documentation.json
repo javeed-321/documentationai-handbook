@@ -1,154 +1,375 @@
 {
-  "name": "Starter Kit",
-  "colors": {
-    "light": {
-      "brand": "#F97316"
-    },
-    "dark": {
-      "brand": "#FDBA74"
-    }
-  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
-        "icon": "book",
+        "tab": "API Reference",
         "groups": [
           {
-            "group": "Start Here",
-            "icon": "rocket",
+            "group": "Loyalty Promotions API",
             "pages": [
               {
-                "title": "Introduction",
-                "path": "introduction",
-                "icon": "home"
+                "title": "Loyalty Promotions",
+                "path": "reference/loyalty-promotions"
               },
               {
-                "title": "Quickstart",
-                "path": "quickstart",
-                "icon": "zap"
+                "title": "Create a Loyalty Promotion",
+                "path": "reference/create-loyalty-promotion",
+                "openapi": "api-reference/1.-create-unified-promo.yaml POST /v3/promotions",
+                "openapi-mode": "custom",
+                "method": "POST"
               },
               {
-                "title": "Components",
-                "path": "components",
-                "icon": "code"
+                "title": "Update Promotion Status",
+                "path": "reference/submit-promotion-for-approval",
+                "openapi": "api-reference/submit-promotion-for-approval.yaml PUT /v3/requests/PROMOTION/{promotionId}/status",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Review a Loyalty Promotion",
+                "path": "reference/review-loyalty-promotion",
+                "openapi": "api-reference/5.-review-unified-promo.yaml POST /v3/promotions/{promotionId}/review",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Enrol Members to a Loyalty Promotion",
+                "path": "reference/enrol-loyalty-promotion",
+                "openapi": "api-reference/2.-enrol-unified-promo.yaml POST /v3/promotions/enrol",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Update a Loyalty Promotion",
+                "path": "reference/update-loyalty-promotion",
+                "openapi": "api-reference/6.-update-unified-promo.yaml PUT /v3/promotions/{promotion_id}",
+                "openapi-mode": "custom",
+                "method": "PUT"
+              },
+              {
+                "title": "Get Details of Loyalty Promotion using ID",
+                "path": "reference/get-loyalty-promotion-by-id",
+                "openapi": "api-reference/3.-get-unified-promo-with-id.yaml GET /v3/promotions/{promotionId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Details of all Loyalty Promotions",
+                "path": "reference/get-loyalty-promotions",
+                "openapi": "api-reference/4.-get-unified-promo.yaml GET /v3/promotions",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "List Member Promotions",
+                "path": "reference/list-member-promotions",
+                "openapi": "api-reference/list-member-promotions.yaml GET /v3/members/{memberId}/promotions",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Member Promotion Explode Details",
+                "path": "reference/get-member-promotion-explode",
+                "openapi": "api-reference/summary-get-member-promotions-explode.yaml GET /v3/members/{memberId}/promotions/{promotionId}",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Get Customer Promotion Details",
+                "path": "reference/get-customer-promotion-details",
+                "openapi": "api-reference/get-customer-promotion-details-v3.yaml GET /v3/customers/{customerId}/customerPromotionDetails/actionSummary",
+                "openapi-mode": "custom",
+                "method": "GET"
+              },
+              {
+                "title": "Revoke a Loyalty Promotion",
+                "path": "reference/revoke-loyalty-promotion",
+                "openapi": "api-reference/revoke-a-loyalty-promotion.yaml POST /v3/promotions/revoke",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Activate Promotion for Customer",
+                "path": "reference/activate-promotion-for-customer",
+                "openapi": "api-reference/activate-promotion-for-customer.yaml POST /api_gateway/v1/promotions/{promotionId}/activate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
+                "title": "Deactivate Promotion for Customer",
+                "path": "reference/deactivate-promotion-for-customer",
+                "openapi": "api-reference/deactivate-promotion-for-customer.yaml POST /api_gateway/v1/promotions/{promotionId}/deactivate",
+                "openapi-mode": "custom",
+                "method": "POST"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "User Documentation",
+        "groups": [
+          {
+            "group": "Data Fields",
+            "pages": [
+              {
+                "title": "badges-fact-table",
+                "path": "docs/badges-fact-table"
+              },
+              {
+                "title": "coupuns-fact-table",
+                "path": "docs/coupuns-fact-table"
+              },
+              {
+                "title": "hello",
+                "path": "docs/hello"
+              },
+              {
+                "title": "hai",
+                "path": "docs/hai"
+              },
+              {
+                "title": "Home Page",
+                "path": "docs/Home",
+                "show-sidebar": false,
+                "show-toc": false,
+                "show-parent-label": false
               }
             ]
           },
           {
-            "group": "Components",
-            "icon": "layers",
+            "group": "Fact & Dimension Tables",
             "pages": [
               {
-                "title": "Images",
-                "path": "components/images",
-                "icon": "image"
+                "title": "Dimensions Tables",
+                "path": "dimensions-tables"
+              },
+              {
+                "group": "Fact tables",
+                "pages": [
+                  {
+                    "title": "Fact Tables",
+                    "path": "fact-tables"
+                  },
+                  {
+                    "title": "Badges Fact Table",
+                    "path": "docs/badges-fact-table"
+                  },
+                  {
+                    "title": "Bill Line Items Fact Table",
+                    "path": "docs/bill-line-items-fact-table"
+                  },
+                  {
+                    "title": "Call Task Customer Status Fact Table",
+                    "path": "docs/call-task-customer-status-fact-table"
+                  },
+                  {
+                    "title": "Communication Credits Log Fact Table",
+                    "path": "docs/communication-credits-log-fact-table"
+                  },
+                  {
+                    "title": "Contact Info Fact Table",
+                    "path": "docs/contact-info-fact-table"
+                  },
+                  {
+                    "title": "Coupons Fact Table",
+                    "path": "docs/coupons-fact-table"
+                  },
+                  {
+                    "title": "Customer Merge Log Fact Table",
+                    "path": "docs/customer-merge-log-fact-table"
+                  },
+                  {
+                    "title": "Customer Notes Fact Table",
+                    "path": "docs/customer-notes-fact-table"
+                  },
+                  {
+                    "title": "Customer Summary Fact Table",
+                    "path": "docs/customer-summary-members-fact-table"
+                  },
+                  {
+                    "title": "Custom Field Data Fact Table",
+                    "path": "docs/custom-field-data-fact-table"
+                  },
+                  {
+                    "title": "Daily Till Summary Fact Table",
+                    "path": "docs/daily-till-summary-fact-table"
+                  },
+                  {
+                    "title": "Earned Promotions Fact Table",
+                    "path": "docs/earned-promotions-fact"
+                  },
+                  {
+                    "title": "Email Click Stats Fact Table",
+                    "path": "docs/email-click-stats-fact-table"
+                  },
+                  {
+                    "title": "External Partner Program Table",
+                    "path": "docs/external-partner-program-table"
+                  },
+                  {
+                    "title": "Goodwill Requests Fact Table",
+                    "path": "docs/goodwill-requests-fact-table"
+                  },
+                  {
+                    "title": "Invitation Sent Fact Table",
+                    "path": "docs/invitation-sent-fact-table"
+                  },
+                  {
+                    "title": "Issue Tracker Fact Table",
+                    "path": "docs/issue-tracker-fact-table"
+                  },
+                  {
+                    "title": "Issued Promotions Fact Table",
+                    "path": "docs/issued-promotions-fact-table"
+                  },
+                  {
+                    "title": "Journeys Fact Table",
+                    "path": "docs/journeys-fact-table"
+                  },
+                  {
+                    "title": "Milestones Fact Table",
+                    "path": "docs/fact_milestones"
+                  },
+                  {
+                    "title": "Nsadmin Messages Fact Table",
+                    "path": "docs/nsadmin-messages-fact-table"
+                  },
+                  {
+                    "title": "Partner Program Enrollment Fact Table",
+                    "path": "docs/partner-program-enrollment-fact-table"
+                  },
+                  {
+                    "title": "Partner Program Linking Fact Table",
+                    "path": "docs/link"
+                  },
+                  {
+                    "title": "Partner Program Slab History Fact Table",
+                    "path": "docs/partner-program-slab-history-fact-table"
+                  },
+                  {
+                    "title": "Partner Program Slab History Fact Table (Supplementary)",
+                    "path": "docs/partner-program-slab-history-fact-table-1"
+                  },
+                  {
+                    "title": "Payment Details Fact Table",
+                    "path": "docs/payment-details-fact"
+                  },
+                  {
+                    "title": "Points Fact Table",
+                    "path": "docs/points-fact-table"
+                  },
+                  {
+                    "title": "Profile Users Fact Table",
+                    "path": "docs/profile-users-fact-table"
+                  },
+                  {
+                    "title": "Referrals Fact Table",
+                    "path": "docs/referrals-fact-table"
+                  },
+                  {
+                    "title": "Referrers Fact Table",
+                    "path": "docs/referrers-fact-table"
+                  },
+                  {
+                    "title": "Registration Event Fact Table",
+                    "path": "docs/fact_registration-event"
+                  },
+                  {
+                    "title": "Response Info Fact Table",
+                    "path": "docs/response-info-fact-table"
+                  },
+                  {
+                    "title": "Return Bill Line Item Fact Table",
+                    "path": "docs/return-bill-line-item-fact-table"
+                  },
+                  {
+                    "title": "Rewards Fact Table",
+                    "path": "docs/rewards-fact-table"
+                  },
+                  {
+                    "title": "Slab Change Log Fact Table",
+                    "path": "docs/slab-change-log-fact-table"
+                  },
+                  {
+                    "title": "Streaks Fact Table",
+                    "path": "docs/fact_streaks"
+                  },
+                  {
+                    "title": "Supplementary Partner Program Fact Table",
+                    "path": "docs/supplementary-partner-program-fact-table"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Event Schema Payload",
+            "pages": [
+              {
+                "title": "Event Schema Payload",
+                "path": "docs/event-schema-payload"
+              },
+              {
+                "title": "Advanced Request Workflows",
+                "path": "docs/event-schema-advanced-request-workflows",
+                "icon": "activity"
+              },
+              {
+                "title": "Request Updated",
+                "path": "docs/event-schema-request-updated",
+                "icon": "album"
               },
               {
                 "title": "Cards",
-                "path": "components/cards",
-                "icon": "square"
+                "path": "docs/event-schema-cards",
+                "icon": "alarm-clock-check"
               },
               {
-                "title": "Code",
-                "path": "components/code",
-                "icon": "code"
+                "title": "Incentives",
+                "path": "docs/event-schema-incentives"
               },
               {
-                "title": "Callouts",
-                "path": "components/callouts",
-                "icon": "message-square"
+                "title": "Partner Program",
+                "path": "docs/event-schema-partner-program"
               },
               {
-                "title": "Steps",
-                "path": "components/steps",
-                "icon": "list-ordered"
+                "title": "Tier",
+                "path": "docs/event-schema-tier"
               },
               {
-                "title": "Tabs",
-                "path": "components/tabs",
-                "icon": "columns"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Overview",
-            "icon": "file-text",
-            "pages": [
+                "title": "Loyalty and Cart Promotions",
+                "path": "docs/event-schema-loyalty-and-cart-promotions"
+              },
               {
-                "title": "Authentication",
-                "path": "authentication",
-                "icon": "lock"
-              }
-            ]
-          },
-          {
-            "group": "Sample Endpoints",
-            "openapi": "openapi.yaml"
-          }
-        ]
-      },
-      {
-        "tab": "Help Center",
-        "icon": "help-circle",
-        "pages": [
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
-          {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
-            "pages": [
+                "title": "Loyalty",
+                "path": "docs/event-schema-loyalty"
+              },
               {
-                "title": "Documentation Source",
-                "path": "help-center/faq/getting-started"
-              }
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
-            "pages": [
+                "title": "Rewards",
+                "path": "docs/event-schema-rewards"
+              },
               {
-                "title": "Page Missing in Sidebar",
-                "path": "help-center/troubleshooting/install-error"
+                "title": "Customer",
+                "path": "docs/event-schema-customer"
               }
             ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Create Your First Page",
-                "path": "help-center/guides/setup-project"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "icon": "clock",
-        "pages": [
-          {
-            "title": "Changelog",
-            "path": "changelog",
-            "icon": "history"
           }
         ]
       }
     ]
+  },
+  "template": "atlas",
+  "colors": {
+    "light": {
+      "brand": "#1341A9",
+      "heading": "#1a1a1a",
+      "text": "#374151"
+    },
+    "dark": {
+      "brand": "#85a1ff",
+      "heading": "#f2f2f2",
+      "text": "#c1c1c1"
+    }
   }
 }
