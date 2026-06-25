@@ -17,6 +17,9 @@ content-width: wide
   .dai-page-header { display: none !important; }
   .page-title      { display: none !important; }
 
+  /* ─── Hide heading anchor icons ─── */
+  [data-component="Heading"] > div { display: none !important; }
+
   /* ─── Content column padding (wide layout, no sidebar) ─── */
   .dai-article,
   .dai-content-column {
@@ -194,12 +197,21 @@ content-width: wide
   .dark h3#user-documentation + [data-component="Columns"] [data-component="Card"] .dai-card-description {
     color: rgba(255,255,255,0.85) !important;
   }
-  /* User doc cards: title turns brand blue on hover (same as dev doc cards) */
+  /* User doc cards: title turns brand blue on hover */
   h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
     color: #1341A9 !important;
   }
   .dark h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
     color: #85A1FF !important;
+  }
+
+  /* User doc cards: visible hover in dark mode on #121212 bg */
+  h3#user-documentation + [data-component="Columns"] [data-component="Card"] {
+    transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+  }
+  .dark h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.25), 0 12px 32px rgba(0,0,0,0.6) !important;
   }
 
   /* ═══════════════════════════════════════════════════
