@@ -1,9 +1,23 @@
-<style>{`
-  /* ─── Hide platform-injected page title ─── */
-  .dai-page-header { display: none !important; }
-  .page-title { display: none !important; }
+---
+title: Home
+show-sidebar: false
+show-toc: false
+show-page-navigation: false
+show-parent-label: false
+content-width: wide
+---
 
-  /* ─── Global: article padding (intentionally not scoped to .cap-home) ─── */
+<style>{`
+
+  .dai-breadcrumbs {
+  display: none !important;
+}
+
+  /* ─── Hide platform page title ─── */
+  .dai-page-header { display: none !important; }
+  .page-title      { display: none !important; }
+
+  /* ─── Content column padding (wide layout, no sidebar) ─── */
   .dai-article,
   .dai-content-column {
     max-width: 100% !important;
@@ -11,314 +25,263 @@
     padding-right: 100px !important;
   }
 
-  /* ─── Color tokens ─── */
-  .cap-home {
-    --cap-heading:  #434B4F;
-    --cap-subtext:  #747474;
-    --cap-title:    #3B4A61;
-    --cap-content:  #3B4A61;
-    --cap-brand:    #1341A9;
-    --cap-bg05:     #F7F7F7;
-    font-family: 'Roboto', sans-serif;
+  /* ─── Main page heading ─── */
+  .dai-article h2:first-of-type {
+    font-size: 26px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    color: #434B4F !important;
+    margin: 0 0 6px !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    font-family: 'Roboto', sans-serif !important;
   }
-  .dark .cap-home {
-    --cap-heading:  #D1D8DD;
-    --cap-subtext:  #A0A0A0;
-    --cap-title:    #D6E0F0;
-    --cap-content:  #D6E0F0;
-    --cap-brand:    #85A1FF;
-    --cap-bg05:     #1E2530;
-  }
-
-  /* ─── Page heading — dark mode color only; sizing via inline style ─── */
-  .dark .cap-home .cap-h2 {
+  .dark .dai-article h2:first-of-type {
     color: #D1D8DD !important;
   }
 
-  /* ─── Subtitle ─── */
-  .cap-home .cap-sub {
-    color: var(--cap-subtext);
+  /* ─── Subtitle paragraph ─── */
+  .dai-article h2:first-of-type + p {
+    color: #747474 !important;
     font-size: 16px !important;
     font-weight: 400 !important;
     line-height: 1.6 !important;
-    margin: 0;
+    margin: 0 !important;
+    font-family: 'Roboto', sans-serif;
+  }
+  .dark .dai-article h2:first-of-type + p {
+    color: #A0A0A0 !important;
   }
 
-  /* ─── Section labels ─── */
-  .cap-home .cap-section-head {
-    color: var(--cap-brand);
+  /* ─── Section labels (H3) ─── */
+  .dai-article h3 {
+    color: #1341A9 !important;
     font-weight: 600 !important;
     font-size: 16px !important;
     line-height: 1.4 !important;
-    margin: 24px 0 0;
+    margin: 24px 0 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    font-family: 'Roboto', sans-serif !important;
+  }
+  .dark .dai-article h3 {
+    color: #85A1FF !important;
   }
 
-  /* ─── Card grid ─── */
-  .cap-home .cap-docs-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding-bottom: 40px;
-    padding-top: 15px;
-  }
-  .cap-home .cap-docs-grid > div {
-    min-height: 215px;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  .cap-home .cap-docs-grid > div:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.10);
-  }
-  .dark .cap-home .cap-docs-grid > div:hover {
-    box-shadow: 0 4px 12px rgba(255,255,255,0.12);
+  /* ─── Columns grid: spacing to match original ─── */
+  h3#user-documentation + [data-component="Columns"],
+  h3#developer-documentation + [data-component="Columns"] {
+    margin-top: 15px !important;
+    margin-bottom: 40px !important;
+    gap: 20px !important;
   }
 
-  /* ─── Card inner padding ─── */
-  .cap-home .cap-card-body {
-    padding: 20px;
-    height: 100%;
-    box-sizing: border-box;
+  /* ─── All cards: 24px radius, min-height, cursor, transition ─── */
+  [data-component="Card"] {
+    border-radius: 24px !important;
+    min-height: 215px !important;
+    cursor: pointer !important;
+    transition: box-shadow 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  [data-component="Card"]:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.10) !important;
+  }
+  .dark [data-component="Card"]:hover {
+    box-shadow: 0 4px 12px rgba(255,255,255,0.12) !important;
   }
 
-  /* ─── Card icon ─── */
-  .cap-home .cap-card-icon {
-    max-width: 40px;
-    display: block;
-    margin-bottom: 0;
+  /* ─── Icon image wrapper: shrink to icon size, add padding ─── */
+  [data-component="Card"] > div:first-child {
+    width: fit-content !important;
+    padding: 20px 0 0 20px !important;
+    overflow: visible !important;
+  }
+
+  /* ─── Icon image: 40 × 40 px, matching original ─── */
+  .dai-card-image {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    object-fit: contain !important;
+    display: block !important;
+    border-radius: 0 !important;
+    transform: none !important; /* kill the group-hover:scale-105 */
+  }
+
+  /* ─── Card body: tighten top padding to preserve icon→title gap ─── */
+  [data-component="Card"] > div:last-child {
+    padding: 8px 20px 20px 20px !important;
   }
 
   /* ─── Card title ─── */
-  .cap-home .cap-card-title {
-    color: var(--cap-title) !important;
+  [data-component="Card"] .dai-card-title {
+    color: #3B4A61 !important;
     font-weight: 500 !important;
     font-size: 16px !important;
     font-family: 'Roboto', sans-serif !important;
     line-height: 1.4 !important;
-    text-decoration: none !important;
-    border: none !important;
-    border-bottom: none !important;
-    padding-bottom: 0 !important;
-    margin: 8px 0 4px;
+    margin: 0 0 4px !important;
+  }
+  .dark [data-component="Card"] .dai-card-title {
+    color: #D6E0F0 !important;
   }
 
   /* ─── Card description ─── */
-  .cap-home .cap-card-desc {
-    color: var(--cap-content) !important;
+  [data-component="Card"] .dai-card-description {
+    color: #3B4A61 !important;
     font-size: 13px !important;
     font-weight: 400 !important;
     line-height: 1.5 !important;
     margin: 0 !important;
-    text-decoration: none !important;
+  }
+  .dark [data-component="Card"] .dai-card-description {
+    color: #D6E0F0 !important;
   }
 
-  /* ─── Inner link ─── */
-  .cap-home .cap-card-link {
-    text-decoration: none !important;
-    border: none !important;
-    display: block;
-    height: 100%;
+  /* ═══════════════════════════════════════════════════
+     USER DOCUMENTATION — individual card backgrounds
+     Selector: h3#user-documentation + [data-component="Columns"] > a:nth-child(N) [data-component="Card"]
+  ═══════════════════════════════════════════════════ */
+
+  /* Card 1 — Loyalty+ */
+  h3#user-documentation + [data-component="Columns"] > a:nth-child(1) [data-component="Card"] {
+    background: url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/da520d6b-8cb3-4ac3-bdb5-bae859a1.png) center / cover no-repeat !important;
+    border-color: transparent !important;
   }
-  .cap-home .cap-card-link:hover {
-    text-decoration: none !important;
+  .dark h3#user-documentation + [data-component="Columns"] > a:nth-child(1) [data-component="Card"] {
+    background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/da520d6b-8cb3-4ac3-bdb5-bae859a1.png) center / cover no-repeat !important;
   }
 
-  /* ─── Hover affordance: title turns brand blue on gray cards ─── */
-  .cap-home .cap-bg-05 .cap-card-link:hover .cap-card-title {
-    color: var(--cap-brand) !important;
+  /* Card 2 — Engage+ */
+  h3#user-documentation + [data-component="Columns"] > a:nth-child(2) [data-component="Card"] {
+    background: url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/b432aaf5-5d36-4947-9fa3-06b1140b.png) center / cover no-repeat !important;
+    border-color: transparent !important;
+  }
+  .dark h3#user-documentation + [data-component="Columns"] > a:nth-child(2) [data-component="Card"] {
+    background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/b432aaf5-5d36-4947-9fa3-06b1140b.png) center / cover no-repeat !important;
   }
 
-  /* ─── Colored card backgrounds ─── */
-  .cap-home .cap-bg-01 {
-    background: url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/da520d6b-8cb3-4ac3-bdb5-bae859a1.png) center/cover no-repeat;
-    border-radius: 24px;
+  /* Card 3 — Insights+ */
+  h3#user-documentation + [data-component="Columns"] > a:nth-child(3) [data-component="Card"] {
+    background: url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/0f637aee-3e50-4713-9f20-1251f84d.png) center / cover no-repeat !important;
+    border-color: transparent !important;
   }
-  .cap-home .cap-bg-02 {
-    background: url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/b432aaf5-5d36-4947-9fa3-06b1140b.png) center/cover no-repeat;
-    border-radius: 24px;
-  }
-  .cap-home .cap-bg-03 {
-    background: url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/0f637aee-3e50-4713-9f20-1251f84d.png) center/cover no-repeat;
-    border-radius: 24px;
-  }
-  .cap-home .cap-bg-04 {
-    background: url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/b67c4cb9-5cf9-48ff-a2fc-7cf02a50.png) center/cover no-repeat;
-    border-radius: 24px;
+  .dark h3#user-documentation + [data-component="Columns"] > a:nth-child(3) [data-component="Card"] {
+    background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/0f637aee-3e50-4713-9f20-1251f84d.png) center / cover no-repeat !important;
   }
 
-  /* ─── Gray card ─── */
-  .cap-home .cap-bg-05 {
-    background: var(--cap-bg05);
-    border-radius: 24px;
+  /* Card 4 — Capillary Data Platform */
+  h3#user-documentation + [data-component="Columns"] > a:nth-child(4) [data-component="Card"] {
+    background: url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/b67c4cb9-5cf9-48ff-a2fc-7cf02a50.png) center / cover no-repeat !important;
+    border-color: transparent !important;
+  }
+  .dark h3#user-documentation + [data-component="Columns"] > a:nth-child(4) [data-component="Card"] {
+    background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/b67c4cb9-5cf9-48ff-a2fc-7cf02a50.png) center / cover no-repeat !important;
   }
 
-  /* ─── No color change on hover for colored cards ─── */
-  .cap-home .cap-bg-01 .cap-card-link:hover .cap-card-title,
-  .cap-home .cap-bg-02 .cap-card-link:hover .cap-card-title,
-  .cap-home .cap-bg-03 .cap-card-link:hover .cap-card-title,
-  .cap-home .cap-bg-04 .cap-card-link:hover .cap-card-title {
-    color: var(--cap-title) !important;
-  }
-  .cap-home .cap-bg-01 .cap-card-link:hover .cap-card-desc,
-  .cap-home .cap-bg-02 .cap-card-link:hover .cap-card-desc,
-  .cap-home .cap-bg-03 .cap-card-link:hover .cap-card-desc,
-  .cap-home .cap-bg-04 .cap-card-link:hover .cap-card-desc {
-    color: var(--cap-content) !important;
-  }
-
-  /* ─── Dark mode: gradient overlay on colored cards ─── */
-  .dark .cap-home .cap-bg-01 {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/da520d6b-8cb3-4ac3-bdb5-bae859a1.png) center/cover no-repeat;
-  }
-  .dark .cap-home .cap-bg-02 {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/b432aaf5-5d36-4947-9fa3-06b1140b.png) center/cover no-repeat;
-  }
-  .dark .cap-home .cap-bg-03 {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/0f637aee-3e50-4713-9f20-1251f84d.png) center/cover no-repeat;
-  }
-  .dark .cap-home .cap-bg-04 {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/b67c4cb9-5cf9-48ff-a2fc-7cf02a50.png) center/cover no-repeat;
-  }
-  .dark .cap-home .cap-bg-01 .cap-card-title,
-  .dark .cap-home .cap-bg-02 .cap-card-title,
-  .dark .cap-home .cap-bg-03 .cap-card-title,
-  .dark .cap-home .cap-bg-04 .cap-card-title {
+  /* Dark mode text on colored cards */
+  .dark h3#user-documentation + [data-component="Columns"] [data-component="Card"] .dai-card-title {
     color: #ffffff !important;
   }
-  .dark .cap-home .cap-bg-01 .cap-card-desc,
-  .dark .cap-home .cap-bg-02 .cap-card-desc,
-  .dark .cap-home .cap-bg-03 .cap-card-desc,
-  .dark .cap-home .cap-bg-04 .cap-card-desc {
+  .dark h3#user-documentation + [data-component="Columns"] [data-component="Card"] .dai-card-description {
     color: rgba(255,255,255,0.85) !important;
   }
-  .dark .cap-home .cap-bg-01 .cap-card-link:hover .cap-card-title,
-  .dark .cap-home .cap-bg-02 .cap-card-link:hover .cap-card-title,
-  .dark .cap-home .cap-bg-03 .cap-card-link:hover .cap-card-title,
-  .dark .cap-home .cap-bg-04 .cap-card-link:hover .cap-card-title {
+  .dark h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
     color: #ffffff !important;
   }
 
-  /* ─── Tablet: 2 columns ─── */
+  /* Colored cards: title stays the same on hover (no brand-blue shift) */
+  h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
+    color: #3B4A61 !important;
+  }
+
+  /* ═══════════════════════════════════════════════════
+     DEVELOPER DOCUMENTATION — gray background cards
+  ═══════════════════════════════════════════════════ */
+  h3#developer-documentation + [data-component="Columns"] [data-component="Card"] {
+    background: #F7F7F7 !important;
+    border-color: transparent !important;
+  }
+  .dark h3#developer-documentation + [data-component="Columns"] [data-component="Card"] {
+    background: #1E2530 !important;
+  }
+
+  /* Gray cards: title turns brand blue on hover */
+  h3#developer-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
+    color: #1341A9 !important;
+  }
+  .dark h3#developer-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
+    color: #85A1FF !important;
+  }
+
+  /* ─── Tablet ─── */
   @media (max-width: 1200px) {
     .dai-article,
     .dai-content-column {
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
-    .cap-home .cap-docs-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 
-  /* ─── Mobile: 1 column ─── */
+  /* ─── Mobile ─── */
   @media (max-width: 540px) {
     .dai-article,
     .dai-content-column {
       padding-left: 16px !important;
       padding-right: 16px !important;
     }
-    .cap-home .cap-docs-grid {
-      grid-template-columns: 1fr;
-      gap: 12px;
-      padding-bottom: 24px;
+    [data-component="Card"] {
+      min-height: 150px !important;
     }
-    .cap-home .cap-docs-grid > div {
-      min-height: 150px;
+    h3#user-documentation + [data-component="Columns"],
+    h3#developer-documentation + [data-component="Columns"] {
+      margin-bottom: 24px !important;
     }
   }
 `}</style>
 
-<div className="cap-home">
+## Capillary Documentation Hub
 
-<p className="cap-h2" style={{fontSize:'26px',fontWeight:'600',lineHeight:'1.4',color:'#434B4F',margin:'0 0 6px',borderBottom:'none',paddingBottom:'0'}}>Capillary Documentation Hub</p>
+Welcome to your Capillary Documentation Hub. Find guides, API references, and data resources for all Capillary products.
 
-<p className="cap-sub">Welcome to your Capillary Documentation Hub. Find guides, API references, and data resources for all Capillary products.</p>
+### User Documentation
+<Columns cols={4}>
+  <Card title="Loyalty+" href="/loyalty/overview" image="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/bf2b0e73-415b-4ad5-8447-6a017c50.png">
+    Retain customers and repeat sales with personalised loyalty programs
+  </Card>
+  <Card title="Engage+" href="/engage/overview" image="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/a2a58193-0c27-469a-bf81-b457d261.png">
+    Personalise your engagement with omnichannel marketing solutions
+  </Card>
+  <Card title="Insights+" href="/insights/overview" image="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/0b1ca3bf-41e5-4753-ab6a-074657db.png">
+    Get actionable insights with AI-powered customer and retail analytics
+  </Card>
+  <Card title="Capillary Data Platform" href="/data-platform/overview" image="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/1ca3ec67-b996-43cc-bfb3-bb34c44c.png">
+    Connect and manage data seamlessly across multiple sources
+  </Card>
+</Columns>
 
-<div role="heading" aria-level="2" className="cap-section-head">User Documentation</div>
-
-<div className="cap-docs-grid">
-  <div className="cap-bg-01">
-    <div className="cap-card-body">
-      <a className="cap-card-link" href="/loyalty/overview">
-        <img src="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/bf2b0e73-415b-4ad5-8447-6a017c50.png" className="cap-card-icon" alt="" />
-        <h3 className="cap-card-title">Loyalty+</h3>
-        <p className="cap-card-desc">Retain customers and repeat sales with personalised loyalty programs</p>
-      </a>
-    </div>
-  </div>
-  <div className="cap-bg-02">
-    <div className="cap-card-body">
-      <a className="cap-card-link" href="/engage/overview">
-        <img src="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/a2a58193-0c27-469a-bf81-b457d261.png" className="cap-card-icon" alt="" />
-        <h3 className="cap-card-title">Engage+</h3>
-        <p className="cap-card-desc">Personalise your engagement with omnichannel marketing solutions</p>
-      </a>
-    </div>
-  </div>
-  <div className="cap-bg-03">
-    <div className="cap-card-body">
-      <a className="cap-card-link" href="/insights/overview">
-        <img src="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/0b1ca3bf-41e5-4753-ab6a-074657db.png" className="cap-card-icon" alt="" />
-        <h3 className="cap-card-title">Insights+</h3>
-        <p className="cap-card-desc">Get actionable insights with AI-powered customer and retail analytics</p>
-      </a>
-    </div>
-  </div>
-  <div className="cap-bg-04">
-    <div className="cap-card-body">
-      <a className="cap-card-link" href="/data-platform/overview">
-        <img src="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/1ca3ec67-b996-43cc-bfb3-bb34c44c.png" className="cap-card-icon" alt="" />
-        <h3 className="cap-card-title">Capillary Data Platform</h3>
-        <p className="cap-card-desc">Connect and manage data seamlessly across multiple sources</p>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div role="heading" aria-level="2" className="cap-section-head">Developer Documentation</div>
-
-<div className="cap-docs-grid">
-  <div className="cap-bg-05">
-    <div className="cap-card-body">
-      <a className="cap-card-link" href="/docs/fact-dimension-tables">
-        <img src="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/e0afea44-782a-48c4-9286-29decabf.png" className="cap-card-icon" alt="" />
-        <h3 className="cap-card-title">Fact &amp; Dimension Tables</h3>
-        <p className="cap-card-desc">Schema reference for all fact and dimension tables, column definitions, and data relationships</p>
-      </a>
-    </div>
-  </div>
-  <div className="cap-bg-05">
-    <div className="cap-card-body">
-      <a className="cap-card-link" href="/docs/event-schema-payload">
-        <img src="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/a841ee68-9149-43ad-911e-3f7cf6c5.png" className="cap-card-icon" alt="" />
-        <h3 className="cap-card-title">Event Schema &amp; Payload</h3>
-        <p className="cap-card-desc">Event structure, payload formats, and integration patterns for all Capillary events</p>
-      </a>
-    </div>
-  </div>
-  <div className="cap-bg-05">
-    <div className="cap-card-body">
-      <a className="cap-card-link" href="/openapi/v1">
-        <img src="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/0b1ca3bf-41e5-4753-ab6a-074657db.png" className="cap-card-icon" alt="" />
-        <h3 className="cap-card-title">OpenAPI v1 Reference</h3>
-        <p className="cap-card-desc">Complete v1 API specifications with endpoint references, request and response schemas</p>
-      </a>
-    </div>
-  </div>
-  <div className="cap-bg-05">
-    <div className="cap-card-body">
-      <a className="cap-card-link" href="/reference/loyalty-promotions">
-        <img src="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/bf2b0e73-415b-4ad5-8447-6a017c50.png" className="cap-card-icon" alt="" />
-        <h3 className="cap-card-title">Loyalty Promotions API</h3>
-        <p className="cap-card-desc">API reference for loyalty promotions — endpoints, parameters, and response formats</p>
-      </a>
-    </div>
-  </div>
-</div>
-
-</div>
+### Developer Documentation
+<Columns cols={4}>
+  <Card title="Fact & Dimension Tables" href="/docs/fact-dimension-tables" image="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/e0afea44-782a-48c4-9286-29decabf.png">
+    Schema reference for all fact and dimension tables, column definitions, and data relationships
+  </Card>
+  <Card title="Event Schema & Payload" href="/docs/event-schema-payload" image="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/a841ee68-9149-43ad-911e-3f7cf6c5.png">
+    Event structure, payload formats, and integration patterns for all Capillary events
+  </Card>
+  <Card title="OpenAPI v1 Reference" href="/openapi/v1" image="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/0b1ca3bf-41e5-4753-ab6a-074657db.png">
+    Complete v1 API specifications with endpoint references, request and response schemas
+  </Card>
+  <Card title="Loyalty Promotions API" href="/reference/loyalty-promotions" image="https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/bf2b0e73-415b-4ad5-8447-6a017c50.png">
+    API reference for loyalty promotions — endpoints, parameters, and response formats
+  </Card>
+</Columns>
