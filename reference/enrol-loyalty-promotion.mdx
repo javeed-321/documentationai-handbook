@@ -55,7 +55,7 @@ The Enrol Unified Promotions API allows you to directly manage member participat
 
 ## API Quick Reference
 
-<CodeGroup default-tab="1" show-lines="true" tabs={["Enroll reference structure","Opt -in reference structure"]}>
+<CodeGroup show-lines="true" tabs={["Enroll reference structure","Opt -in reference structure"]}>
   ```text "Enroll reference structure"
   {{promotions_enrol}}
      └─ {{EnrollmentRequest}}
@@ -112,41 +112,43 @@ The Enrol Unified Promotions API allows you to directly manage member participat
 
 ## Example response
 
-```json
-{
-    "data": {
-        "requestId": "some-test-id",
-        "action": "ENROL",
-        "customer": {
-            "identifierName": "id",
-            "identifierValue": "388369579",
-            "customerId": 388369579
-        },
-        "enrollmentStatus": {
-            "promotion": {
-                "id": "68c3f64bbd0a8a0aa705c793",
-                "identifier": "enr-58",
-                "programId": 3334,
-                "enrollmentId": "25286",
-                "optinId": "25910"
-            },
-            "milestone": {
-                "status": "SUCCESS",
-                "milestones": [
-                    {
-                        "targetGroupId": 97829,
-                        "targetRuleId": 151359,
-                        "initialBalance": 0
-                    }
-                ]
-            }
-        },
-        "status": "SUCCESS"
-    },
-    "errors": null,
-    "warnings": null
-}
-```
+<CodeGroup default-tab="0" show-lines="true" tabs={["JSON"]}>
+  ```json JSON
+  {
+      "data": {
+          "requestId": "some-test-id",
+          "action": "ENROL",
+          "customer": {
+              "identifierName": "id",
+              "identifierValue": "388369579",
+              "customerId": 388369579
+          },
+          "enrollmentStatus": {
+              "promotion": {
+                  "id": "68c3f64bbd0a8a0aa705c793",
+                  "identifier": "enr-58",
+                  "programId": 3334,
+                  "enrollmentId": "25286",
+                  "optinId": "25910"
+              },
+              "milestone": {
+                  "status": "SUCCESS",
+                  "milestones": [
+                      {
+                          "targetGroupId": 97829,
+                          "targetRuleId": 151359,
+                          "initialBalance": 0
+                      }
+                  ]
+              }
+          },
+          "status": "SUCCESS"
+      },
+      "errors": null,
+      "warnings": null
+  }
+  ```
+</CodeGroup>
 
 ## Response parameters
 

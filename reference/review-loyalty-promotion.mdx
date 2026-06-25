@@ -13,7 +13,7 @@ The Review Unified Promotions API allows you to manage the lifecycle of your cam
 
 ## Example request
 
-<CodeGroup default-tab="0" show-lines="true" tabs={["cURL"]}>
+<CodeGroup show-lines="true" tabs={["cURL"]}>
   ```text cURL
   curl --location 'https://eu.api.capillarytech.com/v3/promotions/[promotionid]/review' \
   --header 'Content-Type: application/json' \
@@ -45,114 +45,116 @@ The Review Unified Promotions API allows you to manage the lifecycle of your cam
 
 ## Example response
 
-```json
-{
-    "data": {
-        "metadata": {
-            "name": "Promogold",
-            "description": "newProm43oTest123",
-            "programId": "2607",
-            "orgId": 51174,
-            "startDate": "2025-10-01T00:00:00+05:30",
-            "endDate": "2025-10-31T23:59:00+05:30",
-            "timezoneName": "Asia/Kolkata",
-            "promotionType": "GENERIC",
-            "status": "COMPLETED",
-            "promoIdentifier": "fdee323d-7a5e33342c0-b438-9892085a0a7c",
-            "promotionId": 1133594588,
-            "createdOn": "2025-11-01T15:03:33+05:30",
-            "lastModifiedOn": "2025-11-01T15:03:59+05:30",
-            "createdBy": 50685521,
-            "lastModifiedBy": 50685521,
-            "loyaltyEarningType": null,
-            "version": null,
-            "draftDetails": null,
-            "loyaltyConfigMetaData": {
-                "isStackable": false,
-                "isConsideredForRanking": false,
-                "isExclusive": false,
-                "isAlwaysApply": false,
-                "skipEarnedDateCheckOnRedeem": null
-            },
-            "promotionMetadata": [],
-            "commonStrategies": null,
-            "promotionMode": "UNIFIED"
-        },
-        "customerEnrolment": {
-            "enrolmentMethod": "TRANSACTION"
-        },
-        "activities": [
-            {
-                "type": "SINGLE",
-                "id": "activity_1761824716197",
-                "name": "Activity 1",
-                "commonCycleActionMapping": [
-                    {
-                        "cycle": "Cycle_1",
-                        "actions": [
-                            {
-                                "id": "4706439",
-                                "actionName": "AWARD_POINTS_ACTION",
-                                "actionClass": "com.capillary.shopbook.pointsengine.endpoint.impl.action.AwardPointsActionImpl",
-                                "description": "Fixed10",
-                                "mandatoryPropertiesValues": {
-                                    "AwardStrategy": "121429",
-                                    "ExpiryStrategy": "109006",
-                                    "PointsRoundingStrategy": "ACTUAL",
-                                    "SourceValueRoundingStrategy": "ACTUAL",
-                                    "DelayStrategy": "AS_DEFINED_IN_ALLOCATION_STRATEGY",
-                                    "EvaluatedEntity": "USER",
-                                    "DelayExtendedFieldName": "",
-                                    "ProRateOnSourceValue": "EVENT_DEFAULT_VALUE",
-                                    "PointType": "Main"
-                                },
-                                "mandatoryComplexPropertiesValues": {}
-                            }
-                        ],
-                        "startDate": "2025-10-01",
-                        "endDate": "2025-10-31",
-                        "rulesetId": "1514933"
-                    }
-                ],
-                "event": "TransactionAdd",
-                "expJSON": "{\n  \"arity\": \"literal\",\n  \"type\": \"boolean:primitive\",\n  \"value\": \"true\"\n}",
-                "cycles": [],
-                "milestones": [],
-                "allCycles": []
-            }
-        ],
-        "comments": "dsd",
-        "parentId": null,
-        "parentDetails": null,
-        "version": 1,
-        "limits": [],
-        "liabilityOwnerSplitInfo": [],
-        "id": "69034fe43d40cd1e08fb66d8",
-        "workflowMetadata": {
-            "enrolment": {
-                "basedOn": null,
-                "activities": null,
-                "audienceMapping": null,
-                "restrictions": null
-            },
-            "optin": {
-                "basedOn": null,
-                "audienceMapping": null,
-                "activities": null,
-                "restrictions": null
-            }
-        },
-        "communicationApprovalStatus": {
-            "success": true,
-            "message": "No communications to approve",
-            "response": null,
-            "statusCode": 200
-        }
-    },
-    "errors": null,
-    "warnings": null
-}
-```
+<CodeGroup default-tab="0" show-lines="true" tabs={["JSON"]}>
+  ```text JSON
+  {
+      "data": {
+          "metadata": {
+              "name": "Promogold",
+              "description": "newProm43oTest123",
+              "programId": "2607",
+              "orgId": 51174,
+              "startDate": "2025-10-01T00:00:00+05:30",
+              "endDate": "2025-10-31T23:59:00+05:30",
+              "timezoneName": "Asia/Kolkata",
+              "promotionType": "GENERIC",
+              "status": "COMPLETED",
+              "promoIdentifier": "fdee323d-7a5e33342c0-b438-9892085a0a7c",
+              "promotionId": 1133594588,
+              "createdOn": "2025-11-01T15:03:33+05:30",
+              "lastModifiedOn": "2025-11-01T15:03:59+05:30",
+              "createdBy": 50685521,
+              "lastModifiedBy": 50685521,
+              "loyaltyEarningType": null,
+              "version": null,
+              "draftDetails": null,
+              "loyaltyConfigMetaData": {
+                  "isStackable": false,
+                  "isConsideredForRanking": false,
+                  "isExclusive": false,
+                  "isAlwaysApply": false,
+                  "skipEarnedDateCheckOnRedeem": null
+              },
+              "promotionMetadata": [],
+              "commonStrategies": null,
+              "promotionMode": "UNIFIED"
+          },
+          "customerEnrolment": {
+              "enrolmentMethod": "TRANSACTION"
+          },
+          "activities": [
+              {
+                  "type": "SINGLE",
+                  "id": "activity_1761824716197",
+                  "name": "Activity 1",
+                  "commonCycleActionMapping": [
+                      {
+                          "cycle": "Cycle_1",
+                          "actions": [
+                              {
+                                  "id": "4706439",
+                                  "actionName": "AWARD_POINTS_ACTION",
+                                  "actionClass": "com.capillary.shopbook.pointsengine.endpoint.impl.action.AwardPointsActionImpl",
+                                  "description": "Fixed10",
+                                  "mandatoryPropertiesValues": {
+                                      "AwardStrategy": "121429",
+                                      "ExpiryStrategy": "109006",
+                                      "PointsRoundingStrategy": "ACTUAL",
+                                      "SourceValueRoundingStrategy": "ACTUAL",
+                                      "DelayStrategy": "AS_DEFINED_IN_ALLOCATION_STRATEGY",
+                                      "EvaluatedEntity": "USER",
+                                      "DelayExtendedFieldName": "",
+                                      "ProRateOnSourceValue": "EVENT_DEFAULT_VALUE",
+                                      "PointType": "Main"
+                                  },
+                                  "mandatoryComplexPropertiesValues": {}
+                              }
+                          ],
+                          "startDate": "2025-10-01",
+                          "endDate": "2025-10-31",
+                          "rulesetId": "1514933"
+                      }
+                  ],
+                  "event": "TransactionAdd",
+                  "expJSON": "{\n  \"arity\": \"literal\",\n  \"type\": \"boolean:primitive\",\n  \"value\": \"true\"\n}",
+                  "cycles": [],
+                  "milestones": [],
+                  "allCycles": []
+              }
+          ],
+          "comments": "dsd",
+          "parentId": null,
+          "parentDetails": null,
+          "version": 1,
+          "limits": [],
+          "liabilityOwnerSplitInfo": [],
+          "id": "69034fe43d40cd1e08fb66d8",
+          "workflowMetadata": {
+              "enrolment": {
+                  "basedOn": null,
+                  "activities": null,
+                  "audienceMapping": null,
+                  "restrictions": null
+              },
+              "optin": {
+                  "basedOn": null,
+                  "audienceMapping": null,
+                  "activities": null,
+                  "restrictions": null
+              }
+          },
+          "communicationApprovalStatus": {
+              "success": true,
+              "message": "No communications to approve",
+              "response": null,
+              "statusCode": 200
+          }
+      },
+      "errors": null,
+      "warnings": null
+  }
+  ```
+</CodeGroup>
 
 ## Response parameters
 
