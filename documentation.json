@@ -113,10 +113,6 @@
             "group": "Data Fields",
             "pages": [
               {
-                "title": "badges-fact-table",
-                "path": "docs/badges-fact-table"
-              },
-              {
                 "title": "coupuns-fact-table",
                 "path": "docs/coupuns-fact-table"
               },
