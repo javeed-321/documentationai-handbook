@@ -3,14 +3,14 @@ info:
   title: Unclaim badge
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/badges/badgeMeta/{badgeId}/unclaim:
+  "/api_gateway/v1/badges/badgeMeta/{badgeId}/unclaim":
     post:
       summary: Unclaim badge
       description: ''
@@ -90,7 +90,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

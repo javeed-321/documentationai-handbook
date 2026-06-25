@@ -3,14 +3,14 @@ info:
   title: Get Lock unlock -Pending carts (Cart Promotion)
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /v1/promotions/customer/{customerId}/evaluations/pending_carts:
+  "/v1/promotions/customer/{customerId}/evaluations/pending_carts":
     get:
       summary: Get Lock unlock -Pending carts (Cart Promotion)
       description: This API evaluates and returns the details of the carts which are
@@ -113,20 +113,16 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
       deprecated: false
       x-readme:
         code-samples:
-        - code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/v1/promotions/customer/566881933/evaluations/pending_carts''
-            \
-
-            --header ''Authorization: Basic Z2VvcmdlLmRvY2RlbW86NjVhWY5MGY1NTY5NDk1YmNkNzUxYmJiY2U=''
-            \
-
-            --header ''Cookie: _cfuvid=OgMlxpnYcUTaLvDRPsarD3khviE1Jl3t9uS8-1764069327097-0.0.1.1-604800000'''
+        - code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/v1/promotions/customer/566881933/evaluations/pending_carts'\
+            \ \\\n--header 'Authorization: Basic Z2VvcmdlLmRvY2RlbW86NjVhWY5MGY1NTY5NDk1YmNkNzUxYmJiY2U='\
+            \ \\\n--header 'Cookie: _cfuvid=OgMlxpnYcUTaLvDRPsarD3khviE1Jl3t9uS8-1764069327097-0.0.1.1-604800000'"
           language: shell
           name: ''
         samples-languages:

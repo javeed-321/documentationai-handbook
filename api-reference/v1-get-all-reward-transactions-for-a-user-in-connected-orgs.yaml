@@ -3,7 +3,7 @@ info:
   title: Get all reward transactions for a user in connected orgs
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -25,9 +25,9 @@ paths:
           type: string
       - name: page
         in: query
-        description: 'Retrieve information for a specific page. Set the page value
-          to 0 to disable pagination. Example: page=2&size=10 retrieves 10 results
-          from page 2.'
+        description: "Retrieve information for a specific page. Set the page value\
+          \ to 0 to disable pagination. Example: page=2&size=10 retrieves 10 results\
+          \ from page 2."
         schema:
           type: integer
           format: int32
@@ -50,23 +50,23 @@ paths:
           type: boolean
       - name: redemptionType
         in: query
-        description: 'Retrieves rewards based on their redemption type. Reward redemption
-          is when a customer uses their points/ cash to redeem a reward. Supported
-          values: GAMES, AUCTION, CART_PROMOTION, CASH_WALLET, VENDOR_ONLY_REWARD,
-          VOUCHER, CASH_BACK, INTOUCH_REWARD, PHYSICAL_REWARD, CHARITY, MILES, GIFT_CARD,
-          SWEEPSTAKES, VENDOR_INTOUCH_REWARD, CARD_DISC. Use comma separated values
-          to retrieve reward details for multiple redemption types. Example: INTOUCH_REWARD,
-          MILES The values are case sensitive. This parameter fetches both, failed
-          and successful reward issue transactions. To filter successful transactions
-          for a specific redemption type, set status=true.'
+        description: "Retrieves rewards based on their redemption type. Reward redemption\
+          \ is when a customer uses their points/ cash to redeem a reward. Supported\
+          \ values: GAMES, AUCTION, CART_PROMOTION, CASH_WALLET, VENDOR_ONLY_REWARD,\
+          \ VOUCHER, CASH_BACK, INTOUCH_REWARD, PHYSICAL_REWARD, CHARITY, MILES, GIFT_CARD,\
+          \ SWEEPSTAKES, VENDOR_INTOUCH_REWARD, CARD_DISC. Use comma separated values\
+          \ to retrieve reward details for multiple redemption types. Example: INTOUCH_REWARD,\
+          \ MILES The values are case sensitive. This parameter fetches both, failed\
+          \ and successful reward issue transactions. To filter successful transactions\
+          \ for a specific redemption type, set status=true."
         schema:
           type: string
           enum:
           - ''
       - name: ownerType
         in: query
-        description: 'Module for which the reward was created. Supported values: Loyalty
-          program, Milestones, Campaigns, Journeys, Goodwill.'
+        description: "Module for which the reward was created. Supported values: Loyalty\
+          \ program, Milestones, Campaigns, Journeys, Goodwill."
         schema:
           type: string
           enum:
@@ -88,10 +88,10 @@ paths:
           type: string
       - name: DATA-SCOPE
         in: header
-        description: 'Scopes define what data can be accessed using the API. You can
-          use scopes to control access to data from a parent or child organization.
-          Defining a scope ensures that the response contains only data from the respective
-          organization.  Supported headers: `SELF`, `OTHER` and `ALL`.'
+        description: "Scopes define what data can be accessed using the API. You can\
+          \ use scopes to control access to data from a parent or child organization.\
+          \ Defining a scope ensures that the response contains only data from the\
+          \ respective organization.  Supported headers: `SELF`, `OTHER` and `ALL`."
         schema:
           type: string
       responses:
@@ -101,18 +101,101 @@ paths:
             application/json:
               examples:
                 Sample response with redemptionType filter:
-                  value: '{"status":{"success":true,"code":200,"message":"Reward issue
-                    transactions fetched successfully"},"rewardIssueTransactions":[{"rewardTransactionId":"321583","rewardIssueRefId":"transactionNumber","rewardTransactionDate":1736755804000,"status":{"success":false,"code":8004,"message":"fail
-                    to issue reward as  points are not redeemable"},"rewardDetails":{"rewardId":299166,"languageCode":"en","name":"PointsRewardTest","description":"test","termNConditionsId":null,"termNConditionsUrl":null,"imageId":null,"imageUrl":null,"thumbnailId":null,"thumbnailUrl":null,"enabled":true,"groups":[],"rewardRank":null},"ownerType":null,"ownerId":"","pointsRedemptionRefIds":null,"fulfillmentStatus":null,"orgId":100737,"redemptionType":"INTOUCH_REWARD"},{"rewardTransactionId":"321532","rewardIssueRefId":"transactionNumber","rewardTransactionDate":1736750647000,"status":{"success":true,"code":200,"message":"Reward
-                    issued successfully"},"rewardDetails":{"rewardId":297001,"languageCode":"en","name":"
-                    INTOUCH Enabled","description":"Description","termNConditionsId":"EXDR12987R","termNConditionsUrl":null,"imageId":"EXDR12987U","imageUrl":null,"thumbnailId":"EXDR12987T","thumbnailUrl":null,"enabled":true,"groups":[],"rewardRank":null},"ownerType":null,"ownerId":"","pointsRedemptionRefIds":null,"fulfillmentStatus":null,"orgId":100737,"redemptionType":"PHYSICAL_REWARD"},{"rewardTransactionId":"321531","rewardIssueRefId":"transactionNumber","rewardTransactionDate":1736750220000,"status":{"success":false,"code":8004,"message":"fail
-                    to issue reward as  Coupon Series ID is invalid"},"rewardDetails":{"rewardId":299141,"languageCode":"en","name":"Testreward2","description":"test","termNConditionsId":null,"termNConditionsUrl":null,"imageId":null,"imageUrl":null,"thumbnailId":null,"thumbnailUrl":null,"enabled":true,"groups":[],"rewardRank":null},"ownerType":null,"ownerId":"","pointsRedemptionRefIds":null,"fulfillmentStatus":null,"orgId":100737,"redemptionType":"INTOUCH_REWARD"},{"rewardTransactionId":"321530","rewardIssueRefId":"transactionNumber","rewardTransactionDate":1736750106000,"status":{"success":false,"code":8004,"message":"fail
-                    to issue reward as  Coupon Series ID is invalid"},"rewardDetails":{"rewardId":299141,"languageCode":"en","name":"Testreward2","description":"test","termNConditionsId":null,"termNConditionsUrl":null,"imageId":null,"imageUrl":null,"thumbnailId":null,"thumbnailUrl":null,"enabled":true,"groups":[],"rewardRank":null},"ownerType":null,"ownerId":"","pointsRedemptionRefIds":null,"fulfillmentStatus":null,"orgId":100737,"redemptionType":"INTOUCH_REWARD"},{"rewardTransactionId":"321529","rewardIssueRefId":"transactionNumber","rewardTransactionDate":1736750105000,"status":{"success":false,"code":8004,"message":"fail
-                    to issue reward as  Coupon Series ID is invalid"},"rewardDetails":{"rewardId":299141,"languageCode":"en","name":"Testreward2","description":"test","termNConditionsId":null,"termNConditionsUrl":null,"imageId":null,"imageUrl":null,"thumbnailId":null,"thumbnailUrl":null,"enabled":true,"groups":[],"rewardRank":null},"ownerType":null,"ownerId":"","pointsRedemptionRefIds":null,"fulfillmentStatus":null,"orgId":100737,"redemptionType":"INTOUCH_REWARD"},{"rewardTransactionId":"321528","rewardIssueRefId":"transactionNumber","rewardTransactionDate":1736750084000,"status":{"success":false,"code":8004,"message":"fail
-                    to issue reward as  Coupon Series ID is invalid"},"rewardDetails":{"rewardId":299141,"languageCode":"en","name":"Testreward2","description":"test","termNConditionsId":null,"termNConditionsUrl":null,"imageId":null,"imageUrl":null,"thumbnailId":null,"thumbnailUrl":null,"enabled":true,"groups":[],"rewardRank":null},"ownerType":null,"ownerId":"","pointsRedemptionRefIds":null,"fulfillmentStatus":null,"orgId":100737,"redemptionType":"INTOUCH_REWARD"},{"rewardTransactionId":"321527","rewardIssueRefId":"transactionNumber","rewardTransactionDate":1736750040000,"status":{"success":false,"code":8004,"message":"fail
-                    to issue reward as  Coupon Series ID is invalid"},"rewardDetails":{"rewardId":299141,"languageCode":"en","name":"Testreward2","description":"test","termNConditionsId":null,"termNConditionsUrl":null,"imageId":null,"imageUrl":null,"thumbnailId":null,"thumbnailUrl":null,"enabled":true,"groups":[],"rewardRank":null},"ownerType":null,"ownerId":"","pointsRedemptionRefIds":null,"fulfillmentStatus":null,"orgId":100737,"redemptionType":"INTOUCH_REWARD"},{"rewardTransactionId":"321526","rewardIssueRefId":"transactionNumber","rewardTransactionDate":1736749995000,"status":{"success":false,"code":8004,"message":"fail
-                    to issue reward as  Coupon Series ID is invalid"},"rewardDetails":{"rewardId":299141,"languageCode":"en","name":"Testreward2","description":"test","termNConditionsId":null,"termNConditionsUrl":null,"imageId":null,"imageUrl":null,"thumbnailId":null,"thumbnailUrl":null,"enabled":true,"groups":[],"rewardRank":null},"ownerType":null,"ownerId":"","pointsRedemptionRefIds":null,"fulfillmentStatus":null,"orgId":100737,"redemptionType":"INTOUCH_REWARD"},{"rewardTransactionId":"321524","rewardIssueRefId":"transactionNumber","rewardTransactionDate":1736748983000,"status":{"success":false,"code":8004,"message":"fail
-                    to issue reward as  Coupon Series ID is invalid"},"rewardDetails":{"rewardId":299141,"languageCode":"en","name":"Testreward2","description":"test","termNConditionsId":null,"termNConditionsUrl":null,"imageId":null,"imageUrl":null,"thumbnailId":null,"thumbnailUrl":null,"enabled":true,"groups":[],"rewardRank":null},"ownerType":null,"ownerId":"","pointsRedemptionRefIds":null,"fulfillmentStatus":null,"orgId":100737,"redemptionType":"INTOUCH_REWARD"}],"pagingDto":{"last":true,"totalElements":9,"totalPages":1,"numberOfElements":9,"first":true,"size":10,"number":0}}'
+                  value: "{\"status\":{\"success\":true,\"code\":200,\"message\":\"\
+                    Reward issue transactions fetched successfully\"},\"rewardIssueTransactions\"\
+                    :[{\"rewardTransactionId\":\"321583\",\"rewardIssueRefId\":\"\
+                    transactionNumber\",\"rewardTransactionDate\":1736755804000,\"\
+                    status\":{\"success\":false,\"code\":8004,\"message\":\"fail to\
+                    \ issue reward as  points are not redeemable\"},\"rewardDetails\"\
+                    :{\"rewardId\":299166,\"languageCode\":\"en\",\"name\":\"PointsRewardTest\"\
+                    ,\"description\":\"test\",\"termNConditionsId\":null,\"termNConditionsUrl\"\
+                    :null,\"imageId\":null,\"imageUrl\":null,\"thumbnailId\":null,\"\
+                    thumbnailUrl\":null,\"enabled\":true,\"groups\":[],\"rewardRank\"\
+                    :null},\"ownerType\":null,\"ownerId\":\"\",\"pointsRedemptionRefIds\"\
+                    :null,\"fulfillmentStatus\":null,\"orgId\":100737,\"redemptionType\"\
+                    :\"INTOUCH_REWARD\"},{\"rewardTransactionId\":\"321532\",\"rewardIssueRefId\"\
+                    :\"transactionNumber\",\"rewardTransactionDate\":1736750647000,\"\
+                    status\":{\"success\":true,\"code\":200,\"message\":\"Reward issued\
+                    \ successfully\"},\"rewardDetails\":{\"rewardId\":297001,\"languageCode\"\
+                    :\"en\",\"name\":\" INTOUCH Enabled\",\"description\":\"Description\"\
+                    ,\"termNConditionsId\":\"EXDR12987R\",\"termNConditionsUrl\":null,\"\
+                    imageId\":\"EXDR12987U\",\"imageUrl\":null,\"thumbnailId\":\"\
+                    EXDR12987T\",\"thumbnailUrl\":null,\"enabled\":true,\"groups\"\
+                    :[],\"rewardRank\":null},\"ownerType\":null,\"ownerId\":\"\",\"\
+                    pointsRedemptionRefIds\":null,\"fulfillmentStatus\":null,\"orgId\"\
+                    :100737,\"redemptionType\":\"PHYSICAL_REWARD\"},{\"rewardTransactionId\"\
+                    :\"321531\",\"rewardIssueRefId\":\"transactionNumber\",\"rewardTransactionDate\"\
+                    :1736750220000,\"status\":{\"success\":false,\"code\":8004,\"\
+                    message\":\"fail to issue reward as  Coupon Series ID is invalid\"\
+                    },\"rewardDetails\":{\"rewardId\":299141,\"languageCode\":\"en\"\
+                    ,\"name\":\"Testreward2\",\"description\":\"test\",\"termNConditionsId\"\
+                    :null,\"termNConditionsUrl\":null,\"imageId\":null,\"imageUrl\"\
+                    :null,\"thumbnailId\":null,\"thumbnailUrl\":null,\"enabled\":true,\"\
+                    groups\":[],\"rewardRank\":null},\"ownerType\":null,\"ownerId\"\
+                    :\"\",\"pointsRedemptionRefIds\":null,\"fulfillmentStatus\":null,\"\
+                    orgId\":100737,\"redemptionType\":\"INTOUCH_REWARD\"},{\"rewardTransactionId\"\
+                    :\"321530\",\"rewardIssueRefId\":\"transactionNumber\",\"rewardTransactionDate\"\
+                    :1736750106000,\"status\":{\"success\":false,\"code\":8004,\"\
+                    message\":\"fail to issue reward as  Coupon Series ID is invalid\"\
+                    },\"rewardDetails\":{\"rewardId\":299141,\"languageCode\":\"en\"\
+                    ,\"name\":\"Testreward2\",\"description\":\"test\",\"termNConditionsId\"\
+                    :null,\"termNConditionsUrl\":null,\"imageId\":null,\"imageUrl\"\
+                    :null,\"thumbnailId\":null,\"thumbnailUrl\":null,\"enabled\":true,\"\
+                    groups\":[],\"rewardRank\":null},\"ownerType\":null,\"ownerId\"\
+                    :\"\",\"pointsRedemptionRefIds\":null,\"fulfillmentStatus\":null,\"\
+                    orgId\":100737,\"redemptionType\":\"INTOUCH_REWARD\"},{\"rewardTransactionId\"\
+                    :\"321529\",\"rewardIssueRefId\":\"transactionNumber\",\"rewardTransactionDate\"\
+                    :1736750105000,\"status\":{\"success\":false,\"code\":8004,\"\
+                    message\":\"fail to issue reward as  Coupon Series ID is invalid\"\
+                    },\"rewardDetails\":{\"rewardId\":299141,\"languageCode\":\"en\"\
+                    ,\"name\":\"Testreward2\",\"description\":\"test\",\"termNConditionsId\"\
+                    :null,\"termNConditionsUrl\":null,\"imageId\":null,\"imageUrl\"\
+                    :null,\"thumbnailId\":null,\"thumbnailUrl\":null,\"enabled\":true,\"\
+                    groups\":[],\"rewardRank\":null},\"ownerType\":null,\"ownerId\"\
+                    :\"\",\"pointsRedemptionRefIds\":null,\"fulfillmentStatus\":null,\"\
+                    orgId\":100737,\"redemptionType\":\"INTOUCH_REWARD\"},{\"rewardTransactionId\"\
+                    :\"321528\",\"rewardIssueRefId\":\"transactionNumber\",\"rewardTransactionDate\"\
+                    :1736750084000,\"status\":{\"success\":false,\"code\":8004,\"\
+                    message\":\"fail to issue reward as  Coupon Series ID is invalid\"\
+                    },\"rewardDetails\":{\"rewardId\":299141,\"languageCode\":\"en\"\
+                    ,\"name\":\"Testreward2\",\"description\":\"test\",\"termNConditionsId\"\
+                    :null,\"termNConditionsUrl\":null,\"imageId\":null,\"imageUrl\"\
+                    :null,\"thumbnailId\":null,\"thumbnailUrl\":null,\"enabled\":true,\"\
+                    groups\":[],\"rewardRank\":null},\"ownerType\":null,\"ownerId\"\
+                    :\"\",\"pointsRedemptionRefIds\":null,\"fulfillmentStatus\":null,\"\
+                    orgId\":100737,\"redemptionType\":\"INTOUCH_REWARD\"},{\"rewardTransactionId\"\
+                    :\"321527\",\"rewardIssueRefId\":\"transactionNumber\",\"rewardTransactionDate\"\
+                    :1736750040000,\"status\":{\"success\":false,\"code\":8004,\"\
+                    message\":\"fail to issue reward as  Coupon Series ID is invalid\"\
+                    },\"rewardDetails\":{\"rewardId\":299141,\"languageCode\":\"en\"\
+                    ,\"name\":\"Testreward2\",\"description\":\"test\",\"termNConditionsId\"\
+                    :null,\"termNConditionsUrl\":null,\"imageId\":null,\"imageUrl\"\
+                    :null,\"thumbnailId\":null,\"thumbnailUrl\":null,\"enabled\":true,\"\
+                    groups\":[],\"rewardRank\":null},\"ownerType\":null,\"ownerId\"\
+                    :\"\",\"pointsRedemptionRefIds\":null,\"fulfillmentStatus\":null,\"\
+                    orgId\":100737,\"redemptionType\":\"INTOUCH_REWARD\"},{\"rewardTransactionId\"\
+                    :\"321526\",\"rewardIssueRefId\":\"transactionNumber\",\"rewardTransactionDate\"\
+                    :1736749995000,\"status\":{\"success\":false,\"code\":8004,\"\
+                    message\":\"fail to issue reward as  Coupon Series ID is invalid\"\
+                    },\"rewardDetails\":{\"rewardId\":299141,\"languageCode\":\"en\"\
+                    ,\"name\":\"Testreward2\",\"description\":\"test\",\"termNConditionsId\"\
+                    :null,\"termNConditionsUrl\":null,\"imageId\":null,\"imageUrl\"\
+                    :null,\"thumbnailId\":null,\"thumbnailUrl\":null,\"enabled\":true,\"\
+                    groups\":[],\"rewardRank\":null},\"ownerType\":null,\"ownerId\"\
+                    :\"\",\"pointsRedemptionRefIds\":null,\"fulfillmentStatus\":null,\"\
+                    orgId\":100737,\"redemptionType\":\"INTOUCH_REWARD\"},{\"rewardTransactionId\"\
+                    :\"321524\",\"rewardIssueRefId\":\"transactionNumber\",\"rewardTransactionDate\"\
+                    :1736748983000,\"status\":{\"success\":false,\"code\":8004,\"\
+                    message\":\"fail to issue reward as  Coupon Series ID is invalid\"\
+                    },\"rewardDetails\":{\"rewardId\":299141,\"languageCode\":\"en\"\
+                    ,\"name\":\"Testreward2\",\"description\":\"test\",\"termNConditionsId\"\
+                    :null,\"termNConditionsUrl\":null,\"imageId\":null,\"imageUrl\"\
+                    :null,\"thumbnailId\":null,\"thumbnailUrl\":null,\"enabled\":true,\"\
+                    groups\":[],\"rewardRank\":null},\"ownerType\":null,\"ownerId\"\
+                    :\"\",\"pointsRedemptionRefIds\":null,\"fulfillmentStatus\":null,\"\
+                    orgId\":100737,\"redemptionType\":\"INTOUCH_REWARD\"}],\"pagingDto\"\
+                    :{\"last\":true,\"totalElements\":9,\"totalPages\":1,\"numberOfElements\"\
+                    :9,\"first\":true,\"size\":10,\"number\":0}}"
               schema:
                 type: object
                 properties:
@@ -2250,7 +2333,7 @@ paths:
                                 default: 0
                               message:
                                 type: string
-                                example: redemption id passed doesn't exist
+                                example: "redemption id passed doesn't exist"
                           rewardDetails:
                             type: object
                             properties:
@@ -2301,10 +2384,10 @@ paths:
                             example: CART_PROMOTION
                           eventDateTime:
                             type: string
-                            example: '2025-04-01T06:48:13Z'
+                            example: "2025-04-01T06:48:13Z"
                           issueDateTime:
                             type: string
-                            example: '2025-04-01T06:48:13Z'
+                            example: "2025-04-01T06:48:13Z"
                           vendorId: {}
                     pagingDto:
                       type: object
@@ -2423,10 +2506,10 @@ paths:
                             example: VOUCHER
                           eventDateTime:
                             type: string
-                            example: '2025-03-27T13:38:11Z'
+                            example: "2025-03-27T13:38:11Z"
                           issueDateTime:
                             type: string
-                            example: '2025-05-08T14:28:45Z'
+                            example: "2025-05-08T14:28:45Z"
                           vendorId: {}
                     pagingDto:
                       type: object
@@ -2465,8 +2548,8 @@ paths:
             application/json:
               examples:
                 Without customerId:
-                  value: '{"status":{"success":false,"code":400,"message":"must not
-                    be null"}}'
+                  value: "{\"status\":{\"success\":false,\"code\":400,\"message\"\
+                    :\"must not be null\"}}"
               schema:
                 type: object
                 properties:
@@ -2488,29 +2571,16 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1.1/reward-transactions?customerId=564488660&redemptionType=INTOUCH_REWARD%2C%20PHYSICAL_REWARD''
-            \
-
-            --header ''Authorization: Basic cHJhY2hpOWYzOGEwMTQ3ZjRlMg=='' \
-
-            --header ''DATA-SCOPE: ALL'' \
-
-            --header ''Cookie: QvV29JJCxWj5IdoxxGgak-1737534364314-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1.1/reward-transactions?customerId=564488660&redemptionType=INTOUCH_REWARD%2C%20PHYSICAL_REWARD'\
+            \ \\\n--header 'Authorization: Basic cHJhY2hpOWYzOGEwMTQ3ZjRlMg==' \\\n\
+            --header 'DATA-SCOPE: ALL' \\\n--header 'Cookie: QvV29JJCxWj5IdoxxGgak-1737534364314-0.0.1.1-604800000'"
           name: Sample request
         - language: curl
-          code: 'curl --location ''https://devenv-crm.cc.capillarytech.com/api_gateway/rewards/core/v1.1/reward-transactions?customerId=423789294&size=10&page=0&rewardId=38774''
-            \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''DATA-SCOPE: ALL'' \
-
-            --header ''Authorization: Basic YXV0b3N0b3JlMS50aWxsMS0xNjgwMTY5MjIxOjIwMmNiOTYyYWM1OTA3NWI5NjRiMDcxNTJkMjM0Yjcw''
-            \
-
-            --data '''''
+          code: "curl --location 'https://devenv-crm.cc.capillarytech.com/api_gateway/rewards/core/v1.1/reward-transactions?customerId=423789294&size=10&page=0&rewardId=38774'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--header 'DATA-SCOPE: ALL' \\\n--header 'Authorization:\
+            \ Basic YXV0b3N0b3JlMS50aWxsMS0xNjgwMTY5MjIxOjIwMmNiOTYyYWM1OTA3NWI5NjRiMDcxNTJkMjM0Yjcw'\
+            \ \\\n--data ''"
           name: With rewardId
         samples-languages:
         - curl

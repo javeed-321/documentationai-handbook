@@ -3,14 +3,14 @@ info:
   title: Get all brand rewards using Brand ID
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/reward/list/brand/{BrandID}:
+  "/api_gateway/rewards/core/v1/reward/list/brand/{BrandID}":
     get:
       summary: Get all brand rewards using Brand ID
       description: ''
@@ -182,16 +182,16 @@ paths:
                             example: New year tes
                           startTime:
                             type: string
-                            example: '2025-04-02 10:20:10'
+                            example: "2025-04-02 10:20:10"
                           startDateTime:
                             type: string
-                            example: '2025-04-02T10:20:10Z'
+                            example: "2025-04-02T10:20:10Z"
                           endTime:
                             type: string
-                            example: '2025-04-02 10:25:10'
+                            example: "2025-04-02 10:25:10"
                           endDateTime:
                             type: string
-                            example: '2025-04-02T10:25:10Z'
+                            example: "2025-04-02T10:25:10Z"
                           type:
                             type: string
                             example: VOUCHER
@@ -265,7 +265,7 @@ paths:
                             default: 0
                           lastUpdatedOnDateTime:
                             type: string
-                            example: '2025-04-03T08:03:00Z'
+                            example: "2025-04-03T08:03:00Z"
                           lastUpdatedBy:
                             type: integer
                             example: 75106389
@@ -335,10 +335,10 @@ paths:
                             example: name_first
                           startTime:
                             type: string
-                            example: '2024-11-01 03:53:01'
+                            example: "2024-11-01 03:53:01"
                           endTime:
                             type: string
-                            example: '2027-01-15 07:26:45'
+                            example: "2027-01-15 07:26:45"
                           type:
                             type: string
                             example: VOUCHER
@@ -453,7 +453,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -461,13 +461,9 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/list/brand/1?page=0&size=20''
-            \
-
-            --header ''Authorization: Basic aWFtc2hpdmFhbms6NDAblahblahkNWI1YTI5MWY=''
-            \
-
-            --header ''Cookie: _cfuvid=QbjsRhi.Ql7ZC6uSBP98acGYFfR9hGAQv4cQ2w34JpU-1727244469000-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/list/brand/1?page=0&size=20'\
+            \ \\\n--header 'Authorization: Basic aWFtc2hpdmFhbms6NDAblahblahkNWI1YTI5MWY='\
+            \ \\\n--header 'Cookie: _cfuvid=QbjsRhi.Ql7ZC6uSBP98acGYFfR9hGAQv4cQ2w34JpU-1727244469000-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

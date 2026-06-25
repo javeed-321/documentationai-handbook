@@ -3,7 +3,7 @@ info:
   title: Create search criteria
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -22,7 +22,23 @@ paths:
             application/json:
               examples:
                 Search criteria created:
-                  value: '{"data":{"id":"67c091299e22382d75d405bc","orgId":100737,"name":"TransactionSearch3","searchStrategyType":"COMBINATION","entityType":"TRANSACTION","fieldDefinitions":[{"fieldId":"billNumber","fieldAlias":"billNumber","fieldType":"INDEXED","dataSourceDetails":{"fieldReference":"billNumber"},"dataType":"STRING"}],"dataFieldDefinitions":[{"fieldId":"billNumber","fieldAlias":"billNumber","fieldType":"DATA","dataSourceDetails":{"fieldReference":"billNumber"},"dataType":"STRING"},{"fieldId":"billDate","fieldAlias":"billDate","fieldType":"DATA","dataSourceDetails":{"fieldReference":"billDate"},"dataType":"DATE"}],"searchDataPolicy":{"dataRetentionPolicy":{"unit":"DAYS","value":10},"expireDataFrom":"CREATE"},"criteriaStatus":{"status":"VERIFICATION_IN_PROGRESS"},"bulkJobStatus":"OPEN","auditInfo":{"createdOn":"2025-02-27T16:22:01.911+00:00","createdBy":75155282,"lastUpdatedOn":"2025-02-27T16:22:01.911+00:00","lastUpdatedBy":75155282}},"errors":[]}'
+                  value: "{\"data\":{\"id\":\"67c091299e22382d75d405bc\",\"orgId\"\
+                    :100737,\"name\":\"TransactionSearch3\",\"searchStrategyType\"\
+                    :\"COMBINATION\",\"entityType\":\"TRANSACTION\",\"fieldDefinitions\"\
+                    :[{\"fieldId\":\"billNumber\",\"fieldAlias\":\"billNumber\",\"\
+                    fieldType\":\"INDEXED\",\"dataSourceDetails\":{\"fieldReference\"\
+                    :\"billNumber\"},\"dataType\":\"STRING\"}],\"dataFieldDefinitions\"\
+                    :[{\"fieldId\":\"billNumber\",\"fieldAlias\":\"billNumber\",\"\
+                    fieldType\":\"DATA\",\"dataSourceDetails\":{\"fieldReference\"\
+                    :\"billNumber\"},\"dataType\":\"STRING\"},{\"fieldId\":\"billDate\"\
+                    ,\"fieldAlias\":\"billDate\",\"fieldType\":\"DATA\",\"dataSourceDetails\"\
+                    :{\"fieldReference\":\"billDate\"},\"dataType\":\"DATE\"}],\"\
+                    searchDataPolicy\":{\"dataRetentionPolicy\":{\"unit\":\"DAYS\"\
+                    ,\"value\":10},\"expireDataFrom\":\"CREATE\"},\"criteriaStatus\"\
+                    :{\"status\":\"VERIFICATION_IN_PROGRESS\"},\"bulkJobStatus\":\"\
+                    OPEN\",\"auditInfo\":{\"createdOn\":\"2025-02-27T16:22:01.911+00:00\"\
+                    ,\"createdBy\":75155282,\"lastUpdatedOn\":\"2025-02-27T16:22:01.911+00:00\"\
+                    ,\"lastUpdatedBy\":75155282}},\"errors\":[]}"
               schema:
                 type: object
                 properties:
@@ -121,14 +137,14 @@ paths:
                         properties:
                           createdOn:
                             type: string
-                            example: '2025-02-27T16:22:01.911+00:00'
+                            example: "2025-02-27T16:22:01.911+00:00"
                           createdBy:
                             type: integer
                             example: 75155282
                             default: 0
                           lastUpdatedOn:
                             type: string
-                            example: '2025-02-27T16:22:01.911+00:00'
+                            example: "2025-02-27T16:22:01.911+00:00"
                           lastUpdatedBy:
                             type: integer
                             example: 75155282
@@ -141,7 +157,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

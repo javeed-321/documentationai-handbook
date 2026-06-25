@@ -3,14 +3,14 @@ info:
   title: Cancel Cart Evaluation - Cart Promotion
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /v1/promotions/customer/{customerId}/evaluation/{evaluationId}/cancel:
+  "/v1/promotions/customer/{customerId}/evaluation/{evaluationId}/cancel":
     put:
       summary: Cancel Cart Evaluation - Cart Promotion
       description: This API is used to cancel pending carts where a promotion is locked.
@@ -86,22 +86,12 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location --request PUT ''https://eu.api.capillarytech.com/api_gateway/v1/promotions/customer/565039518/evaluations/67e3dd673919452f135e2f23/cancel?format=json''
-            \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''accept: application/json'' \
-
-            --header ''Authorization: Basic UHJlcmYV9zaW5naDoyZmFhZmZjNjY5ZDRjMTc5Y2NlMzNhYzc5OTBjMTQ1Ng==''
-            \
-
-            --header ''Cookie: CS=2c807081dddb4e7ca19263eea37c6836; _cfuvid=vOR_5OPEjCb_tkeMx.ChSLrA0y5Twfkp2vPk7fEHVxc-1738753364650-0.0.1.1-604800000;
-            _cfuvid=zP7.7RFADYbKBhOOOXaxjPMpBmiYK5v1mxmI_5t6N1g-1742997587555-0.0.1.1-604800000''
-
-            '
+          code: "curl --location --request PUT 'https://eu.api.capillarytech.com/api_gateway/v1/promotions/customer/565039518/evaluations/67e3dd673919452f135e2f23/cancel?format=json'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--header 'accept: application/json' \\\n--header\
+            \ 'Authorization: Basic UHJlcmYV9zaW5naDoyZmFhZmZjNjY5ZDRjMTc5Y2NlMzNhYzc5OTBjMTQ1Ng=='\
+            \ \\\n--header 'Cookie: CS=2c807081dddb4e7ca19263eea37c6836; _cfuvid=vOR_5OPEjCb_tkeMx.ChSLrA0y5Twfkp2vPk7fEHVxc-1738753364650-0.0.1.1-604800000;\
+            \ _cfuvid=zP7.7RFADYbKBhOOOXaxjPMpBmiYK5v1mxmI_5t6N1g-1742997587555-0.0.1.1-604800000'\n"
         samples-languages:
         - curl
 components:

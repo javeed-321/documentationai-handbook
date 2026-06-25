@@ -3,14 +3,14 @@ info:
   title: Get Reward Category
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/metadata/categories/brand/{brandId}:
+  "/api_gateway/rewards/core/v1/metadata/categories/brand/{brandId}":
     get:
       summary: Get Reward Category
       description: Get reward categories for a particluar brand.
@@ -167,31 +167,21 @@ paths:
                           lastUpdatedBy: {}
                           createdOnDateTime:
                             type: string
-                            example: '2025-01-02T11:12:57Z'
+                            example: "2025-01-02T11:12:57Z"
                           lastUpdatedOnDateTime:
                             type: string
-                            example: '2025-01-02T11:12:57Z'
+                            example: "2025-01-02T11:12:57Z"
       deprecated: false
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/metadata/categories/brand/55''
-            \
-
-            --header ''Accept: */*'' \
-
-            --header ''Authorization: Basic Ymxpc3MZTJmNGRjNzU5MWI1NzY='''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/metadata/categories/brand/55'\
+            \ \\\n--header 'Accept: */*' \\\n--header 'Authorization: Basic Ymxpc3MZTJmNGRjNzU5MWI1NzY='"
           name: Sample Request
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/metadata/categories/brand/55?orderBy=ASC&sortBy=lastUpdatedOn''
-            \
-
-            --header ''Accept: */*'' \
-
-            --header ''Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg=''
-            \
-
-            --header ''Cookie: _cfuvid=fUmBd935rmGsApqf1rYLG1M2QWI_fYSTy7P0wHTVZIs-1747377050702-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/metadata/categories/brand/55?orderBy=ASC&sortBy=lastUpdatedOn'\
+            \ \\\n--header 'Accept: */*' \\\n--header 'Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg='\
+            \ \\\n--header 'Cookie: _cfuvid=fUmBd935rmGsApqf1rYLG1M2QWI_fYSTy7P0wHTVZIs-1747377050702-0.0.1.1-604800000'"
           name: With sortBy=lastUpdatedOn
         samples-languages:
         - curl

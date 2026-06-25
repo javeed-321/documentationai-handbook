@@ -3,7 +3,7 @@ info:
   title: Get audit logs of entities
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -34,7 +34,7 @@ paths:
           format: int64
       - name: limit
         in: query
-        description: 'The number of results you wish to retrieve. Default value: 10.'
+        description: "The number of results you wish to retrieve. Default value: 10."
         schema:
           type: integer
           format: int32
@@ -48,15 +48,15 @@ paths:
           default: 0
       - name: sortBy
         in: query
-        description: 'The field by which results should be sorted. Default value:
-          autoUpdateTime.'
+        description: "The field by which results should be sorted. Default value:\
+          \ autoUpdateTime."
         schema:
           type: string
           default: autoUpdateTime
       - name: sortOrder
         in: query
-        description: 'The order in which results should be sorted. Supported values:
-          ASC, DESC.'
+        description: "The order in which results should be sorted. Supported values:\
+          \ ASC, DESC."
         schema:
           type: string
           enum:
@@ -64,13 +64,13 @@ paths:
           - DESC
       - name: startDate
         in: query
-        description: 'The start date of the date range. Example: 2022-08-18 16:00:00.'
+        description: "The start date of the date range. Example: 2022-08-18 16:00:00."
         schema:
           type: string
           format: date
       - name: endDate
         in: query
-        description: 'The end date of the date range. Example: 2022-08-18 16:00:00.'
+        description: "The end date of the date range. Example: 2022-08-18 16:00:00."
         schema:
           type: string
           format: date
@@ -328,7 +328,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -336,14 +336,10 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/v2/audits?entityType=CUSTOMER&entityId=98662653&source=INSTORE''
-            \
-
-            --header ''Authorization: Basic bmVlc3RvcmV0aWxsc3blahblah5784393485TkwNzViOTY0YjA3MTUyZDIzNGI3MA==''
-            \
-
-            --header ''Cookie: _cfuvid=G4EZ7m3VgBPYcMd9fhihHyQmvFmV74lEv6ViPSik2eI-1721025986040-0.0.1.1-604800000;
-            _cfuvid=uMR4BVLIZQrSJ32SAvIJO5lJbORqEZo7MeYVpiOnbRI-1721287584295-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/v2/audits?entityType=CUSTOMER&entityId=98662653&source=INSTORE'\
+            \ \\\n--header 'Authorization: Basic bmVlc3RvcmV0aWxsc3blahblah5784393485TkwNzViOTY0YjA3MTUyZDIzNGI3MA=='\
+            \ \\\n--header 'Cookie: _cfuvid=G4EZ7m3VgBPYcMd9fhihHyQmvFmV74lEv6ViPSik2eI-1721025986040-0.0.1.1-604800000;\
+            \ _cfuvid=uMR4BVLIZQrSJ32SAvIJO5lJbORqEZo7MeYVpiOnbRI-1721287584295-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

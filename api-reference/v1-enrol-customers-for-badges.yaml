@@ -3,7 +3,7 @@ info:
   title: Enrol customers for badges
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -36,9 +36,9 @@ paths:
                   properties: {}
                 issueEventDate:
                   type: string
-                  description: The date on which customer was enrolled in the badge.
-                    Issue event date has to be between the badge start date and end
-                    date. Timestamp in the ISO 8601 standard format format YYYY-MM-DDTHH:MM:SS.SSSZ.
+                  description: "The date on which customer was enrolled in the badge.\
+                    \ Issue event date has to be between the badge start date and\
+                    \ end date. Timestamp in the ISO 8601 standard format format YYYY-MM-DDTHH:MM:SS.SSSZ."
                   format: date-time
       responses:
         '200':
@@ -54,7 +54,7 @@ paths:
                         ownerType: Rewards_Catalog
                         referenceId: '123'
                       expiresOn: 1926235957
-                      expiresOnISO: '2031-01-15T09:32:37Z'
+                      expiresOnISO: "2031-01-15T09:32:37Z"
                       issuedBadges:
                       - customerId: 566135941
                         issuedId: 69807865eba595729385eb1c
@@ -71,7 +71,7 @@ paths:
                         ownerType: Rewards_Catalog
                         referenceId: '123'
                       expiresOn: 1926235957
-                      expiresOnISO: '2031-01-15T09:32:37Z'
+                      expiresOnISO: "2031-01-15T09:32:37Z"
                       issuedBadges:
                       - customerId: 566135941
                         issuedId: 69807969eba595729385eb28

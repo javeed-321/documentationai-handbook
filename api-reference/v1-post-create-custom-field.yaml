@@ -3,7 +3,7 @@ info:
   title: Create custom field for reward
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -79,7 +79,7 @@ paths:
                   scope: REWARD
                   defaultValue: null
                   dataType: STRING
-              'scope : Catalogue Promotion':
+              "scope : Catalogue Promotion":
                 value:
                   orgId: 100458
                   name: Order confirmed
@@ -89,7 +89,7 @@ paths:
                   scope: CATALOGUE_PROMOTION
                   defaultValue: null
                   dataType: STRING
-              'scope: Issue Reward':
+              "scope: Issue Reward":
                 value:
                   orgId: 100458
                   name: Order confirmed
@@ -105,7 +105,7 @@ paths:
           content:
             application/json:
               examples:
-                'Scope: REWARD':
+                "Scope: REWARD":
                   value: "{\n    \"id\": 18833,\n    \"orgId\": 100737,\n    \"name\"\
                     : \"CustomField1\",\n    \"description\": \"CustomField1\",\n\
                     \    \"isMandatory\": false,\n    \"isActive\": true,\n    \"\
@@ -115,7 +115,7 @@ paths:
                     ,\n    \"lastUpdatedBy\": 75152721,\n    \"lastUpdatedOn\": 1741934782959,\n\
                     \    \"enumValues\": null,\n    \"lastUpdatedOnDateTime\": \"\
                     2025-03-14T06:46:22Z\"\n}"
-                'Scope: CATALOGUE_PROMOTION':
+                "Scope: CATALOGUE_PROMOTION":
                   value: "{\n    \"id\": 6913,\n    \"orgId\": 100458,\n    \"name\"\
                     : \"Order confirmed\",\n    \"description\": \"Reward is processing\"\
                     ,\n    \"isMandatory\": false,\n    \"isActive\": true,\n    \"\
@@ -123,14 +123,14 @@ paths:
                     \    \"dataType\": \"STRING\",\n    \"createdBy\": 75130850,\n\
                     \    \"createdOn\": null,\n    \"lastUpdatedBy\": 75130850,\n\
                     \    \"lastUpdatedOn\": null\n}"
-                'Scope: ISSUE_REWARD':
+                "Scope: ISSUE_REWARD":
                   value: "{\n    \"id\": 210,\n    \"orgId\": 100458,\n    \"name\"\
                     : \"CF1A112\",\n    \"description\": \"CF1A112\",\n    \"isMandatory\"\
                     : false,\n    \"isActive\": true,\n    \"scope\": \"ISSUE_REWARD\"\
                     ,\n    \"defaultValue\": null,\n    \"dataType\": \"STRING\",\n\
                     \    \"createdBy\": 75086856,\n    \"createdOn\": null,\n    \"\
                     lastUpdatedBy\": 75086856,\n    \"lastUpdatedOn\": null\n}"
-                'dataType: ENUM':
+                "dataType: ENUM":
                   value: "{\n    \"orgId\": 100458,\n    \"name\": \"CustomField\"\
                     ,\n    \"description\": \"\",\n    \"isMandatory\": false,\n \
                     \   \"isActive\": false,\n    \"defaultValue\": \"PRIMARY\",\n\
@@ -158,7 +158,7 @@ paths:
                     lastUpdatedOnDateTime: null
               schema:
                 oneOf:
-                - title: 'Scope: REWARD'
+                - title: "Scope: REWARD"
                   type: object
                   properties:
                     id:
@@ -200,7 +200,7 @@ paths:
                       default: 0
                     createdOnDateTime:
                       type: string
-                      example: '2025-03-14T06:46:22Z'
+                      example: "2025-03-14T06:46:22Z"
                     lastUpdatedBy:
                       type: integer
                       example: 75152721
@@ -212,8 +212,8 @@ paths:
                     enumValues: {}
                     lastUpdatedOnDateTime:
                       type: string
-                      example: '2025-03-14T06:46:22Z'
-                - title: 'Scope: CATALOGUE_PROMOTION'
+                      example: "2025-03-14T06:46:22Z"
+                - title: "Scope: CATALOGUE_PROMOTION"
                   type: object
                   properties:
                     id:
@@ -255,7 +255,7 @@ paths:
                       example: 75130850
                       default: 0
                     lastUpdatedOn: {}
-                - title: 'Scope: ISSUE_REWARD'
+                - title: "Scope: ISSUE_REWARD"
                   type: object
                   properties:
                     id:
@@ -297,7 +297,7 @@ paths:
                       example: 75086856
                       default: 0
                     lastUpdatedOn: {}
-                - title: 'dataType: ENUM'
+                - title: "dataType: ENUM"
                   type: object
                   properties:
                     orgId:
@@ -414,8 +414,8 @@ paths:
                           default: 0
                         message:
                           type: string
-                          example: 'Invalid characters in enum value. Allowed characters:
-                            [a-z,A-Z,0-9,[]()-_ ]'
+                          example: "Invalid characters in enum value. Allowed characters:\
+                            \ [a-z,A-Z,0-9,[]()-_ ]"
                 - title: No ENUM provided
                   type: object
                   properties:
@@ -432,7 +432,7 @@ paths:
                           default: 0
                         message:
                           type: string
-                          example: ENUM's list size is out of limit
+                          example: "ENUM's list size is out of limit"
                 - title: ENUM character limit exceeded
                   type: object
                   properties:

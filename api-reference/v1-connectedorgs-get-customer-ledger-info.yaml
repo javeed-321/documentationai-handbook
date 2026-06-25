@@ -3,7 +3,7 @@ info:
   title: Get Points Ledger Information in Connected Orgs
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -18,10 +18,10 @@ paths:
       parameters:
       - name: identifierName
         in: query
-        description: 'Identifier type to identify the customer or group. For user
-          groups, the following identifiers are applicable: groupId, externalId, and
-          primaryUserId. For customers, the applicable identifiers include mobile,
-          email, externalId, cuid, and id.'
+        description: "Identifier type to identify the customer or group. For user\
+          \ groups, the following identifiers are applicable: groupId, externalId,\
+          \ and primaryUserId. For customers, the applicable identifiers include mobile,\
+          \ email, externalId, cuid, and id."
         required: true
         schema:
           type: string
@@ -73,14 +73,14 @@ paths:
           format: int32
       - name: startDate
         in: query
-        description: Get ledger information from on or after a specific date. Pass
-          the start date in YYYY-MM-DDThh:mm:ss format. Default value is 90 days
+        description: "Get ledger information from on or after a specific date. Pass\
+          \ the start date in YYYY-MM-DDThh:mm:ss format. Default value is 90 days"
         schema:
           type: string
       - name: endDate
         in: query
-        description: Get ledger information until a specific date. Pass the end date
-          in YYYY-MM-DDThh:mm:ss format. Default value is 90 days
+        description: "Get ledger information until a specific date. Pass the end date\
+          \ in YYYY-MM-DDThh:mm:ss format. Default value is 90 days"
         schema:
           type: string
       - name: includeTillConceptEvents
@@ -325,7 +325,7 @@ paths:
                           default: 0
                         ledgerCreatedDate:
                           type: string
-                          example: Fri Aug 30 11:17:57 GMT 2024
+                          example: "Fri Aug 30 11:17:57 GMT 2024"
                         customerDetails:
                           type: object
                           properties:
@@ -369,7 +369,7 @@ paths:
                               example: '1725016677'
                             date:
                               type: string
-                              example: '2024-08-30 11:17:57.0'
+                              example: "2024-08-30 11:17:57.0"
                             amount:
                               type: integer
                               example: 5000
@@ -438,12 +438,9 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://host/v2.1/pointsLedger/getCustomerLedgerInfo?identifierName=mobile&identifierValue=9988221100&source=INSTORE''
-            \
-
-            --header ''DATA-SCOPE: OTHER'' \
-
-            --header ''DATA-SCOPE-ORG: 50405'' \'
+          code: "curl --location 'https://host/v2.1/pointsLedger/getCustomerLedgerInfo?identifierName=mobile&identifierValue=9988221100&source=INSTORE'\
+            \ \\\n--header 'DATA-SCOPE: OTHER' \\\n--header 'DATA-SCOPE-ORG: 50405'\
+            \ \\"
         samples-languages:
         - curl
 components:

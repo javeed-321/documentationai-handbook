@@ -3,7 +3,7 @@ info:
   title: Merge User Rewards
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -121,7 +121,7 @@ paths:
                           default: 0
                         message:
                           type: string
-                          example: toUserId can't be null.,fromUserId can't be null.
+                          example: "toUserId can't be null.,fromUserId can't be null."
                 - title: requestId not provided
                   type: object
                   properties:
@@ -138,7 +138,7 @@ paths:
                           default: 0
                         message:
                           type: string
-                          example: requestId can't be null.
+                          example: "requestId can't be null."
       deprecated: false
 components:
   securitySchemes:

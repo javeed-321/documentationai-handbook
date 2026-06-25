@@ -1,18 +1,18 @@
 openapi: 3.1.0
 info:
-  title: 'Add Promotion : don''t make it public'
+  title: "Add Promotion : don't make it public"
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/loyalty/v1/programs/{programId}/promotions/add/{promotion_type}:
+  "/api_gateway/loyalty/v1/programs/{programId}/promotions/add/{promotion_type}":
     post:
-      summary: 'Add Promotion : don''t make it public'
+      summary: "Add Promotion : don't make it public"
       description: Lets you create a promotion for a specific loyalty program.
       operationId: add-promotion
       parameters:
@@ -77,13 +77,13 @@ paths:
                   format: int32
                 startDate:
                   type: string
-                  description: Validity of the promotion. Pass the date range in `startDate`
-                    and `endDate` (ISO standard - `yyyy-mm-ddThh:mm:ss.s+z`).
+                  description: "Validity of the promotion. Pass the date range in\
+                    \ `startDate` and `endDate` (ISO standard - `yyyy-mm-ddThh:mm:ss.s+z`)."
                   format: date
                 endDate:
                   type: string
-                  description: Validity of the promotion. Pass the ISO date range
-                    in `startDate` and `endDate` (ISO standard - `yyyy-mm-ddThh:mm:ss.s+z`).
+                  description: "Validity of the promotion. Pass the ISO date range\
+                    \ in `startDate` and `endDate` (ISO standard - `yyyy-mm-ddThh:mm:ss.s+z`)."
                   format: date
                 allocatePointsOn:
                   type: string
@@ -144,9 +144,9 @@ paths:
                   format: int32
                 contextID:
                   type: integer
-                  description: Unique ID of the promotion. Refer to the documentation
-                    on [promotion IDs](https://docs.capillarytech.com/reference/get-promotion-by-id)
-                    for more information.
+                  description: "Unique ID of the promotion. Refer to the documentation\
+                    \ on [promotion IDs](https://docs.capillarytech.com/reference/get-promotion-by-id)\
+                    \ for more information."
                   format: int32
                 orgID:
                   type: integer
@@ -216,8 +216,8 @@ paths:
                   description: Name of the action
                 --mandatoryPropertiesValues:
                   type: string
-                  description: 'As a set of key pair values  eg:   "key": "ProRateOnSourceValue",
-                    "value": "EVENT_DEFAULT_VALUE"'
+                  description: "As a set of key pair values  eg:   \"key\": \"ProRateOnSourceValue\"\
+                    , \"value\": \"EVENT_DEFAULT_VALUE\""
       responses:
         '200':
           description: '200'
@@ -322,10 +322,10 @@ paths:
                           default: 0
                         startDate:
                           type: string
-                          example: '2024-11-27T00:00:00.856Z'
+                          example: "2024-11-27T00:00:00.856Z"
                         endDate:
                           type: string
-                          example: '2024-12-27T23:59:59.856Z'
+                          example: "2024-12-27T23:59:59.856Z"
                         identifier:
                           type: string
                           example: promotion_nov27th

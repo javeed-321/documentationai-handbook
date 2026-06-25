@@ -3,7 +3,7 @@ info:
   title: Create custom field for badges
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -35,7 +35,7 @@ paths:
                   description: The default value of the custom field.
                 dataType:
                   type: string
-                  description: The data type of the custom field's value.
+                  description: "The data type of the custom field's value."
                   enum:
                   - INTEGER
                   - BOOLEAN
@@ -65,10 +65,10 @@ paths:
                       isActive: true
                       dataType: STRING
                       createdOn: 1774248392.63756
-                      createdOnISO: '2026-03-23T06:46:32Z'
+                      createdOnISO: "2026-03-23T06:46:32Z"
                       createdBy: 75197372
                       lastUpdatedOn: 1774248392.63756
-                      lastUpdatedOnISO: '2026-03-23T06:46:32Z'
+                      lastUpdatedOnISO: "2026-03-23T06:46:32Z"
                       lastUpdatedBy: 75197372
                     errors: []
                     warnings: []
@@ -129,7 +129,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

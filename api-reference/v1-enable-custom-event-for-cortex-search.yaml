@@ -3,7 +3,7 @@ info:
   title: Enable or Update Custom Event Tranformation
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -37,9 +37,9 @@ paths:
                       transformEndpoint: /transform/transaction/custom
                       active: true
                       auditInfo:
-                        createdOn: '2025-04-23T06:59:56.411+00:00'
+                        createdOn: "2025-04-23T06:59:56.411+00:00"
                         createdBy: 75155282
-                        lastUpdatedOn: '2025-04-23T07:06:33.947+00:00'
+                        lastUpdatedOn: "2025-04-23T07:06:33.947+00:00"
                         lastUpdatedBy: 75155282
                     errors: []
         '400':
@@ -48,7 +48,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

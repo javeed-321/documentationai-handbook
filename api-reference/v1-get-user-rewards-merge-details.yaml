@@ -3,7 +3,7 @@ info:
   title: Get User Reward Merge Details
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -143,15 +143,10 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/user-merge?fromUserId=100&toUserId=null&page=1&size=5''
-            \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''Authorization: Basic YXV0b3N0YWM1OTA3NWI5NbruhjRiMDcxNTJkMjM0Yjcw''
-            \
-
-            --header ''Cookie: _cfuvid=uaERq9xlkg3etKQty4bclbq216ZQ4fmsGKEGNKW9xJI-1739870550295-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/user-merge?fromUserId=100&toUserId=null&page=1&size=5'\
+            \ \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization:\
+            \ Basic YXV0b3N0YWM1OTA3NWI5NbruhjRiMDcxNTJkMjM0Yjcw' \\\n--header 'Cookie:\
+            \ _cfuvid=uaERq9xlkg3etKQty4bclbq216ZQ4fmsGKEGNKW9xJI-1739870550295-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

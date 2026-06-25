@@ -3,7 +3,7 @@ info:
   title: Create a Vendor
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -111,8 +111,8 @@ paths:
                       lastUpdatedBy: 75197372
                       createdOn: 1764149511000
                       lastUpdatedOn: 1764149511000
-                      createdOnDateTime: '2025-11-26T09:31:51Z'
-                      lastUpdatedOnDateTime: '2025-11-26T09:31:51Z'
+                      createdOnDateTime: "2025-11-26T09:31:51Z"
+                      lastUpdatedOnDateTime: "2025-11-26T09:31:51Z"
                       rank: 6
                       code: uatVendor21
                       description: 6 Vendor for UAT
@@ -120,13 +120,13 @@ paths:
                       - name: imageName001
                         altText: null
                         id: null
-                        url: https://picsum.photos/seed/picsum/200/300
+                        url: "https://picsum.photos/seed/picsum/200/300"
                         isExternal: true
                       videos:
                       - name: videoName001
                         altText: null
                         id: null
-                        url: https://www.pexels.com/download/video/5538262/
+                        url: "https://www.pexels.com/download/video/5538262/"
                         isExternal: true
                       encryptionRequired: false
                   summary: 'Sample response '
@@ -202,10 +202,10 @@ paths:
                           default: 0
                         createdOnDateTime:
                           type: string
-                          example: '2025-06-12T06:01:51Z'
+                          example: "2025-06-12T06:01:51Z"
                         lastUpdatedOnDateTime:
                           type: string
-                          example: '2025-06-12T06:01:51Z'
+                          example: "2025-06-12T06:01:51Z"
                         rank: {}
                         code:
                           type: string
@@ -286,9 +286,9 @@ paths:
                           default: 0
                         message:
                           type: string
-                          example: 'Cannot deserialize value of type com.capillary.solutions.rewards.domain.Type
-                            from String "REWARD": value not one of declared Enum instance
-                            names: [POINTS, REWARDS]'
+                          example: "Cannot deserialize value of type com.capillary.solutions.rewards.domain.Type\
+                            \ from String \"REWARD\": value not one of declared Enum\
+                            \ instance names: [POINTS, REWARDS]"
                 - title: Rank value is 0
                   type: object
                   properties:

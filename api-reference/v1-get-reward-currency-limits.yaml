@@ -3,14 +3,14 @@ info:
   title: Get Reward Currency Limits
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/loyalty/v1/programs/{programId}/cappings:
+  "/api_gateway/loyalty/v1/programs/{programId}/cappings":
     get:
       summary: Get Reward Currency Limits
       description: ''
@@ -233,10 +233,10 @@ paths:
                                         properties:
                                           createdOn:
                                             type: string
-                                            example: 2025-04-04T00:00:00.000+0000
+                                            example: "2025-04-04T00:00:00.000+0000"
                                           lastUpdatedOn:
                                             type: string
-                                            example: 2025-04-04T00:00:00.000+0000
+                                            example: "2025-04-04T00:00:00.000+0000"
                                 targets:
                                   type: array
                                   items:
@@ -309,10 +309,10 @@ paths:
                                   default: 0
                                 targetCycleStartDate:
                                   type: string
-                                  example: 2025-02-01T00:00:00.000+0000
+                                  example: "2025-02-01T00:00:00.000+0000"
                                 targetCycleEndDate:
                                   type: string
-                                  example: 2025-04-28T00:00:00.000+0000
+                                  example: "2025-04-28T00:00:00.000+0000"
                                 frequencyType:
                                   type: string
                                   example: CUSTOM
@@ -394,47 +394,40 @@ paths:
                   properties:
                     error:
                       type: string
-                      example: 'Invalid limit: less than 1 is not allowed'
+                      example: "Invalid limit: less than 1 is not allowed"
                 - title: offset value provided is negative or invalid
                   type: object
                   properties:
                     error:
                       type: string
-                      example: 'Invalid offset: Must be 0 or greater'
+                      example: "Invalid offset: Must be 0 or greater"
                 - title: entity value provided is invalid
                   type: object
                   properties:
                     error:
                       type: string
-                      example: 'Invalid entity value: XZ'
+                      example: "Invalid entity value: XZ"
                 - title: cappingEntity value provided is invalid
                   type: object
                   properties:
                     error:
                       type: string
-                      example: 'Invalid cappingEntity value: XYZ'
+                      example: "Invalid cappingEntity value: XYZ"
                 - title: scopevalue provided is invalid
                   type: object
                   properties:
                     error:
                       type: string
-                      example: 'Invalid scope value: XYZ'
+                      example: "Invalid scope value: XYZ"
       deprecated: false
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''http://eu.api.capillarytech.com/api_gateway/loyalty/v1/programs/973/cappings?sortBy=desc&skip=0&limit=1''
-            \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Authorization: Basic bmFtYW5fZG9jMWJmM5OGM5ZmM2YjZlY2I2MmEy''
-            \
-
-            --header ''Cookie: _cfuvid=.IB5iiDWhIzd8FVm0jCIsaXd5y7tmMiRb03tbNu3Fv0-1744020716241-0.0.1.1-604800000''
-            \'
+          code: "curl --location 'http://eu.api.capillarytech.com/api_gateway/loyalty/v1/programs/973/cappings?sortBy=desc&skip=0&limit=1'\
+            \ \\\n--header 'Content-Type: application/json' \\\n--header 'Accept:\
+            \ application/json' \\\n--header 'Authorization: Basic bmFtYW5fZG9jMWJmM5OGM5ZmM2YjZlY2I2MmEy'\
+            \ \\\n--header 'Cookie: _cfuvid=.IB5iiDWhIzd8FVm0jCIsaXd5y7tmMiRb03tbNu3Fv0-1744020716241-0.0.1.1-604800000'\
+            \ \\"
         samples-languages:
         - curl
 components:

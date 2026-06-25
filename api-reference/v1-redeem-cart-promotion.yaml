@@ -3,18 +3,18 @@ info:
   title: Redeem Cart Promotion
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/promotions/redemptions#:
+  "/api_gateway/v1/promotions/redemptions#":
     post:
       summary: Redeem Cart Promotion
-      description: This API records a customer's cart promotion redemption during
-        a transaction.
+      description: "This API records a customer's cart promotion redemption during\
+        \ a transaction."
       operationId: redeem-cart-promotion
       responses:
         '200':

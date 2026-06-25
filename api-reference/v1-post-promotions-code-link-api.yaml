@@ -3,14 +3,14 @@ info:
   title: Post Cart Promotions Code link API
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/promotions/{code}/link:
+  "/api_gateway/v1/promotions/{code}/link":
     post:
       summary: Post Cart Promotions Code link API
       description: This API is used to link the code of the cart promotion earned
@@ -229,7 +229,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

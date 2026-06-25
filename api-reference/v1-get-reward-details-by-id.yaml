@@ -3,14 +3,14 @@ info:
   title: Get reward details by ID
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/reward/{rewardId}/brand/{brandId}:
+  "/api_gateway/rewards/core/v1/reward/{rewardId}/brand/{brandId}":
     get:
       summary: Get reward details by ID
       description: ''
@@ -108,7 +108,7 @@ paths:
                     : null,\n        \"segment\": [],\n        \"cards\": null,\n\
                     \        \"labels\": [\n            12751,12752\n        ]\n \
                     \   }\n}"
-                With 'altText' for images and videos:
+                "With 'altText' for images and videos":
                   value: "{\n    \"status\": {\n        \"success\": true,\n     \
                     \   \"code\": 6001,\n        \"message\": \"Reward fetched successfully\"\
                     \n    },\n    \"reward\": {\n        \"id\": 316356,\n       \
@@ -152,7 +152,7 @@ paths:
                     \        \"labels\": null\n    }\n}"
                 ? ''
                 : summary: ''
-                  value: '{}'
+                  value: "{}"
                 Sample response:
                   value:
                     status:
@@ -162,10 +162,10 @@ paths:
                     reward:
                       id: 488443
                       type: VOUCHER
-                      startDate: '2025-09-16 05:15:00'
-                      startDateTime: '2025-09-16T05:15:00Z'
-                      endDate: '2025-10-01 06:00:00'
-                      endDateTime: '2025-10-01T06:00:00Z'
+                      startDate: "2025-09-16 05:15:00"
+                      startDateTime: "2025-09-16T05:15:00Z"
+                      endDate: "2025-10-01 06:00:00"
+                      endDateTime: "2025-10-01T06:00:00Z"
                       enabled: true
                       priority: 1
                       intouchPoints: 0
@@ -277,16 +277,16 @@ paths:
                           example: VOUCHER
                         startDate:
                           type: string
-                          example: '2025-09-26 20:00:00'
+                          example: "2025-09-26 20:00:00"
                         startDateTime:
                           type: string
-                          example: '2025-09-26T20:00:00Z'
+                          example: "2025-09-26T20:00:00Z"
                         endDate:
                           type: string
-                          example: '2026-10-31 11:59:30'
+                          example: "2026-10-31 11:59:30"
                         endDateTime:
                           type: string
-                          example: '2026-10-31T11:59:30Z'
+                          example: "2026-10-31T11:59:30Z"
                         enabled:
                           type: boolean
                           example: true
@@ -400,10 +400,10 @@ paths:
                           example: FREE_VOUCHER
                         startDate:
                           type: string
-                          example: '2025-11-28 13:56:00'
+                          example: "2025-11-28 13:56:00"
                         endDate:
                           type: string
-                          example: '2026-11-28 14:10:00'
+                          example: "2026-11-28 14:10:00"
                         enabled:
                           type: boolean
                           example: true
@@ -456,19 +456,19 @@ paths:
                                 example: EXDR12987R
                               termNConditionsUrl:
                                 type: string
-                                example: https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987R?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDL6O%2FKoTICzLkDy8DiLMAcE7CWzspkAB%2BVnSL37PeVgwEQE6Y%2Fy4Xpik1znpHFktlC33uDYO%2B1JxmLjy2VRr5C6HJ2bsgHXlcBhVF4Pegrj8gZ6mMJpeJYVWMvMUeE1xN%2FREa1dAL4V5XV3rjHRDSc24fVLAAerYzQ5D5a0oGy6KLP5xGu9OnPbAeQVUNOkrDpvVivN4cXFSkNhJtz%2FWkaddTBSTTUAAyGXaLMU1xYsOkPf%2FgXXunXm2vHdd6%2BsHw5RnltXHs%2FZ%2BOWVSO8RojtvzXDZkJ6t2jLH1PiiJvIm7BjItbQY7QS%2B5EAmU1eOOR%2FzRSRTo0r3spUfS1fLeHexFjeXG88tMBFDq9INiow8u&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB2AHTQVTQ%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=0ec51631b66041f63dc34fcbf79d437f4549d272ca7bec7921cdf6b5a18cf3c1
+                                example: "https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987R?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDL6O%2FKoTICzLkDy8DiLMAcE7CWzspkAB%2BVnSL37PeVgwEQE6Y%2Fy4Xpik1znpHFktlC33uDYO%2B1JxmLjy2VRr5C6HJ2bsgHXlcBhVF4Pegrj8gZ6mMJpeJYVWMvMUeE1xN%2FREa1dAL4V5XV3rjHRDSc24fVLAAerYzQ5D5a0oGy6KLP5xGu9OnPbAeQVUNOkrDpvVivN4cXFSkNhJtz%2FWkaddTBSTTUAAyGXaLMU1xYsOkPf%2FgXXunXm2vHdd6%2BsHw5RnltXHs%2FZ%2BOWVSO8RojtvzXDZkJ6t2jLH1PiiJvIm7BjItbQY7QS%2B5EAmU1eOOR%2FzRSRTo0r3spUfS1fLeHexFjeXG88tMBFDq9INiow8u&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB2AHTQVTQ%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=0ec51631b66041f63dc34fcbf79d437f4549d272ca7bec7921cdf6b5a18cf3c1"
                               imageId:
                                 type: string
                                 example: EXDR12987U
                               imageUrl:
                                 type: string
-                                example: https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987U?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDL6O%2FKoTICzLkDy8DiLMAcE7CWzspkAB%2BVnSL37PeVgwEQE6Y%2Fy4Xpik1znpHFktlC33uDYO%2B1JxmLjy2VRr5C6HJ2bsgHXlcBhVF4Pegrj8gZ6mMJpeJYVWMvMUeE1xN%2FREa1dAL4V5XV3rjHRDSc24fVLAAerYzQ5D5a0oGy6KLP5xGu9OnPbAeQVUNOkrDpvVivN4cXFSkNhJtz%2FWkaddTBSTTUAAyGXaLMU1xYsOkPf%2FgXXunXm2vHdd6%2BsHw5RnltXHs%2FZ%2BOWVSO8RojtvzXDZkJ6t2jLH1PiiJvIm7BjItbQY7QS%2B5EAmU1eOOR%2FzRSRTo0r3spUfS1fLeHexFjeXG88tMBFDq9INiow8u&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB2AHTQVTQ%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=6c5c14013bb68f52e3cacb2b659133ad46bdafaf99812eb99c266232c2745e3c
+                                example: "https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987U?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDL6O%2FKoTICzLkDy8DiLMAcE7CWzspkAB%2BVnSL37PeVgwEQE6Y%2Fy4Xpik1znpHFktlC33uDYO%2B1JxmLjy2VRr5C6HJ2bsgHXlcBhVF4Pegrj8gZ6mMJpeJYVWMvMUeE1xN%2FREa1dAL4V5XV3rjHRDSc24fVLAAerYzQ5D5a0oGy6KLP5xGu9OnPbAeQVUNOkrDpvVivN4cXFSkNhJtz%2FWkaddTBSTTUAAyGXaLMU1xYsOkPf%2FgXXunXm2vHdd6%2BsHw5RnltXHs%2FZ%2BOWVSO8RojtvzXDZkJ6t2jLH1PiiJvIm7BjItbQY7QS%2B5EAmU1eOOR%2FzRSRTo0r3spUfS1fLeHexFjeXG88tMBFDq9INiow8u&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB2AHTQVTQ%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=6c5c14013bb68f52e3cacb2b659133ad46bdafaf99812eb99c266232c2745e3c"
                               thumbnailId:
                                 type: string
                                 example: EXDR12987T
                               thumbnailUrl:
                                 type: string
-                                example: https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987T?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDL6O%2FKoTICzLkDy8DiLMAcE7CWzspkAB%2BVnSL37PeVgwEQE6Y%2Fy4Xpik1znpHFktlC33uDYO%2B1JxmLjy2VRr5C6HJ2bsgHXlcBhVF4Pegrj8gZ6mMJpeJYVWMvMUeE1xN%2FREa1dAL4V5XV3rjHRDSc24fVLAAerYzQ5D5a0oGy6KLP5xGu9OnPbAeQVUNOkrDpvVivN4cXFSkNhJtz%2FWkaddTBSTTUAAyGXaLMU1xYsOkPf%2FgXXunXm2vHdd6%2BsHw5RnltXHs%2FZ%2BOWVSO8RojtvzXDZkJ6t2jLH1PiiJvIm7BjItbQY7QS%2B5EAmU1eOOR%2FzRSRTo0r3spUfS1fLeHexFjeXG88tMBFDq9INiow8u&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB2AHTQVTQ%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=f36461d01eb3b5e7004f69df6fd1e90bd4490f4e0676aef4f36f888c69807b4c
+                                example: "https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987T?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDL6O%2FKoTICzLkDy8DiLMAcE7CWzspkAB%2BVnSL37PeVgwEQE6Y%2Fy4Xpik1znpHFktlC33uDYO%2B1JxmLjy2VRr5C6HJ2bsgHXlcBhVF4Pegrj8gZ6mMJpeJYVWMvMUeE1xN%2FREa1dAL4V5XV3rjHRDSc24fVLAAerYzQ5D5a0oGy6KLP5xGu9OnPbAeQVUNOkrDpvVivN4cXFSkNhJtz%2FWkaddTBSTTUAAyGXaLMU1xYsOkPf%2FgXXunXm2vHdd6%2BsHw5RnltXHs%2FZ%2BOWVSO8RojtvzXDZkJ6t2jLH1PiiJvIm7BjItbQY7QS%2B5EAmU1eOOR%2FzRSRTo0r3spUfS1fLeHexFjeXG88tMBFDq9INiow8u&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB2AHTQVTQ%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=f36461d01eb3b5e7004f69df6fd1e90bd4490f4e0676aef4f36f888c69807b4c"
                               enabled:
                                 type: boolean
                                 example: true
@@ -482,13 +482,13 @@ paths:
                                 properties:
                                   testdate:
                                     type: string
-                                    example: '2020-01-01 01:01:01'
+                                    example: "2020-01-01 01:01:01"
                         customFields:
                           type: object
                           properties:
                             testdate:
                               type: string
-                              example: '2020-01-01 01:01:01'
+                              example: "2020-01-01 01:01:01"
                         owners: {}
                         supplementaryCriteriaRO:
                           type: array
@@ -545,10 +545,10 @@ paths:
                           example: FREE_VOUCHER
                         startDate:
                           type: string
-                          example: '2025-11-28 13:56:00'
+                          example: "2025-11-28 13:56:00"
                         endDate:
                           type: string
-                          example: '2026-11-28 14:10:00'
+                          example: "2026-11-28 14:10:00"
                         enabled:
                           type: boolean
                           example: true
@@ -601,19 +601,19 @@ paths:
                                 example: EXDR12987R
                               termNConditionsUrl:
                                 type: string
-                                example: https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987R?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDFxdV1gYlKLzLNiCnyLMAfXpuU8lo%2F68GeRLMF3%2FN1CyDf6CP73dqIIhHjl%2FdmjfV%2FSDrNS0K0Imfh5kS4XiQo9PV%2FFfS3hbkQapEb%2FJqbZ4ZRIaosH2pp6niOxmntCLCgKosDCe1%2B3ZzqwAXi4SffMv39DUpcwkijRS0V%2BO4IF6QxhR6ftWr3WgxNmOLyKDJQ24GRKyWNkugyGDJmlARbcXoJUk%2FYSMQLHmNZ0kOQ1RUX%2BEAZM%2B%2BertX%2B7apw9a4rwNQTDpyBQfuxhGXQFUvYOw29TeD%2B5lqwiqgijlu4m7BjItFXnYIJPLJBnocGeTFvZyRLVgOd5xXgQeXG8sTh5Ffr16yFgF49OOFi7KHEhy&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T054136Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMBZHQLFRXX%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=2c33f149316ca3f9d8c3dd00ceb5a8c55a8ee68e929a955b8f741ff70637f9fa
+                                example: "https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987R?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDFxdV1gYlKLzLNiCnyLMAfXpuU8lo%2F68GeRLMF3%2FN1CyDf6CP73dqIIhHjl%2FdmjfV%2FSDrNS0K0Imfh5kS4XiQo9PV%2FFfS3hbkQapEb%2FJqbZ4ZRIaosH2pp6niOxmntCLCgKosDCe1%2B3ZzqwAXi4SffMv39DUpcwkijRS0V%2BO4IF6QxhR6ftWr3WgxNmOLyKDJQ24GRKyWNkugyGDJmlARbcXoJUk%2FYSMQLHmNZ0kOQ1RUX%2BEAZM%2B%2BertX%2B7apw9a4rwNQTDpyBQfuxhGXQFUvYOw29TeD%2B5lqwiqgijlu4m7BjItFXnYIJPLJBnocGeTFvZyRLVgOd5xXgQeXG8sTh5Ffr16yFgF49OOFi7KHEhy&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T054136Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMBZHQLFRXX%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=2c33f149316ca3f9d8c3dd00ceb5a8c55a8ee68e929a955b8f741ff70637f9fa"
                               imageId:
                                 type: string
                                 example: EXDR12987U
                               imageUrl:
                                 type: string
-                                example: https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987U?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDFxdV1gYlKLzLNiCnyLMAfXpuU8lo%2F68GeRLMF3%2FN1CyDf6CP73dqIIhHjl%2FdmjfV%2FSDrNS0K0Imfh5kS4XiQo9PV%2FFfS3hbkQapEb%2FJqbZ4ZRIaosH2pp6niOxmntCLCgKosDCe1%2B3ZzqwAXi4SffMv39DUpcwkijRS0V%2BO4IF6QxhR6ftWr3WgxNmOLyKDJQ24GRKyWNkugyGDJmlARbcXoJUk%2FYSMQLHmNZ0kOQ1RUX%2BEAZM%2B%2BertX%2B7apw9a4rwNQTDpyBQfuxhGXQFUvYOw29TeD%2B5lqwiqgijlu4m7BjItFXnYIJPLJBnocGeTFvZyRLVgOd5xXgQeXG8sTh5Ffr16yFgF49OOFi7KHEhy&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T054136Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMBZHQLFRXX%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=2c075879e5bd1e7095bbe1783b02c641d50cbe986bb6e141444425ad8b080b41
+                                example: "https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987U?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDFxdV1gYlKLzLNiCnyLMAfXpuU8lo%2F68GeRLMF3%2FN1CyDf6CP73dqIIhHjl%2FdmjfV%2FSDrNS0K0Imfh5kS4XiQo9PV%2FFfS3hbkQapEb%2FJqbZ4ZRIaosH2pp6niOxmntCLCgKosDCe1%2B3ZzqwAXi4SffMv39DUpcwkijRS0V%2BO4IF6QxhR6ftWr3WgxNmOLyKDJQ24GRKyWNkugyGDJmlARbcXoJUk%2FYSMQLHmNZ0kOQ1RUX%2BEAZM%2B%2BertX%2B7apw9a4rwNQTDpyBQfuxhGXQFUvYOw29TeD%2B5lqwiqgijlu4m7BjItFXnYIJPLJBnocGeTFvZyRLVgOd5xXgQeXG8sTh5Ffr16yFgF49OOFi7KHEhy&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T054136Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMBZHQLFRXX%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=2c075879e5bd1e7095bbe1783b02c641d50cbe986bb6e141444425ad8b080b41"
                               thumbnailId:
                                 type: string
                                 example: EXDR12987T
                               thumbnailUrl:
                                 type: string
-                                example: https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987T?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDFxdV1gYlKLzLNiCnyLMAfXpuU8lo%2F68GeRLMF3%2FN1CyDf6CP73dqIIhHjl%2FdmjfV%2FSDrNS0K0Imfh5kS4XiQo9PV%2FFfS3hbkQapEb%2FJqbZ4ZRIaosH2pp6niOxmntCLCgKosDCe1%2B3ZzqwAXi4SffMv39DUpcwkijRS0V%2BO4IF6QxhR6ftWr3WgxNmOLyKDJQ24GRKyWNkugyGDJmlARbcXoJUk%2FYSMQLHmNZ0kOQ1RUX%2BEAZM%2B%2BertX%2B7apw9a4rwNQTDpyBQfuxhGXQFUvYOw29TeD%2B5lqwiqgijlu4m7BjItFXnYIJPLJBnocGeTFvZyRLVgOd5xXgQeXG8sTh5Ffr16yFgF49OOFi7KHEhy&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T054136Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMBZHQLFRXX%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=7ec80a41a78f17904036103194476e5ec306df5745023aee27d0b6d493f0818b
+                                example: "https://s3.eu-west-1.amazonaws.com/eucrm-solutions/BUKL/EXDR12987T?X-Amz-Security-Token=FwoGZXIvYXdzEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDFxdV1gYlKLzLNiCnyLMAfXpuU8lo%2F68GeRLMF3%2FN1CyDf6CP73dqIIhHjl%2FdmjfV%2FSDrNS0K0Imfh5kS4XiQo9PV%2FFfS3hbkQapEb%2FJqbZ4ZRIaosH2pp6niOxmntCLCgKosDCe1%2B3ZzqwAXi4SffMv39DUpcwkijRS0V%2BO4IF6QxhR6ftWr3WgxNmOLyKDJQ24GRKyWNkugyGDJmlARbcXoJUk%2FYSMQLHmNZ0kOQ1RUX%2BEAZM%2B%2BertX%2B7apw9a4rwNQTDpyBQfuxhGXQFUvYOw29TeD%2B5lqwiqgijlu4m7BjItFXnYIJPLJBnocGeTFvZyRLVgOd5xXgQeXG8sTh5Ffr16yFgF49OOFi7KHEhy&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241218T054136Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMBZHQLFRXX%2F20241218%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=7ec80a41a78f17904036103194476e5ec306df5745023aee27d0b6d493f0818b"
                               enabled:
                                 type: boolean
                                 example: true
@@ -627,13 +627,13 @@ paths:
                                 properties:
                                   testdate:
                                     type: string
-                                    example: '2020-01-01 01:01:01'
+                                    example: "2020-01-01 01:01:01"
                         customFields:
                           type: object
                           properties:
                             testdate:
                               type: string
-                              example: '2020-01-01 01:01:01'
+                              example: "2020-01-01 01:01:01"
                         owners: {}
                         supplementaryCriteriaRO:
                           type: array
@@ -655,7 +655,7 @@ paths:
                             type: integer
                             example: 12751
                             default: 0
-                - title: With 'altText' for images and videos
+                - title: "With 'altText' for images and videos"
                   type: object
                   properties:
                     status:
@@ -684,10 +684,10 @@ paths:
                           example: FREE_VOUCHER
                         startDate:
                           type: string
-                          example: '2025-02-12 05:59:00'
+                          example: "2025-02-12 05:59:00"
                         endDate:
                           type: string
-                          example: '2025-12-30 12:50:20'
+                          example: "2025-12-30 12:50:20"
                         enabled:
                           type: boolean
                           example: true
@@ -740,19 +740,19 @@ paths:
                                 example: EXDR12987R
                               termNConditionsUrl:
                                 type: string
-                                example: https://s3.eu-west-1.amazonaws.com/eucrm-solutions/DOCDEMO/EXDR12987R?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEND%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQCHxXxuzFsKGh4jJe8nHWJC8HpR%2F3JEbwYOoEbvWHcRAgIhAPHRhNSihPD%2FLbllR5gTsy3JwRbbW2B9gNc%2BnfnsMyq3Kr4CCOn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTAyODEyNzc5MjY3IgzR86kFkYBtTNYWUGEqkgIRCzR%2FTzOgs49WDyP4TG2upwP1cOLb%2FdD624eALCKdqLr13XWC66rOCiThnqfRowrl%2B1uC%2BHOZxaE%2FkNhkunfgpd9GQrySwEjHECw%2BJUWnbBNWq%2FxV4MfzPZD7nQEUvoRdhNnNhclJQiyvq088Uc%2BQpRJ6ocbjZK4pd0UHPsFM1GtyOFrPJAObFHKtAAjxwi4NENFeMYb90Yy43d%2B6Yi%2F8H0FCreqVqxnfqtWzomYy9s49lBmuL3tB89dt2PUCh4%2FivNQRPzVTNX1M9JI7IASl5GwLIo9FYzxfpbmmAPZqouGubstMGddC122zSBnv%2BkxpJY5lOYAd4ZAF1lFLeEi0iWlVNDkI%2BpDul8chs%2FguWzLHMOKpsb0GOpwBplJpeihD7zlre1M2WZy9hyNkEEY0GHgsIJHXGYbdv6ZUDErV654w%2FugSzUO%2FhSkwnkywvQssqWQBVqUBSb5KiMoc7oRj2uiXzZdhgvBEftPXvWR1gKenEaRE70ZhE51bYLCTES%2F6nkZz%2FIDbwWTU4plCc3JIN1Um3C0jjQQwCqV5pELcdtrMsPrNNmQ41aDlL9pNT01YT7k1svL1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250212T075930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB4DAMOMRZ%2F20250212%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=ba3dc28fada891e7e9c25534a7d364d85253c8db1471725e5204fe32eed7482c
+                                example: "https://s3.eu-west-1.amazonaws.com/eucrm-solutions/DOCDEMO/EXDR12987R?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEND%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQCHxXxuzFsKGh4jJe8nHWJC8HpR%2F3JEbwYOoEbvWHcRAgIhAPHRhNSihPD%2FLbllR5gTsy3JwRbbW2B9gNc%2BnfnsMyq3Kr4CCOn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTAyODEyNzc5MjY3IgzR86kFkYBtTNYWUGEqkgIRCzR%2FTzOgs49WDyP4TG2upwP1cOLb%2FdD624eALCKdqLr13XWC66rOCiThnqfRowrl%2B1uC%2BHOZxaE%2FkNhkunfgpd9GQrySwEjHECw%2BJUWnbBNWq%2FxV4MfzPZD7nQEUvoRdhNnNhclJQiyvq088Uc%2BQpRJ6ocbjZK4pd0UHPsFM1GtyOFrPJAObFHKtAAjxwi4NENFeMYb90Yy43d%2B6Yi%2F8H0FCreqVqxnfqtWzomYy9s49lBmuL3tB89dt2PUCh4%2FivNQRPzVTNX1M9JI7IASl5GwLIo9FYzxfpbmmAPZqouGubstMGddC122zSBnv%2BkxpJY5lOYAd4ZAF1lFLeEi0iWlVNDkI%2BpDul8chs%2FguWzLHMOKpsb0GOpwBplJpeihD7zlre1M2WZy9hyNkEEY0GHgsIJHXGYbdv6ZUDErV654w%2FugSzUO%2FhSkwnkywvQssqWQBVqUBSb5KiMoc7oRj2uiXzZdhgvBEftPXvWR1gKenEaRE70ZhE51bYLCTES%2F6nkZz%2FIDbwWTU4plCc3JIN1Um3C0jjQQwCqV5pELcdtrMsPrNNmQ41aDlL9pNT01YT7k1svL1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250212T075930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB4DAMOMRZ%2F20250212%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=ba3dc28fada891e7e9c25534a7d364d85253c8db1471725e5204fe32eed7482c"
                               imageId:
                                 type: string
                                 example: EXDR12987U
                               imageUrl:
                                 type: string
-                                example: https://s3.eu-west-1.amazonaws.com/eucrm-solutions/DOCDEMO/EXDR12987U?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEND%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQCHxXxuzFsKGh4jJe8nHWJC8HpR%2F3JEbwYOoEbvWHcRAgIhAPHRhNSihPD%2FLbllR5gTsy3JwRbbW2B9gNc%2BnfnsMyq3Kr4CCOn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTAyODEyNzc5MjY3IgzR86kFkYBtTNYWUGEqkgIRCzR%2FTzOgs49WDyP4TG2upwP1cOLb%2FdD624eALCKdqLr13XWC66rOCiThnqfRowrl%2B1uC%2BHOZxaE%2FkNhkunfgpd9GQrySwEjHECw%2BJUWnbBNWq%2FxV4MfzPZD7nQEUvoRdhNnNhclJQiyvq088Uc%2BQpRJ6ocbjZK4pd0UHPsFM1GtyOFrPJAObFHKtAAjxwi4NENFeMYb90Yy43d%2B6Yi%2F8H0FCreqVqxnfqtWzomYy9s49lBmuL3tB89dt2PUCh4%2FivNQRPzVTNX1M9JI7IASl5GwLIo9FYzxfpbmmAPZqouGubstMGddC122zSBnv%2BkxpJY5lOYAd4ZAF1lFLeEi0iWlVNDkI%2BpDul8chs%2FguWzLHMOKpsb0GOpwBplJpeihD7zlre1M2WZy9hyNkEEY0GHgsIJHXGYbdv6ZUDErV654w%2FugSzUO%2FhSkwnkywvQssqWQBVqUBSb5KiMoc7oRj2uiXzZdhgvBEftPXvWR1gKenEaRE70ZhE51bYLCTES%2F6nkZz%2FIDbwWTU4plCc3JIN1Um3C0jjQQwCqV5pELcdtrMsPrNNmQ41aDlL9pNT01YT7k1svL1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250212T075930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3599&X-Amz-Credential=ASIAXKEP2EMB4DAMOMRZ%2F20250212%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=b0ae5fced49362da529ae652d280cc8fa42186556e64851e20f3b5bd0cc63613
+                                example: "https://s3.eu-west-1.amazonaws.com/eucrm-solutions/DOCDEMO/EXDR12987U?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEND%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQCHxXxuzFsKGh4jJe8nHWJC8HpR%2F3JEbwYOoEbvWHcRAgIhAPHRhNSihPD%2FLbllR5gTsy3JwRbbW2B9gNc%2BnfnsMyq3Kr4CCOn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTAyODEyNzc5MjY3IgzR86kFkYBtTNYWUGEqkgIRCzR%2FTzOgs49WDyP4TG2upwP1cOLb%2FdD624eALCKdqLr13XWC66rOCiThnqfRowrl%2B1uC%2BHOZxaE%2FkNhkunfgpd9GQrySwEjHECw%2BJUWnbBNWq%2FxV4MfzPZD7nQEUvoRdhNnNhclJQiyvq088Uc%2BQpRJ6ocbjZK4pd0UHPsFM1GtyOFrPJAObFHKtAAjxwi4NENFeMYb90Yy43d%2B6Yi%2F8H0FCreqVqxnfqtWzomYy9s49lBmuL3tB89dt2PUCh4%2FivNQRPzVTNX1M9JI7IASl5GwLIo9FYzxfpbmmAPZqouGubstMGddC122zSBnv%2BkxpJY5lOYAd4ZAF1lFLeEi0iWlVNDkI%2BpDul8chs%2FguWzLHMOKpsb0GOpwBplJpeihD7zlre1M2WZy9hyNkEEY0GHgsIJHXGYbdv6ZUDErV654w%2FugSzUO%2FhSkwnkywvQssqWQBVqUBSb5KiMoc7oRj2uiXzZdhgvBEftPXvWR1gKenEaRE70ZhE51bYLCTES%2F6nkZz%2FIDbwWTU4plCc3JIN1Um3C0jjQQwCqV5pELcdtrMsPrNNmQ41aDlL9pNT01YT7k1svL1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250212T075930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3599&X-Amz-Credential=ASIAXKEP2EMB4DAMOMRZ%2F20250212%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=b0ae5fced49362da529ae652d280cc8fa42186556e64851e20f3b5bd0cc63613"
                               thumbnailId:
                                 type: string
                                 example: EXDR12987T
                               thumbnailUrl:
                                 type: string
-                                example: https://s3.eu-west-1.amazonaws.com/eucrm-solutions/DOCDEMO/EXDR12987T?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEND%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQCHxXxuzFsKGh4jJe8nHWJC8HpR%2F3JEbwYOoEbvWHcRAgIhAPHRhNSihPD%2FLbllR5gTsy3JwRbbW2B9gNc%2BnfnsMyq3Kr4CCOn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTAyODEyNzc5MjY3IgzR86kFkYBtTNYWUGEqkgIRCzR%2FTzOgs49WDyP4TG2upwP1cOLb%2FdD624eALCKdqLr13XWC66rOCiThnqfRowrl%2B1uC%2BHOZxaE%2FkNhkunfgpd9GQrySwEjHECw%2BJUWnbBNWq%2FxV4MfzPZD7nQEUvoRdhNnNhclJQiyvq088Uc%2BQpRJ6ocbjZK4pd0UHPsFM1GtyOFrPJAObFHKtAAjxwi4NENFeMYb90Yy43d%2B6Yi%2F8H0FCreqVqxnfqtWzomYy9s49lBmuL3tB89dt2PUCh4%2FivNQRPzVTNX1M9JI7IASl5GwLIo9FYzxfpbmmAPZqouGubstMGddC122zSBnv%2BkxpJY5lOYAd4ZAF1lFLeEi0iWlVNDkI%2BpDul8chs%2FguWzLHMOKpsb0GOpwBplJpeihD7zlre1M2WZy9hyNkEEY0GHgsIJHXGYbdv6ZUDErV654w%2FugSzUO%2FhSkwnkywvQssqWQBVqUBSb5KiMoc7oRj2uiXzZdhgvBEftPXvWR1gKenEaRE70ZhE51bYLCTES%2F6nkZz%2FIDbwWTU4plCc3JIN1Um3C0jjQQwCqV5pELcdtrMsPrNNmQ41aDlL9pNT01YT7k1svL1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250212T075930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB4DAMOMRZ%2F20250212%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=4396fceaf5cc64a17c7fbe7f7e11389431edab9602bb4b20938bdcc2aa3d7e4e
+                                example: "https://s3.eu-west-1.amazonaws.com/eucrm-solutions/DOCDEMO/EXDR12987T?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEND%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQCHxXxuzFsKGh4jJe8nHWJC8HpR%2F3JEbwYOoEbvWHcRAgIhAPHRhNSihPD%2FLbllR5gTsy3JwRbbW2B9gNc%2BnfnsMyq3Kr4CCOn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTAyODEyNzc5MjY3IgzR86kFkYBtTNYWUGEqkgIRCzR%2FTzOgs49WDyP4TG2upwP1cOLb%2FdD624eALCKdqLr13XWC66rOCiThnqfRowrl%2B1uC%2BHOZxaE%2FkNhkunfgpd9GQrySwEjHECw%2BJUWnbBNWq%2FxV4MfzPZD7nQEUvoRdhNnNhclJQiyvq088Uc%2BQpRJ6ocbjZK4pd0UHPsFM1GtyOFrPJAObFHKtAAjxwi4NENFeMYb90Yy43d%2B6Yi%2F8H0FCreqVqxnfqtWzomYy9s49lBmuL3tB89dt2PUCh4%2FivNQRPzVTNX1M9JI7IASl5GwLIo9FYzxfpbmmAPZqouGubstMGddC122zSBnv%2BkxpJY5lOYAd4ZAF1lFLeEi0iWlVNDkI%2BpDul8chs%2FguWzLHMOKpsb0GOpwBplJpeihD7zlre1M2WZy9hyNkEEY0GHgsIJHXGYbdv6ZUDErV654w%2FugSzUO%2FhSkwnkywvQssqWQBVqUBSb5KiMoc7oRj2uiXzZdhgvBEftPXvWR1gKenEaRE70ZhE51bYLCTES%2F6nkZz%2FIDbwWTU4plCc3JIN1Um3C0jjQQwCqV5pELcdtrMsPrNNmQ41aDlL9pNT01YT7k1svL1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250212T075930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIAXKEP2EMB4DAMOMRZ%2F20250212%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Signature=4396fceaf5cc64a17c7fbe7f7e11389431edab9602bb4b20938bdcc2aa3d7e4e"
                               enabled:
                                 type: boolean
                                 example: true
@@ -848,13 +848,10 @@ paths:
       x-readme:
         code-samples:
         - language: shell
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/488443/brand/61''
-            \
-
-            --header ''Authorization: Basic bWFkaHV3MjU2YQ=='' \
-
-            --header ''Cookie: _cfuvid=j9A8Ne5yK28__G6y3AO.PC0FO2nL2Nxa6njgXshLg08-1745825668814-0.0.1.1-604800000;
-            _cfuvid=Bt3knKvTi5qr4tLz.8c.OaIfgPwkuJF5o.pmTZJLci8-1763381177435-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/488443/brand/61'\
+            \ \\\n--header 'Authorization: Basic bWFkaHV3MjU2YQ==' \\\n--header 'Cookie:\
+            \ _cfuvid=j9A8Ne5yK28__G6y3AO.PC0FO2nL2Nxa6njgXshLg08-1745825668814-0.0.1.1-604800000;\
+            \ _cfuvid=Bt3knKvTi5qr4tLz.8c.OaIfgPwkuJF5o.pmTZJLci8-1763381177435-0.0.1.1-604800000'"
           name: Sample request
         samples-languages:
         - shell

@@ -3,7 +3,7 @@ info:
   title: Issue User Reward
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host

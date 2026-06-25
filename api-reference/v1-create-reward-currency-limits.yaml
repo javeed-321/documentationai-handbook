@@ -3,14 +3,14 @@ info:
   title: Create Reward Currency Limits
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/loyalty/v1/programs/{programId}/cappings:
+  "/api_gateway/loyalty/v1/programs/{programId}/cappings":
     post:
       summary: Create Reward Currency Limits
       description: ''
@@ -56,17 +56,17 @@ paths:
                     code: {}
                     message:
                       type: string
-                      example: Error creating target group could not create targetGroups
-                        from intouch-api-v3 [IntouchApiError{code=310069, message='target
-                        group name already exist', status=false}]
+                      example: "Error creating target group could not create targetGroups\
+                        \ from intouch-api-v3 [IntouchApiError{code=310069, message='target\
+                        \ group name already exist', status=false}]"
                 - type: object
                   properties:
                     code: {}
                     message:
                       type: string
-                      example: Error creating target group could not create targetGroups
-                        from intouch-api-v3 [IntouchApiError{code=300004, message='Invalid
-                        input', status=false}]
+                      example: "Error creating target group could not create targetGroups\
+                        \ from intouch-api-v3 [IntouchApiError{code=300004, message='Invalid\
+                        \ input', status=false}]"
       deprecated: false
       x-readme:
         code-samples:

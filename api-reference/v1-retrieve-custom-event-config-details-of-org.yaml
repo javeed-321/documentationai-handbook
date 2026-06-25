@@ -3,7 +3,7 @@ info:
   title: Retrieve Custom Event Config Details of Org
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -65,14 +65,14 @@ paths:
                           properties:
                             createdOn:
                               type: string
-                              example: '2025-04-23T06:59:56.411+00:00'
+                              example: "2025-04-23T06:59:56.411+00:00"
                             createdBy:
                               type: integer
                               example: 75155282
                               default: 0
                             lastUpdatedOn:
                               type: string
-                              example: '2025-04-23T07:06:33.947+00:00'
+                              example: "2025-04-23T07:06:33.947+00:00"
                             lastUpdatedBy:
                               type: integer
                               example: 75155282
@@ -85,7 +85,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

@@ -3,14 +3,14 @@ info:
   title: Get available reward details for user by id
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/user/reward/{reward Id}/brand/{brand name}:
+  "/api_gateway/rewards/core/v1/user/reward/{reward Id}/brand/{brand name}":
     get:
       summary: Get available reward details for user by id
       description: ''
@@ -189,16 +189,16 @@ paths:
                       group: {}
                       startTime:
                         type: string
-                        example: '2025-09-26 20:00:00'
+                        example: "2025-09-26 20:00:00"
                       startDateTime:
                         type: string
-                        example: '2025-09-26T20:00:00Z'
+                        example: "2025-09-26T20:00:00Z"
                       endTime:
                         type: string
-                        example: '2026-10-31 11:59:30'
+                        example: "2026-10-31 11:59:30"
                       endDateTime:
                         type: string
-                        example: '2026-10-31T11:59:30Z'
+                        example: "2026-10-31T11:59:30Z"
                       expired:
                         type: boolean
                         example: false
@@ -433,14 +433,10 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/user/reward/355104/brand/DOCDEMO?userId=565039504''
-            \
-
-            --header ''Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg=''
-            \
-
-            --header ''Cookie: _cfuvid=5A9H65nLTjshWYFwlD4Eez8KP6Aqj84z4mKabXwAVuo-1732602816001-0.0.1.1-604800000;
-            _cfuvid=MglQfT4Gdb3DhzjEkJBQ_6vSB3xcEJLuBpENxVTO3GQ-1745904637618-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/user/reward/355104/brand/DOCDEMO?userId=565039504'\
+            \ \\\n--header 'Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg='\
+            \ \\\n--header 'Cookie: _cfuvid=5A9H65nLTjshWYFwlD4Eez8KP6Aqj84z4mKabXwAVuo-1732602816001-0.0.1.1-604800000;\
+            \ _cfuvid=MglQfT4Gdb3DhzjEkJBQ_6vSB3xcEJLuBpENxVTO3GQ-1745904637618-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

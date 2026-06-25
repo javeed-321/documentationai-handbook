@@ -3,14 +3,14 @@ info:
   title: Get Status of Redeemed Coupons
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /upload/getUploadRedeemedCouponStatus/{couponSeriesId}:
+  "/upload/getUploadRedeemedCouponStatus/{couponSeriesId}":
     get:
       summary: Get Status of Redeemed Coupons
       description: Retrieves the status of the uploaded coupon redeem job a coupon
@@ -158,7 +158,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -177,17 +177,11 @@ paths:
       x-readme:
         code-samples:
         - language: shell
-          code: 'curl --location ''https://eu.api.capillarytech.com/coupon/api/v1/upload/getUploadRedeemedCouponStatus/760779''
-            \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''X-CAP-API-OAUTH-TOKEN: eyJraWQiOiJrMSIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJDYXBpbGxhcnkiLCJleHAiOjE3NjI4NDEyMjQsImp0aSI6IndTN0x4YkdXdGNwSG5icUw2RVBsdEEiLCJpYXQiOjE3NjI4Mzc2MjQsInN1YiI6IlRKIE9BdXRoIiwiY2xpZW50X2lkIjoyMjYwMSwib3JnX2lkIjoxMDA3MzcsInRva2VuX3VzZSI6InRva2VuX2FjY2VzcyIsImNsaWVudF9rZXkiOiIwckUwdENZRDFjSDhmWlQ5V1l4M1lUU1UxIiwiZGVmYXVsdF90aWxsIjo3NTE1NTI5Nywic2NvcGVzIjoiW10ifQ.C0TAQcsFoNYBJoDCL01C0-XUFStZDZr5yz8Shdyk7rcl5u8FdzQy1mNBm2cdfV5rl-2MSSO0iFvdxa5aSI2sk8yfGZWV8qAAmO7r8j6L9yE9pO5Srnvminn22FiWvvOPq9_edpTF4M2cGaLQjAuPNuLoLJkDd48EhEhFnm5SKwR2ep7hiYvx148uETGS6MhpF0m-5PmgIVjwo4eVxMocz7pKyUpdFFJ83-j6BY6Zf9Jx7gg_JuIkc7S0cTFNGjtQkZuy7iVPvEi91YP3fTtoeaAljcLoFRBxs1h4P2CAFOkW_CxuOi-_Z2mqPBXZpEl1pq82kWtA6Pr3G519oWLpew''
-            \
-
-            --header ''Authorization: Basic bWFkaHVfcMjU2YQ=='' \
-
-            --header ''Cookie: _cfuvid=VRspa.rJGymgxf5EqRzslLCpNcfrx2TzDI_DJwB3nco-1762837407045-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/coupon/api/v1/upload/getUploadRedeemedCouponStatus/760779'\
+            \ \\\n--header 'Content-Type: application/json' \\\n--header 'X-CAP-API-OAUTH-TOKEN:\
+            \ eyJraWQiOiJrMSIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJDYXBpbGxhcnkiLCJleHAiOjE3NjI4NDEyMjQsImp0aSI6IndTN0x4YkdXdGNwSG5icUw2RVBsdEEiLCJpYXQiOjE3NjI4Mzc2MjQsInN1YiI6IlRKIE9BdXRoIiwiY2xpZW50X2lkIjoyMjYwMSwib3JnX2lkIjoxMDA3MzcsInRva2VuX3VzZSI6InRva2VuX2FjY2VzcyIsImNsaWVudF9rZXkiOiIwckUwdENZRDFjSDhmWlQ5V1l4M1lUU1UxIiwiZGVmYXVsdF90aWxsIjo3NTE1NTI5Nywic2NvcGVzIjoiW10ifQ.C0TAQcsFoNYBJoDCL01C0-XUFStZDZr5yz8Shdyk7rcl5u8FdzQy1mNBm2cdfV5rl-2MSSO0iFvdxa5aSI2sk8yfGZWV8qAAmO7r8j6L9yE9pO5Srnvminn22FiWvvOPq9_edpTF4M2cGaLQjAuPNuLoLJkDd48EhEhFnm5SKwR2ep7hiYvx148uETGS6MhpF0m-5PmgIVjwo4eVxMocz7pKyUpdFFJ83-j6BY6Zf9Jx7gg_JuIkc7S0cTFNGjtQkZuy7iVPvEi91YP3fTtoeaAljcLoFRBxs1h4P2CAFOkW_CxuOi-_Z2mqPBXZpEl1pq82kWtA6Pr3G519oWLpew'\
+            \ \\\n--header 'Authorization: Basic bWFkaHVfcMjU2YQ==' \\\n--header 'Cookie:\
+            \ _cfuvid=VRspa.rJGymgxf5EqRzslLCpNcfrx2TzDI_DJwB3nco-1762837407045-0.0.1.1-604800000'"
           name: Sample Request
         samples-languages:
         - shell

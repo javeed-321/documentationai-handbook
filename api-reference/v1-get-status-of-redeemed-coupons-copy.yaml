@@ -3,14 +3,14 @@ info:
   title: Get Status of Redeemed Coupons
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /upload/getUploadRedeemedCouponStatus/{couponSeriesId} (COPY):
+  "/upload/getUploadRedeemedCouponStatus/{couponSeriesId} (COPY)":
     get:
       summary: Get Status of Redeemed Coupons
       description: Retrieves the status of the uploaded coupon redeem job a coupon
@@ -149,7 +149,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

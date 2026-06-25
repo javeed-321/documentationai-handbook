@@ -3,7 +3,7 @@ info:
   title: Issue bulk reward
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -169,17 +169,17 @@ paths:
                                 example: '1908009843'
                               codeExpiry:
                                 type: string
-                                example: '2025-10-31 00:00:00'
+                                example: "2025-10-31 00:00:00"
                               codeExpiryDateTime:
                                 type: string
-                                example: '2025-10-31T00:00:00Z'
+                                example: "2025-10-31T00:00:00Z"
                         promotions:
                           type: array
                         vendor:
                           type: array
                         eventDateTime:
                           type: string
-                          example: '2025-05-08T13:48:13Z'
+                          example: "2025-05-08T13:48:13Z"
                         restrictions: {}
                         paymentConfig:
                           type: object
@@ -294,7 +294,7 @@ paths:
                                   example: 42FU1ZP3
                                 codeExpiry:
                                   type: string
-                                  example: '2023-06-09 00:00:00'
+                                  example: "2023-06-09 00:00:00"
                           promotions:
                             type: array
                           vendor:

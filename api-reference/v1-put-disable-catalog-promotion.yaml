@@ -3,14 +3,14 @@ info:
   title: Disable Catalog promotion
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/promotion/{promotion Id}/status/false/brand/{brand Id}:
+  "/api_gateway/rewards/core/v1/promotion/{promotion Id}/status/false/brand/{brand Id}":
     put:
       summary: Disable Catalog promotion
       description: ''
@@ -29,12 +29,12 @@ paths:
         schema:
           type: integer
           format: int64
-      - name: promotion Id
+      - name: brand Id
         in: path
         required: true
         schema:
           type: string
-      - name: brand Id
+      - name: promotion Id
         in: path
         required: true
         schema:

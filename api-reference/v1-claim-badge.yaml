@@ -3,14 +3,14 @@ info:
   title: Claim badge
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/badges/badgeMeta/{badgeId}/claim:
+  "/api_gateway/v1/badges/badgeMeta/{badgeId}/claim":
     post:
       summary: Claim badge
       description: ''
@@ -151,10 +151,10 @@ paths:
                             default: 0
                           message:
                             type: string
-                            example: 'Invalid enum value: ''LOYALTY'' for the field:
-                              ''ownerType''. The value must be one of: [Loyalty, Referral_Campaigns,
-                              Journeys, Audience_Campaigns, Rewards_Catalog, Goodwill_Module,
-                              Milestones].'
+                            example: "Invalid enum value: 'LOYALTY' for the field:\
+                              \ 'ownerType'. The value must be one of: [Loyalty, Referral_Campaigns,\
+                              \ Journeys, Audience_Campaigns, Rewards_Catalog, Goodwill_Module,\
+                              \ Milestones]."
                           reference: {}
                     warnings: {}
       deprecated: false

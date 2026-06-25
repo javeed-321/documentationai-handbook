@@ -3,14 +3,14 @@ info:
   title: Get user rank across target groups
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/intouch-api-v3/v3.1/leaderboards/user/{userID}:
+  "/api_gateway/intouch-api-v3/v3.1/leaderboards/user/{userID}":
     get:
       summary: Get user rank across target groups
       description: ''
@@ -30,10 +30,10 @@ paths:
           type: string
       - name: DATA-SCOPE
         in: header
-        description: 'Scopes define what data can be accessed using the API. You can
-          use scopes to control access to data from a parent or child organisation.
-          Defining a scope ensures that the response contains only data from the respective
-          organisation.  Supported headers: SELF, OTHER and ALL.'
+        description: "Scopes define what data can be accessed using the API. You can\
+          \ use scopes to control access to data from a parent or child organisation.\
+          \ Defining a scope ensures that the response contains only data from the\
+          \ respective organisation.  Supported headers: SELF, OTHER and ALL."
         schema:
           type: string
       - name: userID
@@ -76,8 +76,8 @@ paths:
                 Result:
                   value:
                     data:
-                      lastSyncTime: 2024-06-24T17:37:00.000IST
-                      lastSyncTimeISO: '2024-06-24T12:07:00.000Z'
+                      lastSyncTime: "2024-06-24T17:37:00.000IST"
+                      lastSyncTimeISO: "2024-06-24T12:07:00.000Z"
                       customerId: 381329847
                       userEnrichmentDetails:
                         mobile: '9988221100'
@@ -91,8 +91,8 @@ paths:
                         periodId: 243
                         achievedValue: 3000
                         rank: 1771
-                        lastActivityTime: 2022-11-25T21:45:05.000IST
-                        lastActivityTimeISO: '2022-11-25T16:15:05.000Z'
+                        lastActivityTime: "2022-11-25T21:45:05.000IST"
+                        lastActivityTimeISO: "2022-11-25T16:15:05.000Z"
                         totalUsersInTargetGroup: 4527
                     errors: []
                     warnings: []
@@ -104,7 +104,7 @@ paths:
                     properties:
                       lastSyncTime:
                         type: string
-                        example: 2024-06-24T17:37:00.000IST
+                        example: "2024-06-24T17:37:00.000IST"
                       customerId:
                         type: integer
                         example: 381329847
@@ -155,7 +155,7 @@ paths:
                               default: 0
                             lastActivityTime:
                               type: string
-                              example: 2022-11-25T21:45:05.000IST
+                              example: "2022-11-25T21:45:05.000IST"
                             totalUsersInTargetGroup:
                               type: integer
                               example: 4527
@@ -170,7 +170,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

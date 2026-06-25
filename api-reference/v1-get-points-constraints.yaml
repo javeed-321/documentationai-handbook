@@ -3,7 +3,7 @@ info:
   title: Points - Get points constraints
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -220,10 +220,10 @@ paths:
                         default: 0
                       createdOnDateTime:
                         type: string
-                        example: '2025-05-16T05:47:58Z'
+                        example: "2025-05-16T05:47:58Z"
                       lastUpdatedOnDateTime:
                         type: string
-                        example: '2025-05-16T05:47:58Z'
+                        example: "2025-05-16T05:47:58Z"
                       redemptionType:
                         type: string
                         example: CASH
@@ -233,7 +233,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -241,23 +241,15 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: https://eucrm.cc.capillarytech.com/api_gateway/rewards/core/v1/brand/constraints
+          code: "https://eucrm.cc.capillarytech.com/api_gateway/rewards/core/v1/brand/constraints"
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/brand/constraints?orderBy=DESC&sortBy=lastUpdatedOn''
-            \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''accept: application/json'' \
-
-            --header ''Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg=''
-            \
-
-            --header ''Cookie: _cfuvid=uhTtxlP23uZ.hb5OlDs7wWzPVVOQ89Yv7IGmE9Z4Qm4-1747308482787-0.0.1.1-604800000;
-            _cfuvid=uhTtxlP23uZ.hb5OlDs7wWzPVVOQ89Yv7IGmE9Z4Qm4-1747308482787-0.0.1.1-604800000;
-            _cfuvid=0HswOUeY1hLB1ChixiPHPvEBpkBYBw.OmrLWQyfiBZ0-1747382714367-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/brand/constraints?orderBy=DESC&sortBy=lastUpdatedOn'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--header 'accept: application/json' \\\n--header\
+            \ 'Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg='\
+            \ \\\n--header 'Cookie: _cfuvid=uhTtxlP23uZ.hb5OlDs7wWzPVVOQ89Yv7IGmE9Z4Qm4-1747308482787-0.0.1.1-604800000;\
+            \ _cfuvid=uhTtxlP23uZ.hb5OlDs7wWzPVVOQ89Yv7IGmE9Z4Qm4-1747308482787-0.0.1.1-604800000;\
+            \ _cfuvid=0HswOUeY1hLB1ChixiPHPvEBpkBYBw.OmrLWQyfiBZ0-1747382714367-0.0.1.1-604800000'"
           name: With sortBy=lastUpdatedOn
         samples-languages:
         - curl

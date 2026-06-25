@@ -3,14 +3,14 @@ info:
   title: Get top ranked users
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/intouch-api-v3/v3.1/leaderboards/targetGroups/{targetGroupId}:
+  "/api_gateway/intouch-api-v3/v3.1/leaderboards/targetGroups/{targetGroupId}":
     get:
       summary: Get top ranked users
       description: ''
@@ -61,10 +61,10 @@ paths:
           type: string
       - name: DATA-SCOPE
         in: header
-        description: 'Scopes define what data can be accessed using the API. You can
-          use scopes to control access to data from a parent or child organisation.
-          Defining a scope ensures that the response contains only data from the respective
-          organisation.  Supported headers: SELF, OTHER and ALL.'
+        description: "Scopes define what data can be accessed using the API. You can\
+          \ use scopes to control access to data from a parent or child organisation.\
+          \ Defining a scope ensures that the response contains only data from the\
+          \ respective organisation.  Supported headers: SELF, OTHER and ALL."
         schema:
           type: string
       - in: path
@@ -123,7 +123,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -131,8 +131,8 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl -L ''https://eu.api.capillarytech.com/api_gateway/intouch-api-v3/v3.1/leaderboards/targetGroups/232?targetId=366&periodId=243&pageOffset=0&pageSize=3''
-            -H ''Authorization:****'' -H ''DATA-SCOPE: SELF'''
+          code: "curl -L 'https://eu.api.capillarytech.com/api_gateway/intouch-api-v3/v3.1/leaderboards/targetGroups/232?targetId=366&periodId=243&pageOffset=0&pageSize=3'\
+            \ -H 'Authorization:****' -H 'DATA-SCOPE: SELF'"
         samples-languages:
         - curl
 components:

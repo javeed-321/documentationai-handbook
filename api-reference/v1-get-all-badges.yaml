@@ -3,7 +3,7 @@ info:
   title: Get all badges
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -69,14 +69,14 @@ paths:
         schema:
           type: string
           format: date
-          default: '2023-02-16T00:00:00Z'
+          default: "2023-02-16T00:00:00Z"
       - name: expiresOn
         in: query
         description: Filter based on expiry of the badge.
         schema:
           type: string
           format: date
-          default: '2024-02-16T00:00:00Z'
+          default: "2024-02-16T00:00:00Z"
       responses:
         '200':
           description: '200'
@@ -469,7 +469,7 @@ paths:
                                     example: qwer-8634-8938
                                   url:
                                     type: string
-                                    example: https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d
+                                    example: "https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d"
                                   tag:
                                     type: string
                                     example: EARNED
@@ -570,13 +570,9 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/v1/badges/badgeMeta/getFixedWindowDetails?badgeMetaId=693804d8cebb9648d8974489''
-            \
-
-            --header ''Authorization: Basic Z2VvcRvY2RlbW86NjVhMDgzYjk1MWY5MGY1NTY5NDk1YmNkNzUxYmJiY2U=''
-            \
-
-            --header ''Cookie: _cfuvid=xqa2vacPzz6hoOC_9d5xoORuyNOUReJ4nYUCw-1765278778115-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/v1/badges/badgeMeta/getFixedWindowDetails?badgeMetaId=693804d8cebb9648d8974489'\
+            \ \\\n--header 'Authorization: Basic Z2VvcRvY2RlbW86NjVhMDgzYjk1MWY5MGY1NTY5NDk1YmNkNzUxYmJiY2U='\
+            \ \\\n--header 'Cookie: _cfuvid=xqa2vacPzz6hoOC_9d5xoORuyNOUReJ4nYUCw-1765278778115-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

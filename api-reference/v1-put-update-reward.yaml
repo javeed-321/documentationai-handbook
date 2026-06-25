@@ -3,14 +3,14 @@ info:
   title: Update Reward
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/reward/{rewardId}/brand/{brandId}:
+  "/api_gateway/rewards/core/v1/reward/{rewardId}/brand/{brandId}":
     put:
       summary: Update Reward
       description: ''
@@ -38,30 +38,40 @@ paths:
                 RAW_BODY:
                   type: string
                   description: Request body
-                  default: '{     "name": "testreward1poi",     "description": "testreward1",     "startTime":
-                    "2025-09-26T20:00:00",     "endTime": "2026-10-31T11:59:30",     "priority":
-                    1,     "type": "VOUCHER",     "brandId": "1",     "enabled": true,     "intouchPoints":
-                    500,     "geography": [         {             "countryId": 1         }     ],     "categories":
-                    [         4     ],     "rewardRank":"1",     "intouchSeriesId":
-                    "301233",     "redemptionType": "INTOUCH_REWARD",     "vendorRedemption":
-                    null,     "communications": [         "1"     ],     "restrictions":
-                    {         "customerLevel": [             {                 "kpi":
-                    "QUANTITY",                 "limit": 10,                 "repeatFrequencyType":
-                    "DAYS",                 "interval": "30"             },             {                 "kpi":
-                    "QUANTITY",                 "limit": 50,                 "repeatFrequencyType":
-                    "MONTHS",                 "interval": "12"             }         ],         "rewardLevel":
-                    [             {                 "kpi": "QUANTITY",                 "limit":
-                    10000,                 "repeatFrequencyType": "NO_LIMIT"             }         ]     },     "supplementaryCriteriaRO":
-                    [         {             "loyaltyProgramId": 469,             "tierIds":
-                    null,             "partnerProgramIds": [                 48             ]         },         {             "loyaltyProgramId":
-                    690,             "tierIds": null,             "partnerProgramIds":
-                    null         }     ],     "customFields": {         "CF1": "Custom
-                    field 1"     },     "languageSpecificInfo": [         {             "languageCode":
-                    "en",             "name": "testreward1",             "description":
-                    "testreward1",             "imageId": "bef4d522-2cf8-4fea-8087-376c449d5c85",             "termNConditions":
-                    "t&c",             "thumbnailId": "c886f064-2b3f-4c19-9e86-7f7e5ab5ae04",             "termNConditionsId":
-                    "820a3d7f-2601-405b-9f56-4a3ba8e9df73",             "enabled":
-                    true         }     ],     "isactive" : true }'
+                  default: "{     \"name\": \"testreward1poi\",     \"description\"\
+                    : \"testreward1\",     \"startTime\": \"2025-09-26T20:00:00\"\
+                    ,     \"endTime\": \"2026-10-31T11:59:30\",     \"priority\":\
+                    \ 1,     \"type\": \"VOUCHER\",     \"brandId\": \"1\",     \"\
+                    enabled\": true,     \"intouchPoints\": 500,     \"geography\"\
+                    : [         {             \"countryId\": 1         }     ],  \
+                    \   \"categories\": [         4     ],     \"rewardRank\":\"1\"\
+                    ,     \"intouchSeriesId\": \"301233\",     \"redemptionType\"\
+                    : \"INTOUCH_REWARD\",     \"vendorRedemption\": null,     \"communications\"\
+                    : [         \"1\"     ],     \"restrictions\": {         \"customerLevel\"\
+                    : [             {                 \"kpi\": \"QUANTITY\",     \
+                    \            \"limit\": 10,                 \"repeatFrequencyType\"\
+                    : \"DAYS\",                 \"interval\": \"30\"             },\
+                    \             {                 \"kpi\": \"QUANTITY\",       \
+                    \          \"limit\": 50,                 \"repeatFrequencyType\"\
+                    : \"MONTHS\",                 \"interval\": \"12\"           \
+                    \  }         ],         \"rewardLevel\": [             {     \
+                    \            \"kpi\": \"QUANTITY\",                 \"limit\"\
+                    : 10000,                 \"repeatFrequencyType\": \"NO_LIMIT\"\
+                    \             }         ]     },     \"supplementaryCriteriaRO\"\
+                    : [         {             \"loyaltyProgramId\": 469,         \
+                    \    \"tierIds\": null,             \"partnerProgramIds\": [ \
+                    \                48             ]         },         {       \
+                    \      \"loyaltyProgramId\": 690,             \"tierIds\": null,\
+                    \             \"partnerProgramIds\": null         }     ],   \
+                    \  \"customFields\": {         \"CF1\": \"Custom field 1\"   \
+                    \  },     \"languageSpecificInfo\": [         {             \"\
+                    languageCode\": \"en\",             \"name\": \"testreward1\"\
+                    ,             \"description\": \"testreward1\",             \"\
+                    imageId\": \"bef4d522-2cf8-4fea-8087-376c449d5c85\",         \
+                    \    \"termNConditions\": \"t&c\",             \"thumbnailId\"\
+                    : \"c886f064-2b3f-4c19-9e86-7f7e5ab5ae04\",             \"termNConditionsId\"\
+                    : \"820a3d7f-2601-405b-9f56-4a3ba8e9df73\",             \"enabled\"\
+                    : true         }     ],     \"isactive\" : true }"
                   format: json
       responses:
         '200':
@@ -139,8 +149,8 @@ paths:
                           default: 0
                         message:
                           type: string
-                          example: 'Unable to update reward as Org doesn''t have the
-                            custom field/s: labels,tag'
+                          example: "Unable to update reward as Org doesn't have the\
+                            \ custom field/s: labels,tag"
                     reward: {}
                 - type: object
                   properties:

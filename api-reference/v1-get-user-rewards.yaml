@@ -3,7 +3,7 @@ info:
   title: Get User Rewards
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -281,7 +281,7 @@ paths:
                               example: 49J2H12D32.image/jpeg
                             thumbnailUrl:
                               type: string
-                              example: https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J2H12D32.image/jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T142928Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=d57fc7aae76c9632946f88f54cab83ff4c168642084774c0326a86c98f929a34
+                              example: "https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J2H12D32.image/jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T142928Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=d57fc7aae76c9632946f88f54cab83ff4c168642084774c0326a86c98f929a34"
                             imageId:
                               type: string
                               example: 49J2H0VB31.image/jpeg
@@ -290,10 +290,10 @@ paths:
                               example: 49J3M0Y134.html
                             termNConditionsUrl:
                               type: string
-                              example: https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J3M0Y134.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T142928Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=cbaf68a15587a4b7f07ba46f51bbd7688baf27c6d9312e2b2f0ec9ba43d211b4
+                              example: "https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J3M0Y134.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T142928Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=cbaf68a15587a4b7f07ba46f51bbd7688baf27c6d9312e2b2f0ec9ba43d211b4"
                             imageUrl:
                               type: string
-                              example: https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J2H0VB31.image/jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T142928Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=61bfabff1582fdd948ebbba6fbbd1e13eda386a6c382755fba93d78be7b0d3ce
+                              example: "https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J2H0VB31.image/jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T142928Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=61bfabff1582fdd948ebbba6fbbd1e13eda386a6c382755fba93d78be7b0d3ce"
                             tier:
                               type: string
                               example: GIFT
@@ -313,8 +313,17 @@ paths:
                               expiry: {}
                               vendor:
                                 type: string
-                                example: '{"status":{"success":"true","code":200,"message":"Success"},"coupons":{"coupon":{"customer":{"mobile":"918848000000","email":null,"external_id":"90000000000195300"},"code":"TL150O7R","discount_code":"NO_VALUE","series_code":"8483","series_info":[],"is_absolute":"true","coupon_value":"0","transaction":{"amount":"","number":""},"side_effects":[],"item_status":{"success":"true","code":700,"message":"Coupon
-                                  processing successful"}}}}'
+                                example: "{\"status\":{\"success\":\"true\",\"code\"\
+                                  :200,\"message\":\"Success\"},\"coupons\":{\"coupon\"\
+                                  :{\"customer\":{\"mobile\":\"918848000000\",\"email\"\
+                                  :null,\"external_id\":\"90000000000195300\"},\"\
+                                  code\":\"TL150O7R\",\"discount_code\":\"NO_VALUE\"\
+                                  ,\"series_code\":\"8483\",\"series_info\":[],\"\
+                                  is_absolute\":\"true\",\"coupon_value\":\"0\",\"\
+                                  transaction\":{\"amount\":\"\",\"number\":\"\"},\"\
+                                  side_effects\":[],\"item_status\":{\"success\":\"\
+                                  true\",\"code\":700,\"message\":\"Coupon processing\
+                                  \ successful\"}}}}"
                               rewardId:
                                 type: integer
                                 example: 21400
@@ -364,7 +373,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -372,7 +381,7 @@ paths:
       x-readme:
         code-samples:
         - language: html
-          code: https://apac-apigateway.capillarytech.com/mobile/v2/api/marvel/vouchers/get?mobile=9988221100&cap_brand=demoBrand&username=till.1&status={{status}}&language=en
+          code: "https://apac-apigateway.capillarytech.com/mobile/v2/api/marvel/vouchers/get?mobile=9988221100&cap_brand=demoBrand&username=till.1&status={{status}}&language=en"
         samples-languages:
         - html
 components:

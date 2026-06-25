@@ -3,14 +3,14 @@ info:
   title: Upload Coupons (Batch)
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /upload/file/{couponSeriedId}:
+  "/upload/file/{couponSeriedId}":
     post:
       summary: Upload Coupons (Batch)
       description: ''
@@ -53,14 +53,14 @@ paths:
               properties:
                 file:
                   type: string
-                  description: 'Name of the CSV file with customer and coupon details.
-                    Sample file content: File content sample for uploading the coupon
-                    code is as follows customer_identifier,coupon code value 1,ABCDEF1
-                    value 2,ABCDEF2 value 3,ABCDEF3 File content sample for uploading
-                    customer identifier: customerIdentifier value 1 value 2 value
-                    3 File content sample for uploading customer tagged coupons is
-                    as follows customerIdentifier,coupon code value 1,ABCDEF1 value
-                    2,ABCDEF2 value 3,ABCDEF3'
+                  description: "Name of the CSV file with customer and coupon details.\
+                    \ Sample file content: File content sample for uploading the coupon\
+                    \ code is as follows customer_identifier,coupon code value 1,ABCDEF1\
+                    \ value 2,ABCDEF2 value 3,ABCDEF3 File content sample for uploading\
+                    \ customer identifier: customerIdentifier value 1 value 2 value\
+                    \ 3 File content sample for uploading customer tagged coupons\
+                    \ is as follows customerIdentifier,coupon code value 1,ABCDEF1\
+                    \ value 2,ABCDEF2 value 3,ABCDEF3"
                 customerIdentifier:
                   type: string
                   description: Customer identifier type used in the CSV file. Use
@@ -177,7 +177,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

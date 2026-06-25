@@ -3,14 +3,14 @@ info:
   title: Update catalog promotion
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/promotion/{promotionId}/brand/{brand Id}:
+  "/api_gateway/rewards/core/v1/promotion/{promotionId}/brand/{brand Id}":
     put:
       summary: Update catalog promotion
       description: ''
@@ -35,16 +35,17 @@ paths:
                 RAW_BODY:
                   type: string
                   description: Sample request body
-                  default: '{        "endTime": "2024-10-25T11:16:00Z",        "discountType":
-                    "ABSOLUTE",        "discountValue": 1.00,        "languageSpecificInfo":
-                    [            {                "languageCode": "en",                "name":
-                    "P1- R-5165 P1- R-5165 upadted 2.1",                "description":
-                    "description",                "enabled": true            }        ],    "rewardIds":    [        112295    ]
-                    }'
+                  default: "{        \"endTime\": \"2024-10-25T11:16:00Z\",      \
+                    \  \"discountType\": \"ABSOLUTE\",        \"discountValue\": 1.00,\
+                    \        \"languageSpecificInfo\": [            {            \
+                    \    \"languageCode\": \"en\",                \"name\": \"P1-\
+                    \ R-5165 P1- R-5165 upadted 2.1\",                \"description\"\
+                    : \"description\",                \"enabled\": true          \
+                    \  }        ],    \"rewardIds\":    [        112295    ] }"
             examples:
               Request Body:
                 value:
-                  endTime: '2024-10-25T11:16:00Z'
+                  endTime: "2024-10-25T11:16:00Z"
                   discountType: ABSOLUTE
                   discountValue: 1
                   languageSpecificInfo:

@@ -3,7 +3,7 @@ info:
   title: Revoke enrolled badges
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -60,7 +60,7 @@ paths:
                     : \"653e024bb3cda7078c7c6903\",\n                \"error\": null\n\
                     \            }\n        ],\n        \"requestId\": null\n    },\n\
                     \    \"errors\": [],\n    \"warnings\": []\n}"
-                'Failure: Customer is not issued':
+                "Failure: Customer is not issued":
                   value: "{\n    \"data\": {\n        \"badgeMetaId\": \"653de84db3cda7078c7c68ed\"\
                     ,\n        \"revokedIssuedBadges\": [\n            {\n       \
                     \         \"customerId\": 123,\n                \"issuedId\":\
@@ -84,7 +84,7 @@ paths:
                     ,\n       \"revokedIssuedBadges\": [\n           { \"customerId\"\
                     : 12323, \"issuedId\": \"66e3ef1e5abea9582ae4f302\" }\n      \
                     \ ]\n   },\n   \"errors\": [],\n   \"warnings\": []\n}"
-                'Failure: RevokeIssuals or CustomerId is not passed':
+                "Failure: RevokeIssuals or CustomerId is not passed":
                   value: "{\n    \"data\": null,\n    \"errors\": [\n        {\n \
                     \           \"code\": 1051,\n            \"message\": \"RevokeIssuals\
                     \ or CustomerId is mandatory\",\n            \"reference\": null\n\
@@ -118,7 +118,7 @@ paths:
                       type: array
                     warnings:
                       type: array
-                - title: 'Failure: Customer is not issued'
+                - title: "Failure: Customer is not issued"
                   type: object
                   properties:
                     data:
@@ -146,7 +146,7 @@ paths:
                                     default: 0
                                   message:
                                     type: string
-                                    example: Customer doesn't have issue instance
+                                    example: "Customer doesn't have issue instance"
                                   reference: {}
                         requestId: {}
                     errors:
@@ -205,7 +205,7 @@ paths:
                       type: array
                     warnings:
                       type: array
-                - title: 'Failure: RevokeIssuals or CustomerId is not passed'
+                - title: "Failure: RevokeIssuals or CustomerId is not passed"
                   type: object
                   properties:
                     data: {}

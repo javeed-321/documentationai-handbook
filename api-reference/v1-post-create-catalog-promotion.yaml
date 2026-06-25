@@ -3,7 +3,7 @@ info:
   title: Create catalog promotion
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -24,18 +24,20 @@ paths:
                 RAW_BODY:
                   type: string
                   description: Sample request body
-                  default: '{     "startTime": "2024-05-04T20:58:49.000Z",     "endTime":
-                    "2025-10-25T05:46Z",     "discountType": "ABSOLUTE",     "discountValue":
-                    1,     "brandId": "1",     "enabled": true,     "languageSpecificInfo":     [         {             "languageCode":
-                    "en",             "name": "test1",             "description":
-                    "description",             "enabled": true         }     ],     "rewardIds":     [         112295     ]
-                    }'
+                  default: "{     \"startTime\": \"2024-05-04T20:58:49.000Z\",   \
+                    \  \"endTime\": \"2025-10-25T05:46Z\",     \"discountType\": \"\
+                    ABSOLUTE\",     \"discountValue\": 1,     \"brandId\": \"1\",\
+                    \     \"enabled\": true,     \"languageSpecificInfo\":     [ \
+                    \        {             \"languageCode\": \"en\",             \"\
+                    name\": \"test1\",             \"description\": \"description\"\
+                    ,             \"enabled\": true         }     ],     \"rewardIds\"\
+                    :     [         112295     ] }"
                   format: json
             examples:
               Request Body:
                 value:
-                  startTime: '2024-05-04T20:58:49.000Z'
-                  endTime: 2025-10-25T05:46Z
+                  startTime: "2024-05-04T20:58:49.000Z"
+                  endTime: "2025-10-25T05:46Z"
                   discountType: ABSOLUTE
                   discountValue: 1
                   brandId: '1'
@@ -153,10 +155,10 @@ paths:
                             example: 20 off on 2000
                           startTime:
                             type: string
-                            example: '2023-04-17 09:17:08'
+                            example: "2023-04-17 09:17:08"
                           endTime:
                             type: string
-                            example: '2023-12-29 02:17:08'
+                            example: "2023-12-29 02:17:08"
                           type:
                             type: string
                             example: VOUCHER
@@ -207,13 +209,13 @@ paths:
                             default: 0
                           name:
                             type: string
-                            example: 20% off on women's wear
+                            example: "20% off on women's wear"
                           startTime:
                             type: string
-                            example: '2023-04-18 13:03:00'
+                            example: "2023-04-18 13:03:00"
                           endTime:
                             type: string
-                            example: '2023-10-29 04:59:30'
+                            example: "2023-10-29 04:59:30"
                           type:
                             type: string
                             example: VOUCHER

@@ -3,18 +3,18 @@ info:
   title: Earn Cart Promotion
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/promotions/{promotionId}/earn:
+  "/api_gateway/v1/promotions/{promotionId}/earn":
     post:
       summary: Earn Cart Promotion
-      description: Description :With this API , we can get the details of all the
-        cart promotions earned by a particular customer.
+      description: "Description :With this API , we can get the details of all the\
+        \ cart promotions earned by a particular customer."
       operationId: earn-promotion
       parameters:
       - name: promotionId
@@ -40,8 +40,8 @@ paths:
                   description: Unique id assigned to the promotion
                 earnedFromType:
                   type: string
-                  description: 'Type of customer activity for which promotion is earned
-                    . Enums: ACTIVITY,MILESTONE, REWARD'
+                  description: "Type of customer activity for which promotion is earned\
+                    \ . Enums: ACTIVITY,MILESTONE, REWARD"
                 earnedFromId:
                   type: string
                   description: earn event id
@@ -154,7 +154,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

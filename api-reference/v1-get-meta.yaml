@@ -3,14 +3,14 @@ info:
   title: Retrieve search criteria details
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/cortex/v1/criteria/{id}:
+  "/api_gateway/cortex/v1/criteria/{id}":
     get:
       summary: Retrieve search criteria details
       description: This API enables you to retrieve the search criteria details using
@@ -118,14 +118,14 @@ paths:
                         properties:
                           createdOn:
                             type: string
-                            example: '2023-07-14T09:39:35.353+00:00'
+                            example: "2023-07-14T09:39:35.353+00:00"
                           createdBy:
                             type: integer
                             example: 13425520
                             default: 0
                           lastUpdatedOn:
                             type: string
-                            example: '2023-07-14T09:39:35.353+00:00'
+                            example: "2023-07-14T09:39:35.353+00:00"
                           lastUpdatedBy:
                             type: integer
                             example: 13425520
@@ -138,7 +138,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -146,7 +146,7 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: https://apac.api.capillarytech.com/api_gateway/cortex/v1/criteria/64b117d756bb3f20312aae7f
+          code: "https://apac.api.capillarytech.com/api_gateway/cortex/v1/criteria/64b117d756bb3f20312aae7f"
           name: Retrieve search criteria details
         samples-languages:
         - curl

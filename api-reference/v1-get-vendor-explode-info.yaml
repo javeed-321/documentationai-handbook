@@ -3,14 +3,14 @@ info:
   title: Get Vendor Details
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/vendor/{VendorId}/details:
+  "/api_gateway/rewards/core/v1/vendor/{VendorId}/details":
     get:
       summary: Get Vendor Details
       description: ''
@@ -51,7 +51,7 @@ paths:
                     ,\n        \"createdBy\": null,\n        \"lastUpdatedBy\": null,\n\
                     \        \"createdOnDateTime\": \"2025-02-17T09:13:21Z\",\n  \
                     \      \"encryptionRequired\": false\n    }\n}"
-                'Failure: Invalid Vendor ID':
+                "Failure: Invalid Vendor ID":
                   value: "{\n    \"status\": {\n        \"success\": false,\n    \
                     \    \"code\": 5004,\n        \"message\": \"Vendor not found\"\
                     \n    },\n    \"vendor\": null\n}"
@@ -112,7 +112,7 @@ paths:
                               id: {}
                               url:
                                 type: string
-                                example: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6RFSqYEgenJSDc0Wo_eoEKzxd0iXvTOO-LQ&s
+                                example: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6RFSqYEgenJSDc0Wo_eoEKzxd0iXvTOO-LQ&s"
                               isExternal:
                                 type: boolean
                                 example: true
@@ -129,7 +129,7 @@ paths:
                               id: {}
                               url:
                                 type: string
-                                example: https://videos.pexels.com/video-files/6265096/6265096-uhd_1440_2560_30fps.mp4
+                                example: "https://videos.pexels.com/video-files/6265096/6265096-uhd_1440_2560_30fps.mp4"
                               isExternal:
                                 type: boolean
                                 example: true
@@ -151,17 +151,17 @@ paths:
                           default: 0
                         lastUpdatedOnDateTime:
                           type: string
-                          example: '2025-02-17T09:13:21Z'
+                          example: "2025-02-17T09:13:21Z"
                         createdBy: {}
                         lastUpdatedBy: {}
                         createdOnDateTime:
                           type: string
-                          example: '2025-02-17T09:13:21Z'
+                          example: "2025-02-17T09:13:21Z"
                         encryptionRequired:
                           type: boolean
                           example: false
                           default: true
-                - title: 'Failure: Invalid Vendor ID'
+                - title: "Failure: Invalid Vendor ID"
                   type: object
                   properties:
                     status:
@@ -185,7 +185,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -193,18 +193,11 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/59/details''
-            \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''Authorization: Basic bmFtYW5fZG9jOmzA3MWJmYjM5OGM5ZmM2YjZlY2I2MmEy''
-            \
-
-            --header ''Cookie: _cfuvid=fmRA3Hit0aFMwbfKLvt4ueC_cBYGp6.izrIrTxsLCds-1727420270955-0.0.1.1-604800000;
-            _cfuvid=FJsFTsQxFxFqUup40xQQ36aT7bnuhPmb6nYOClavKpU-1739797830423-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/59/details'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--header 'Authorization: Basic bmFtYW5fZG9jOmzA3MWJmYjM5OGM5ZmM2YjZlY2I2MmEy'\
+            \ \\\n--header 'Cookie: _cfuvid=fmRA3Hit0aFMwbfKLvt4ueC_cBYGp6.izrIrTxsLCds-1727420270955-0.0.1.1-604800000;\
+            \ _cfuvid=FJsFTsQxFxFqUup40xQQ36aT7bnuhPmb6nYOClavKpU-1739797830423-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

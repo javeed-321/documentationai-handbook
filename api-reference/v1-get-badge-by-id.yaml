@@ -3,14 +3,14 @@ info:
   title: Get badge by ID
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/badges/badgeMeta/{badgeId}:
+  "/api_gateway/v1/badges/badgeMeta/{badgeId}":
     get:
       summary: Get badge by ID
       description: ''
@@ -187,9 +187,9 @@ paths:
                       name: Test badge 02/12 01
                       description: null
                       startOn: 1764654607
-                      startOnISO: '2025-12-02T05:50:07Z'
+                      startOnISO: "2025-12-02T05:50:07Z"
                       expiresOn: 1777701007
-                      expiresOnISO: '2026-05-02T05:50:07Z'
+                      expiresOnISO: "2026-05-02T05:50:07Z"
                       earnedBadgeExpiry:
                         expiryType: RELATIVE
                         relativeExpirytype: WEEKS
@@ -221,10 +221,10 @@ paths:
                       earnType: EARN
                       status: LIVE
                       createdOn: 1764654707.835
-                      createdOnISO: '2025-12-02T05:51:47Z'
+                      createdOnISO: "2025-12-02T05:51:47Z"
                       createdBy: 75176138
                       lastUpdatedOn: 1768827399.422
-                      lastUpdatedOnISO: '2026-01-19T12:56:39Z'
+                      lastUpdatedOnISO: "2026-01-19T12:56:39Z"
                       lastUpdatedBy: 75197372
                       customFields:
                         CF 04: '1234'
@@ -933,12 +933,9 @@ paths:
       x-readme:
         code-samples:
         - language: shell
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/v1/badges/badgeMeta/692e7e739b3ca00e4bbf7c06''
-            \
-
-            --header ''Authorization: Basic bWFkaHVMjU2YQ=='' \
-
-            --header ''Cookie: _cfuvid=nKq1OmGgF8JDdQmuHn27NBzA2WUbPnTTBX5655HaG2Q-1769073063328-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/v1/badges/badgeMeta/692e7e739b3ca00e4bbf7c06'\
+            \ \\\n--header 'Authorization: Basic bWFkaHVMjU2YQ==' \\\n--header 'Cookie:\
+            \ _cfuvid=nKq1OmGgF8JDdQmuHn27NBzA2WUbPnTTBX5655HaG2Q-1769073063328-0.0.1.1-604800000'"
           name: Sample request
         samples-languages:
         - shell

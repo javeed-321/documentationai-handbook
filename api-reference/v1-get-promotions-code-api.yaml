@@ -3,7 +3,7 @@ info:
   title: Get Cart Promotions code API
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -28,7 +28,7 @@ paths:
                     redemption
                 mode:
                   type: string
-                  description: 'type of mode: DISCOUNT or PAYMENT_VOUCHER'
+                  description: "type of mode: DISCOUNT or PAYMENT_VOUCHER"
                 includeRedemptions:
                   type: boolean
                   description: to include details of redemption
@@ -89,7 +89,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

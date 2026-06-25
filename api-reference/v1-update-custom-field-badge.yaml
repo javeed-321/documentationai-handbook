@@ -3,14 +3,14 @@ info:
   title: Update badge custom field
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/badges/customField/{customFieldId}:
+  "/api_gateway/v1/badges/customField/{customFieldId}":
     put:
       summary: Update badge custom field
       description: ''
@@ -76,10 +76,10 @@ paths:
                       isActive: true
                       dataType: STRING
                       createdOn: 1771420714.676
-                      createdOnISO: '2026-02-18T13:18:34Z'
+                      createdOnISO: "2026-02-18T13:18:34Z"
                       createdBy: 75197372
                       lastUpdatedOn: 1771496603.0093
-                      lastUpdatedOnISO: '2026-02-19T10:23:23Z'
+                      lastUpdatedOnISO: "2026-02-19T10:23:23Z"
                       lastUpdatedBy: 75197372
                     errors: []
                     warnings: []
@@ -140,7 +140,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

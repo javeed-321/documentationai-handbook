@@ -3,14 +3,14 @@ info:
   title: Generate Expression JSON
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /loyalty/api/v1/workflows/expJSON/{programId}/{eventType}:
+  "/loyalty/api/v1/workflows/expJSON/{programId}/{eventType}":
     post:
       summary: Generate Expression JSON
       description: Converts a rule expression string into an expressionJSON object

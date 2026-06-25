@@ -3,14 +3,14 @@ info:
   title: Upload Coupons (Batch)
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /coupon/api/v1/upload/file/{couponSeriedId}:
+  "/coupon/api/v1/upload/file/{couponSeriedId}":
     post:
       summary: Upload Coupons (Batch)
       description: ''
@@ -136,7 +136,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

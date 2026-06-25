@@ -3,14 +3,14 @@ info:
   title: Get individual badge details of a customer
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/badges/management/{customerId}/badge/{badgeId}:
+  "/api_gateway/v1/badges/management/{customerId}/badge/{badgeId}":
     get:
       summary: Get individual badge details of a customer
       description: ''
@@ -310,13 +310,13 @@ paths:
                       name: 'Badge Issueds_Test6 '
                       description: Make 5 transactions
                       createdOn: 1765185213.63
-                      createdOnISO: '2025-12-08T09:13:33Z'
+                      createdOnISO: "2025-12-08T09:13:33Z"
                       lastUpdatedOn: 1765185213.63
-                      lastUpdatedOnISO: '2025-12-08T09:13:33Z'
+                      lastUpdatedOnISO: "2025-12-08T09:13:33Z"
                       startsOn: 1765178896000
-                      startsOnISO: +57906-04-18T07:06:40Z
+                      startsOnISO: "+57906-04-18T07:06:40Z"
                       expiresOn: 1796275142001
-                      expiresOnISO: +58891-09-10T13:13:21Z
+                      expiresOnISO: "+58891-09-10T13:13:21Z"
                       action: ACTIVATED
                       badgeType: ISSUE_EARN
                       badgeStatus: UPCOMING
@@ -334,7 +334,7 @@ paths:
                       images:
                       - name: Issued
                         fileSvcHandle: qwer-8634-8938
-                        url: https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d
+                        url: "https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d"
                         tag: EARNED
                       earnExpiry:
                         expiryType: RELATIVE
@@ -344,7 +344,7 @@ paths:
                         expiryType: ABSOLUTE
                         type: FIXED_DATE
                         expiresOn: 1796277042000
-                        expiresOnISO: +58891-10-02T13:00:00Z
+                        expiresOnISO: "+58891-10-02T13:00:00Z"
                         expireWithBadgeMeta: false
                       tags: []
                       badgeRank: 3
@@ -1110,13 +1110,13 @@ paths:
                           properties:
                             tets-3:
                               type: string
-                              example: '2024-06-13 14:20:42'
+                              example: "2024-06-13 14:20:42"
                             test-19:
                               type: string
-                              example: '2024-06-11 14:24:43'
+                              example: "2024-06-11 14:24:43"
                             test-16:
                               type: string
-                              example: '2024-06-10 14:24:06'
+                              example: "2024-06-10 14:24:06"
                             msd-1:
                               type: string
                               example: 'true'
@@ -1125,13 +1125,13 @@ paths:
                               example: Helo
                             test-23456:
                               type: string
-                              example: '2024-06-11 16:48:22'
+                              example: "2024-06-11 16:48:22"
                             AKV:
                               type: string
                               example: hi1
                             test-21:
                               type: string
-                              example: '2024-06-06 14:25:14'
+                              example: "2024-06-06 14:25:14"
                             ka_test_1:
                               type: string
                               example: 'false'
@@ -1202,7 +1202,7 @@ paths:
                                 example: qwer-8634-8938
                               url:
                                 type: string
-                                example: https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d
+                                example: "https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d"
                               tag:
                                 type: string
                                 example: EARNED
@@ -1399,7 +1399,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -1407,12 +1407,9 @@ paths:
       x-readme:
         code-samples:
         - language: shell
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/v1/badges/management/919999999994/badge/693696bdcebb9648d89735b3?includeStatistics=true''
-            \
-
-            --header ''Authorization: Basic bWFkaMjU2YQ=='' \
-
-            --header ''Cookie: _cfuvid=LbgLgMATQVG7rxgU6obNtuTjuntKzGkHg15XluHdUPI-1768984490920-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/v1/badges/management/919999999994/badge/693696bdcebb9648d89735b3?includeStatistics=true'\
+            \ \\\n--header 'Authorization: Basic bWFkaMjU2YQ==' \\\n--header 'Cookie:\
+            \ _cfuvid=LbgLgMATQVG7rxgU6obNtuTjuntKzGkHg15XluHdUPI-1768984490920-0.0.1.1-604800000'"
           name: Sample request
         samples-languages:
         - shell

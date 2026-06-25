@@ -3,7 +3,7 @@ info:
   title: Organisation Level Configuration for Rewards Catalog
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -23,8 +23,9 @@ paths:
               properties:
                 RAW_BODY:
                   type: string
-                  description: '{     "configKeyName": "CONF_START_OF_THE_WEEK_FOR_ORG_RESTRICTION",     "configKeyValue":
-                    "SUNDAY",     "brandId": 47,     "label": "" }'
+                  description: "{     \"configKeyName\": \"CONF_START_OF_THE_WEEK_FOR_ORG_RESTRICTION\"\
+                    ,     \"configKeyValue\": \"SUNDAY\",     \"brandId\": 47,   \
+                    \  \"label\": \"\" }"
       responses:
         '200':
           description: '200'
@@ -160,7 +161,7 @@ paths:
                             example: CONF_SEND_EXPIRY_NOTIFICATION_FOR_REWARD_TIME
                           configKeyValue:
                             type: string
-                            example: '16:00'
+                            example: "16:00"
                           brandId:
                             type: integer
                             example: 1

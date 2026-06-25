@@ -3,14 +3,14 @@ info:
   title: Get Cart Promotions for a particular till
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/promotions/till/{tillId}:
+  "/api_gateway/v1/promotions/till/{tillId}":
     get:
       summary: Get Cart Promotions for a particular till
       description: This API can be used to fetch the Cart promotions for a particular
@@ -935,14 +935,14 @@ paths:
                           default: 0
                         createdOn:
                           type: string
-                          example: '2023-01-19T09:28:58.595Z'
+                          example: "2023-01-19T09:28:58.595Z"
                         lastUpdatedBy:
                           type: integer
                           example: 0
                           default: 0
                         lastUpdatedOn:
                           type: string
-                          example: '2023-01-19T09:28:58.595Z'
+                          example: "2023-01-19T09:28:58.595Z"
                         startDate:
                           type: integer
                           example: 0
@@ -1363,10 +1363,10 @@ paths:
                                 example: OPEN
                               createdOn:
                                 type: string
-                                example: '2023-01-19T09:28:58.595Z'
+                                example: "2023-01-19T09:28:58.595Z"
                               lastUpdatedOn:
                                 type: string
-                                example: '2023-01-19T09:28:58.595Z'
+                                example: "2023-01-19T09:28:58.595Z"
                               lastUpdatedBy:
                                 type: integer
                                 example: 0
@@ -1423,7 +1423,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

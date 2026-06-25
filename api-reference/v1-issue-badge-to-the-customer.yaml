@@ -3,7 +3,7 @@ info:
   title: Issue badge (earn)
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -42,18 +42,18 @@ paths:
                   description: A unique identifier associated with the owner.
                 earnEventDate:
                   type: string
-                  description: The date on which the customer performed the activity.
-                    Earn event date. Timestamp in the ISO 8601 standard format format
-                    YYYY-MM-DDTHH:MM:SS.SSSZ. has to be between the badge start date
-                    and end date if it is a direct earn type of badge and it has to
-                    be between the badge issual start date and end date if it is an
-                    issue & earn type of badge.
+                  description: "The date on which the customer performed the activity.\
+                    \ Earn event date. Timestamp in the ISO 8601 standard format format\
+                    \ YYYY-MM-DDTHH:MM:SS.SSSZ. has to be between the badge start\
+                    \ date and end date if it is a direct earn type of badge and it\
+                    \ has to be between the badge issual start date and end date if\
+                    \ it is an issue & earn type of badge."
                   format: date-time
             examples:
               request:
                 value:
                   badgeMetaId: 692e7e739b3ca00e4bbf7c06
-                  earnEventDate: '2025-12-02T11:30:00.192Z'
+                  earnEventDate: "2025-12-02T11:30:00.192Z"
                   customerId: '23423'
                   requestId: 23432
                   triggeredBy:
@@ -72,7 +72,7 @@ paths:
                       customerId: 23423
                       earnedBadgeId: 696e2234eba5957293853195
                       expiresOn: 1770034996.71532
-                      expiresOnISO: '2026-02-02T12:23:16Z'
+                      expiresOnISO: "2026-02-02T12:23:16Z"
                       requestId: '23432'
                       issuedId: null
                     errors: []

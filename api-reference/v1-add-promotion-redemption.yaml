@@ -3,7 +3,7 @@ info:
   title: Add Promotion Redemption
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -22,7 +22,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -55,8 +55,8 @@ paths:
                     type: array
                     items:
                       type: string
-                      example: 'Promotion with ids : [674fbb982335bd1d58a8c2a4, 674fbb982335bd1d58a8c2a4]
-                        not found for org : 4000004 .'
+                      example: "Promotion with ids : [674fbb982335bd1d58a8c2a4, 674fbb982335bd1d58a8c2a4]\
+                        \ not found for org : 4000004 ."
       deprecated: false
       x-readme:
         code-samples:

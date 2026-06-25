@@ -3,14 +3,14 @@ info:
   title: Get purchased reward details by id and user
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/user/reward/{rewardId}/vouchers/brand/{brand name}:
+  "/api_gateway/rewards/core/v1/user/reward/{rewardId}/vouchers/brand/{brand name}":
     get:
       summary: Get purchased reward details by id and user
       description: ''
@@ -95,7 +95,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -103,7 +103,7 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: https://eucrm.cc.capillarytech.com/api_gateway/rewards/core/v1/user/reward/121879/brand/BUKL
+          code: "https://eucrm.cc.capillarytech.com/api_gateway/rewards/core/v1/user/reward/121879/brand/BUKL"
         samples-languages:
         - curl
 components:

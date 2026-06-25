@@ -3,7 +3,7 @@ info:
   title: Get all vendor redemptions
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -57,12 +57,12 @@ paths:
           content:
             application/json:
               examples:
-                'Failure: Incorrect Page number and size':
+                "Failure: Incorrect Page number and size":
                   value: "{\n    \"status\": {\n        \"success\": false,\n    \
                     \    \"code\": 8000,\n        \"message\": \"Unable to fetch as\
                     \ Page number and size is invalid\"\n    },\n    \"redemptionList\"\
                     : null,\n    \"pagingDetails\": null\n}"
-                'Failure: Invalid redemption type':
+                "Failure: Invalid redemption type":
                   value: "{\n    \"status\": {\n        \"success\": false,\n    \
                     \    \"code\": 2110,\n        \"message\": \"Invalid redemption(reward)\
                     \ type\"\n    },\n    \"redemptionList\": null,\n    \"pagingDetails\"\
@@ -80,27 +80,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759733970000
-                      lastUpdatedOnDateTime: '2025-10-06T06:59:30Z'
+                      lastUpdatedOnDateTime: "2025-10-06T06:59:30Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759733970000
-                      createdOnDateTime: '2025-10-06T06:59:30Z'
+                      createdOnDateTime: "2025-10-06T06:59:30Z"
                       redemptionActionList:
                       - id: 25858
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 1
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -110,14 +111,14 @@ paths:
                       enabled: true
                       responseKeys: []
                       lastUpdatedOn: 1759740082000
-                      lastUpdatedOnDateTime: '2025-10-06T08:41:22Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:41:22Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740082000
-                      createdOnDateTime: '2025-10-06T08:41:22Z'
+                      createdOnDateTime: "2025-10-06T08:41:22Z"
                       redemptionActionList: null
                     - id: 34427
                       name: UAT Vendor Redemption 3
@@ -125,27 +126,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759740368000
-                      lastUpdatedOnDateTime: '2025-10-06T08:46:08Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:46:08Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740368000
-                      createdOnDateTime: '2025-10-06T08:46:08Z'
+                      createdOnDateTime: "2025-10-06T08:46:08Z"
                       redemptionActionList:
                       - id: 25861
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 1
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -154,14 +156,15 @@ paths:
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 2
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -170,14 +173,15 @@ paths:
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -188,27 +192,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759740733000
-                      lastUpdatedOnDateTime: '2025-10-06T08:52:13Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:52:13Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740733000
-                      createdOnDateTime: '2025-10-06T08:52:13Z'
+                      createdOnDateTime: "2025-10-06T08:52:13Z"
                       redemptionActionList:
                       - id: 25864
                         name: add good will points
                         enabled: true
                         apiType: GET
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -219,27 +224,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759740863000
-                      lastUpdatedOnDateTime: '2025-10-06T08:54:23Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:54:23Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740863000
-                      createdOnDateTime: '2025-10-06T08:54:23Z'
+                      createdOnDateTime: "2025-10-06T08:54:23Z"
                       redemptionActionList:
                       - id: 25865
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -250,27 +256,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759740876000
-                      lastUpdatedOnDateTime: '2025-10-06T08:54:36Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:54:36Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740876000
-                      createdOnDateTime: '2025-10-06T08:54:36Z'
+                      createdOnDateTime: "2025-10-06T08:54:36Z"
                       redemptionActionList:
                       - id: 25866
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -281,27 +288,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759741297000
-                      lastUpdatedOnDateTime: '2025-10-06T09:01:37Z'
+                      lastUpdatedOnDateTime: "2025-10-06T09:01:37Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759741297000
-                      createdOnDateTime: '2025-10-06T09:01:37Z'
+                      createdOnDateTime: "2025-10-06T09:01:37Z"
                       redemptionActionList:
                       - id: 25867
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -312,27 +320,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759741307000
-                      lastUpdatedOnDateTime: '2025-10-06T09:01:47Z'
+                      lastUpdatedOnDateTime: "2025-10-06T09:01:47Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759741307000
-                      createdOnDateTime: '2025-10-06T09:01:47Z'
+                      createdOnDateTime: "2025-10-06T09:01:47Z"
                       redemptionActionList:
                       - id: 25868
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://cc.capillarytech
+                        apiUrl: "https://cc.capillarytech"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -343,27 +352,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759741603000
-                      lastUpdatedOnDateTime: '2025-10-06T09:06:43Z'
+                      lastUpdatedOnDateTime: "2025-10-06T09:06:43Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759741603000
-                      createdOnDateTime: '2025-10-06T09:06:43Z'
+                      createdOnDateTime: "2025-10-06T09:06:43Z"
                       redemptionActionList:
                       - id: 25870
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://cc.capillarytech
+                        apiUrl: "https://cc.capillarytech"
                         apiHeaders:
                           Authorization: ''
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -374,14 +384,14 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759741612000
-                      lastUpdatedOnDateTime: '2025-10-06T09:06:52Z'
+                      lastUpdatedOnDateTime: "2025-10-06T09:06:52Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759741612000
-                      createdOnDateTime: '2025-10-06T09:06:52Z'
+                      createdOnDateTime: "2025-10-06T09:06:52Z"
                       redemptionActionList: null
                     pagingDetails:
                       last: false
@@ -405,24 +415,25 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1764153802000
-                      lastUpdatedOnDateTime: '2025-11-26T10:43:22Z'
+                      lastUpdatedOnDateTime: "2025-11-26T10:43:22Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75197372
                       lastUpdatedBy: 75197372
                       createdOn: 1764153802000
-                      createdOnDateTime: '2025-11-26T10:43:22Z'
+                      createdOnDateTime: "2025-11-26T10:43:22Z"
                       redemptionActionList:
                       - id: 27322
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders: {}
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 1
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -433,27 +444,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1764153001000
-                      lastUpdatedOnDateTime: '2025-11-26T10:30:01Z'
+                      lastUpdatedOnDateTime: "2025-11-26T10:30:01Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75197372
                       lastUpdatedBy: 75197372
                       createdOn: 1764153001000
-                      createdOnDateTime: '2025-11-26T10:30:01Z'
+                      createdOnDateTime: "2025-11-26T10:30:01Z"
                       redemptionActionList:
                       - id: 27321
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 1
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -464,27 +476,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1764152638000
-                      lastUpdatedOnDateTime: '2025-11-26T10:23:58Z'
+                      lastUpdatedOnDateTime: "2025-11-26T10:23:58Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75197372
                       lastUpdatedBy: 75197372
                       createdOn: 1764152638000
-                      createdOnDateTime: '2025-11-26T10:23:58Z'
+                      createdOnDateTime: "2025-11-26T10:23:58Z"
                       redemptionActionList:
                       - id: 27320
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 1
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -499,14 +512,14 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759750121000
-                      lastUpdatedOnDateTime: '2025-10-06T11:28:41Z'
+                      lastUpdatedOnDateTime: "2025-10-06T11:28:41Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759750121000
-                      createdOnDateTime: '2025-10-06T11:28:41Z'
+                      createdOnDateTime: "2025-10-06T11:28:41Z"
                       redemptionActionList: null
                     - id: 34442
                       name: UAT Vendor Redemption 6
@@ -514,20 +527,20 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759749265000
-                      lastUpdatedOnDateTime: '2025-10-06T11:14:25Z'
+                      lastUpdatedOnDateTime: "2025-10-06T11:14:25Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759749265000
-                      createdOnDateTime: '2025-10-06T11:14:25Z'
+                      createdOnDateTime: "2025-10-06T11:14:25Z"
                       redemptionActionList:
                       - id: 25874
                         name: add good will points
                         enabled: true
                         apiType: INVALID
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
@@ -543,20 +556,20 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759741624000
-                      lastUpdatedOnDateTime: '2025-10-06T09:07:04Z'
+                      lastUpdatedOnDateTime: "2025-10-06T09:07:04Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759741624000
-                      createdOnDateTime: '2025-10-06T09:07:04Z'
+                      createdOnDateTime: "2025-10-06T09:07:04Z"
                       redemptionActionList:
                       - id: 25871
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://cc.capillarytech
+                        apiUrl: "https://cc.capillarytech"
                         apiHeaders:
                           Authorization: ''
                           accept: application/json
@@ -572,14 +585,14 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759741612000
-                      lastUpdatedOnDateTime: '2025-10-06T09:06:52Z'
+                      lastUpdatedOnDateTime: "2025-10-06T09:06:52Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759741612000
-                      createdOnDateTime: '2025-10-06T09:06:52Z'
+                      createdOnDateTime: "2025-10-06T09:06:52Z"
                       redemptionActionList: null
                     - id: 34435
                       name: UAT Vendor Redemption 5
@@ -587,27 +600,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759741603000
-                      lastUpdatedOnDateTime: '2025-10-06T09:06:43Z'
+                      lastUpdatedOnDateTime: "2025-10-06T09:06:43Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759741603000
-                      createdOnDateTime: '2025-10-06T09:06:43Z'
+                      createdOnDateTime: "2025-10-06T09:06:43Z"
                       redemptionActionList:
                       - id: 25870
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://cc.capillarytech
+                        apiUrl: "https://cc.capillarytech"
                         apiHeaders:
                           Authorization: ''
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -618,27 +632,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759741307000
-                      lastUpdatedOnDateTime: '2025-10-06T09:01:47Z'
+                      lastUpdatedOnDateTime: "2025-10-06T09:01:47Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759741307000
-                      createdOnDateTime: '2025-10-06T09:01:47Z'
+                      createdOnDateTime: "2025-10-06T09:01:47Z"
                       redemptionActionList:
                       - id: 25868
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://cc.capillarytech
+                        apiUrl: "https://cc.capillarytech"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -649,27 +664,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759741297000
-                      lastUpdatedOnDateTime: '2025-10-06T09:01:37Z'
+                      lastUpdatedOnDateTime: "2025-10-06T09:01:37Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759741297000
-                      createdOnDateTime: '2025-10-06T09:01:37Z'
+                      createdOnDateTime: "2025-10-06T09:01:37Z"
                       redemptionActionList:
                       - id: 25867
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -680,27 +696,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759740876000
-                      lastUpdatedOnDateTime: '2025-10-06T08:54:36Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:54:36Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740876000
-                      createdOnDateTime: '2025-10-06T08:54:36Z'
+                      createdOnDateTime: "2025-10-06T08:54:36Z"
                       redemptionActionList:
                       - id: 25866
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -711,27 +728,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759740863000
-                      lastUpdatedOnDateTime: '2025-10-06T08:54:23Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:54:23Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740863000
-                      createdOnDateTime: '2025-10-06T08:54:23Z'
+                      createdOnDateTime: "2025-10-06T08:54:23Z"
                       redemptionActionList:
                       - id: 25865
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -742,27 +760,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759740733000
-                      lastUpdatedOnDateTime: '2025-10-06T08:52:13Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:52:13Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740733000
-                      createdOnDateTime: '2025-10-06T08:52:13Z'
+                      createdOnDateTime: "2025-10-06T08:52:13Z"
                       redemptionActionList:
                       - id: 25864
                         name: add good will points
                         enabled: true
                         apiType: GET
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -773,27 +792,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759740368000
-                      lastUpdatedOnDateTime: '2025-10-06T08:46:08Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:46:08Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740368000
-                      createdOnDateTime: '2025-10-06T08:46:08Z'
+                      createdOnDateTime: "2025-10-06T08:46:08Z"
                       redemptionActionList:
                       - id: 25861
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 1
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -802,14 +822,15 @@ paths:
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 2
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -818,14 +839,15 @@ paths:
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 3
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -835,14 +857,14 @@ paths:
                       enabled: true
                       responseKeys: []
                       lastUpdatedOn: 1759740082000
-                      lastUpdatedOnDateTime: '2025-10-06T08:41:22Z'
+                      lastUpdatedOnDateTime: "2025-10-06T08:41:22Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759740082000
-                      createdOnDateTime: '2025-10-06T08:41:22Z'
+                      createdOnDateTime: "2025-10-06T08:41:22Z"
                       redemptionActionList: null
                     - id: 34421
                       name: UAT Vendor Redemption 1
@@ -850,27 +872,28 @@ paths:
                       responseKeys:
                       - voucher
                       lastUpdatedOn: 1759733970000
-                      lastUpdatedOnDateTime: '2025-10-06T06:59:30Z'
+                      lastUpdatedOnDateTime: "2025-10-06T06:59:30Z"
                       redemptionType: INTOUCH_REWARD
                       vendorId: 430
                       vendorName: UAT Vendor 8
                       createdBy: 75155297
                       lastUpdatedBy: 75155297
                       createdOn: 1759733970000
-                      createdOnDateTime: '2025-10-06T06:59:30Z'
+                      createdOnDateTime: "2025-10-06T06:59:30Z"
                       redemptionActionList:
                       - id: 25858
                         name: add good will points
                         enabled: true
                         apiType: POST
-                        apiUrl: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                        apiUrl: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                         apiHeaders:
                           Authorization: Basic bHVjaWF1dG9fdGlsbF8xMDoyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA==
                           accept: application/json
                           Content-Type: application/json
-                        apiBody: '{"customFields_property": {"customField_1_property":
-                          "${customfield_CF1}"}, "transactionId_property": "${rewardTransactionId}",
-                          "fulfillmentStatus_property": "${fulfillmentStatus}"}'
+                        apiBody: "{\"customFields_property\": {\"customField_1_property\"\
+                          : \"${customfield_CF1}\"}, \"transactionId_property\": \"\
+                          ${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                          : \"${fulfillmentStatus}\"}"
                         execOrder: 1
                         contextKeys:
                           voucher: response.requests.request.get(0).id
@@ -930,7 +953,7 @@ paths:
                             default: 0
                           lastUpdatedOnDateTime:
                             type: string
-                            example: '2025-05-27T11:18:57Z'
+                            example: "2025-05-27T11:18:57Z"
                           redemptionType:
                             type: string
                             example: VOUCHER
@@ -955,7 +978,7 @@ paths:
                             default: 0
                           createdOnDateTime:
                             type: string
-                            example: '2025-05-27T11:18:57Z'
+                            example: "2025-05-27T11:18:57Z"
                           redemptionActionList:
                             type: array
                             items:
@@ -977,7 +1000,7 @@ paths:
                                   example: POST
                                 apiUrl:
                                   type: string
-                                  example: https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851
+                                  example: "https://crm-nightly-new.cc.capillarytech.com/v1.1/request/add?program_id=2851"
                                 apiHeaders:
                                   type: object
                                   properties:
@@ -992,10 +1015,10 @@ paths:
                                       example: application/json
                                 apiBody:
                                   type: string
-                                  example: '{"customFields_property": {"customField_1_property":
-                                    "${customfield_CF1}"}, "transactionId_property":
-                                    "${rewardTransactionId}", "fulfillmentStatus_property":
-                                    "${fulfillmentStatus}"}'
+                                  example: "{\"customFields_property\": {\"customField_1_property\"\
+                                    : \"${customfield_CF1}\"}, \"transactionId_property\"\
+                                    : \"${rewardTransactionId}\", \"fulfillmentStatus_property\"\
+                                    : \"${fulfillmentStatus}\"}"
                                 execOrder:
                                   type: integer
                                   example: 1
@@ -1041,7 +1064,7 @@ paths:
                           type: integer
                           example: 0
                           default: 0
-                - title: 'Failure: Incorrect Page number and size'
+                - title: "Failure: Incorrect Page number and size"
                   type: object
                   properties:
                     status:
@@ -1060,7 +1083,7 @@ paths:
                           example: Unable to fetch as Page number and size is invalid
                     redemptionList: {}
                     pagingDetails: {}
-                - title: 'Failure: Invalid redemption type'
+                - title: "Failure: Invalid redemption type"
                   type: object
                   properties:
                     status:
@@ -1121,7 +1144,7 @@ paths:
                             default: 0
                           lastUpdatedOnDateTime:
                             type: string
-                            example: '2025-05-16T05:53:39Z'
+                            example: "2025-05-16T05:53:39Z"
                           actionCount:
                             type: integer
                             example: 1
@@ -1140,33 +1163,23 @@ paths:
                             default: 0
                           createdOnDateTime:
                             type: string
-                            example: '2025-05-16T05:53:39Z'
+                            example: "2025-05-16T05:53:39Z"
       deprecated: false
       x-readme:
         code-samples:
         - language: shell
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/redemptions?page=0&size=10&vendorId=430&order=ASC&redemptionType=INTOUCH_REWARD&sortOn=LAST_UPDATED_ON''
-            \
-
-            --header ''Authorization: Basic bWFkaHV2YQ=='' \
-
-            --header ''Cookie: _cfuvid=8rpNyzE0Ay41U4JARZee6dsWf__nZ.F84E_l3QkuwKU-1734505895564-0.0.1.1-604800000;
-            _cfuvid=NtRONY0QwuYX36Yw4pjmIyA9l2D5m4QjzK0D0oQyNxA-1764223014942-0.0.1.1-604800000''
-            \
-
-            --header ''Accept: application/json'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/redemptions?page=0&size=10&vendorId=430&order=ASC&redemptionType=INTOUCH_REWARD&sortOn=LAST_UPDATED_ON'\
+            \ \\\n--header 'Authorization: Basic bWFkaHV2YQ==' \\\n--header 'Cookie:\
+            \ _cfuvid=8rpNyzE0Ay41U4JARZee6dsWf__nZ.F84E_l3QkuwKU-1734505895564-0.0.1.1-604800000;\
+            \ _cfuvid=NtRONY0QwuYX36Yw4pjmIyA9l2D5m4QjzK0D0oQyNxA-1764223014942-0.0.1.1-604800000'\
+            \ \\\n--header 'Accept: application/json'"
           name: Sample request
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/redemptions?order=DESC&redemptionType=INTOUCH_REWARD&sortOn=LAST_UPDATED_ON''
-            \
-
-            --header ''Authorization: Basic bWFkaHVfjU2YQ=='' \
-
-            --header ''Cookie: _cfuvid=8rpNyzE0Ay41U4JARZee6dsWf__nZ.F84E_l3QkuwKU-1734505895564-0.0.1.1-604800000;
-            _cfuvid=UN7LBPD0Ze6HcR1IkmVQYBfFVNI5f8Y.u5QwTnxv8Uo-1764223624323-0.0.1.1-604800000''
-            \
-
-            --header ''Accept: application/json'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/redemptions?order=DESC&redemptionType=INTOUCH_REWARD&sortOn=LAST_UPDATED_ON'\
+            \ \\\n--header 'Authorization: Basic bWFkaHVfjU2YQ==' \\\n--header 'Cookie:\
+            \ _cfuvid=8rpNyzE0Ay41U4JARZee6dsWf__nZ.F84E_l3QkuwKU-1734505895564-0.0.1.1-604800000;\
+            \ _cfuvid=UN7LBPD0Ze6HcR1IkmVQYBfFVNI5f8Y.u5QwTnxv8Uo-1764223624323-0.0.1.1-604800000'\
+            \ \\\n--header 'Accept: application/json'"
           name: Sample request With sortOn=lastUpdatedOn, order= DESC, redemptionType=
             INTOUCH_REWARD
         samples-languages:

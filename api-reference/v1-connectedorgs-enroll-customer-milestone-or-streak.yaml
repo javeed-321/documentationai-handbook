@@ -3,14 +3,14 @@ info:
   title: Enroll/Re-Enroll a Customer to a Milestone or Streak
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/intouch-api-v3/v3.1/targetGroups/{targetGroupId}/targets/{targetId}/enroll:
+  "/api_gateway/intouch-api-v3/v3.1/targetGroups/{targetGroupId}/targets/{targetId}/enroll":
     post:
       summary: Enroll/Re-Enroll a Customer to a Milestone or Streak
       description: ''
@@ -62,21 +62,21 @@ paths:
                     Streaks, this field itself is not needed.
                 initialBalance:
                   type: integer
-                  description: The initial balance amount assigned to the customer.
-                    This could be 0 or any other number, and when a user enrols with
-                    initial balance, the amount of targets needs to be achieved will
-                    be decreased by same value. If this given as NULL in the case
-                    or re-enrol, then the user's target value will start from the
-                    same value at which the un-enrol happened before. Initial balance
-                    field won't work for streaks.
+                  description: "The initial balance amount assigned to the customer.\
+                    \ This could be 0 or any other number, and when a user enrols\
+                    \ with initial balance, the amount of targets needs to be achieved\
+                    \ will be decreased by same value. If this given as NULL in the\
+                    \ case or re-enrol, then the user's target value will start from\
+                    \ the same value at which the un-enrol happened before. Initial\
+                    \ balance field won't work for streaks."
                   format: int32
                 resetStreakStatus:
                   type: boolean
-                  description: This field is only for streaks. If this is false, user
-                    will continue from the streak value that is present before the
-                    un-enrol from the streak. If this is marked as true during re-enrol,
-                    then the streak value of the user will be reset & it's like starting
-                    fresh.
+                  description: "This field is only for streaks. If this is false,\
+                    \ user will continue from the streak value that is present before\
+                    \ the un-enrol from the streak. If this is marked as true during\
+                    \ re-enrol, then the streak value of the user will be reset &\
+                    \ it's like starting fresh."
       responses:
         '200':
           description: '200'

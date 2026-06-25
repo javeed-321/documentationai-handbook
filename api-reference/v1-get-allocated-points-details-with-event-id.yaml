@@ -3,7 +3,7 @@ info:
   title: Get Point Allocation Details by Event ID
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -18,10 +18,10 @@ paths:
       parameters:
       - name: entity_id
         in: query
-        description: 'Specifies the identifier used to fetch event-specific details.
-          This can be one of the following:  The event ID of the event, such as TransactionAdd
-          or a behavioral event  The unique ID of the event  The server-generated
-          request ID of a behavioral event'
+        description: "Specifies the identifier used to fetch event-specific details.\
+          \ This can be one of the following:  The event ID of the event, such as\
+          \ TransactionAdd or a behavioral event  The unique ID of the event  The\
+          \ server-generated request ID of a behavioral event"
         required: true
         schema:
           type: string
@@ -41,8 +41,8 @@ paths:
           format: int32
       - name: page
         in: query
-        description: 'Retrieve details of a specific page. Page count starts from
-          1.  Example: page=2 retrieves data on page 2.'
+        description: "Retrieve details of a specific page. Page count starts from\
+          \ 1.  Example: page=2 retrieves data on page 2."
         schema:
           type: integer
           format: int32
@@ -201,7 +201,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

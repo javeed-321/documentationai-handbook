@@ -3,7 +3,7 @@ info:
   title: Issue Reward in connected orgs
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -443,7 +443,7 @@ paths:
                                   example: 42FU1ZP3
                                 codeExpiry:
                                   type: string
-                                  example: '2023-06-09 00:00:00'
+                                  example: "2023-06-09 00:00:00"
                           promotions:
                             type: array
                           vendor:

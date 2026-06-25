@@ -3,7 +3,7 @@ info:
   title: Get Cart Promotions for a Customer
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -13,10 +13,10 @@ paths:
   /api_gateway/v1/promotions/customer/109943742:
     get:
       summary: Get Cart Promotions for a Customer
-      description: This API is used to retrieve the cart promotions tagged to a particular
-        customer based on the user ID. This returns cart promotions issued to the
-        customer or POS promotions which are tagged to the customer's tier or supplementary
-        programs.
+      description: "This API is used to retrieve the cart promotions tagged to a particular\
+        \ customer based on the user ID. This returns cart promotions issued to the\
+        \ customer or POS promotions which are tagged to the customer's tier or supplementary\
+        \ programs."
       operationId: get-promotions-for-a-customer
       parameters:
       - name: includeRedemptions
@@ -27,8 +27,8 @@ paths:
           type: boolean
       - name: includeSupplementaryPromotions
         in: query
-        description: includeSupplementaryPromotions=true includes the POS promotions
-          tagged to the customer's tier or supplementary program
+        description: "includeSupplementaryPromotions=true includes the POS promotions\
+          \ tagged to the customer's tier or supplementary program"
         schema:
           type: boolean
       responses:
@@ -468,7 +468,7 @@ paths:
                             example: 6461b3771baa292a997ada73
                           promotionName:
                             type: string
-                            example: Enrollment:15¢ off per gallon for 5 fuel ups
+                            example: "Enrollment:15¢ off per gallon for 5 fuel ups"
                           validTill:
                             type: integer
                             example: 1704047399999
@@ -510,20 +510,20 @@ paths:
                             properties:
                               t&c:
                                 type: string
-                                example: Enrollment:15¢ off per gallon for 5 fuel
-                                  ups
+                                example: "Enrollment:15¢ off per gallon for 5 fuel\
+                                  \ ups"
                               Test_Cap:
                                 type: string
-                                example: Enrollment:15¢ off per gallon for 5 fuel
-                                  ups
+                                example: "Enrollment:15¢ off per gallon for 5 fuel\
+                                  \ ups"
                               Field:
                                 type: string
-                                example: Enrollment:15¢ off per gallon for 5 fuel
-                                  ups
+                                example: "Enrollment:15¢ off per gallon for 5 fuel\
+                                  \ ups"
                               image_url:
                                 type: string
-                                example: Enrollment:15¢ off per gallon for 5 fuel
-                                  ups
+                                example: "Enrollment:15¢ off per gallon for 5 fuel\
+                                  \ ups"
                               partner 1 liability value:
                                 type: string
                                 example: '1'
@@ -656,7 +656,7 @@ paths:
                             example: 6461b3771baa292a997ada73
                           promotionName:
                             type: string
-                            example: Enrollment:15¢ off per gallon for 5 fuel ups
+                            example: "Enrollment:15¢ off per gallon for 5 fuel ups"
                           validTill:
                             type: integer
                             example: 1704047399999
@@ -698,20 +698,20 @@ paths:
                             properties:
                               t&c:
                                 type: string
-                                example: Enrollment:15¢ off per gallon for 5 fuel
-                                  ups
+                                example: "Enrollment:15¢ off per gallon for 5 fuel\
+                                  \ ups"
                               Test_Cap:
                                 type: string
-                                example: Enrollment:15¢ off per gallon for 5 fuel
-                                  ups
+                                example: "Enrollment:15¢ off per gallon for 5 fuel\
+                                  \ ups"
                               Field:
                                 type: string
-                                example: Enrollment:15¢ off per gallon for 5 fuel
-                                  ups
+                                example: "Enrollment:15¢ off per gallon for 5 fuel\
+                                  \ ups"
                               image_url:
                                 type: string
-                                example: Enrollment:15¢ off per gallon for 5 fuel
-                                  ups
+                                example: "Enrollment:15¢ off per gallon for 5 fuel\
+                                  \ ups"
                               partner 1 liability value:
                                 type: string
                                 example: '1'
@@ -824,13 +824,9 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/v1/promotions/customer/566881933?includeRedemptions=true&isIncludeActivePromotionsOnly=true''
-            \
-
-            --header ''Authorization: Basic Z2VvcmdlLmRvY2RlbW86MmQ1OTNhMjI2MTk1OGE2NWI5ZjAxMzU5NGIwNDllZTk=''
-            \
-
-            --header ''Cookie: _cfuvid=uvNcgoyX0Q6nY4banbmZMCVkA64njE4pSA_tJw1wkWo-1762160764633-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/v1/promotions/customer/566881933?includeRedemptions=true&isIncludeActivePromotionsOnly=true'\
+            \ \\\n--header 'Authorization: Basic Z2VvcmdlLmRvY2RlbW86MmQ1OTNhMjI2MTk1OGE2NWI5ZjAxMzU5NGIwNDllZTk='\
+            \ \\\n--header 'Cookie: _cfuvid=uvNcgoyX0Q6nY4banbmZMCVkA64njE4pSA_tJw1wkWo-1762160764633-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

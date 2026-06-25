@@ -3,14 +3,14 @@ info:
   title: Approve or reject a request
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v2/request-workflow/{requestType}:
+  "/api_gateway/v2/request-workflow/{requestType}":
     put:
       summary: Approve or reject a request
       description: This API enables you to approve or reject a request
@@ -72,11 +72,11 @@ paths:
                       userName: tom.sawyer@capillarytech.com
                       requestType: customer-status-change
                       state: approved
-                      startTime: '2023-10-04T16:29:19'
-                      endTime: '2023-10-04T16:42:25'
+                      startTime: "2023-10-04T16:29:19"
+                      endTime: "2023-10-04T16:42:25"
                       details:
                         IntouchAPITask-Payload:
-                          hostname: <https://crm-nightly-new.cc.capillarytech.com>
+                          hostname: "<https://crm-nightly-new.cc.capillarytech.com>"
                           path: /v2/customers/lookup/status
                           method: PUT
                           pathParams: {}
@@ -102,7 +102,7 @@ paths:
                           status: 200
                           headers:
                             Date:
-                            - Wed, 04 Oct 2023 11:12:25 GMT
+                            - "Wed, 04 Oct 2023 11:12:25 GMT"
                             Content-Type:
                             - application/json; charset=UTF-8
                             Content-Length:
@@ -110,11 +110,11 @@ paths:
                             Connection:
                             - keep-alive
                             X-Application-Context:
-                            - application:1900
+                            - "application:1900"
                             Host:
                             - intouch-api-64f99fb8b7-lkzjb
                             uri_path:
-                            - /v2/customers/{id}/status
+                            - "/v2/customers/{id}/status"
                             org_id:
                             - '51251'
                             status_code:
@@ -143,11 +143,11 @@ paths:
                       userName: tom.sawyer@capillarytech.com
                       requestType: points-redemption
                       state: failed
-                      startTime: '2023-10-04T16:49:14'
-                      endTime: '2023-10-04T16:49:58'
+                      startTime: "2023-10-04T16:49:14"
+                      endTime: "2023-10-04T16:49:58"
                       details:
                         IntouchAPITask-Payload:
-                          hostname: <https://crm-nightly-new.cc.capillarytech.com>
+                          hostname: "<https://crm-nightly-new.cc.capillarytech.com>"
                           path: /v1.1/points/redeem
                           method: POST
                           pathParams: {}
@@ -160,7 +160,7 @@ paths:
                                 points_redeemed: '100'
                                 customer:
                                   mobile: '9988221100'
-                                redemption_time: '2020-04-15 23:01:46'
+                                redemption_time: "2020-04-15 23:01:46"
                                 transaction_number: numbr892723330323421971280
                                 notes: Redemption by SMS
                                 external_reference_number: ACR-583523332039150121
@@ -178,7 +178,7 @@ paths:
                           status: 200
                           headers:
                             Date:
-                            - Wed, 04 Oct 2023 11:19:58 GMT
+                            - "Wed, 04 Oct 2023 11:19:58 GMT"
                             Content-Type:
                             - application/json;charset=UTF-8
                             Content-Length:
@@ -186,7 +186,7 @@ paths:
                             Connection:
                             - keep-alive
                             X-Application-Context:
-                            - application:1900
+                            - "application:1900"
                             Host:
                             - intouch-api-64f99fb8b7-lkzjb
                             uri_path:
@@ -426,10 +426,10 @@ paths:
                           example: approved
                         startTime:
                           type: string
-                          example: '2023-10-04T16:29:19'
+                          example: "2023-10-04T16:29:19"
                         endTime:
                           type: string
-                          example: '2023-10-04T16:42:25'
+                          example: "2023-10-04T16:42:25"
                         details:
                           type: object
                           properties:
@@ -438,7 +438,7 @@ paths:
                               properties:
                                 hostname:
                                   type: string
-                                  example: <https://crm-nightly-new.cc.capillarytech.com>
+                                  example: "<https://crm-nightly-new.cc.capillarytech.com>"
                                 path:
                                   type: string
                                   example: /v2/customers/lookup/status
@@ -518,7 +518,7 @@ paths:
                                       type: array
                                       items:
                                         type: string
-                                        example: Wed, 04 Oct 2023 11:12:25 GMT
+                                        example: "Wed, 04 Oct 2023 11:12:25 GMT"
                                     Content-Type:
                                       type: array
                                       items:
@@ -538,7 +538,7 @@ paths:
                                       type: array
                                       items:
                                         type: string
-                                        example: application:1900
+                                        example: "application:1900"
                                     Host:
                                       type: array
                                       items:
@@ -548,7 +548,7 @@ paths:
                                       type: array
                                       items:
                                         type: string
-                                        example: /v2/customers/{id}/status
+                                        example: "/v2/customers/{id}/status"
                                     org_id:
                                       type: array
                                       items:
@@ -622,10 +622,10 @@ paths:
                           example: failed
                         startTime:
                           type: string
-                          example: '2023-10-04T16:49:14'
+                          example: "2023-10-04T16:49:14"
                         endTime:
                           type: string
-                          example: '2023-10-04T16:49:58'
+                          example: "2023-10-04T16:49:58"
                         details:
                           type: object
                           properties:
@@ -634,7 +634,7 @@ paths:
                               properties:
                                 hostname:
                                   type: string
-                                  example: <https://crm-nightly-new.cc.capillarytech.com>
+                                  example: "<https://crm-nightly-new.cc.capillarytech.com>"
                                 path:
                                   type: string
                                   example: /v1.1/points/redeem
@@ -673,7 +673,7 @@ paths:
                                                   example: '9988221100'
                                             redemption_time:
                                               type: string
-                                              example: '2020-04-15 23:01:46'
+                                              example: "2020-04-15 23:01:46"
                                             transaction_number:
                                               type: string
                                               example: numbr892723330323421971280
@@ -729,7 +729,7 @@ paths:
                                       type: array
                                       items:
                                         type: string
-                                        example: Wed, 04 Oct 2023 11:19:58 GMT
+                                        example: "Wed, 04 Oct 2023 11:19:58 GMT"
                                     Content-Type:
                                       type: array
                                       items:
@@ -749,7 +749,7 @@ paths:
                                       type: array
                                       items:
                                         type: string
-                                        example: application:1900
+                                        example: "application:1900"
                                     Host:
                                       type: array
                                       items:
@@ -895,10 +895,10 @@ paths:
                           example: approved
                         startTime:
                           type: string
-                          example: '2023-12-26T20:19:40'
+                          example: "2023-12-26T20:19:40"
                         endTime:
                           type: string
-                          example: '2023-12-26T20:20:00'
+                          example: "2023-12-26T20:20:00"
                         details:
                           type: object
                           properties:
@@ -907,7 +907,7 @@ paths:
                               properties:
                                 hostname:
                                   type: string
-                                  example: http://internal-intouch-api.default:1900
+                                  example: "http://internal-intouch-api.default:1900"
                                 path:
                                   type: string
                                   example: /internal/goodwill/
@@ -996,12 +996,12 @@ paths:
                                       type: array
                                       items:
                                         type: string
-                                        example: Tue, 26 Dec 2023 14:49:59 GMT
+                                        example: "Tue, 26 Dec 2023 14:49:59 GMT"
                                     X-Application-Context:
                                       type: array
                                       items:
                                         type: string
-                                        example: application:1900
+                                        example: "application:1900"
                                     Content-Type:
                                       type: array
                                       items:
@@ -1108,10 +1108,10 @@ paths:
                           example: approved
                         startTime:
                           type: string
-                          example: '2023-12-29T02:23:23'
+                          example: "2023-12-29T02:23:23"
                         endTime:
                           type: string
-                          example: '2023-12-29T02:23:39'
+                          example: "2023-12-29T02:23:39"
                         details:
                           type: object
                           properties:
@@ -1120,7 +1120,7 @@ paths:
                               properties:
                                 hostname:
                                   type: string
-                                  example: https://crm-nightly-new.cc.capillarytech.com
+                                  example: "https://crm-nightly-new.cc.capillarytech.com"
                                 path:
                                   type: string
                                   example: /api_gateway/v1/badges/badgeMeta/customer/issueBulk
@@ -1197,7 +1197,7 @@ paths:
                                       type: array
                                       items:
                                         type: string
-                                        example: Thu, 28 Dec 2023 20:53:38 GMT
+                                        example: "Thu, 28 Dec 2023 20:53:38 GMT"
                                     Content-Type:
                                       type: array
                                       items:
@@ -1292,10 +1292,10 @@ paths:
                           example: approved
                         startTime:
                           type: string
-                          example: '2023-12-29T02:23:23'
+                          example: "2023-12-29T02:23:23"
                         endTime:
                           type: string
-                          example: '2023-12-29T02:23:39'
+                          example: "2023-12-29T02:23:39"
                         details:
                           type: object
                           properties:
@@ -1304,7 +1304,7 @@ paths:
                               properties:
                                 hostname:
                                   type: string
-                                  example: https://crm-nightly-new.cc.capillarytech.com
+                                  example: "https://crm-nightly-new.cc.capillarytech.com"
                                 path:
                                   type: string
                                   example: /api_gateway/v1/badges/badgeMeta/customer/issueBulk
@@ -1381,7 +1381,7 @@ paths:
                                       type: array
                                       items:
                                         type: string
-                                        example: Thu, 28 Dec 2023 20:53:38 GMT
+                                        example: "Thu, 28 Dec 2023 20:53:38 GMT"
                                     Content-Type:
                                       type: array
                                       items:
@@ -1525,10 +1525,10 @@ paths:
                         example: approved
                       startTime:
                         type: string
-                        example: '2023-12-27T21:58:14'
+                        example: "2023-12-27T21:58:14"
                       endTime:
                         type: string
-                        example: '2023-12-27T21:58:21'
+                        example: "2023-12-27T21:58:21"
                       details:
                         type: object
                         properties:
@@ -1537,7 +1537,7 @@ paths:
                             properties:
                               hostname:
                                 type: string
-                                example: https://crm-nightly-new.cc.capillarytech.com
+                                example: "https://crm-nightly-new.cc.capillarytech.com"
                               path:
                                 type: string
                                 example: /api_gateway/v1/badges/customer/earn
@@ -1612,7 +1612,7 @@ paths:
                                     type: array
                                     items:
                                       type: string
-                                      example: Wed, 27 Dec 2023 16:28:21 GMT
+                                      example: "Wed, 27 Dec 2023 16:28:21 GMT"
                                   Content-Type:
                                     type: array
                                     items:
@@ -1672,7 +1672,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

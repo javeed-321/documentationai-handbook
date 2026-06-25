@@ -3,14 +3,14 @@ info:
   title: Get Organisation Level Configuration
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/brand/{id}/getConfig:
+  "/api_gateway/rewards/core/v1/brand/{id}/getConfig":
     get:
       summary: Get Organisation Level Configuration
       description: ''
@@ -102,7 +102,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -110,10 +110,8 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''http://eu.api.capillarytech.com/api_gateway/rewards/core/v1/brand/1/getConfig''
-            \
-
-            --header ''Authorization: Basic Y20uMToyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA=='''
+          code: "curl --location 'http://eu.api.capillarytech.com/api_gateway/rewards/core/v1/brand/1/getConfig'\
+            \ \\\n--header 'Authorization: Basic Y20uMToyMDJjYjk2MmFjNTkwNzViOTY0YjA3MTUyZDIzNGI3MA=='"
         samples-languages:
         - curl
 components:

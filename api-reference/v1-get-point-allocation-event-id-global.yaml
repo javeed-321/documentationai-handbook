@@ -3,7 +3,7 @@ info:
   title: Get Point Allocation Details by Event ID
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -18,10 +18,10 @@ paths:
       parameters:
       - name: entity_id
         in: query
-        description: 'Specifies the identifier used to fetch event-specific details.
-          This can be one of the following:  The event ID of the event, such as TransactionAdd
-          or a behavioral event  The unique ID of the event  The server-generated
-          request ID of a behavioral event'
+        description: "Specifies the identifier used to fetch event-specific details.\
+          \ This can be one of the following:  The event ID of the event, such as\
+          \ TransactionAdd or a behavioral event  The unique ID of the event  The\
+          \ server-generated request ID of a behavioral event"
         required: true
         schema:
           type: string
@@ -41,8 +41,8 @@ paths:
           format: int32
       - name: page
         in: query
-        description: 'Retrieve details of a specific page. Page count starts from
-          1.  Example: page=2 retrieves data on page 2.'
+        description: "Retrieve details of a specific page. Page count starts from\
+          \ 1.  Example: page=2 retrieves data on page 2."
         schema:
           type: integer
           format: int32
@@ -201,7 +201,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -209,17 +209,11 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://nightly.api.capillarytech.com/x/neo/pointsAllocation/event?entity_id=hfjWDK0dek&customer_id=374819205&event_type_id=15''
-            \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''x-cap-neo-dag-scope: global'' \
-
-            --header ''Authorization: Basic RiMDcJkMjM0Yjcw'' \
-
-            --header ''Cookie: _cfuvid=aipDF8qJJabNkC6ofNg0_4.3nMtpbVSQI9mVehJNjMw-1749448275226-0.0.1.1-604800000;
-            _cfuvid=v57gtlQUtWUPppXkFQEmDIwmVy3hK1VROA7UHTl9fS0-1750313687627-0.0.1.1-604800000'''
+          code: "curl --location 'https://nightly.api.capillarytech.com/x/neo/pointsAllocation/event?entity_id=hfjWDK0dek&customer_id=374819205&event_type_id=15'\
+            \ \\\n--header 'Content-Type: application/json' \\\n--header 'x-cap-neo-dag-scope:\
+            \ global' \\\n--header 'Authorization: Basic RiMDcJkMjM0Yjcw' \\\n--header\
+            \ 'Cookie: _cfuvid=aipDF8qJJabNkC6ofNg0_4.3nMtpbVSQI9mVehJNjMw-1749448275226-0.0.1.1-604800000;\
+            \ _cfuvid=v57gtlQUtWUPppXkFQEmDIwmVy3hK1VROA7UHTl9fS0-1750313687627-0.0.1.1-604800000'"
           name: Sample Request
         samples-languages:
         - curl

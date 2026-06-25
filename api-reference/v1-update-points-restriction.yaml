@@ -3,7 +3,7 @@ info:
   title: Points - Update points restriction
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -23,10 +23,11 @@ paths:
               properties:
                 RAW_BODY:
                   type: string
-                  description: '[     {   "rewardConstraintId": 6759,         "kpi"
-                    :"POINTS",         "constraintLevel" : "CUSTOMER",         "frequencyType"
-                    : "DAILY",         "intervalValue" : 3,         "constraintLimitValue"
-                    : 8,         "isActive" : false     } ]'
+                  description: "[     {   \"rewardConstraintId\": 6759,         \"\
+                    kpi\" :\"POINTS\",         \"constraintLevel\" : \"CUSTOMER\"\
+                    ,         \"frequencyType\" : \"DAILY\",         \"intervalValue\"\
+                    \ : 3,         \"constraintLimitValue\" : 8,         \"isActive\"\
+                    \ : false     } ]"
             examples:
               Request Example:
                 value:
@@ -102,7 +103,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

@@ -3,14 +3,14 @@ info:
   title: Get purchased rewards for user (Old API)
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/user/vouchers/brand/{brand name}:
+  "/api_gateway/rewards/core/v1/user/vouchers/brand/{brand name}":
     get:
       summary: Get purchased rewards for user (Old API)
       description: ''

@@ -3,7 +3,7 @@ info:
   title: Get Loyalty Promotion List of a Customer (Connected Org)
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -130,10 +130,10 @@ paths:
                           default: 0
                         startDate:
                           type: string
-                          example: '2024-08-30T00:00:00.000Z'
+                          example: "2024-08-30T00:00:00.000Z"
                         endDate:
                           type: string
-                          example: '2024-09-29T23:59:59.000Z'
+                          example: "2024-09-29T23:59:59.000Z"
                         identifier:
                           type: string
                           example: ed64e808-dc10-4784-a752-eb7d8d55c87e
@@ -207,12 +207,9 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''host/v2.1/customers/lookup/promotionData?identifierName=mobile&identifierValue=9988221100&source=INSTORE''
-            \
-
-            --header ''DATA-SCOPE: OTHER'' \
-
-            --header ''DATA-SCOPE-ORG: 50405'' \'
+          code: "curl --location 'host/v2.1/customers/lookup/promotionData?identifierName=mobile&identifierValue=9988221100&source=INSTORE'\
+            \ \\\n--header 'DATA-SCOPE: OTHER' \\\n--header 'DATA-SCOPE-ORG: 50405'\
+            \ \\"
           name: cURL
         samples-languages:
         - curl

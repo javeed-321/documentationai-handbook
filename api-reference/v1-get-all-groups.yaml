@@ -3,7 +3,7 @@ info:
   title: Get all groups
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -31,8 +31,8 @@ paths:
           type: string
       - name: page
         in: query
-        description: 'The amount of the records that you want to retrieve. Default
-          value: 10.'
+        description: "The amount of the records that you want to retrieve. Default\
+          \ value: 10."
         schema:
           type: string
       responses:
@@ -799,7 +799,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -807,7 +807,7 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: https://eucrm.cc.capillarytech.com/api_gateway/v1/badges/group
+          code: "https://eucrm.cc.capillarytech.com/api_gateway/v1/badges/group"
         samples-languages:
         - curl
 components:

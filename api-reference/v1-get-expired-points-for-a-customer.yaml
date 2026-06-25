@@ -3,7 +3,7 @@ info:
   title: Get Customer’s Earned and Expired Points by Year
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -39,8 +39,8 @@ paths:
           format: int64
       - name: page
         in: query
-        description: 'Retrieve details of a specific page. Page count starts from
-          1. Example: page=2 retrieves data on page 2.'
+        description: "Retrieve details of a specific page. Page count starts from\
+          \ 1. Example: page=2 retrieves data on page 2."
         schema:
           type: integer
           format: int32
@@ -88,7 +88,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

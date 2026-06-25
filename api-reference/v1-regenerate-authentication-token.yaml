@@ -3,7 +3,7 @@ info:
   title: Regenerate Authentication Token
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -31,8 +31,8 @@ paths:
               properties:
                 identifierType:
                   type: string
-                  description: 'Identifier used for token generation. Values: MOBILE,
-                    EMAIL, USERNAME.'
+                  description: "Identifier used for token generation. Values: MOBILE,\
+                    \ EMAIL, USERNAME."
                 identifierValue:
                   type: string
                   description: Value of the specified identifierType.
@@ -107,7 +107,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}

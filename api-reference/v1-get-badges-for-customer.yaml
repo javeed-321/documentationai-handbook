@@ -3,14 +3,14 @@ info:
   title: Get badges for customer
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/badges/customer/{customerId}:
+  "/api_gateway/v1/badges/customer/{customerId}":
     get:
       summary: Get badges for customer
       description: ''
@@ -39,7 +39,7 @@ paths:
         required: true
       - name: sortOn
         in: query
-        description: 'Enables sorting of badges based on rank. Value: rank.'
+        description: "Enables sorting of badges based on rank. Value: rank."
         schema:
           type: string
       - name: X-CAP-CUSTOMER-IDENTIFIER
@@ -60,16 +60,16 @@ paths:
           type: string
       - name: lastEarnedOnDate
         in: query
-        description: 'Date and time when the badge was awarded to the customer. Time
-          format: Epoch format (UNIX timestamp in milliseconds).'
+        description: "Date and time when the badge was awarded to the customer. Time\
+          \ format: Epoch format (UNIX timestamp in milliseconds)."
         schema:
           type: number
           format: float
       - name: lastEarnEventDate
         in: query
-        description: 'Date and time when a triggering event (transactional or behavioural)
-          occurred, initiating the badge earning. Time format: Epoch format (UNIX
-          timestamp in milliseconds).'
+        description: "Date and time when a triggering event (transactional or behavioural)\
+          \ occurred, initiating the badge earning. Time format: Epoch format (UNIX\
+          \ timestamp in milliseconds)."
         schema:
           type: number
           format: float
@@ -278,9 +278,9 @@ paths:
                         name: George
                         description: erg
                         startOn: 1770143400
-                        startOnISO: '2026-02-03T18:30:00Z'
+                        startOnISO: "2026-02-03T18:30:00Z"
                         expiresOn: 1774376999
-                        expiresOnISO: '2026-03-24T18:29:59Z'
+                        expiresOnISO: "2026-03-24T18:29:59Z"
                         images: []
                         tags: []
                         badgeGroupId: 690874cd2814b4096eba3662
@@ -365,7 +365,7 @@ paths:
                                       example: qwer-8634-8938
                                     url:
                                       type: string
-                                      example: https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d
+                                      example: "https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d"
                                     tag:
                                       type: string
                                       example: EARNED
@@ -538,7 +538,7 @@ paths:
                                       example: qwer-8634-8938
                                     url:
                                       type: string
-                                      example: https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d
+                                      example: "https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d"
                                     tag:
                                       type: string
                                       example: EARNED
@@ -721,7 +721,7 @@ paths:
                                       example: 8be2b78e-b1d6-4127-926a-2cbed7eb2785
                                     url:
                                       type: string
-                                      example: https://storage.crm.eu.content-cdn.io/fs.capillary.eu/incentives_assets/badges/images/100606/653dea07b3cda7078c7c68ee_UN_EARNED_vDx_DRdk.png
+                                      example: "https://storage.crm.eu.content-cdn.io/fs.capillary.eu/incentives_assets/badges/images/100606/653dea07b3cda7078c7c68ee_UN_EARNED_vDx_DRdk.png"
                                     tag:
                                       type: string
                                       example: UN_EARNED
@@ -784,7 +784,7 @@ paths:
                                     example: 'true'
                                   Date:
                                     type: string
-                                    example: '2025-01-18 14:39:09'
+                                    example: "2025-01-18 14:39:09"
                                   Category1:
                                     type: string
                                     example: 'false'
@@ -822,37 +822,21 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/v1/badges/customer/565039504''
-            \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''accept: application/json'' \
-
-            --header ''Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg=''
-            \
-
-            --header ''Cookie: _cfuvid=pDcK3FYcGs86zaO.Nm3dErmATpyR5j3nnGAtlkTM0Sk-1745211210745-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/v1/badges/customer/565039504'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--header 'accept: application/json' \\\n--header\
+            \ 'Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg='\
+            \ \\\n--header 'Cookie: _cfuvid=pDcK3FYcGs86zaO.Nm3dErmATpyR5j3nnGAtlkTM0Sk-1745211210745-0.0.1.1-604800000'"
           name: Example request
         - language: curl
-          code: https://eucrm.cc.capillarytech.com/api_gateway/v1/badges/customer/tom.sawyer@capillarytech.com
+          code: "https://eucrm.cc.capillarytech.com/api_gateway/v1/badges/customer/tom.sawyer@capillarytech.com"
           name: Example request using the header
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/v1/badges/customer/566881933?groupId=690874cd2814b4096eba3662''
-            \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''accept: application/json'' \
-
-            --header ''Authorization: Basic bWFkaHVfoI3MjU2YQ=='' \
-
-            --header ''Cookie: _cfuvid=pDcK3FYcGs86zaO.Nm3dErmATpyR5j3nnGAtlkTM0Sk-1745211210745-0.0.1.1-604800000;
-            _cfuvid=I_dbNMPLOmRfzPQyzR9DnX8lpYlzQ6p6AY5ZrM1UpaM-1770891499083-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/v1/badges/customer/566881933?groupId=690874cd2814b4096eba3662'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--header 'accept: application/json' \\\n--header\
+            \ 'Authorization: Basic bWFkaHVfoI3MjU2YQ==' \\\n--header 'Cookie: _cfuvid=pDcK3FYcGs86zaO.Nm3dErmATpyR5j3nnGAtlkTM0Sk-1745211210745-0.0.1.1-604800000;\
+            \ _cfuvid=I_dbNMPLOmRfzPQyzR9DnX8lpYlzQ6p6AY5ZrM1UpaM-1770891499083-0.0.1.1-604800000'"
           name: Sample Example request with group ID filter
         samples-languages:
         - curl

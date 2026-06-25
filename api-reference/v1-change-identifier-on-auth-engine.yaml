@@ -3,7 +3,7 @@ info:
   title: Change identifier on Auth engine (COPY)
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host

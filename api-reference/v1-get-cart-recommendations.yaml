@@ -3,7 +3,7 @@ info:
   title: Get Cart Recommendations
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -28,8 +28,9 @@ paths:
         required: true
       - name: cartparam
         in: query
-        description: Object type to identify the cart items in SKU:quantity pairs
-          - {sku1:quantity,sku2:quantity}. For example,cartparam={"000000000000010242":1,000000000000080246":5}
+        description: "Object type to identify the cart items in SKU:quantity pairs\
+          \ - {sku1:quantity,sku2:quantity}. For example,cartparam={\"000000000000010242\"\
+          :1,000000000000080246\":5}"
         required: true
         schema:
           type: string
@@ -52,17 +53,17 @@ paths:
           format: int32
       - name: categories
         in: query
-        description: 'Filter recommended products by one or more categories. Pass
-          comma separated category codes. Maximum of 10 categories are supported.
-          Example: categories=Shirts,Bottomwear'
+        description: "Filter recommended products by one or more categories. Pass\
+          \ comma separated category codes. Maximum of 10 categories are supported.\
+          \ Example: categories=Shirts,Bottomwear"
         schema:
           type: array
           items:
             type: string
       - name: stores
         in: query
-        description: 'Filter products by stores. Pass comma separated store codes.
-          Max limit is 10. Example: stores=store.1,store.2'
+        description: "Filter products by stores. Pass comma separated store codes.\
+          \ Max limit is 10. Example: stores=store.1,store.2"
         schema:
           type: array
           items:
@@ -83,8 +84,8 @@ paths:
       x-readme:
         code-samples:
         - language: html
-          code: 'https://incrm.cc.capillarytech.com/api_gateway/v1/recommendations/cart/frequently-bought-together/?cartparam={"000000000000010242":
-            1}&limit=5&offset=0&categories'
+          code: "https://incrm.cc.capillarytech.com/api_gateway/v1/recommendations/cart/frequently-bought-together/?cartparam={\"\
+            000000000000010242\": 1}&limit=5&offset=0&categories"
           name: Sample Request URL
         samples-languages:
         - html

@@ -3,7 +3,7 @@ info:
   title: Get Reward Expiry Reminder
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -101,7 +101,7 @@ paths:
                           default: 0
                         timing:
                           type: string
-                          example: '12:00'
+                          example: "12:00"
                         isActive:
                           type: boolean
                           example: true
@@ -206,17 +206,10 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/expiryReminder?filter=ACTIVE&size=10&page=0''
-            \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''Authorization: Basic aWFtc2hpdmFhbblahblahZjhlMzRkNWI1YTI5MWY=''
-            \
-
-            --header ''user-agent: pyapps_auto_2024-05-25-12-47-39'' \
-
-            --header ''Cookie: _cfuvid=EdYU22mJWP1xzoxt74hggY7PKdhUOcIzYPQlaq4bOyU-1727677397251-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/expiryReminder?filter=ACTIVE&size=10&page=0'\
+            \ \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization:\
+            \ Basic aWFtc2hpdmFhbblahblahZjhlMzRkNWI1YTI5MWY=' \\\n--header 'user-agent:\
+            \ pyapps_auto_2024-05-25-12-47-39' \\\n--header 'Cookie: _cfuvid=EdYU22mJWP1xzoxt74hggY7PKdhUOcIzYPQlaq4bOyU-1727677397251-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

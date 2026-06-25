@@ -3,7 +3,7 @@ info:
   title: Get Custom Fields Associated with Coupon Redemption
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -27,8 +27,8 @@ paths:
           format: int64
       - name: page
         in: query
-        description: 'Retrieve details of a specific page. Page count starts from
-          1. Example: page=2 results on page 2.'
+        description: "Retrieve details of a specific page. Page count starts from\
+          \ 1. Example: page=2 results on page 2."
         schema:
           type: integer
           format: int32
@@ -86,7 +86,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -94,16 +94,10 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://nightly.api.capillarytech.com/x/neo/couponRedemption/customFields?redemption_ids=1046094%2C1046095%2C1046096&page=1&count=15''
-            \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''x-cap-neo-dag-scope: global'' \
-
-            --header ''Authorization: Basic A3NWI5NjRiMDcxNTJkMjM0Yjcw'' \
-
-            --header ''Cookie: _cfuvid=bDzuqORMDePiD7OSqoaM5Wf.LRjcYN1SoBJGzi0aLo4-1749727061901-0.0.1.1-604800000'''
+          code: "curl --location 'https://nightly.api.capillarytech.com/x/neo/couponRedemption/customFields?redemption_ids=1046094%2C1046095%2C1046096&page=1&count=15'\
+            \ \\\n--header 'Content-Type: application/json' \\\n--header 'x-cap-neo-dag-scope:\
+            \ global' \\\n--header 'Authorization: Basic A3NWI5NjRiMDcxNTJkMjM0Yjcw'\
+            \ \\\n--header 'Cookie: _cfuvid=bDzuqORMDePiD7OSqoaM5Wf.LRjcYN1SoBJGzi0aLo4-1749727061901-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

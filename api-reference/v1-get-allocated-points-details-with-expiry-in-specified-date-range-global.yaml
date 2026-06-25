@@ -3,7 +3,7 @@ info:
   title: Get Allocated Points Details with Expiry in Specified Date Range
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -33,15 +33,15 @@ paths:
           format: int32
       - name: expiry_date_start
         in: query
-        description: 'Start date of the expiry range. Format: YYYY-MM-DD. Example:
-          2025-06-01'
+        description: "Start date of the expiry range. Format: YYYY-MM-DD. Example:\
+          \ 2025-06-01"
         required: true
         schema:
           type: string
           format: date
       - name: expiry_date_end
         in: query
-        description: 'End date of the expiry range. Format: YYYY-MM-DD. Example: 2025-06-22'
+        description: "End date of the expiry range. Format: YYYY-MM-DD. Example: 2025-06-22"
         required: true
         schema:
           type: string
@@ -56,8 +56,8 @@ paths:
           format: int64
       - name: page
         in: query
-        description: 'Retrieve details of a specific page. Page count starts from
-          1.  Example: page=2 retrieves data on page 2.'
+        description: "Retrieve details of a specific page. Page count starts from\
+          \ 1.  Example: page=2 retrieves data on page 2."
         schema:
           type: integer
           format: int32
@@ -208,7 +208,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -216,16 +216,10 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://nightly.api.capillarytech.com/x/neo/pointsAllocation/dateRange?expiry_date_start=2025-06-01%2000%3A00%3A00&expiry_date_end=2027-06-01%2023%3A59%3A59&point_category_id=17383&program_id=2282&entity_id=383474113''
-            \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''x-cap-neo-dag-scope: global'' \
-
-            --header ''Authorization: Basic WI5NjRiMDcxNTJkMjM0Yjcw'' \
-
-            --header ''Cookie: _cfuvid=GGHmRJB3vR2afrZYKGGEonxyUpRW_cRsEMKHeQJEB9U-1749653959367-0.0.1.1-604800000'''
+          code: "curl --location 'https://nightly.api.capillarytech.com/x/neo/pointsAllocation/dateRange?expiry_date_start=2025-06-01%2000%3A00%3A00&expiry_date_end=2027-06-01%2023%3A59%3A59&point_category_id=17383&program_id=2282&entity_id=383474113'\
+            \ \\\n--header 'Content-Type: application/json' \\\n--header 'x-cap-neo-dag-scope:\
+            \ global' \\\n--header 'Authorization: Basic WI5NjRiMDcxNTJkMjM0Yjcw'\
+            \ \\\n--header 'Cookie: _cfuvid=GGHmRJB3vR2afrZYKGGEonxyUpRW_cRsEMKHeQJEB9U-1749653959367-0.0.1.1-604800000'"
           name: Sample Request
         samples-languages:
         - curl

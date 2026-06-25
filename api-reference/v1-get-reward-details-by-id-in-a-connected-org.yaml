@@ -3,14 +3,14 @@ info:
   title: Get reward details by ID in connected orgs
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /v1.1/user/rewards/{rewardId}:
+  "/v1.1/user/rewards/{rewardId}":
     get:
       summary: Get reward details by ID in connected orgs
       description: ''
@@ -71,7 +71,7 @@ paths:
                     \      \"orgId\": 4000084\n            },\n            {\n   \
                     \             \"isValid\": true,\n                \"orgId\": 4000085\n\
                     \            }\n        ]\n    }\n}"
-                'Failure: With ALL as a scope':
+                "Failure: With ALL as a scope":
                   value: "{\n    \"data\": null,\n    \"errors\": [\n      {\n   \
                     \     \"code\": 310141,\n        \"message\": 'Datascope 'ALL'\
                     \ is not supported for this 'API'\n      }\n      ],\n    \"warnings\"\
@@ -124,7 +124,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: '{}'
+                  value: "{}"
               schema:
                 type: object
                 properties: {}
@@ -132,17 +132,10 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/197661''
-            \
-
-            --header ''DATA-SCOPE: SELF'' \
-
-            --header ''CONNECTED-ORGS: [51544]'' \
-
-            --header ''Authorization: Basic bmFtYW46Y2FiY2U5OGblahblahTM5YTY0NTY0MTY=''
-            \
-
-            --header ''Cookie: _cfuvid=xxMm_kEPa5p5wKh9ZuyskEbGrgopax35c_46Bk8Eh1k-1729140070721-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/197661'\
+            \ \\\n--header 'DATA-SCOPE: SELF' \\\n--header 'CONNECTED-ORGS: [51544]'\
+            \ \\\n--header 'Authorization: Basic bmFtYW46Y2FiY2U5OGblahblahTM5YTY0NTY0MTY='\
+            \ \\\n--header 'Cookie: _cfuvid=xxMm_kEPa5p5wKh9ZuyskEbGrgopax35c_46Bk8Eh1k-1729140070721-0.0.1.1-604800000'"
         samples-languages:
         - curl
 components:

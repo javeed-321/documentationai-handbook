@@ -3,14 +3,14 @@ info:
   title: Vendor List for Specific Brand
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/vendor/brand/{brandId}:
+  "/api_gateway/rewards/core/v1/vendor/brand/{brandId}":
     get:
       summary: Vendor List for Specific Brand
       description: ''
@@ -270,7 +270,7 @@ paths:
                     \            ],\n            \"videos\": [],\n            \"lastUpdatedOn\"\
                     : 1739783325000,\n            \"encryptionRequired\": false\n\
                     \        }\n    ]\n}"
-                'Failure: Invalid Brand ID':
+                "Failure: Invalid Brand ID":
                   value: "{\n    \"status\": {\n        \"success\": false,\n    \
                     \    \"code\": 3004,\n        \"message\": \"Brand not found\"\
                     \n    }\n}"
@@ -1074,7 +1074,7 @@ paths:
                             default: 0
                           lastUpdatedOnDateTime:
                             type: string
-                            example: '2025-02-17T07:29:07Z'
+                            example: "2025-02-17T07:29:07Z"
                           encryptionRequired:
                             type: boolean
                             example: false
@@ -1131,7 +1131,7 @@ paths:
                             type: boolean
                             example: false
                             default: true
-                - title: 'Failure: Invalid Brand ID'
+                - title: "Failure: Invalid Brand ID"
                   type: object
                   properties:
                     status:
@@ -1211,10 +1211,10 @@ paths:
                             default: 0
                           createdOnDateTime:
                             type: string
-                            example: '2025-01-02T11:14:09Z'
+                            example: "2025-01-02T11:14:09Z"
                           lastUpdatedOnDateTime:
                             type: string
-                            example: '2025-02-13T09:17:06Z'
+                            example: "2025-02-13T09:17:06Z"
                           createdBy: {}
                           lastUpdatedBy: {}
                           encryptionRequired:
@@ -1287,7 +1287,7 @@ paths:
                                 id: {}
                                 url:
                                   type: string
-                                  example: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6RFSqYEgenJSDc0Wo_eoEKzxd0iXvTOO-LQ&s
+                                  example: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6RFSqYEgenJSDc0Wo_eoEKzxd0iXvTOO-LQ&s"
                                 isExternal:
                                   type: boolean
                                   example: true
@@ -1304,7 +1304,7 @@ paths:
                                 id: {}
                                 url:
                                   type: string
-                                  example: https://videos.pexels.com/video-files/6265096/6265096-uhd_1440_2560_30fps.mp4
+                                  example: "https://videos.pexels.com/video-files/6265096/6265096-uhd_1440_2560_30fps.mp4"
                                 isExternal:
                                   type: boolean
                                   example: true
@@ -1319,10 +1319,10 @@ paths:
                             default: 0
                           createdOnDateTime:
                             type: string
-                            example: '2025-05-22T10:47:58Z'
+                            example: "2025-05-22T10:47:58Z"
                           lastUpdatedOnDateTime:
                             type: string
-                            example: '2025-05-22T10:47:58Z'
+                            example: "2025-05-22T10:47:58Z"
                           createdBy:
                             type: integer
                             example: 75161973
@@ -1398,10 +1398,10 @@ paths:
                             default: 0
                           createdOnDateTime:
                             type: string
-                            example: '2025-01-02T11:14:09Z'
+                            example: "2025-01-02T11:14:09Z"
                           lastUpdatedOnDateTime:
                             type: string
-                            example: '2025-02-13T09:17:06Z'
+                            example: "2025-02-13T09:17:06Z"
                           createdBy: {}
                           lastUpdatedBy: {}
                           encryptionRequired:
@@ -1419,45 +1419,24 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/brand/1?enabled=false''
-            \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''Authorization: Basic aWFtc2hpdmFblahblahODM4ZjhlMzRkNWI1YTI5MWY=''
-            \
-
-            --header ''Cookie: _cfuvid=fmRA3Hit0aFMwbfKLvt4ueC_cBYGp6.izrIrTxsLCds-1727420270955-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/brand/1?enabled=false'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--header 'Authorization: Basic aWFtc2hpdmFblahblahODM4ZjhlMzRkNWI1YTI5MWY='\
+            \ \\\n--header 'Cookie: _cfuvid=fmRA3Hit0aFMwbfKLvt4ueC_cBYGp6.izrIrTxsLCds-1727420270955-0.0.1.1-604800000'"
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/brand/61?sortBy=lastUpdatedOn&orderBy=ASC''
-            \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg=''
-            \
-
-            --header ''Cookie: _cfuvid=fmRA3Hit0aFMwbfKLvt4ueC_cBYGp6.izrIrTxsLCds-1727420270955-0.0.1.1-604800000;
-            _cfuvid=mwKQqt7DCUZsTkcj_rglhDNIQmcSwrbV6vuL0ivceZE-1747306541010-0.0.1.1-604800000;
-            _cfuvid=fUmBd935rmGsApqf1rYLG1M2QWI_fYSTy7P0wHTVZIs-1747377050702-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/brand/61?sortBy=lastUpdatedOn&orderBy=ASC'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--header 'Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg='\
+            \ \\\n--header 'Cookie: _cfuvid=fmRA3Hit0aFMwbfKLvt4ueC_cBYGp6.izrIrTxsLCds-1727420270955-0.0.1.1-604800000;\
+            \ _cfuvid=mwKQqt7DCUZsTkcj_rglhDNIQmcSwrbV6vuL0ivceZE-1747306541010-0.0.1.1-604800000;\
+            \ _cfuvid=fUmBd935rmGsApqf1rYLG1M2QWI_fYSTy7P0wHTVZIs-1747377050702-0.0.1.1-604800000'"
           name: With sortBy=lastUpdatedOn
         - language: curl
-          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/brand/61?code=1234''
-            \
-
-            --header ''Accept: application/json'' \
-
-            --header ''Content-Type: application/json'' \
-
-            --header ''Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg=''
-            \
-
-            --header ''Cookie: _cfuvid=fmRA3Hit0aFMwbfKLvt4ueC_cBYGp6.izrIrTxsLCds-1727420270955-0.0.1.1-604800000;
-            _cfuvid=6xC4hLz.xgsLkmOzK9BEBxZpSHY.D.Pu7yaeeLK6XQ8-1747911871335-0.0.1.1-604800000'''
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/vendor/brand/61?code=1234'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--header 'Authorization: Basic Z2VvcmdlLmpvaG5zb246OTg4OTU2NWI4ODVhMmY4ZWE1MTk1MjA2NWEwYTEzNzg='\
+            \ \\\n--header 'Cookie: _cfuvid=fmRA3Hit0aFMwbfKLvt4ueC_cBYGp6.izrIrTxsLCds-1727420270955-0.0.1.1-604800000;\
+            \ _cfuvid=6xC4hLz.xgsLkmOzK9BEBxZpSHY.D.Pu7yaeeLK6XQ8-1747911871335-0.0.1.1-604800000'"
           name: With Vendor code Filter
         samples-languages:
         - curl

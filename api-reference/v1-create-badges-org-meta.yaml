@@ -3,7 +3,7 @@ info:
   title: Create badges org meta
   version: '1.0'
 servers:
-- url: https://{host}
+- url: "https://{host}"
   variables:
     host:
       default: host
@@ -31,7 +31,7 @@ paths:
                   properties:
                     key:
                       type: string
-                      description: The name of the tag, e.g., "Category".
+                      description: "The name of the tag, e.g., \"Category\"."
                     dataType:
                       type: string
                       description: The data type of the tag.
@@ -92,14 +92,14 @@ paths:
                               default: true
                       createdOn:
                         type: string
-                        example: '2023-11-08T15:43:40.382Z'
+                        example: "2023-11-08T15:43:40.382Z"
                       createdBy:
                         type: integer
                         example: 0
                         default: 0
                       lastUpdatedOn:
                         type: string
-                        example: '2023-11-08T15:43:40.382Z'
+                        example: "2023-11-08T15:43:40.382Z"
                       lastUpdatedBy:
                         type: integer
                         example: 0
