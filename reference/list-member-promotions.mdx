@@ -7,10 +7,12 @@ Returns a paginated list of  loyalty promotions associated with a specific membe
 
 ## Example request
 
-```json cURL
-curl -X GET "https://{host}/v3/members/{memberId}/promotions?page=0&size=10" \
-  -H "Authorization: Basic {token}"
-```
+<CodeGroup default-tab="0" show-lines="true" tabs={["cURL"]}>
+  ```text wrap="true" cURL
+  curl -X GET "https://{host}/v3/members/{memberId}/promotions?page=0&size=10" \
+    -H "Authorization: Basic {token}"
+  ```
+</CodeGroup>
 
 ## Prerequisites
 
@@ -20,9 +22,8 @@ curl -X GET "https://{host}/v3/members/{memberId}/promotions?page=0&size=10" \
 
 ## Resource information
 
-|               |     |
-| :------------ | :-- |
 | Pagination    | Yes |
+| :------------ | :-- |
 | Batch support | No  |
 
 ## Path parameters
@@ -66,40 +67,45 @@ GET /v3/members/{memberId}/promotions
 
 ## Example response
 
-```json
-{
-  "pageDetails": {
-    "pageNumber": 0,
-    "pageSize": 10,
-    "totalEntries": 37,
-    "pageCount": 4
-  },
-  "memberId": 388757626,
-  "promotions": [
-    {
-      "promotionId": 126779,
-      "promotionName": "UAT ULP - Updating enrolment type using API",
-      "programId": 973,
-      "startDateISO": "2026-03-18T06:11:00Z",
-      "endDateISO": "2026-03-19T06:11:59Z",
-      "timezoneName": "Indian/Maldives",
-      "promotionIdentifier": "f385f258-c315-412c-b910-7bd8a8d89427",
-      "description": "UAT ULP - Updating enrolment type using API",
-      "active": true
+<CodeGroup default-tab="0" show-lines="true" tabs={["JSON"]}>
+  ```text JSON
+  {
+    "pageDetails": {
+      "pageNumber": 0,
+      "pageSize": 10,
+      "totalEntries": 37,
+      "pageCount": 4
     },
-    {
-      "promotionId": 126635,
-      "promotionName": "Single Activity Promotion2",
-      "programId": 973,
-      "startDateISO": "2026-03-01T05:11:00Z",
-      "endDateISO": "2026-03-31T05:11:59Z",
-      "timezoneName": "Asia/Kolkata",
-      "promotionIdentifier": "single-activity-promotion2",
-      "description": "A promotion with single activity",
-      "active": true
-    }
-  ]
-}
+    "memberId": 388757626,
+    "promotions": [
+      {
+        "promotionId": 126779,
+        "promotionName": "UAT ULP - Updating enrolment type using API",
+        "programId": 973,
+        "startDateISO": "2026-03-18T06:11:00Z",
+        "endDateISO": "2026-03-19T06:11:59Z",
+        "timezoneName": "Indian/Maldives",
+        "promotionIdentifier": "f385f258-c315-412c-b910-7bd8a8d89427",
+        "description": "UAT ULP - Updating enrolment type using API",
+        "active": true
+      },
+      {
+        "promotionId": 126635,
+        "promotionName": "Single Activity Promotion2",
+        "programId": 973,
+        "startDateISO": "2026-03-01T05:11:00Z",
+        "endDateISO": "2026-03-31T05:11:59Z",
+        "timezoneName": "Asia/Kolkata",
+        "promotionIdentifier": "single-activity-promotion2",
+        "description": "A promotion with single activity",
+        "active": true
+      }
+    ]
+  }
+  ```
+</CodeGroup>
+
+```json
 ```
 
 ## Response parameters

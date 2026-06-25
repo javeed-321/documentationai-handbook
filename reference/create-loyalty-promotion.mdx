@@ -33,8 +33,8 @@ Use this API to create and configure loyalty promotions. This allows you to mana
 
 ## Example request
 
-<CodeGroup default-tab="0" show-lines="true" tabs={["CURL"]}>
-  ```text CURL
+<CodeGroup show-lines="true" tabs={["cURL"]}>
+  ```text cURL
 
   curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
   --header 'content-type: application/json' \
@@ -126,66 +126,68 @@ Use this API to create and configure loyalty promotions. This allows you to mana
 
 ## API Quick Reference
 
-```text
-{{https://eu.api.capillarytech.com/v3/promotions}}
-   └─ {{CreateLoyaltyPromotionRequest}}
-       ├─ {{metadata}} (Object)
-       │   ├─ {{name}} (string)
-       │   ├─ {{description}} (string)
-       │   ├─ {{orgId}} (integer)
-       │   ├─ {{programId}} (string)
-       │   ├─ {{startDate}} (string)
-       │   ├─ {{endDate}} (string)
-       │   ├─ {{promotionType}} (string)
-       │   ├─ {{status}} (enum)
-       │   ├─ {{timezoneName}} (string)
-       │   ├─ {{promoIdentifier}} (string)
-       │   ├─ {{promotionCategory}} (string, Conditional — broadcast only)
-       │   └─ {{promotionMetadata}}[]
-       ├─ {{customerEnrolment}} (Object)
-       │   ├─ {{enrolmentMethod}} (enum)
-       │   ├─ {{audienceGroups}}[]
-       │   └─ {{customerEligibilityType}} (enum)
-       ├─ {{activities}}[]
-       │   ├─ {{id}} (string)
-       │   ├─ {{type}} (enum)
-       │   ├─ {{name}} (string)
-       │   ├─ {{event}} (string)
-       │   ├─ {{expJSON}} (string)
-       │   ├─ {{cycles}}[]
-       │   ├─ {{commonCycleActionMapping}} []
-       │   ├─ {{activityCycles}}[]
-       │   ├─ {{milestones}} []
-       │   └─ {{children}}[]
-       ├─ {{workflowMetadata}} (Object)
-       │   ├─ {{enrolment}} (Object)
-       │   └─ {{optin}} (Object)
-       ├─ {{limits}}[]
-       │   ├─ {{entityScope}} (enum)
-       │   ├─ {{granularity}} (enum)
-       │   ├─ {{actionType}} (enum)
-       │   ├─ {{actionSubTypeId}} (string)
-       │   ├─ {{limitType}} (enum)
-       │   ├─ {{limitValue}} (number)
-       │   └─ {{period}} (Object)
-       ├─ {{liabilityOwnerSplitInfo}}[]
-       │   ├─ {{orgId}} (integer)
-       │   ├─ {{liabilityOwnerId}} (integer)
-       │   ├─ {{componentType}} (enum)
-       │   ├─ {{ratio}} (number)
-       │   ├─ {{liabilityOwnerType}} (enum)
-       │   └─ {{active}} (boolean)
-       ├─ {{comments}} (string)
-       ├─ {{broadcastMetadata}} (Object, Conditional — broadcast only)
-       │   ├─ {{source}} (string)
-       │   └─ {{audienceFilter}} (Object)
-       │       └─ {{audienceListIds}} (Array of integer)
-       └─ {{promotionSchedule}} (Object, Conditional — broadcast only)
-           └─ {{schedule}} (Object)
-               ├─ {{startType}} (enum)
-               ├─ {{scheduleDate}} (string, Conditional)
-               └─ {{frequency}} (enum)
-```
+<CodeGroup show-lines="true" tabs={["Text "]}>
+  ```text "Text "
+  {{https://eu.api.capillarytech.com/v3/promotions}}
+     └─ {{CreateLoyaltyPromotionRequest}}
+         ├─ {{metadata}} (Object)
+         │   ├─ {{name}} (string)
+         │   ├─ {{description}} (string)
+         │   ├─ {{orgId}} (integer)
+         │   ├─ {{programId}} (string)
+         │   ├─ {{startDate}} (string)
+         │   ├─ {{endDate}} (string)
+         │   ├─ {{promotionType}} (string)
+         │   ├─ {{status}} (enum)
+         │   ├─ {{timezoneName}} (string)
+         │   ├─ {{promoIdentifier}} (string)
+         │   ├─ {{promotionCategory}} (string, Conditional — broadcast only)
+         │   └─ {{promotionMetadata}}[]
+         ├─ {{customerEnrolment}} (Object)
+         │   ├─ {{enrolmentMethod}} (enum)
+         │   ├─ {{audienceGroups}}[]
+         │   └─ {{customerEligibilityType}} (enum)
+         ├─ {{activities}}[]
+         │   ├─ {{id}} (string)
+         │   ├─ {{type}} (enum)
+         │   ├─ {{name}} (string)
+         │   ├─ {{event}} (string)
+         │   ├─ {{expJSON}} (string)
+         │   ├─ {{cycles}}[]
+         │   ├─ {{commonCycleActionMapping}} []
+         │   ├─ {{activityCycles}}[]
+         │   ├─ {{milestones}} []
+         │   └─ {{children}}[]
+         ├─ {{workflowMetadata}} (Object)
+         │   ├─ {{enrolment}} (Object)
+         │   └─ {{optin}} (Object)
+         ├─ {{limits}}[]
+         │   ├─ {{entityScope}} (enum)
+         │   ├─ {{granularity}} (enum)
+         │   ├─ {{actionType}} (enum)
+         │   ├─ {{actionSubTypeId}} (string)
+         │   ├─ {{limitType}} (enum)
+         │   ├─ {{limitValue}} (number)
+         │   └─ {{period}} (Object)
+         ├─ {{liabilityOwnerSplitInfo}}[]
+         │   ├─ {{orgId}} (integer)
+         │   ├─ {{liabilityOwnerId}} (integer)
+         │   ├─ {{componentType}} (enum)
+         │   ├─ {{ratio}} (number)
+         │   ├─ {{liabilityOwnerType}} (enum)
+         │   └─ {{active}} (boolean)
+         ├─ {{comments}} (string)
+         ├─ {{broadcastMetadata}} (Object, Conditional — broadcast only)
+         │   ├─ {{source}} (string)
+         │   └─ {{audienceFilter}} (Object)
+         │       └─ {{audienceListIds}} (Array of integer)
+         └─ {{promotionSchedule}} (Object, Conditional — broadcast only)
+             └─ {{schedule}} (Object)
+                 ├─ {{startType}} (enum)
+                 ├─ {{scheduleDate}} (string, Conditional)
+                 └─ {{frequency}} (enum)
+  ```
+</CodeGroup>
 
 ## Prerequisites
 

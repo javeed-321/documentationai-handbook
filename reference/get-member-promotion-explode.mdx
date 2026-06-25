@@ -5,12 +5,14 @@ title: 'Get Member Promotion Explode Details '
 
 Returns the full participation history for a specific promotion for a member, including enrollment and opt-in timeline details, promotion metadata, and promotion-level custom fields. Use the optional query parameter filters to narrow results by enrolment status, promotion identifier, or promotion ID.
 
-## Example request
+## Example request\\
 
-```json cURL
-curl -X GET "https://{host}/v3/members/388757266/promotions/1133608813?memberEnrollmentStatus=AVAILABLE_TO_REDEEM" \
-  -H "Authorization: Basic dGlsbGhnXXXXXXXX"
-```
+<CodeGroup default-tab="0" show-lines="true" tabs={["cURL"]}>
+  ```text wrap="true" cURL
+  // Add your code herecurl -X GET "https://{host}/v3/members/388757266/promotions/1133608813?memberEnrollmentStatus=AVAILABLE_TO_REDEEM" \
+    -H "Authorization: Basic dGlsbGhnXXXXXXXX"
+  ```
+</CodeGroup>
 
 ## Prerequisites
 
@@ -22,9 +24,8 @@ curl -X GET "https://{host}/v3/members/388757266/promotions/1133608813?memberEnr
 
 ## Resource information
 
-|               |    |
-| :------------ | :- |
 | Pagination    | No |
+| :------------ | :- |
 | Batch support | No |
 
 ## Path parameters
@@ -82,52 +83,54 @@ GET /v3/members/{memberId}/promotions/{promotionId}
 
 ## Example response
 
-```json
-{
-    "memberId": 388757266,
-    "promotions": [
-        {
-            "promotionId": 1133608813,
-            "promotionName": "test-loyalty-promo-123",
-            "programId": 2607,
-            "startDateISO": "2026-03-01T00:00:00+05:30",
-            "endDateISO": "2026-04-01T23:59:59+05:30",
-            "timezoneName": "Asia/Kolkata",
-            "promotionIdentifier": "2dac55ea-2ae8-486a-bed1-0c7992c2565c",
-            "unifiedPromotionId": "abc12345-0000-4abc-8def-000000000000",
-            "description": "test-loyalty-promo-123",
-            "active": true,
-            "promotionCustomFields": [
-                { "key": "header-new", "value": "1234", "brandDefined": true },
-                { "key": "xsx", "value": "4567", "brandDefined": true }
-            ],
-            "customerPromotionTimelines": [
-                {
-                    "enrollmentDetails": [
-                        {
-                            "enrollmentId": 222987,
-                            "enrollmentDateISO": "2026-03-10T13:55:10+05:30",
-                            "enrollmentExpiryDateISO": "2026-04-01T23:59:59+05:30",
-                            "enrollEventLogId": 52208266,
-                            "active": true,
-                            "optInDetails": [
-                                {
-                                    "optInId": 185122,
-                                    "optInDateISO": "2026-03-10T13:57:20+05:30",
-                                    "optInExpiryDateISO": "2026-04-01T23:59:59+05:30",
-                                    "optInEventLogId": 52208279,
-                                    "optInProcessingDateISO": "2026-03-10T13:57:20+05:30",
-                                    "active": true
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+<CodeGroup default-tab="0" show-lines="true" tabs={["JSON"]}>
+  ```json JSON
+  {
+      "memberId": 388757266,
+      "promotions": [
+          {
+              "promotionId": 1133608813,
+              "promotionName": "test-loyalty-promo-123",
+              "programId": 2607,
+              "startDateISO": "2026-03-01T00:00:00+05:30",
+              "endDateISO": "2026-04-01T23:59:59+05:30",
+              "timezoneName": "Asia/Kolkata",
+              "promotionIdentifier": "2dac55ea-2ae8-486a-bed1-0c7992c2565c",
+              "unifiedPromotionId": "abc12345-0000-4abc-8def-000000000000",
+              "description": "test-loyalty-promo-123",
+              "active": true,
+              "promotionCustomFields": [
+                  { "key": "header-new", "value": "1234", "brandDefined": true },
+                  { "key": "xsx", "value": "4567", "brandDefined": true }
+              ],
+              "customerPromotionTimelines": [
+                  {
+                      "enrollmentDetails": [
+                          {
+                              "enrollmentId": 222987,
+                              "enrollmentDateISO": "2026-03-10T13:55:10+05:30",
+                              "enrollmentExpiryDateISO": "2026-04-01T23:59:59+05:30",
+                              "enrollEventLogId": 52208266,
+                              "active": true,
+                              "optInDetails": [
+                                  {
+                                      "optInId": 185122,
+                                      "optInDateISO": "2026-03-10T13:57:20+05:30",
+                                      "optInExpiryDateISO": "2026-04-01T23:59:59+05:30",
+                                      "optInEventLogId": 52208279,
+                                      "optInProcessingDateISO": "2026-03-10T13:57:20+05:30",
+                                      "active": true
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
+  }
+  ```
+</CodeGroup>
 
 ## Response parameters
 

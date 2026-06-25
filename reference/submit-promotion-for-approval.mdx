@@ -23,65 +23,62 @@ Updates the status of a loyalty promotion to manage its lifecycle. Use this endp
 </Callout>
 
 ## Example requests
-<CodeGroup>
 
-```bash DRAFT → PENDING_APPROVAL
-curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=DRAFT' \
---header 'Content-Type: application/json' \
---header 'Authorization: Basic <token>' \
---data '{
-    "promotionStatus": "PENDING_APPROVAL"
-}'
-```
+<CodeGroup show-lines="true" tabs={["DRAFT → PENDING_APPROVAL","PENDING_APPROVAL → DRAFT","ACTIVE → PAUSED","ACTIVE → STOPPED","PAUSED → ACTIVE","PAUSED → STOPPED"]}>
+  ```bash "DRAFT → PENDING_APPROVAL"
+  curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=DRAFT' \
+  --header 'Content-Type: application/json' \
+  --header 'Authorization: Basic <token>' \
+  --data '{
+      "promotionStatus": "PENDING_APPROVAL"
+  }'
+  ```
 
-```bash PENDING_APPROVAL → DRAFT
-curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=PENDING_APPROVAL' \
---header 'Content-Type: application/json' \
---header 'Authorization: Basic <token>' \
---data '{
-    "promotionStatus": "REVOKE"
-}'
-```
+  ```bash "PENDING_APPROVAL → DRAFT"
+  curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=PENDING_APPROVAL' \
+  --header 'Content-Type: application/json' \
+  --header 'Authorization: Basic <token>' \
+  --data '{
+      "promotionStatus": "REVOKE"
+  }'
+  ```
 
-```bash ACTIVE → PAUSED
-curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=ACTIVE' \
---header 'Content-Type: application/json' \
---header 'Authorization: Basic <token>' \
---data '{
-    "promotionStatus": "PAUSE"
-}'
-```
+  ```bash "ACTIVE → PAUSED"
+  curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=ACTIVE' \
+  --header 'Content-Type: application/json' \
+  --header 'Authorization: Basic <token>' \ 
+  --data '{
+      "promotionStatus": "PAUSE"
+  }'
+  ```
 
-```bash ACTIVE → STOPPED
-curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=ACTIVE' \
---header 'Content-Type: application/json' \
---header 'Authorization: Basic <token>' \
---data '{
-    "promotionStatus": "STOP"
-}'
-```
+  ```bash "ACTIVE → STOPPED"
+  curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=ACTIVE' \
+  --header 'Content-Type: application/json' \
+  --header 'Authorization: Basic <token>' \
+  --data '{
+      "promotionStatus": "STOP"
+  }'
+  ```
 
-```bash PAUSED → ACTIVE
-curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=PAUSED' \
---header 'Content-Type: application/json' \
---header 'Authorization: Basic <token>' \
---data '{
-    "promotionStatus": "RESUME"
-}'
-```
+  ```bash "PAUSED → ACTIVE"
+  curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=PAUSED' \
+  --header 'Content-Type: application/json' \
+  --header 'Authorization: Basic <token>' \
+  --data '{
+      "promotionStatus": "RESUME"
+  }'
+  ```
 
-```bash PAUSED → STOPPED
-curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=PAUSED' \
---header 'Content-Type: application/json' \
---header 'Authorization: Basic <token>' \
---data '{
-    "promotionStatus": "STOP"
-}'
-```
-
+  ```bash "PAUSED → STOPPED"
+  curl --location --request PUT 'https://eu.api.capillarytech.com/v3/requests/PROMOTION/{promotionId}/status?existingStatus=PAUSED' \
+  --header 'Content-Type: application/json' \
+  --header 'Authorization: Basic <token>' \
+  --data '{
+      "promotionStatus": "STOP"
+  }'
+  ```
 </CodeGroup>
-
-
 
 ## Prerequisites
 

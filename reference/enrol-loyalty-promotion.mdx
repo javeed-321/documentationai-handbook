@@ -9,8 +9,8 @@ The Enrol Unified Promotions API allows you to directly manage member participat
 
 ## Example request
 
-<CodeGroup show-lines="true" tabs={[]}>
-  ```bash
+<CodeGroup show-lines="true" tabs={["ENROL","OPT_IN"]}>
+  ```bash ENROL
   curl --location 'https://{host}/v3/promotions/enrol' \
   --header 'Content-Type: application/json' \
   --data '{
@@ -30,7 +30,7 @@ The Enrol Unified Promotions API allows you to directly manage member participat
   }'
   ```
 
-  ```json
+  ```json OPT_IN
   curl --location 'https://eu.api.capillarytech.com/v3/promotions/enrol' \
   --header 'Content-Type: application/json' \
   --header 'Authorization: Basic DllZTk=' \
@@ -55,36 +55,38 @@ The Enrol Unified Promotions API allows you to directly manage member participat
 
 ## API Quick Reference
 
-```curl "Enroll reference structure"
-{{promotions_enrol}}
-   └─ {{EnrollmentRequest}}
-      ├─ {{requestId}} (string)
-      ├─ {{action}} (string)
-      ├─ {{programId}} (integer)
-      ├─ {{promotion}}
-      │   ├─ {{promoHexId}} (string)
-      │   └─ {{promoIntId}} (integer)
-      └─ {{customer}}
-          ├─ {{identifierName}} (string)
-          ├─ {{identifierValue}} (string)
-          └─ {{source}} (string)
-```
+<CodeGroup default-tab="1" show-lines="true" tabs={["Enroll reference structure","Opt -in reference structure"]}>
+  ```text "Enroll reference structure"
+  {{promotions_enrol}}
+     └─ {{EnrollmentRequest}}
+        ├─ {{requestId}} (string)
+        ├─ {{action}} (string)
+        ├─ {{programId}} (integer)
+        ├─ {{promotion}}
+        │   ├─ {{promoHexId}} (string)
+        │   └─ {{promoIntId}} (integer)
+        └─ {{customer}}
+            ├─ {{identifierName}} (string)
+            ├─ {{identifierValue}} (string)
+            └─ {{source}} (string)
+  ```
 
-```curl "Opt -in reference structure"
-{{promotions_enrol}}
-   └─ {{OptInRequest}}
-      ├─ {{requestId}} (string)
-      ├─ {{action}} (string)
-      ├─ {{programId}} (integer)
-      ├─ {{optinDate}} (string)
-      ├─ {{promotion}}
-      │   ├─ {{promoHexId}} (string)
-      │   └─ {{promoIntId}} (integer)
-      └─ {{customer}}
-          ├─ {{identifierName}} (string)
-          ├─ {{identifierValue}} (string)
-          └─ {{source}} (string)
-```
+  ```text "Opt -in reference structure"
+  {{promotions_enrol}}
+     └─ {{OptInRequest}}
+        ├─ {{requestId}} (string)
+        ├─ {{action}} (string)
+        ├─ {{programId}} (integer)
+        ├─ {{optinDate}} (string)
+        ├─ {{promotion}}
+        │   ├─ {{promoHexId}} (string)
+        │   └─ {{promoIntId}} (integer)
+        └─ {{customer}}
+            ├─ {{identifierName}} (string)
+            ├─ {{identifierValue}} (string)
+            └─ {{source}} (string)
+  ```
+</CodeGroup>
 
 ## Prerequisites
 
