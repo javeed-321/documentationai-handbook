@@ -23,6 +23,11 @@ paths:
           type: integer
           format: int64
         required: true
+      - name: couponSeriedId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:

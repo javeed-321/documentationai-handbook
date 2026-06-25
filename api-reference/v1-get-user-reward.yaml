@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/user/vouchers/brand/{brand name}?mobile={mobile}&username={store}:
+  /api_gateway/rewards/core/v1/user/vouchers/brand/{brand name}:
     get:
       summary: Get purchased rewards for user (Old API)
       description: ''
@@ -61,6 +61,21 @@ paths:
         schema:
           type: string
           default: 'true'
+      - name: brand name
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: mobile
+        in: query
+        schema:
+          type: string
+        required: false
+      - name: store
+        in: query
+        schema:
+          type: string
+        required: false
       responses:
         '200':
           description: '200'

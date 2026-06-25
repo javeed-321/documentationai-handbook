@@ -36,6 +36,11 @@ paths:
           organisation.  Supported headers: SELF, OTHER and ALL.'
         schema:
           type: string
+      - name: userID
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:

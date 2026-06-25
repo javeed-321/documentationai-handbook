@@ -23,6 +23,11 @@ paths:
           type: integer
           format: int32
         required: true
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: '200'

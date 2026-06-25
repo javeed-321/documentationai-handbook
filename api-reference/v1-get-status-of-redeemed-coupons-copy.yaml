@@ -35,6 +35,11 @@ paths:
         required: true
         schema:
           type: string
+      - name: couponSeriesId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: '200'

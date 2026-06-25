@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/management/transactions?skip_validation=true:
+  /api_gateway/rewards/core/v1/management/transactions:
     put:
       summary: Update fulfillment status and transaction custom fields for issued
         rewards

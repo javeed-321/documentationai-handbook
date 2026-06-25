@@ -25,6 +25,11 @@ paths:
           - activate
           - deactivate
         required: true
+      - name: badgeId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: '200'

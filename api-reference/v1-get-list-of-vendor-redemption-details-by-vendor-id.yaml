@@ -91,6 +91,22 @@ paths:
           name: Sample request
         samples-languages:
         - shell
+      parameters:
+      - name: brandid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: vendorid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: redemptionid
+        in: path
+        required: true
+        schema:
+          type: string
 components:
   securitySchemes:
     sec0:

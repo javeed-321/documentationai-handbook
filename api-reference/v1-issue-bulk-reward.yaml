@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/user/rewards/issue?username={store}&skip_validation=true:
+  /api_gateway/rewards/core/v1/user/rewards/issue:
     post:
       summary: Issue bulk reward
       description: ''
@@ -28,6 +28,11 @@ paths:
         description: optional
         schema:
           type: string
+      - name: store
+        in: query
+        schema:
+          type: string
+        required: false
       requestBody:
         content:
           application/json:

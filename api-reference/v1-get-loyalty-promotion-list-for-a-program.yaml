@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /api_gateway/loyalty/v1/programs/{programId}/promotionsV2?limit=100&offset=0&sourceType=USER_CREATED:
+  /api_gateway/loyalty/v1/programs/{programId}/promotionsV2:
     get:
       summary: Get Loyalty Promotion List for a Program
       description: Retrieves a paginated list of promotions for a given program.

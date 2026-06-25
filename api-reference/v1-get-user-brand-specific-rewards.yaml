@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/user/reward/{reward Id}/brand/{brand name}?userId={id}:
+  /api_gateway/rewards/core/v1/user/reward/{reward Id}/brand/{brand name}:
     get:
       summary: Get available reward details for user by id
       description: ''
@@ -33,6 +33,21 @@ paths:
         description: Unique identifier of the user.
         schema:
           type: string
+      - name: brand name
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: reward Id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: query
+        schema:
+          type: string
+        required: false
       responses:
         '200':
           description: '200'

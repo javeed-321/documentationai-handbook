@@ -29,6 +29,16 @@ paths:
         schema:
           type: integer
           format: int64
+      - name: promotion Id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: brandId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: '200'

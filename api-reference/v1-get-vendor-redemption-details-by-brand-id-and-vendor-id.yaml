@@ -251,6 +251,17 @@ paths:
           name: Sample request
         samples-languages:
         - shell
+      parameters:
+      - name: vendorId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: brandId
+        in: path
+        required: true
+        schema:
+          type: string
 components:
   securitySchemes:
     sec0:

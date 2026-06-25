@@ -88,6 +88,9 @@ paths:
           name: Sample Request URL
         samples-languages:
         - html
+      responses:
+        '200':
+          description: Successful response
 components:
   securitySchemes:
     sec0:

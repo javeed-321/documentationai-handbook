@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1.1/user/rewards?userId={customerId}:
+  /api_gateway/rewards/core/v1.1/user/rewards:
     get:
       summary: Get all available rewards for user in connected orgs
       description: ''
@@ -105,6 +105,11 @@ paths:
         required: true
         schema:
           type: string
+      - name: customerId
+        in: query
+        schema:
+          type: string
+        required: false
       responses:
         '200':
           description: '200'

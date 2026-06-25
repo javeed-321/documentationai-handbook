@@ -89,6 +89,9 @@ paths:
                   validationCode: '87654'
                   redemptionTime: ''
       deprecated: false
+      responses:
+        '200':
+          description: Successful response
 components:
   securitySchemes:
     sec0:

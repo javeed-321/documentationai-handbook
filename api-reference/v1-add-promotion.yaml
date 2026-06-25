@@ -33,6 +33,11 @@ paths:
           - RANGE
           - KEYWORD
         required: true
+      - name: promotion_type
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:

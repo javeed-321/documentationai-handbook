@@ -36,6 +36,11 @@ paths:
         required: true
         schema:
           type: string
+      - name: couponSeriedId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:

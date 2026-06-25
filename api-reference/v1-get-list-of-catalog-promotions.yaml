@@ -22,6 +22,11 @@ paths:
         schema:
           type: integer
           format: int64
+      - name: brand Id
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: '200'

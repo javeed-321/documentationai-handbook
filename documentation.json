@@ -1,4 +1,7 @@
 {
+  "css": [
+    { "src": "styles/home-page.css" }
+  ],
   "navigation": {
     "tabs": [
       {
@@ -947,7 +950,7 @@
               {
                 "title": "Get all available rewards for user in connected orgs",
                 "path": "reference/v1-get-all-available-rewards-for-user-in-a-connected-org",
-                "openapi": "api-reference/v1-get-all-available-rewards-for-user-in-a-connected-org.yaml GET /api_gateway/rewards/core/v1.1/user/rewards?userId={customerId}",
+                "openapi": "api-reference/v1-get-all-available-rewards-for-user-in-a-connected-org.yaml GET /api_gateway/rewards/core/v1.1/user/rewards",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
@@ -968,7 +971,7 @@
               {
                 "title": "Get Cart Promotions for a Customer",
                 "path": "reference/v1-get-promotions-for-a-customer",
-                "openapi": "api-reference/v1-get-promotions-for-a-customer.yaml GET /api_gateway/v1/promotions/customer/109943742?includeRedemptions=true&includeSupplementaryPromotions=true",
+                "openapi": "api-reference/v1-get-promotions-for-a-customer.yaml GET /api_gateway/v1/promotions/customer/109943742",
                 "openapi-mode": "custom",
                 "method": "GET"
               }
@@ -1147,7 +1150,7 @@
               {
                 "title": "Get Loyalty Promotion List for a Program",
                 "path": "reference/v1-get-loyalty-promotion-list-for-a-program",
-                "openapi": "api-reference/v1-get-loyalty-promotion-list-for-a-program.yaml GET /api_gateway/loyalty/v1/programs/{programId}/promotionsV2?limit=100&offset=0&sourceType=USER_CREATED",
+                "openapi": "api-reference/v1-get-loyalty-promotion-list-for-a-program.yaml GET /api_gateway/loyalty/v1/programs/{programId}/promotionsV2",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
@@ -1353,14 +1356,14 @@
               {
                 "title": "Issue single reward",
                 "path": "reference/v1-post-issue-user-reward",
-                "openapi": "api-reference/v1-post-issue-user-reward.yaml POST /api_gateway/rewards/core/v1/user/reward/{reward Id}/issue?username={store}&skip_validation=true",
+                "openapi": "api-reference/v1-post-issue-user-reward.yaml POST /api_gateway/rewards/core/v1/user/reward/{reward Id}/issue",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Issue bulk reward",
                 "path": "reference/v1-issue-bulk-reward",
-                "openapi": "api-reference/v1-issue-bulk-reward.yaml POST /api_gateway/rewards/core/v1/user/rewards/issue?username={store}&skip_validation=true",
+                "openapi": "api-reference/v1-issue-bulk-reward.yaml POST /api_gateway/rewards/core/v1/user/rewards/issue",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
@@ -1374,14 +1377,14 @@
               {
                 "title": "Get available reward details for user by id",
                 "path": "reference/v1-get-user-brand-specific-rewards",
-                "openapi": "api-reference/v1-get-user-brand-specific-rewards.yaml GET /api_gateway/rewards/core/v1/user/reward/{reward Id}/brand/{brand name}?userId={id}",
+                "openapi": "api-reference/v1-get-user-brand-specific-rewards.yaml GET /api_gateway/rewards/core/v1/user/reward/{reward Id}/brand/{brand name}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Get all brand rewards using Brand ID",
                 "path": "reference/v1-get-reward-list",
-                "openapi": "api-reference/v1-get-reward-list.yaml GET /api_gateway/rewards/core/v1/reward/list/brand/{BrandID}?ownerId={ownerId}&ownerType={ownerType}",
+                "openapi": "api-reference/v1-get-reward-list.yaml GET /api_gateway/rewards/core/v1/reward/list/brand/{BrandID}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
@@ -1395,7 +1398,7 @@
               {
                 "title": "Get available brand rewards",
                 "path": "reference/v1-get-available-brand-rewards",
-                "openapi": "api-reference/v1-get-available-brand-rewards.yaml GET /api_gateway/rewards/core/v1/reward/brand/{Brand ID}/available?startDate={YYYY-MM-DDTHH:MMZ}&endDate={YYYY-MM-DDTHH:MMZ}",
+                "openapi": "api-reference/v1-get-available-brand-rewards.yaml GET /api_gateway/rewards/core/v1/reward/brand/{Brand ID}/available",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
@@ -1549,7 +1552,7 @@
               {
                 "title": "Issue Reward in connected orgs",
                 "path": "reference/v1-issue-bulk-reward-connected-org",
-                "openapi": "api-reference/v1-issue-bulk-reward-connected-org.yaml POST /v1.1/user/rewards/issue/?username={till}&skip_validation=true",
+                "openapi": "api-reference/v1-issue-bulk-reward-connected-org.yaml POST /v1.1/user/rewards/issue/",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
@@ -1605,14 +1608,14 @@
               {
                 "title": "Get purchased reward details by id and user",
                 "path": "reference/v1-get-user-specific-reward-by-id",
-                "openapi": "api-reference/v1-get-user-specific-reward-by-id.yaml GET /api_gateway/rewards/core/v1/user/reward/{rewardId}/vouchers/brand/{brand name}?mobile={mobile}&username={store}",
+                "openapi": "api-reference/v1-get-user-specific-reward-by-id.yaml GET /api_gateway/rewards/core/v1/user/reward/{rewardId}/vouchers/brand/{brand name}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Get purchased rewards for user (Old API)",
                 "path": "reference/v1-get-user-reward",
-                "openapi": "api-reference/v1-get-user-reward.yaml GET /api_gateway/rewards/core/v1/user/vouchers/brand/{brand name}?mobile={mobile}&username={store}",
+                "openapi": "api-reference/v1-get-user-reward.yaml GET /api_gateway/rewards/core/v1/user/vouchers/brand/{brand name}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
@@ -1755,14 +1758,14 @@
               {
                 "title": "Update fulfillment status and transaction custom fields for issued rewards",
                 "path": "reference/v1-update-fulfilment-status-and-txn-custom-fields",
-                "openapi": "api-reference/v1-update-fulfilment-status-and-txn-custom-fields.yaml PUT /api_gateway/rewards/core/v1/management/transactions?skip_validation=true",
+                "openapi": "api-reference/v1-update-fulfilment-status-and-txn-custom-fields.yaml PUT /api_gateway/rewards/core/v1/management/transactions",
                 "openapi-mode": "custom",
                 "method": "PUT"
               },
               {
                 "title": "Get all reward transactions for a user in connected orgs",
                 "path": "reference/v1-get-all-reward-transactions-for-a-user-in-connected-orgs",
-                "openapi": "api-reference/v1-get-all-reward-transactions-for-a-user-in-connected-orgs.yaml GET /api_gateway/rewards/core/v1.1/reward-transactions?customerId={customerId}",
+                "openapi": "api-reference/v1-get-all-reward-transactions-for-a-user-in-connected-orgs.yaml GET /api_gateway/rewards/core/v1.1/reward-transactions",
                 "openapi-mode": "custom",
                 "method": "GET"
               },

@@ -95,6 +95,12 @@ paths:
           name: UPDATE Rich Text Content
         samples-languages:
         - curl
+      parameters:
+      - name: RichcontentmetaID
+        in: path
+        required: true
+        schema:
+          type: string
 components:
   securitySchemes:
     sec0:

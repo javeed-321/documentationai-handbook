@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /v1.1/user/rewards/issue/?username={till}&skip_validation=true:
+  /v1.1/user/rewards/issue/:
     post:
       summary: Issue Reward in connected orgs
       description: ''
@@ -28,6 +28,11 @@ paths:
         description: optional
         schema:
           type: string
+      - name: till
+        in: query
+        schema:
+          type: string
+        required: false
       requestBody:
         content:
           application/json:

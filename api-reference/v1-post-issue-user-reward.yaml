@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/user/reward/{reward Id}/issue?username={store}&skip_validation=true:
+  /api_gateway/rewards/core/v1/user/reward/{reward Id}/issue:
     post:
       summary: Issue single reward
       description: ''
@@ -32,6 +32,16 @@ paths:
         required: true
         schema:
           type: string
+      - name: reward Id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: store
+        in: query
+        schema:
+          type: string
+        required: false
       requestBody:
         content:
           application/json:

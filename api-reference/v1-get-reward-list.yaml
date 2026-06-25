@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /api_gateway/rewards/core/v1/reward/list/brand/{BrandID}?ownerId={ownerId}&ownerType={ownerType}:
+  /api_gateway/rewards/core/v1/reward/list/brand/{BrandID}:
     get:
       summary: Get all brand rewards using Brand ID
       description: ''
@@ -59,6 +59,11 @@ paths:
           enum:
           - ''
           default: en
+      - name: BrandID
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: '200'

@@ -236,6 +236,12 @@ paths:
           name: Transaction
         samples-languages:
         - curl
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
 components:
   securitySchemes:
     sec0:

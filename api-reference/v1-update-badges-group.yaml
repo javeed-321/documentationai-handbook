@@ -21,6 +21,11 @@ paths:
         description: Unique ID of the group.
         schema:
           type: string
+      - name: groupid
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:

@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /api_gateway/v1/promotions/customer/109943742?includeRedemptions=true&includeSupplementaryPromotions=true:
+  /api_gateway/v1/promotions/customer/109943742:
     get:
       summary: Get Cart Promotions for a Customer
       description: This API is used to retrieve the cart promotions tagged to a particular
