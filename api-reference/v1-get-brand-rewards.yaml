@@ -3,7 +3,7 @@ info:
   title: Get Brand Rewards
   version: '1.0'
 servers:
-- url: "https://{host}"
+- url: https://{host}
   variables:
     host:
       default: host
@@ -80,11 +80,6 @@ paths:
       - name: area
         in: query
         description: Retrieve rewards of a specific region. Pass the area name.
-        schema:
-          type: string
-      - name: city
-        in: query
-        description: Retrieve rewards of a specific city. Pass the city name.
         schema:
           type: string
       - name: country
@@ -214,19 +209,19 @@ paths:
                           example: 49J2711828.image/jpeg
                         imageUrl:
                           type: string
-                          example: "https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J2711828.image/jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T143336Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=21d7bc16a4af1d99894a235bb53e4e08f79d81e524572f75ec475799e983c425"
+                          example: https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J2711828.image/jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T143336Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=21d7bc16a4af1d99894a235bb53e4e08f79d81e524572f75ec475799e983c425
                         thumbnailId:
                           type: string
                           example: 49J2719V29.image/jpeg
                         thumbnailUrl:
                           type: string
-                          example: "https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J2719V29.image/jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T143336Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=e3ce9dcae77d8dd0680ac28ba6745fcbcfcf795ee6922eabeced5234f8bd8657"
+                          example: https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J2719V29.image/jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T143336Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=e3ce9dcae77d8dd0680ac28ba6745fcbcfcf795ee6922eabeced5234f8bd8657
                         termAndConditionsId:
                           type: string
                           example: 49J271AC30.html
                         termAndConditionsUrl:
                           type: string
-                          example: "https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J271AC30.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T143336Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=1c71e0cfb2573537747f8fa01771fbe95756ecabe57cdcc404a8b724393fb0fd"
+                          example: https://demo.aip-southeast-1.amazonaws.com/solutions-rewards/DemoOrg/49J271AC30.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20201028T143336Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAIU4E4JJZBOKPYUAA%2F20201028%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=1c71e0cfb2573537747f8fa01771fbe95756ecabe57cdcc404a8b724393fb0fd
                         tier:
                           type: string
                           example: ''
@@ -246,10 +241,10 @@ paths:
                           example: ''
                         startTime:
                           type: string
-                          example: "2020-10-17 14:00:36"
+                          example: '2020-10-17 14:00:36'
                         endTime:
                           type: string
-                          example: "2026-12-31 03:00:36"
+                          example: '2026-12-31 03:00:36'
                         expired:
                           type: boolean
                           example: false
@@ -295,7 +290,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: "{}"
+                  value: '{}'
               schema:
                 type: object
                 properties: {}
@@ -303,7 +298,7 @@ paths:
       x-readme:
         code-samples:
         - language: html
-          code: "https://apac-apigateway.capillarytech.com/mobile/v2/api/marvel/reward/details?sortBy=asc&orderBy=intouchPoints&area=hsr&language=en&city=bangalore&tier=&type=&group=&label=&country=india&category=fuel"
+          code: https://apac-apigateway.capillarytech.com/mobile/v2/api/marvel/reward/details?sortBy=asc&orderBy=intouchPoints&area=hsr&language=en&city=bangalore&tier=&type=&group=&label=&country=india&category=fuel
         samples-languages:
         - html
 components:

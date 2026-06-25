@@ -51,15 +51,9 @@ paths:
               - contextType
               - endpointName
               - type
-              - startDate , endDate
               - active
               - rules
-              - -exp
-              - -expJSON
-              - -isActive
               - caseToActions
-              - --name
-              - --mandatoryPropertiesValues
               properties:
                 name:
                   type: string
@@ -156,9 +150,6 @@ paths:
                 type:
                   type: string
                   description: Type of ruleset.
-                startDate , endDate:
-                  type: string
-                  description: Format in Epoch time (ex. 1726207950)
                 active:
                   type: boolean
                   description: Status of the promotion. Set to true when creating
@@ -167,52 +158,53 @@ paths:
                   type: array
                   description: The rules defined for the promotion
                   items:
-                    type: string
-                -id:
-                  type: integer
-                  description: The unique identifier for the rule.
-                  format: int32
-                -exp:
-                  type: boolean
-                  description: Enable rule expression. Rule expressions are conditions
-                    that determine whether a statement is true or false. Refer to
-                    rule writing for more information.
-                -expJSON:
-                  type: string
-                  description: The rule expression in JSON format.
-                -isActive:
-                  type: boolean
-                  description: Indicates whether the rule is active. Set to true when
-                    creating a promotion for the first time
-                -priority:
-                  type: integer
-                  description: The priority of the rule.
-                  format: int32
-                -startDate:
-                  type: integer
-                  description: The start date of the rule. ISO 8601 Date Format
-                  format: int32
-                -endDate:
-                  type: integer
-                  description: The end date of the rule. ISO 8601 Date Format
-                  format: int32
-                -createdOn:
-                  type: integer
-                  description: The timestamp when the rule was created. ISO 8601 Date
-                    Format
-                  format: int32
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        description: The unique identifier for the rule.
+                        format: int32
+                      exp:
+                        type: boolean
+                        description: Enable rule expression. Rule expressions are conditions
+                          that determine whether a statement is true or false. Refer
+                          to rule writing for more information.
+                      expJSON:
+                        type: string
+                        description: The rule expression in JSON format.
+                      isActive:
+                        type: boolean
+                        description: Indicates whether the rule is active. Set to true
+                          when creating a promotion for the first time
+                      priority:
+                        type: integer
+                        description: The priority of the rule.
+                        format: int32
+                      startDate:
+                        type: integer
+                        description: The start date of the rule. ISO 8601 Date Format
+                        format: int32
+                      endDate:
+                        type: integer
+                        description: The end date of the rule. ISO 8601 Date Format
+                        format: int32
+                      createdOn:
+                        type: integer
+                        description: The timestamp when the rule was created. ISO 8601
+                          Date Format
+                        format: int32
                 caseToActions:
                   type: object
                   description: The actions to be taken based on the rule. Refer to
                     actions for more information
-                  properties: {}
-                --name:
-                  type: string
-                  description: Name of the action
-                --mandatoryPropertiesValues:
-                  type: string
-                  description: "As a set of key pair values  eg:   \"key\": \"ProRateOnSourceValue\"\
-                    , \"value\": \"EVENT_DEFAULT_VALUE\""
+                  properties:
+                    name:
+                      type: string
+                      description: Name of the action
+                    mandatoryPropertiesValues:
+                      type: string
+                      description: "As a set of key pair values  eg:   \"key\": \"ProRateOnSourceValue\"\
+                        , \"value\": \"EVENT_DEFAULT_VALUE\""
       responses:
         '200':
           description: '200'

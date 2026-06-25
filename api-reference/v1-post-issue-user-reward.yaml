@@ -43,13 +43,13 @@ paths:
             schema:
               type: object
               required:
-              - mobile/ email/externalId
+              - mobile
               - brand
               - transactionNumber
               properties:
-                mobile/ email/externalId:
+                mobile:
                   type: string
-                  description: Mobile number/ email Id/ External Id of the customer
+                  description: Mobile number, email ID, or external ID of the customer
                 brand:
                   type: string
                   description: name of the brand

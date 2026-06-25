@@ -3,30 +3,25 @@ info:
   title: Get list of Catalog promotions
   version: '1.0'
 servers:
-- url: "https://{host}"
+- url: https://{host}
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/promotion/brand/{brandId}":
+  /api_gateway/rewards/core/v1/promotion/brand/{brandId}:
     get:
       summary: Get list of Catalog promotions
       description: ''
       operationId: get-list-of-catalog-promotions
       parameters:
-      - name: BrandId
-        in: query
-        description: Unique ID of the brand.
-        schema:
-          type: integer
-          format: int64
       - name: brandId
         in: path
         required: true
         schema:
           type: string
+        description: Unique ID of the brand.
       responses:
         '200':
           description: '200'
@@ -109,16 +104,16 @@ paths:
                           default: true
                         startTime:
                           type: string
-                          example: "2023-04-26 06:58:49"
+                          example: '2023-04-26 06:58:49'
                         startDateTime:
                           type: string
-                          example: "2023-04-26T06:58:49Z"
+                          example: '2023-04-26T06:58:49Z'
                         endTime:
                           type: string
-                          example: "2024-10-25 11:16:00"
+                          example: '2024-10-25 11:16:00'
                         endDateTime:
                           type: string
-                          example: "2024-10-25T11:16:00Z"
+                          example: '2024-10-25T11:16:00Z'
                         discountType:
                           type: string
                           example: ABSOLUTE
@@ -128,16 +123,16 @@ paths:
                           default: 0
                         lastUpdatedOn:
                           type: string
-                          example: "2023-11-16 10:10:03"
+                          example: '2023-11-16 10:10:03'
                         lastUpdatedOnDateTime:
                           type: string
-                          example: "2023-11-16T10:10:03Z"
+                          example: '2023-11-16T10:10:03Z'
                         createdOn:
                           type: string
-                          example: "2023-04-25 13:59:28"
+                          example: '2023-04-25 13:59:28'
                         createdOnDateTime:
                           type: string
-                          example: "2023-11-16T10:10:03Z"
+                          example: '2023-11-16T10:10:03Z'
                         lastUpdatedBy:
                           type: integer
                           example: 75078478
@@ -166,7 +161,7 @@ paths:
       x-readme:
         code-samples:
         - language: curl
-          code: "https://eucrm.cc.capillarytech.com/api_gateway/rewards/core/v1/promotion/brand/1"
+          code: https://eucrm.cc.capillarytech.com/api_gateway/rewards/core/v1/promotion/brand/1
         samples-languages:
         - curl
 components:

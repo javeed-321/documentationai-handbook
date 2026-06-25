@@ -251,7 +251,10 @@ paths:
             : 1742284015000,\n    \"endTime\": 1759564015000    \n}'"
           name: Generic sample
         - language: curl
-          code: "{\n    \"startTime\": \"2025-02-06T07:43:30.00Z\",\n    \"endTime\"\
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/create'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"startTime\": \"2025-02-06T07:43:30.00Z\",\n    \"endTime\"\
             : \"2026-11-29T05:39:49.00Z\",\n    \"type\": \"POINTS\",\n    \"brandId\"\
             : 3,\n    \"priority\": 1,\n    \"enabled\": true,\n    \"intouchPoints\"\
             : 1,\n    \"intouchSeriesId\": \"6538e3ac60ce5c504144bb07\",\n    \"tier\"\
@@ -279,10 +282,13 @@ paths:
             \    \"redemptionType\": \"CART_PROMOTION\",\n    \"communications\":\
             \ [\n        4\n    ],\n    \"owners\": [\n        {\n            \"ownerType\"\
             : \"LOYALTY_PROGRAM\",\n            \"ownerId\": \"123\"\n        }\n\
-            \    ]\n}"
+            \    ]\n}'"
           name: With image support
         - language: curl
-          code: "{\n    \"startTime\": \"2025-03-07T08:53:49.00Z\",\n    \"endTime\"\
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/create'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"startTime\": \"2025-03-07T08:53:49.00Z\",\n    \"endTime\"\
             : \"2026-03-14T05:39:49.00Z\",\n    \"type\": \"POINTS\",\n    \"brandId\"\
             : \"8\",\n    \"priority\": 1,\n    \"enabled\": true,\n    \"intouchPoints\"\
             : 3,\n    \"intouchSeriesId\": \"73684275\",\n    \"tier\": \"GOLD\",\n\
@@ -307,10 +313,13 @@ paths:
             :\n    [\n        \"11\"\n    ],\n    \"rewardRank\":\"1\",        \n\
             \    \"redemptionType\": \"INTOUCH_REWARD\",\n    \"communications\":\n\
             \    [\n        \"11\"\n    ],\n    \"vendorRedemption\": null,\n    \"\
-            group\": null,\n    \"label\": null\n}"
+            group\": null,\n    \"label\": null\n}'"
           name: with multi lingual custom field
         - language: curl
-          code: "\n{\n    \"startTime\": \"2025-03-07T17:04:30.00Z\",\n    \"endTime\"\
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/create'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"startTime\": \"2025-03-07T17:04:30.00Z\",\n    \"endTime\"\
             : \"2026-10-31T05:39:49.00Z\",\n    \"rewardRevenueMeta\" : [\n      \
             \  {\n            \"commissionParticipant\": \"BRAND\",\n            \"\
             commissionRate\": \"1.0\",\n            \"cycleStartDate\": \"2025-03-07T17:04:30.000Z\"\
@@ -334,11 +343,14 @@ paths:
             ,\n      \"enabled\": true\n    }\n  ],\n  \"categories\": [\n    5\n\
             \  ],\n  \"redemptionType\": \"INTOUCH_REWARD\",\n  \"communications\"\
             : [\n    4\n  ],\n  \"owners\":[{\n      \"ownerType\":\"LOYALTY_PROGRAM\"\
-            ,\n      \"ownerId\":\"123\"\n      }\n  ]\n  \n}"
+            ,\n      \"ownerId\":\"123\"\n      }\n  ]\n  \n}'"
           name: With revenue metadata
         - language: curl
-          code: "{\n    \"startTime\": \"2025-09-26T20:00:00Z\",\n    \"endTime\"\
-            : \"2026-10-31T11:59:30Z\",\n    \"priority\": 1,\n    \"type\": \"VOUCHER\"\
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/create'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"startTime\": \"2025-09-26T20:00:00Z\",\n    \"endTime\": \"\
+            2026-10-31T11:59:30Z\",\n    \"priority\": 1,\n    \"type\": \"VOUCHER\"\
             ,\n    \"brandId\": \"1\",\n    \"enabled\": true,\n    \"intouchPoints\"\
             : 500,\n    \"geography\": [\n        {\n            \"countryId\": 1\n\
             \        }\n    ],\n\"paymentConfigs\": [\n       {\n            \"paymentMode\"\
@@ -367,11 +379,14 @@ paths:
             \      \"termNConditions\": \"t&c\",\n            \"thumbnailId\": \"\
             c886f064-2b3f-4c19-9e86-7f7e5ab5ae04\",\n            \"termNConditionsId\"\
             : \"820a3d7f-2601-405b-9f56-4a3ba8e9df73\",\n            \"enabled\":\
-            \ true\n        }\n    ],\n    \"isactive\" : true\n}"
+            \ true\n        }\n    ],\n    \"isactive\" : true\n}'"
           name: With payment mode info
         - language: curl
-          code: "{\n    \"startTime\": \"2025-01-27T08:07:05Z\",\n    \"endTime\"\
-            : \"2026-10-31T11:59:30Z\",\n    \"priority\": 1,\n    \"type\": \"VOUCHER\"\
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/create'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"startTime\": \"2025-01-27T08:07:05Z\",\n    \"endTime\": \"\
+            2026-10-31T11:59:30Z\",\n    \"priority\": 1,\n    \"type\": \"VOUCHER\"\
             ,\n    \"redemptionType\": \"MILES\",\n    \"brandId\": \"1\",\n    \"\
             enabled\": true,\n   \n\"paymentConfigs\": [\n       {\n            \"\
             paymentMode\": \"CONV_RATIO\",\n            \"conversionRatio\":0.33\n\
@@ -391,11 +406,14 @@ paths:
             \            \"termNConditions\": \"t&c\",\n            \"thumbnailId\"\
             : \"c886f064-2b3f-4c19-9e86-7f7e5ab5ae04\",\n            \"termNConditionsId\"\
             : \"820a3d7f-2601-405b-9f56-4a3ba8e9df73\",\n            \"enabled\":\
-            \ true\n        }\n    ],\n    \"isactive\" : true\n}"
+            \ true\n        }\n    ],\n    \"isactive\" : true\n}'"
           name: With KPI as Quantity
         - language: curl
-          code: "{\n    \"startTime\": \"2025-01-27T08:22:20Z\",\n    \"endTime\"\
-            : \"2026-10-31T11:59:30Z\",\n    \"priority\": 1,\n    \"type\": \"VOUCHER\"\
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/create'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"startTime\": \"2025-01-27T08:22:20Z\",\n    \"endTime\": \"\
+            2026-10-31T11:59:30Z\",\n    \"priority\": 1,\n    \"type\": \"VOUCHER\"\
             ,\n    \"redemptionType\": \"MILES\",\n    \"brandId\": \"1\",\n    \"\
             enabled\": true,\n    \n    \n    \n    \n    \n    \n\n\"paymentConfigs\"\
             : [\n       {\n            \"paymentMode\": \"CONV_RATIO\",\n        \
@@ -418,10 +436,13 @@ paths:
             \            \"termNConditions\": \"t&c\",\n            \"thumbnailId\"\
             : \"c886f064-2b3f-4c19-9e86-7f7e5ab5ae04\",\n            \"termNConditionsId\"\
             : \"820a3d7f-2601-405b-9f56-4a3ba8e9df73\",\n            \"enabled\":\
-            \ true\n        }\n    ],\n    \"isactive\" : true\n}"
+            \ true\n        }\n    ],\n    \"isactive\" : true\n}'"
           name: With KPI as Redemption value
         - language: curl
-          code: "{\n    \"startTime\": \"2025-02-12T05:59:00.000Z\",\n    \"endTime\"\
+          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/create'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"startTime\": \"2025-02-12T05:59:00.000Z\",\n    \"endTime\"\
             : \"2025-12-30T12:50:20.000Z\",\n    \"type\": \"FREE_VOUCHER\",\n   \
             \ \"brandId\": 61,\n    \"priority\": 1,\n    \"enabled\": true,\n   \
             \ \"intouchPoints\": 0,\n    \"tier\": \"PLATINUM\",\n    \"languageSpecificInfo\"\
@@ -438,7 +459,7 @@ paths:
             : true,\n                    \"url\":\"mypic.com\",\n                \
             \    \"altText\":\"product picture\"\n                }\n            ]\n\
             \        }\n    ],\n\n    \"redemptionType\": \"PHYSICAL_REWARD\"\n  \
-            \   \n}"
+            \   \n}'"
           name: "With 'altText' for images and videos"
         - language: curl
           code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/create'\
@@ -471,8 +492,11 @@ paths:
             \    \"isEnabled\": true\n                }\n            }\n        }\n\
             \    ],\n    \"isactive\": true\n}'"
           name: With rich text content
-        - code: "'{\n    \"intouchPoints\": 0,\n    \"redemptionType\": \"AUCTION\"\
-            ,\n    \"type\": \"FREE_VOUCHER\",\n    \"restrictions\": {\n        \"\
+        - code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/create'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"intouchPoints\": 0,\n    \"redemptionType\": \"AUCTION\",\n\
+            \    \"type\": \"FREE_VOUCHER\",\n    \"restrictions\": {\n        \"\
             rewardLevel\": [\n            {\n                \"kpi\": \"QUANTITY\"\
             ,\n                \"windowType\": \"FIXED\",\n                \"repeatFrequencyType\"\
             : \"WEEKS\",\n                \"weekStartDay\": \"TUESDAY\",\n       \
@@ -490,7 +514,7 @@ paths:
             \           \"enabled\": true\n        }   \n    ],\n    \"brandId\":\
             \ 61,\n    \"enabled\": true,\n    \"startTime\": 1742284015000,\n   \
             \ \"endTime\": 1759564015000    \n}'"
-          language: json
+          language: curl
           name: With frequency restriction
         samples-languages:
         - curl

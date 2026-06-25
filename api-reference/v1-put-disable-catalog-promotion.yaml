@@ -3,42 +3,31 @@ info:
   title: Disable Catalog promotion
   version: '1.0'
 servers:
-- url: "https://{host}"
+- url: https://{host}
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/promotion/{promotionId}/status/false/brand/{brandId}":
+  /api_gateway/rewards/core/v1/promotion/{promotionId}/status/false/brand/{brandId}:
     put:
       summary: Disable Catalog promotion
       description: ''
       operationId: put-disable-catalog-promotion
       parameters:
       - name: promotionId
-        in: query
+        in: path
+        required: true
+        schema:
+          type: string
         description: Unique ID of the promotion.
+      - name: brandId
+        in: path
         required: true
         schema:
           type: string
-      - name: brandId
-        in: query
         description: Unique ID of the brand.
-        required: true
-        schema:
-          type: integer
-          format: int64
-      - name: promotionId
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: brandId
-        in: path
-        required: true
-        schema:
-          type: string
       responses:
         '200':
           description: '200'

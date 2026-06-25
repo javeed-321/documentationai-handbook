@@ -3,14 +3,14 @@ info:
   title: Update Data Field
   version: '1.0'
 servers:
-- url: "https://{host}"
+- url: https://{host}
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  "/api_gateway/cortex/v1/dataFields/{id}":
+  /api_gateway/cortex/v1/dataFields/{id}:
     put:
       summary: Update Data Field
       description: This API allows you to update data fields that you defined for
@@ -156,14 +156,14 @@ paths:
                           properties:
                             createdOn:
                               type: string
-                              example: "2025-04-01T11:20:09.793+00:00"
+                              example: '2025-04-01T11:20:09.793+00:00'
                             createdBy:
                               type: integer
                               example: 75155282
                               default: 0
                             lastUpdatedOn:
                               type: string
-                              example: "2025-04-01T11:20:09.793+00:00"
+                              example: '2025-04-01T11:20:09.793+00:00'
                             lastUpdatedBy:
                               type: integer
                               example: 75155282
@@ -176,7 +176,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: "{}"
+                  value: '{}'
               schema:
                 type: object
                 properties: {}
@@ -242,6 +242,7 @@ paths:
         required: true
         schema:
           type: string
+        description: Unique ID of the data field to update.
 components:
   securitySchemes:
     sec0:

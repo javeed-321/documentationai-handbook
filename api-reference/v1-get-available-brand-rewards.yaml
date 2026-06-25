@@ -3,14 +3,14 @@ info:
   title: Get available brand rewards
   version: '1.0'
 servers:
-- url: "https://{host}"
+- url: https://{host}
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/reward/brand/{brandId}/available":
+  /api_gateway/rewards/core/v1/reward/brand/{brandId}/available:
     get:
       summary: Get available brand rewards
       description: ''
@@ -28,11 +28,13 @@ paths:
         required: true
         schema:
           type: string
+        description: 'Start date in ISO 8601 format: YYYY-MM-DDTHH:MMZ (e.g. 2024-01-15T10:30Z)'
       - name: endDate
         in: query
         required: true
         schema:
           type: string
+        description: 'End date in ISO 8601 format: YYYY-MM-DDTHH:MMZ (e.g. 2024-01-31T23:59Z)'
       - name: language
         in: query
         description: Filters the response based on the reward language. Use this parameter
@@ -43,16 +45,6 @@ paths:
           enum:
           - ''
           default: en
-      - name: "yYYY-MM-DDTHH:MMZ"
-        in: query
-        schema:
-          type: string
-        required: false
-      - name: "yYYY-MM-DDTHH:MMZ"
-        in: query
-        schema:
-          type: string
-        required: false
       responses:
         '200':
           description: '200'
@@ -196,10 +188,10 @@ paths:
                           example: ENDED
                         startTime:
                           type: string
-                          example: "2021-05-10 18:45:14"
+                          example: '2021-05-10 18:45:14'
                         endTime:
                           type: string
-                          example: "2021-05-10 18:45:14"
+                          example: '2021-05-10 18:45:14'
                         type:
                           type: string
                           example: VOUCHER
@@ -251,16 +243,24 @@ paths:
                         default: 0
                       message:
                         type: string
-                        example: "start or end date should be passed in proper format\
-                          \ yyyy-MM-dd'T'HH:mm'Z'"
+                        example: start or end date should be passed in proper format
+                          yyyy-MM-dd'T'HH:mm'Z'
       deprecated: false
       x-readme:
         code-samples:
         - language: curl
-          code: "curl --location 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/brand/1/available?startDate=2023-04-20T08:55Z&endDate=2024-07-30T08:55Z'\
-            \ \\\n--header 'Accept: */*' \\\n--header 'Authorization: Basic aWFtc2hpdmFhbms6NblahblahDM4ZjhlMzRkNWI1YTI5MWY='\
-            \ \\\n--header 'Cookie: _cfuvid=NJfT4sKrp52F91VHc.jjVnfGMHiYjCsRisiSMqu5.eg-1734413549869-0.0.1.1-604800000'\
-            \ \\\n--data ''"
+          code: 'curl --location ''https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/brand/1/available?startDate=2023-04-20T08:55Z&endDate=2024-07-30T08:55Z''
+            \
+
+            --header ''Accept: */*'' \
+
+            --header ''Authorization: Basic aWFtc2hpdmFhbms6NblahblahDM4ZjhlMzRkNWI1YTI5MWY=''
+            \
+
+            --header ''Cookie: _cfuvid=NJfT4sKrp52F91VHc.jjVnfGMHiYjCsRisiSMqu5.eg-1734413549869-0.0.1.1-604800000''
+            \
+
+            --data '''''
         samples-languages:
         - curl
 components:

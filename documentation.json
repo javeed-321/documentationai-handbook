@@ -540,13 +540,6 @@
                 "openapi": "api-reference/v1-forget-password-1.yaml POST /auth/v1/password/forget",
                 "openapi-mode": "custom",
                 "method": "POST"
-              },
-              {
-                "title": "Change identifier on Auth engine (COPY)",
-                "path": "reference/v1-change-identifier-on-auth-engine",
-                "openapi": "api-reference/v1-change-identifier-on-auth-engine.yaml POST /auth/v1/user/updateIdentifierValue (COPY)",
-                "openapi-mode": "custom",
-                "method": "POST"
               }
             ]
           },
@@ -865,7 +858,7 @@
                 "method": "GET"
               },
               {
-                "title": "Get Status of Redeemed Coupons (COPY)",
+                "title": "Get Status of Redeemed Coupons",
                 "path": "reference/v1-get-status-of-redeemed-coupons-copy-1",
                 "openapi": "api-reference/v1-get-status-of-redeemed-coupons-copy-1.yaml GET /coupon/api/v1/upload/getUploadRedeemedCouponStatus/{couponSeriesId}",
                 "openapi-mode": "custom",
@@ -895,21 +888,21 @@
               {
                 "title": "Get Status of Redeemed Coupons",
                 "path": "reference/v1-get-status-of-redeemed-coupons-copy",
-                "openapi": "api-reference/v1-get-status-of-redeemed-coupons-copy.yaml GET /upload/getUploadRedeemedCouponStatus/{couponSeriesId} (COPY)",
+                "openapi": "api-reference/v1-get-status-of-redeemed-coupons-copy.yaml GET /upload/getUploadRedeemedCouponStatus/{couponSeriesId}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Get Uploaded Coupons' Status",
                 "path": "reference/v1-get-uploaded-coupons-status-copy",
-                "openapi": "api-reference/v1-get-uploaded-coupons-status-copy.yaml GET /coupon/api/v1/upload/getUploadStatus/{couponSeriesId} (COPY)",
+                "openapi": "api-reference/v1-get-uploaded-coupons-status-copy.yaml GET /coupon/api/v1/upload/getUploadStatus/{couponSeriesId}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Upload Redeemed Coupons",
                 "path": "reference/v1-upload-redeemed-coupons-copy",
-                "openapi": "api-reference/v1-upload-redeemed-coupons-copy.yaml POST /upload/redeemFile (COPY)",
+                "openapi": "api-reference/v1-upload-redeemed-coupons-copy.yaml POST /upload/redeemFile",
                 "openapi-mode": "custom",
                 "method": "POST"
               },

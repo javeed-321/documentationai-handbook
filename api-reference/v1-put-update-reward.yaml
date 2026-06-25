@@ -251,7 +251,10 @@ paths:
             \ : true\n}'"
           name: Sample cURL
         - language: curl
-          code: "{\n  \t\"name\":\"ABCD\",\n  \t\"description\":\"Reward\",\n    \"\
+          code: "curl --location --request PUT 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/{rewardId}/brand/{brandId}'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n  \t\"name\":\"ABCD\",\n  \t\"description\":\"Reward\",\n    \"\
             startTime\": \"2025-02-06T07:43:30.00Z\",\n    \"endTime\": \"2026-11-29T05:39:49.00Z\"\
             ,\n    \"type\": \"POINTS\",\n    \"brandId\": 3,\n    \"priority\": 1,\n\
             \    \"enabled\": true,\n    \"intouchPoints\": 1,\n    \"intouchSeriesId\"\
@@ -277,10 +280,13 @@ paths:
             \     }\n    ],\n    \"categories\": [\n        5\n    ],\n    \"redemptionType\"\
             : \"CART_PROMOTION\",\n    \"communications\": [\n        4\n    ],\n\
             \    \"owners\": [\n        {\n            \"ownerType\": \"LOYALTY_PROGRAM\"\
-            ,\n            \"ownerId\": \"123\"\n        }\n    ]\n}"
+            ,\n            \"ownerId\": \"123\"\n        }\n    ]\n}'"
           name: With image support
         - language: curl
-          code: "{\n    \"startTime\": \"2024-03-07T08:53:49.00Z\",\n    \"endTime\"\
+          code: "curl --location --request PUT 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/{rewardId}/brand/{brandId}'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"startTime\": \"2024-03-07T08:53:49.00Z\",\n    \"endTime\"\
             : \"2024-03-14T05:39:49.00Z\",\n    \"type\": \"POINTS\",\n    \"brandId\"\
             : \"8\",\n    \"priority\": 1,\n    \"enabled\": true,\n    \"intouchPoints\"\
             : 3,\n    \"intouchSeriesId\": \"73684275\",\n    \"tier\": \"GOLD\",\n\
@@ -302,10 +308,13 @@ paths:
             \n            }\n        }\n    ],\n    \"categories\":\n    [\n     \
             \   \"11\"\n    ],\n    \"redemptionType\": \"INTOUCH_REWARD\",\n    \"\
             communications\":\n    [\n        \"11\"\n    ],\n    \"vendorRedemption\"\
-            : null,\n    \"group\": null,\n    \"label\": null\n}"
+            : null,\n    \"group\": null,\n    \"label\": null\n}'"
           name: With multi lingual custom field
         - language: curl
-          code: "\n{\n    \"startTime\": \"2024-10-07T17:04:30.00Z\",\n    \"endTime\"\
+          code: "curl --location --request PUT 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/{rewardId}/brand/{brandId}'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json'\\\n--header 'Authorization: Basic {token}' \\\n--data\
+            \ '{\n    \"startTime\": \"2024-10-07T17:04:30.00Z\",\n    \"endTime\"\
             : \"2027-10-31T05:39:49.00Z\",\n    \"rewardRevenueMeta\" : [\n      \
             \  {\n            \"commissionParticipant\": \"BRAND\",\n            \"\
             commissionRate\": \"1.5\",\n            \"cycleStartDate\": \"2024-11-07T17:04:30.000Z\"\
@@ -327,7 +336,7 @@ paths:
             : \"EXDR12987T\",\n      \"enabled\": true\n    }\n  ],\n  \"categories\"\
             : [\n    5\n  ],\n  \"redemptionType\": \"INTOUCH_REWARD\",\n  \"communications\"\
             : [\n    4\n  ],\n  \"owners\":[{\n      \"ownerType\":\"LOYALTY_PROGRAM\"\
-            ,\n      \"ownerId\":\"123\"\n      }\n  ]\n}"
+            ,\n      \"ownerId\":\"123\"\n      }\n  ]\n}'"
           name: With revenue metadata
         - language: curl
           code: "curl --location --request PUT 'https://eu.api.capillarytech.com/api_gateway/rewards/core/v1/reward/367568/brand/61'\

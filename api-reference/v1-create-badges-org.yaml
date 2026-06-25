@@ -3,7 +3,7 @@ info:
   title: Create badges
   version: '1.0'
 servers:
-- url: "https://{host}"
+- url: https://{host}
   variables:
     host:
       default: host
@@ -16,7 +16,7 @@ paths:
       description: ''
       operationId: create-badges-org
       parameters:
-      - name: "X-CAP-BADGES-MIGRATION:"
+      - name: X-CAP-BADGES-MIGRATION
         in: header
         description: Enables you to use historical badges.
         schema:
@@ -30,25 +30,22 @@ paths:
               properties:
                 RAW_BODY:
                   type: string
-                  description: "{     \"name\": \"Furry Friend Badge\",     \"description\"\
-                    : \"Purchase 5 pet products in 3 months and get a pet grooming\
-                    \ voucher\",     \"startOn\": 1699596721,     \"expiresOn\": 1828754110,\
-                    \     \"earnedBadgeExpiry\": {         \"expiryType\": \"RELATIVE\"\
-                    ,         \"relativeExpirytype\": \"MONTHS\",         \"value\"\
-                    : 3     },     \"ownership\": {         \"restrictedToOwners\"\
-                    : [             \"Loyalty\"         ]     },     \"customerConstraints\"\
-                    : [         {             \"constraintType\": \"CUSTOMER_BADGE_FIXED_VALUE\"\
-                    ,             \"maxEarnLimit\": 1         }     ],     \"badgeConstraints\"\
-                    : [         {             \"constraintType\": \"BADGE_FIXED_VALUE\"\
-                    ,             \"maxEarnLimit\": 1000         }     ],     \"earnType\"\
-                    : \"EARN\",     \"benefits\": [         {             \"benefitType\"\
-                    : \"COUPON\",             \"seriesId\": 13686         },     \
-                    \    {             \"benefitType\": \"LOYALTY_POINTS\",      \
-                    \       \"points\": 100,             \"programId\": 626,     \
-                    \        \"promotionId\": 80332,             \"allocationStrategyId\"\
-                    : 1489,             \"expirationStrategyId\": 3843         } \
-                    \    ],     \"tags\": [         {             \"name\": \"Type\"\
-                    ,             \"value\": \"Birthday\"         }     ] }"
+                  description: '{     "name": "Furry Friend Badge",     "description":
+                    "Purchase 5 pet products in 3 months and get a pet grooming voucher",     "startOn":
+                    1699596721,     "expiresOn": 1828754110,     "earnedBadgeExpiry":
+                    {         "expiryType": "RELATIVE",         "relativeExpirytype":
+                    "MONTHS",         "value": 3     },     "ownership": {         "restrictedToOwners":
+                    [             "Loyalty"         ]     },     "customerConstraints":
+                    [         {             "constraintType": "CUSTOMER_BADGE_FIXED_VALUE",             "maxEarnLimit":
+                    1         }     ],     "badgeConstraints": [         {             "constraintType":
+                    "BADGE_FIXED_VALUE",             "maxEarnLimit": 1000         }     ],     "earnType":
+                    "EARN",     "benefits": [         {             "benefitType":
+                    "COUPON",             "seriesId": 13686         },         {             "benefitType":
+                    "LOYALTY_POINTS",             "points": 100,             "programId":
+                    626,             "promotionId": 80332,             "allocationStrategyId":
+                    1489,             "expirationStrategyId": 3843         }     ],     "tags":
+                    [         {             "name": "Type",             "value": "Birthday"         }     ]
+                    }'
                   format: json
             examples:
               Earn type- Fixed window:
@@ -134,17 +131,17 @@ paths:
                   orgId: 50933
                   name: demo testkerl2n26df132
                   description: string
-                  startOn: "2023-11-14T21:51:00.192Z"
-                  expiresOn: "2026-12-03T15:19:37.192Z"
+                  startOn: '2023-11-14T21:51:00.192Z'
+                  expiresOn: '2026-12-03T15:19:37.192Z'
                   earnedBadgeExpiry:
                     expiryType: ABSOLUTE
                     type: WITH_BADGE_META
-                    expiresOn: "2024-11-03T15:19:37.192Z"
+                    expiresOn: '2024-11-03T15:19:37.192Z'
                     expireWithBadgeMeta: true
                   issuedBadgeExpiry:
                     expiryType: ABSOLUTE
                     type: WITH_BADGE_META
-                    expiresOn: "2024-11-03T15:19:37.192Z"
+                    expiresOn: '2024-11-03T15:19:37.192Z'
                     expireWithBadgeMeta: true
                   images:
                   - name: string
@@ -198,9 +195,9 @@ paths:
                   issuedCount: 0
                   earnedCount: 0
                   status: LIVE
-                  createdOn: "2023-11-03T15:19:37.192Z"
+                  createdOn: '2023-11-03T15:19:37.192Z'
                   createdBy: 0
-                  lastUpdatedOn: "2023-11-03T15:19:37.192Z"
+                  lastUpdatedOn: '2023-11-03T15:19:37.192Z'
                   lastUpdatedBy: 0
                   customFields:
                     CF1: CF1
@@ -289,9 +286,9 @@ paths:
                       name: Badge Issue earn type
                       description: Make 5 transactions
                       startOn: 1716803487
-                      startOnISO: "2024-05-27T09:51:27Z"
+                      startOnISO: '2024-05-27T09:51:27Z'
                       expiresOn: 1726804000
-                      expiresOnISO: "2024-09-20T03:46:40Z"
+                      expiresOnISO: '2024-09-20T03:46:40Z'
                       earnedBadgeExpiry:
                         expiryType: RELATIVE
                         relativeExpirytype: WEEKS
@@ -300,12 +297,12 @@ paths:
                         expiryType: ABSOLUTE
                         type: FIXED_DATE
                         expiresOn: 1926235957
-                        expiresOnISO: "2031-01-15T09:32:37Z"
+                        expiresOnISO: '2031-01-15T09:32:37Z'
                         expireWithBadgeMeta: false
                       images:
                       - name: Issued
                         fileSvcHandle: qwer-8634-8938
-                        url: "https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d"
+                        url: https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d
                         tag: EARNED
                       ownership:
                         restrictedToOwners:
@@ -320,9 +317,9 @@ paths:
                         maxEarnLimit: 2
                         cycleStatus: ACTIVE
                         startDate: 1716803487
-                        startDateISO: "2024-05-27T09:51:27Z"
+                        startDateISO: '2024-05-27T09:51:27Z'
                         endDate: 1926235957
-                        endDateISO: "2031-01-15T09:32:37Z"
+                        endDateISO: '2031-01-15T09:32:37Z'
                       badgeConstraints:
                       - constraintType: BADGE_FIXED_VALUE
                         maxEarnLimit: 10000
@@ -341,10 +338,10 @@ paths:
                       earnType: ISSUE_EARN
                       status: EXPIRED
                       createdOn: 1768813441.18082
-                      createdOnISO: "2026-01-19T09:04:01Z"
+                      createdOnISO: '2026-01-19T09:04:01Z'
                       createdBy: 75197372
                       lastUpdatedOn: 1768813441.18082
-                      lastUpdatedOnISO: "2026-01-19T09:04:01Z"
+                      lastUpdatedOnISO: '2026-01-19T09:04:01Z'
                       lastUpdatedBy: 75197372
                       customFields: {}
                       active: true
@@ -360,14 +357,14 @@ paths:
                       name: badgetestjan16 01
                       description: null
                       startOn: 1768714500
-                      startOnISO: "2026-01-18T05:35:00Z"
+                      startOnISO: '2026-01-18T05:35:00Z'
                       expiresOn: 1769751300
-                      expiresOnISO: "2026-01-30T05:35:00Z"
+                      expiresOnISO: '2026-01-30T05:35:00Z'
                       earnedBadgeExpiry:
                         expiryType: ABSOLUTE
                         type: FIXED_DATE
                         expiresOn: 1769751300
-                        expiresOnISO: "2026-01-30T05:35:00Z"
+                        expiresOnISO: '2026-01-30T05:35:00Z'
                         expireWithBadgeMeta: false
                       issuedBadgeExpiry: null
                       images: []
@@ -403,10 +400,10 @@ paths:
                       earnType: EARN
                       status: LIVE
                       createdOn: 1768813084.80786
-                      createdOnISO: "2026-01-19T08:58:04Z"
+                      createdOnISO: '2026-01-19T08:58:04Z'
                       createdBy: 75197372
                       lastUpdatedOn: 1768813084.80786
-                      lastUpdatedOnISO: "2026-01-19T08:58:04Z"
+                      lastUpdatedOnISO: '2026-01-19T08:58:04Z'
                       lastUpdatedBy: 75197372
                       customFields: {}
                       active: true
@@ -656,7 +653,7 @@ paths:
                                 example: qwer-8634-8938
                               url:
                                 type: string
-                                example: "https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d"
+                                example: https://firebasestorage.googleapis.com/v0/b/createbadges.appspot.com/o/images%2Fsuccess1.jpg?alt=media&token=66b2f0bc-9c55-4e33-a5e9-c6be96d94f2d
                               tag:
                                 type: string
                                 example: EARNED
@@ -853,8 +850,8 @@ paths:
                           default: 0
                         message:
                           type: string
-                          example: "HV000028: Unexpected exception during isValid\
-                            \ call."
+                          example: 'HV000028: Unexpected exception during isValid
+                            call.'
                         reference: {}
                   warnings: {}
       deprecated: false

@@ -197,10 +197,13 @@ paths:
       x-readme:
         code-samples:
         - language: shell
-          code: "{\n   \"identifierType\":\"USERNAME\",\n   \"identifierValue\":\"\
-            9945560224\",\n   \"mobile\":\"9988221100\",\n   \"email\": \"\",\n  \
-            \  \"deviceId\": \"deviceid1\",\n    \"brand\": \"STANDARDAPP\",\n   \
-            \ \"password\":\"password\",\n    \"confirmPassword\":\"password\"\n}"
+          code: "curl --location 'https://eu.api.capillarytech.com/auth/v1/web/token/generate'\
+            \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\
+            \ application/json' \\\n--data '{\n   \"identifierType\":\"USERNAME\"\
+            ,\n   \"identifierValue\":\"9945560224\",\n   \"mobile\":\"9988221100\"\
+            ,\n   \"email\": \"\",\n    \"deviceId\": \"deviceid1\",\n    \"brand\"\
+            : \"STANDARDAPP\",\n    \"password\":\"password\",\n    \"confirmPassword\"\
+            :\"password\"\n}'"
           name: Authenticate with username
         - code: "curl --location 'https://eu.api.capillarytech.com/auth/v1/token/generate'\
             \ \\\n--header 'Accept: application/json' \\\n--header 'Content-Type:\

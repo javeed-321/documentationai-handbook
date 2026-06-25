@@ -10,7 +10,7 @@ servers:
 security:
 - sec0: []
 paths:
-  /upload/redeemFile (COPY):
+  /upload/redeemFile:
     post:
       summary: Upload Redeemed Coupons
       description: "Lets you upload coupons that are redeemed for a coupon series\

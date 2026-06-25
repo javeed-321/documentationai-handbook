@@ -1,27 +1,21 @@
 openapi: 3.1.0
 info:
-  title: "Get Uploaded Coupons' Status"
+  title: Get Uploaded Coupons' Status
   version: '1.0'
 servers:
-- url: "https://{host}"
+- url: https://{host}
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  "/coupon/api/v1/upload/getUploadStatus/{couponSeriesId} (COPY)":
+  /coupon/api/v1/upload/getUploadStatus/{couponSeriesId}:
     get:
-      summary: "Get Uploaded Coupons' Status"
+      summary: Get Uploaded Coupons' Status
       description: Retrieves the status of a coupon upload job.
       operationId: get-uploaded-coupons-status-copy
       parameters:
-      - name: couponSeriesId
-        in: query
-        description: The unique ID of the coupon series to get the status.
-        schema:
-          type: integer
-          format: int64
       - name: couponSeriesId
         in: path
         required: true
@@ -126,7 +120,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: "{}"
+                  value: '{}'
               schema:
                 type: object
                 properties: {}

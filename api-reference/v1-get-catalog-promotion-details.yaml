@@ -3,42 +3,31 @@ info:
   title: Get catalog promotion details
   version: '1.0'
 servers:
-- url: "https://{host}"
+- url: https://{host}
   variables:
     host:
       default: host
 security:
 - sec0: []
 paths:
-  "/api_gateway/rewards/core/v1/promotion/{promotionId}/brand/{brandId}":
+  /api_gateway/rewards/core/v1/promotion/{promotionId}/brand/{brandId}:
     get:
       summary: Get catalog promotion details
       description: ''
       operationId: get-catalog-promotion-details
       parameters:
-      - name: promotionid
-        in: query
-        description: Unique ID of reward.
-        required: true
-        schema:
-          type: string
-      - name: brandId
-        in: query
-        description: Unique ID of the brand.
-        required: true
-        schema:
-          type: integer
-          format: int64
       - name: promotionId
         in: path
         required: true
         schema:
           type: string
+        description: Unique ID of the promotion.
       - name: brandId
         in: path
         required: true
         schema:
           type: string
+        description: Unique ID of the brand.
       responses:
         '200':
           description: '200'
@@ -118,16 +107,16 @@ paths:
                         default: true
                       startTime:
                         type: string
-                        example: "2025-03-14 20:58:49"
+                        example: '2025-03-14 20:58:49'
                       startDateTime:
                         type: string
-                        example: "2025-03-14T20:58:49Z"
+                        example: '2025-03-14T20:58:49Z'
                       endTime:
                         type: string
-                        example: "2025-10-25 05:46:00"
+                        example: '2025-10-25 05:46:00'
                       endDateTime:
                         type: string
-                        example: "2025-10-25T05:46:00Z"
+                        example: '2025-10-25T05:46:00Z'
                       discountType:
                         type: string
                         example: ABSOLUTE
@@ -137,16 +126,16 @@ paths:
                         default: 0
                       lastUpdatedOn:
                         type: string
-                        example: "2025-03-13 09:48:42"
+                        example: '2025-03-13 09:48:42'
                       lastUpdatedOnDateTime:
                         type: string
-                        example: "2025-03-13T09:48:42Z"
+                        example: '2025-03-13T09:48:42Z'
                       createdOn:
                         type: string
-                        example: "2025-03-13 09:48:42"
+                        example: '2025-03-13 09:48:42'
                       createdOnDateTime:
                         type: string
-                        example: "2025-03-13T09:48:42Z"
+                        example: '2025-03-13T09:48:42Z'
                       lastUpdatedBy:
                         type: integer
                         example: 75140757
@@ -179,20 +168,20 @@ paths:
                               default: 0
                             createdOn:
                               type: string
-                              example: "2025-03-13 09:48:42"
+                              example: '2025-03-13 09:48:42'
                             createdOnDateTime:
                               type: string
-                              example: "2025-03-13T09:48:42Z"
+                              example: '2025-03-13T09:48:42Z'
                             lastUpdatedBy:
                               type: integer
                               example: 75140757
                               default: 0
                             lastUpdateOn:
                               type: string
-                              example: "2025-03-13 09:48:42"
+                              example: '2025-03-13 09:48:42'
                             lastUpdateOnDateTime:
                               type: string
-                              example: "2025-03-13T09:48:42Z"
+                              example: '2025-03-13T09:48:42Z'
                       customFields:
                         type: object
                         properties:
@@ -227,16 +216,16 @@ paths:
                               default: 0
                             startTime:
                               type: string
-                              example: "2025-03-14 20:58:49"
+                              example: '2025-03-14 20:58:49'
                             startDateTime:
                               type: string
-                              example: "2025-03-14T20:58:49Z"
+                              example: '2025-03-14T20:58:49Z'
                             endTime:
                               type: string
-                              example: "2025-10-25 05:46:00"
+                              example: '2025-10-25 05:46:00'
                             endDateTime:
                               type: string
-                              example: "2025-10-25T05:46:00Z"
+                              example: '2025-10-25T05:46:00Z'
                             expired:
                               type: boolean
                               example: false
