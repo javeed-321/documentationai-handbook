@@ -148,76 +148,56 @@
                     "path": "fact-tables"
                   },
                   {
-                    "title": "Badges Fact Table",
-                    "path": "docs/badges-fact-table"
-                  },
-                  {
                     "title": "Bill Line Items Fact Table",
                     "path": "docs/bill-line-items-fact-table"
-                  },
-                  {
-                    "title": "Call Task Customer Status Fact Table",
-                    "path": "docs/call-task-customer-status-fact-table"
-                  },
-                  {
-                    "title": "Communication Credits Log Fact Table",
-                    "path": "docs/communication-credits-log-fact-table"
-                  },
-                  {
-                    "title": "Contact Info Fact Table",
-                    "path": "docs/contact-info-fact-table"
-                  },
-                  {
-                    "title": "Coupons Fact Table",
-                    "path": "docs/coupons-fact-table"
-                  },
-                  {
-                    "title": "Customer Merge Log Fact Table",
-                    "path": "docs/customer-merge-log-fact-table"
-                  },
-                  {
-                    "title": "Customer Notes Fact Table",
-                    "path": "docs/customer-notes-fact-table"
-                  },
-                  {
-                    "title": "Customer Summary Fact Table",
-                    "path": "docs/customer-summary-members-fact-table"
-                  },
-                  {
-                    "title": "Custom Field Data Fact Table",
-                    "path": "docs/custom-field-data-fact-table"
                   },
                   {
                     "title": "Daily Till Summary Fact Table",
                     "path": "docs/daily-till-summary-fact-table"
                   },
                   {
-                    "title": "Earned Promotions Fact Table",
-                    "path": "docs/earned-promotions-fact"
+                    "title": "Payment Details Fact Table",
+                    "path": "docs/payment-details-fact"
                   },
                   {
-                    "title": "Email Click Stats Fact Table",
-                    "path": "docs/email-click-stats-fact-table"
+                    "title": "Return Bill Line Item Fact Table",
+                    "path": "docs/return-bill-line-item-fact-table"
                   },
                   {
-                    "title": "External Partner Program Table",
-                    "path": "docs/external-partner-program-table"
+                    "title": "Customer Summary Fact Table",
+                    "path": "docs/customer-summary-members-fact-table"
+                  },
+                  {
+                    "title": "Profile Users Fact Table",
+                    "path": "docs/profile-users-fact-table"
+                  },
+                  {
+                    "title": "Registration Event Fact Table",
+                    "path": "docs/fact_registration-event"
+                  },
+                  {
+                    "title": "Nsadmin Messages Fact Table",
+                    "path": "docs/nsadmin-messages-fact-table"
                   },
                   {
                     "title": "Goodwill Requests Fact Table",
                     "path": "docs/goodwill-requests-fact-table"
                   },
                   {
-                    "title": "Invitation Sent Fact Table",
-                    "path": "docs/invitation-sent-fact-table"
+                    "title": "Points Fact Table",
+                    "path": "docs/points-fact-table"
                   },
                   {
-                    "title": "Issue Tracker Fact Table",
-                    "path": "docs/issue-tracker-fact-table"
+                    "title": "Coupons Fact Table",
+                    "path": "docs/coupons-fact-table"
                   },
                   {
-                    "title": "Issued Promotions Fact Table",
-                    "path": "docs/issued-promotions-fact-table"
+                    "title": "Badges Fact Table",
+                    "path": "docs/badges-fact-table"
+                  },
+                  {
+                    "title": "Streaks Fact Table",
+                    "path": "docs/fact_streaks"
                   },
                   {
                     "title": "Journeys Fact Table",
@@ -228,36 +208,12 @@
                     "path": "docs/fact_milestones"
                   },
                   {
-                    "title": "Nsadmin Messages Fact Table",
-                    "path": "docs/nsadmin-messages-fact-table"
+                    "title": "Rewards Fact Table",
+                    "path": "docs/rewards-fact-table"
                   },
                   {
-                    "title": "Partner Program Enrollment Fact Table",
-                    "path": "docs/partner-program-enrollment-fact-table"
-                  },
-                  {
-                    "title": "Partner Program Linking Fact Table",
-                    "path": "docs/link"
-                  },
-                  {
-                    "title": "Partner Program Slab History Fact Table",
-                    "path": "docs/partner-program-slab-history-fact-table"
-                  },
-                  {
-                    "title": "Partner Program Slab History Fact Table (Supplementary)",
-                    "path": "docs/partner-program-slab-history-fact-table-1"
-                  },
-                  {
-                    "title": "Payment Details Fact Table",
-                    "path": "docs/payment-details-fact"
-                  },
-                  {
-                    "title": "Points Fact Table",
-                    "path": "docs/points-fact-table"
-                  },
-                  {
-                    "title": "Profile Users Fact Table",
-                    "path": "docs/profile-users-fact-table"
+                    "title": "Invitation Sent Fact Table",
+                    "path": "docs/invitation-sent-fact-table"
                   },
                   {
                     "title": "Referrals Fact Table",
@@ -268,32 +224,76 @@
                     "path": "docs/referrers-fact-table"
                   },
                   {
-                    "title": "Registration Event Fact Table",
-                    "path": "docs/fact_registration-event"
+                    "title": "Contact Info Fact Table",
+                    "path": "docs/contact-info-fact-table"
                   },
                   {
                     "title": "Response Info Fact Table",
                     "path": "docs/response-info-fact-table"
                   },
                   {
-                    "title": "Return Bill Line Item Fact Table",
-                    "path": "docs/return-bill-line-item-fact-table"
+                    "title": "Communication Credits Log Fact Table",
+                    "path": "docs/communication-credits-log-fact-table"
                   },
                   {
-                    "title": "Rewards Fact Table",
-                    "path": "docs/rewards-fact-table"
+                    "title": "Email Click Stats Fact Table",
+                    "path": "docs/email-click-stats-fact-table"
+                  },
+                  {
+                    "title": "Custom Field Data Fact Table",
+                    "path": "docs/custom-field-data-fact-table"
+                  },
+                  {
+                    "title": "Customer Merge Log Fact Table",
+                    "path": "docs/customer-merge-log-fact-table"
+                  },
+                  {
+                    "title": "Customer Notes Fact Table",
+                    "path": "docs/customer-notes-fact-table"
+                  },
+                  {
+                    "title": "Issue Tracker Fact Table",
+                    "path": "docs/issue-tracker-fact-table"
+                  },
+                  {
+                    "title": "Call Task Customer Status Fact Table",
+                    "path": "docs/call-task-customer-status-fact-table"
                   },
                   {
                     "title": "Slab Change Log Fact Table",
                     "path": "docs/slab-change-log-fact-table"
                   },
                   {
-                    "title": "Streaks Fact Table",
-                    "path": "docs/fact_streaks"
+                    "title": "Earned Promotions Fact Table",
+                    "path": "docs/earned-promotions-fact"
+                  },
+                  {
+                    "title": "Issued Promotions Fact Table",
+                    "path": "docs/issued-promotions-fact-table"
+                  },
+                  {
+                    "title": "Partner Program Enrollment Fact Table",
+                    "path": "docs/partner-program-enrollment-fact-table"
+                  },
+                  {
+                    "title": "Partner Program Slab History Fact Table",
+                    "path": "docs/partner-program-slab-history-fact-table"
+                  },
+                  {
+                    "title": "External Partner Program Table",
+                    "path": "docs/external-partner-program-table"
+                  },
+                  {
+                    "title": "Partner Program Slab History Fact Table (Supplementary)",
+                    "path": "docs/partner-program-slab-history-fact-table-1"
                   },
                   {
                     "title": "Supplementary Partner Program Fact Table",
                     "path": "docs/supplementary-partner-program-fact-table"
+                  },
+                  {
+                    "title": "Partner Program Linking Fact Table",
+                    "path": "docs/link"
                   }
                 ]
               }
