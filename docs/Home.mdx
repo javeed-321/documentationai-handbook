@@ -142,17 +142,6 @@ content-width: wide
      USER DOCUMENTATION — individual card backgrounds
      Selector: h3#user-documentation + [data-component="Columns"] > a:nth-child(N) [data-component="Card"]
   ═══════════════════════════════════════════════════ */
-/* Smooth lift transition for user doc cards */
-h3#user-documentation + [data-component="Columns"] [data-component="Card"] {
-  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
-}
-
-/* Lift + strong shadow on hover in dark mode */
-.dark h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.7), 0 4px 12px rgba(0,0,0,0.5) !important;
-}
-
   /* Card 1 — Loyalty+ */
   h3#user-documentation + [data-component="Columns"] > a:nth-child(1) [data-component="Card"] {
     background: url(https://s3.amazonaws.com/fileservice.in/intouch_creative_assets/da520d6b-8cb3-4ac3-bdb5-bae859a1.png) center / cover no-repeat !important;
@@ -205,14 +194,12 @@ h3#user-documentation + [data-component="Columns"] [data-component="Card"] {
   .dark h3#user-documentation + [data-component="Columns"] [data-component="Card"] .dai-card-description {
     color: rgba(255,255,255,0.85) !important;
   }
-  .dark h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
-    color: #ffffff !important;
-  }
-
-
-  /* Colored cards: title stays the same on hover (no brand-blue shift) */
+  /* User doc cards: title turns brand blue on hover (same as dev doc cards) */
   h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
-    color: #3B4A61 !important;
+    color: #1341A9 !important;
+  }
+  .dark h3#user-documentation + [data-component="Columns"] a:hover [data-component="Card"] .dai-card-title {
+    color: #85A1FF !important;
   }
 
   /* ═══════════════════════════════════════════════════
