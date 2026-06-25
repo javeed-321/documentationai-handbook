@@ -104,8 +104,8 @@
             "group": "Data Fields",
             "pages": [
               {
-                "title": "coupuns-fact-table",
-                "path": "docs/coupuns-fact-table"
+                "title": "coupons-fact-table",
+                "path": "docs/coupons-fact-table"
               },
               {
                 "title": "hello",
@@ -299,18 +299,15 @@
               },
               {
                 "title": "Advanced Request Workflows",
-                "path": "docs/event-schema-advanced-request-workflows",
-                "icon": "activity"
+                "path": "docs/event-schema-advanced-request-workflows"
               },
               {
                 "title": "Request Updated",
-                "path": "docs/event-schema-request-updated",
-                "icon": "album"
+                "path": "docs/event-schema-request-updated"
               },
               {
                 "title": "Cards",
-                "path": "docs/event-schema-cards",
-                "icon": "alarm-clock-check"
+                "path": "docs/event-schema-cards"
               },
               {
                 "title": "Incentives",
