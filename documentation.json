@@ -99,10 +99,6 @@
             "group": "Data Fields",
             "pages": [
               {
-                "title": "coupons-fact-table",
-                "path": "docs/coupons-fact-table"
-              },
-              {
                 "title": "hello",
                 "path": "docs/hello"
               },
