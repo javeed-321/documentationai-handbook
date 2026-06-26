@@ -1722,9 +1722,6 @@
   "customCss": [
     {
       "src": "styles/home-page.css"
-    },
-    {
-      "src": "styles/event-schema-payload.css"
     }
   ]
 }
