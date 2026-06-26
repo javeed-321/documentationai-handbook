@@ -22,7 +22,7 @@
   /* ─── Content column padding (wide layout, no sidebar) ─── */
     /* ─── Top breathing room above the heading ─── */
   .dai-article {
-    padding-top: 10px !important;
+    padding-top: 4px !important;
   }
 
   .dai-article,
@@ -74,7 +74,7 @@
   }
     /* Match the space above the first section to the second */
   .dai-article h3#user-documentation {
-    margin-top: 40px !important;
+    margin-top: 20px !important;
   }
 
 
