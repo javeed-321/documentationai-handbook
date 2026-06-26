@@ -451,7 +451,7 @@
                 ]
               },
               {
-                "group": "Auth (Other variants)",
+                "group": "Customer Authentication (Others)",
                 "pages": [
                   {
                     "title": "Generate Authentication Token",
@@ -541,7 +541,7 @@
                 ]
               },
               {
-                "group": "Coupon (Other)",
+                "group": "Coupon (Others)",
                 "pages": [
                   {
                     "title": "Get Custom Fields Associated with Coupon Redemption",
@@ -651,27 +651,6 @@
           {
             "group": "Badges",
             "pages": [
-              {
-                "title": "Get badges org meta",
-                "path": "reference/v1-get-badges-org-meta",
-                "openapi": "api-reference/v1-get-badges-org-meta.yaml GET /api_gateway/v1/badges/orgMeta",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Create badges org meta",
-                "path": "reference/v1-create-badges-org-meta",
-                "openapi": "api-reference/v1-create-badges-org-meta.yaml POST /api_gateway/v1/badges/orgMeta",
-                "openapi-mode": "custom",
-                "method": "POST"
-              },
-              {
-                "title": "Update badges org meta",
-                "path": "reference/v1-update-badges-org-meta",
-                "openapi": "api-reference/v1-update-badges-org-meta.yaml PUT /api_gateway/v1/badges/orgMeta",
-                "openapi-mode": "custom",
-                "method": "PUT"
-              },
               {
                 "title": "Create badges",
                 "path": "reference/create-badges-org",
@@ -846,6 +825,32 @@
                 "openapi": "api-reference/get-all-custom-fields.yaml GET /api_gateway/v1/badges/customField",
                 "openapi-mode": "custom",
                 "method": "GET"
+              },
+              {
+                "group": "Badges (Others)",
+                "pages": [
+                  {
+                    "title": "Get badges org meta",
+                    "path": "reference/v1-get-badges-org-meta",
+                    "openapi": "api-reference/v1-get-badges-org-meta.yaml GET /api_gateway/v1/badges/orgMeta",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  },
+                  {
+                    "title": "Create badges org meta",
+                    "path": "reference/v1-create-badges-org-meta",
+                    "openapi": "api-reference/v1-create-badges-org-meta.yaml POST /api_gateway/v1/badges/orgMeta",
+                    "openapi-mode": "custom",
+                    "method": "POST"
+                  },
+                  {
+                    "title": "Update badges org meta",
+                    "path": "reference/v1-update-badges-org-meta",
+                    "openapi": "api-reference/v1-update-badges-org-meta.yaml PUT /api_gateway/v1/badges/orgMeta",
+                    "openapi-mode": "custom",
+                    "method": "PUT"
+                  }
+                ]
               }
             ]
           },
@@ -1332,7 +1337,7 @@
                 ]
               },
               {
-                "group": "Rewards (Other)",
+                "group": "Rewards Catalog (Others)",
                 "pages": [
                   {
                     "title": "Retrieve Brand ID",
@@ -1450,7 +1455,7 @@
                 ]
               },
               {
-                "group": "Target (Other)",
+                "group": "Target/Milestone (Others)",
                 "pages": [
                   {
                     "title": "Get Loyalty Promotion List of a Customer (Connected Org)",
@@ -1565,7 +1570,7 @@
                 "method": "POST"
               },
               {
-                "group": "Promotions (Other)",
+                "group": "Cart Promotions (Others)",
                 "pages": [
                   {
                     "title": "Add Promotion : don't make it public",
@@ -1643,7 +1648,7 @@
                 ]
               },
               {
-                "group": "Points (Other)",
+                "group": "Points (Others)",
                 "pages": [
                   {
                     "title": "Get Reward Currency Limits",
