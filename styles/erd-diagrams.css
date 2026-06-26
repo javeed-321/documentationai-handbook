@@ -1,0 +1,20 @@
+/*
+  ERD diagram styling.
+  Applies to every <div className="erd-diagram"> wrapper that embeds an
+  inline ERD (Entity Relationship Diagram) SVG on the fact-table pages.
+  The class is unique to these diagrams, so these rules are global by
+  design and affect nothing else on the site.
+*/
+.erd-diagram {
+  margin-top: 1.5rem;        /* one line of space above each diagram */
+  padding: 12px;
+  border: 1px solid #e2e8f0; /* light frame */
+  border-radius: 8px;
+  background: #ffffff;       /* matches the SVG's own white background */
+  overflow: hidden;          /* clip the SVG's square corners to the rounded frame */
+}
+
+/* Dark theme: soften the frame so it doesn't glare (platform uses a `.dark` root class) */
+.dark .erd-diagram {
+  border-color: #2d2d2d;
+}

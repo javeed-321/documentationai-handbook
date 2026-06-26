@@ -16,6 +16,11 @@
   [data-component="Heading"] > div { display: none !important; }
 
   /* ─── Content column padding (wide layout, no sidebar) ─── */
+    /* ─── Top breathing room above the heading ─── */
+  .dai-article {
+    padding-top: 40px !important;
+  }
+
   .dai-article,
   .dai-content-column {
     max-width: 100% !important;
@@ -63,6 +68,11 @@
   &.dark .dai-article h3 {
     color: #85A1FF !important;
   }
+    /* Match the space above the first section to the second */
+  .dai-article h3#user-documentation {
+    margin-top: 40px !important;
+  }
+
 
   /* ─── Columns grid spacing ─── */
   h3#user-documentation + [data-component="Columns"],
@@ -226,6 +236,10 @@
 
   /* ─── Mobile ─── */
   @media (max-width: 540px) {
+        .dai-article h3#user-documentation {
+      margin-top: 24px !important;
+    }
+
     .dai-article,
     .dai-content-column {
       padding-left: 16px !important;

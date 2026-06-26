@@ -1710,6 +1710,9 @@
   "customCss": [
     {
       "src": "styles/home-page.css"
+    },
+    {
+      "src": "styles/erd-diagrams.css"
     }
   ],
   "initialRoute": "docs/Home",
