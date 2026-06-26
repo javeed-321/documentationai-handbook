@@ -7,6 +7,10 @@
 
   /* ─── Hide breadcrumbs ─── */
   .dai-breadcrumbs { display: none !important; }
+ .dai-navbar-tabs {
+    display: none !important;
+  }
+
 
   /* ─── Hide platform page title ─── */
   .dai-page-header { display: none !important; }
