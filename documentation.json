@@ -858,6 +858,13 @@
             "group": "Rewards Catalog",
             "pages": [
               {
+                "title": "Retrieve Brand ID",
+                "path": "reference/retrieve-brand-id",
+                "openapi": "api-reference/retrieve-brand-id.yaml POST /api_gateway/rewards/core/v1/brand/getAll",
+                "openapi-mode": "custom",
+                "method": "POST"
+              },
+              {
                 "group": "Reward Catalog Management",
                 "pages": [
                   {
@@ -968,13 +975,6 @@
                     "title": "Get available reward details for user by id",
                     "path": "reference/get-user-brand-specific-rewards",
                     "openapi": "api-reference/get-user-brand-specific-rewards.yaml GET /api_gateway/rewards/core/v1/user/reward/{rewardId}/brand/{brandName}",
-                    "openapi-mode": "custom",
-                    "method": "GET"
-                  },
-                  {
-                    "title": "Get customer reward transactions",
-                    "path": "reference/get-customer-reward-transactions",
-                    "openapi": "api-reference/get-customer-reward-transactions.yaml GET /api_gateway/rewards/core/v1/management/customer/{customerId}/issuals",
                     "openapi-mode": "custom",
                     "method": "GET"
                   },
@@ -1340,11 +1340,11 @@
                 "group": "Rewards Catalog (Others)",
                 "pages": [
                   {
-                    "title": "Retrieve Brand ID",
-                    "path": "reference/retrieve-brand-id",
-                    "openapi": "api-reference/retrieve-brand-id.yaml POST /api_gateway/rewards/core/v1/brand/getAll",
+                    "title": "Get customer reward transactions",
+                    "path": "reference/get-customer-reward-transactions",
+                    "openapi": "api-reference/get-customer-reward-transactions.yaml GET /api_gateway/rewards/core/v1/management/customer/{customerId}/issuals",
                     "openapi-mode": "custom",
-                    "method": "POST"
+                    "method": "GET"
                   },
                   {
                     "title": "Get Brand Rewards",
@@ -1528,23 +1528,9 @@
                 "method": "POST"
               },
               {
-                "title": "Post Revoke Earned Cart Promotion",
-                "path": "reference/post-revoke-earned-promotion",
-                "openapi": "api-reference/post-revoke-earned-promotion.yaml POST /api_gateway/v1/promotions/revokeEarn",
-                "openapi-mode": "custom",
-                "method": "POST"
-              },
-              {
                 "title": "Post Earn Cart Promotions in Bulk",
                 "path": "reference/post-earn-promotions-in-bulk",
                 "openapi": "api-reference/post-earn-promotions-in-bulk.yaml POST /api_gateway/v1/promotions/earn/bulk",
-                "openapi-mode": "custom",
-                "method": "POST"
-              },
-              {
-                "title": "Evaluate Promotion",
-                "path": "reference/evaluate-promotion",
-                "openapi": "api-reference/evaluate-promotion.yaml POST /api_gateway/v1/promotions/evaluate",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
@@ -1572,6 +1558,20 @@
               {
                 "group": "Cart Promotions (Others)",
                 "pages": [
+                  {
+                    "title": "Evaluate Promotion",
+                    "path": "reference/evaluate-promotion",
+                    "openapi": "api-reference/evaluate-promotion.yaml POST /api_gateway/v1/promotions/evaluate",
+                    "openapi-mode": "custom",
+                    "method": "POST"
+                  },
+                  {
+                    "title": "Post Revoke Earned Cart Promotion",
+                    "path": "reference/post-revoke-earned-promotion",
+                    "openapi": "api-reference/post-revoke-earned-promotion.yaml POST /api_gateway/v1/promotions/revokeEarn",
+                    "openapi-mode": "custom",
+                    "method": "POST"
+                  },
                   {
                     "title": "Add Promotion : don't make it public",
                     "path": "reference/add-promotion",
@@ -1745,25 +1745,30 @@
             "group": "Recommendations",
             "pages": [
               {
-                "title": "Get User Recommendations",
-                "path": "reference/get-user-recommendations",
-                "openapi": "api-reference/get-user-recommendations.yaml GET /api_gateway/v1/recommendations/user",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Item Recommendations",
-                "path": "reference/get-item-recommendations",
-                "openapi": "api-reference/get-item-recommendations.yaml GET /api_gateway/v1/recommendations/item",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Cart Recommendations",
-                "path": "reference/get-cart-recommendations",
-                "openapi": "api-reference/get-cart-recommendations.yaml GET /api_gateway/v1/recommendations/cart",
-                "openapi-mode": "custom",
-                "method": "GET"
+                "group": "Recommendations (Others)",
+                "pages": [
+                  {
+                    "title": "Get User Recommendations",
+                    "path": "reference/get-user-recommendations",
+                    "openapi": "api-reference/get-user-recommendations.yaml GET /api_gateway/v1/recommendations/user",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  },
+                  {
+                    "title": "Get Item Recommendations",
+                    "path": "reference/get-item-recommendations",
+                    "openapi": "api-reference/get-item-recommendations.yaml GET /api_gateway/v1/recommendations/item",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  },
+                  {
+                    "title": "Get Cart Recommendations",
+                    "path": "reference/get-cart-recommendations",
+                    "openapi": "api-reference/get-cart-recommendations.yaml GET /api_gateway/v1/recommendations/cart",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  }
+                ]
               }
             ]
           },
@@ -1771,11 +1776,16 @@
             "group": "DAS",
             "pages": [
               {
-                "title": "Get Allocated Points Details with Expiry in Specified Date Range",
-                "path": "reference/retrieve-pa-id-for-specified-data-range",
-                "openapi": "api-reference/retrieve-pa-id-for-specified-data-range.yaml GET /das/getPAIdsForProvidedDateRange",
-                "openapi-mode": "custom",
-                "method": "GET"
+                "group": "DAS (Others)",
+                "pages": [
+                  {
+                    "title": "Get Allocated Points Details with Expiry in Specified Date Range",
+                    "path": "reference/retrieve-pa-id-for-specified-data-range",
+                    "openapi": "api-reference/retrieve-pa-id-for-specified-data-range.yaml GET /das/getPAIdsForProvidedDateRange",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  }
+                ]
               }
             ]
           },
@@ -1783,53 +1793,58 @@
             "group": "Points (Event Logs)",
             "pages": [
               {
-                "title": "Get Event Log IDs with Credit or Debit for Points",
-                "path": "reference/get-event-log-ids-for-credit-debit",
-                "openapi": "api-reference/get-event-log-ids-for-credit-debit.yaml GET /das/getLedgerEntriesWithEventId",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Event Log IDs with Credit or Debit for Alternate Currency",
-                "path": "reference/get-event-log-ids-with-credit-or-debit-for-alternate-currency",
-                "openapi": "api-reference/get-event-log-ids-with-credit-or-debit-for-alternate-currency.yaml GET /das/getACLedgerEntriesWithEventId",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Custom Field Values for TransactionAdd event",
-                "path": "reference/get-custom-field-for-transaction-add-event",
-                "openapi": "api-reference/get-custom-field-for-transaction-add-event.yaml GET /das/getTransactionAddExplodeLedger",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Point Redemption Details for Redemption Events",
-                "path": "reference/get-point-redemption-details-for-redemption-events",
-                "openapi": "api-reference/get-point-redemption-details-for-redemption-events.yaml GET /das/getPointsRedemptionExplodeLedger",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Target Completion Details",
-                "path": "reference/get-target-completion-details",
-                "openapi": "api-reference/get-target-completion-details.yaml GET /das/getTargetCompletedExplodeLedger",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Manual Points Adjustment Details",
-                "path": "reference/get-manual-points-adjustment-details",
-                "openapi": "api-reference/get-manual-points-adjustment-details.yaml GET /das/getManualPointsAdjustmentExplodeLedger",
-                "openapi-mode": "custom",
-                "method": "GET"
-              },
-              {
-                "title": "Get Ledger Information for Event Log IDs",
-                "path": "reference/get-ledger-information-for-event-log-ids",
-                "openapi": "api-reference/get-ledger-information-for-event-log-ids.yaml GET /x/neo/customer/ledgerDetails",
-                "openapi-mode": "custom",
-                "method": "GET"
+                "group": "Points (Event Logs) (Others)",
+                "pages": [
+                  {
+                    "title": "Get Event Log IDs with Credit or Debit for Points",
+                    "path": "reference/get-event-log-ids-for-credit-debit",
+                    "openapi": "api-reference/get-event-log-ids-for-credit-debit.yaml GET /das/getLedgerEntriesWithEventId",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  },
+                  {
+                    "title": "Get Event Log IDs with Credit or Debit for Alternate Currency",
+                    "path": "reference/get-event-log-ids-with-credit-or-debit-for-alternate-currency",
+                    "openapi": "api-reference/get-event-log-ids-with-credit-or-debit-for-alternate-currency.yaml GET /das/getACLedgerEntriesWithEventId",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  },
+                  {
+                    "title": "Get Custom Field Values for TransactionAdd event",
+                    "path": "reference/get-custom-field-for-transaction-add-event",
+                    "openapi": "api-reference/get-custom-field-for-transaction-add-event.yaml GET /das/getTransactionAddExplodeLedger",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  },
+                  {
+                    "title": "Get Point Redemption Details for Redemption Events",
+                    "path": "reference/get-point-redemption-details-for-redemption-events",
+                    "openapi": "api-reference/get-point-redemption-details-for-redemption-events.yaml GET /das/getPointsRedemptionExplodeLedger",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  },
+                  {
+                    "title": "Get Target Completion Details",
+                    "path": "reference/get-target-completion-details",
+                    "openapi": "api-reference/get-target-completion-details.yaml GET /das/getTargetCompletedExplodeLedger",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  },
+                  {
+                    "title": "Get Manual Points Adjustment Details",
+                    "path": "reference/get-manual-points-adjustment-details",
+                    "openapi": "api-reference/get-manual-points-adjustment-details.yaml GET /das/getManualPointsAdjustmentExplodeLedger",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  },
+                  {
+                    "title": "Get Ledger Information for Event Log IDs",
+                    "path": "reference/get-ledger-information-for-event-log-ids",
+                    "openapi": "api-reference/get-ledger-information-for-event-log-ids.yaml GET /x/neo/customer/ledgerDetails",
+                    "openapi-mode": "custom",
+                    "method": "GET"
+                  }
+                ]
               }
             ]
           },
@@ -1837,11 +1852,16 @@
             "group": "Loyalty (Other)",
             "pages": [
               {
-                "title": "Generate Expression JSON",
-                "path": "reference/post_loyalty-api-v1-workflows-expjson-programid-eventtype",
-                "openapi": "api-reference/post_loyalty-api-v1-workflows-expjson-programid-eventtype.yaml POST /loyalty/api/v1/workflows/expJSON/{programId}/{eventType}",
-                "openapi-mode": "custom",
-                "method": "POST"
+                "group": "Loyalty (Other) (Others)",
+                "pages": [
+                  {
+                    "title": "Generate Expression JSON",
+                    "path": "reference/post_loyalty-api-v1-workflows-expjson-programid-eventtype",
+                    "openapi": "api-reference/post_loyalty-api-v1-workflows-expjson-programid-eventtype.yaml POST /loyalty/api/v1/workflows/expJSON/{programId}/{eventType}",
+                    "openapi-mode": "custom",
+                    "method": "POST"
+                  }
+                ]
               }
             ]
           }
@@ -1849,7 +1869,7 @@
       }
     ]
   },
-  "template": "atlas",
+  "template": "classic",
   "colors": {
     "light": {
       "brand": "#1341A9",
