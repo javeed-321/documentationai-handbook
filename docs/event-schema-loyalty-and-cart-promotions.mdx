@@ -18,7 +18,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 
 <CodeGroup >
 
-```json "Webhook payload - Transaction events"
+```json "Webhook payload-For Transaction Events, with custom fields"
 {
     "createdAt": 1738644477432,
     "loyaltyEventId": "567012971210e00eb9b4e80ded2d5e62",
@@ -53,7 +53,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 }
 ```
 
-```json "Webhook payload - Generic events"
+```json "For Generic Events, (event name and id would be of generic event)"
 {
     "createdAt": 1738590476015,
     "loyaltyEventId": "8aa9e77ec84bb2ff00365a57fa761beb",
@@ -83,7 +83,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 }
 ```
 
-```json "Webhook payload - Target completed event"
+```json "For Target completed event, there will be xtra field named linkedTargetGroupVsTargetRuleIdMap"
 {
     "createdAt": 1738648339724,
     "loyaltyEventId": "793166e072ecfda8ed3d579937867777",

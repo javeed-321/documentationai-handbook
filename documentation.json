@@ -286,51 +286,51 @@
             ]
           },
           {
-            "group": "Event Schema Payload",
+            "group": "Event schema (Payload)",
             "pages": [
               {
-                "title": "Event Schema Payload",
+                "title": "Event schema (Payload)",
                 "path": "docs/event-schema-payload"
               },
               {
-                "title": "Advanced Request Workflows",
-                "path": "docs/event-schema-advanced-request-workflows"
+                "title": "Customer and User Group",
+                "path": "docs/event-schema-customer"
               },
               {
-                "title": "Request Updated",
-                "path": "docs/event-schema-request-updated"
-              },
-              {
-                "title": "Cards",
-                "path": "docs/event-schema-cards"
-              },
-              {
-                "title": "Incentives",
-                "path": "docs/event-schema-incentives"
-              },
-              {
-                "title": "Partner Program",
-                "path": "docs/event-schema-partner-program"
-              },
-              {
-                "title": "Tier",
-                "path": "docs/event-schema-tier"
-              },
-              {
-                "title": "Loyalty and Cart Promotions",
-                "path": "docs/event-schema-loyalty-and-cart-promotions"
+                "title": "Transaction",
+                "path": "docs/event-schema-rewards"
               },
               {
                 "title": "Loyalty",
                 "path": "docs/event-schema-loyalty"
               },
               {
-                "title": "Rewards",
-                "path": "docs/event-schema-rewards"
+                "title": "Loyalty Promotions and Cart Promotions",
+                "path": "docs/event-schema-loyalty-and-cart-promotions"
               },
               {
-                "title": "Customer",
-                "path": "docs/event-schema-customer"
+                "title": "Tier",
+                "path": "docs/event-schema-tier"
+              },
+              {
+                "title": "Partner Program",
+                "path": "docs/event-schema-partner-program"
+              },
+              {
+                "title": "Incentives",
+                "path": "docs/event-schema-incentives"
+              },
+              {
+                "title": "Cards",
+                "path": "docs/event-schema-cards"
+              },
+              {
+                "title": "Request Updates",
+                "path": "docs/event-schema-request-updated"
+              },
+              {
+                "title": "Advanced Request Workflows",
+                "path": "docs/event-schema-advanced-request-workflows"
               }
             ]
           }
