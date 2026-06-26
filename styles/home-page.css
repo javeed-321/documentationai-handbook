@@ -240,14 +240,19 @@
 
   /* ─── Mobile ─── */
   @media (max-width: 540px) {
-        .dai-article h3#user-documentation {
-      margin-top: 5px !important;
-    }
+
+    .dai-article {
+    padding-top: 0px !important;   /* ← add this line */
+  }
+  .dai-article h3#user-documentation {
+    margin-top: 0px !important;    /* ← change 5px to 0px */
+  }
+
 
     .dai-article,
     .dai-content-column {
-      padding-left: 4px !important;
-      padding-right: 4px !important;
+      padding-left: 2px !important;
+      padding-right: 2px !important;
     }
     [data-component="Card"] {
       min-height: 150px !important;
