@@ -552,176 +552,176 @@
               },
               {
                 "title": "Get all badges",
-                "path": "reference/v1-get-all-badges",
-                "openapi": "api-reference/v1-get-all-badges.yaml GET /api_gateway/v1/badges/badgeMeta",
+                "path": "reference/get-all-badges",
+                "openapi": "api-reference/get-all-badges.yaml GET /api_gateway/v1/badges/badgeMeta",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Create badges",
-                "path": "reference/v1-create-badges-org",
-                "openapi": "api-reference/v1-create-badges-org.yaml POST /api_gateway/v1/badges/badgeMeta",
+                "path": "reference/create-badges-org",
+                "openapi": "api-reference/create-badges-org.yaml POST /api_gateway/v1/badges/badgeMeta",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Update badges",
-                "path": "reference/v1-update-badges",
-                "openapi": "api-reference/v1-update-badges.yaml PUT /api_gateway/v1/badges/badgeMeta",
+                "path": "reference/update-badges",
+                "openapi": "api-reference/update-badges.yaml PUT /api_gateway/v1/badges/badgeMeta",
                 "openapi-mode": "custom",
                 "method": "PUT"
               },
               {
                 "title": "Get badge by ID",
-                "path": "reference/v1-get-badge-by-id",
-                "openapi": "api-reference/v1-get-badge-by-id.yaml GET /api_gateway/v1/badges/badgeMeta/{badgeId}",
+                "path": "reference/get-badge-by-id",
+                "openapi": "api-reference/get-badge-by-id.yaml GET /api_gateway/v1/badges/badgeMeta/{badgeId}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Claim badge",
-                "path": "reference/v1-claim-badge",
-                "openapi": "api-reference/v1-claim-badge.yaml POST /api_gateway/v1/badges/badgeMeta/{badgeId}/claim",
+                "path": "reference/claim-badge",
+                "openapi": "api-reference/claim-badge.yaml POST /api_gateway/v1/badges/badgeMeta/{badgeId}/claim",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Unclaim badge",
-                "path": "reference/v1-unclaim-badge",
-                "openapi": "api-reference/v1-unclaim-badge.yaml POST /api_gateway/v1/badges/badgeMeta/{badgeId}/unclaim",
+                "path": "reference/unclaim-badge",
+                "openapi": "api-reference/unclaim-badge.yaml POST /api_gateway/v1/badges/badgeMeta/{badgeId}/unclaim",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Update activation status of badge",
-                "path": "reference/v1-update-the-activation-status-of-badge",
-                "openapi": "api-reference/v1-update-the-activation-status-of-badge.yaml PUT /api_gateway/v1/badges/badgeMeta/{badgeId}/{activationStatus}",
+                "path": "reference/update-the-activation-status-of-badge",
+                "openapi": "api-reference/update-the-activation-status-of-badge.yaml PUT /api_gateway/v1/badges/badgeMeta/{badgeId}/{activationStatus}",
                 "openapi-mode": "custom",
                 "method": "PUT"
               },
               {
                 "title": "Enrol customers for badges",
-                "path": "reference/v1-enrol-customers-for-badges",
-                "openapi": "api-reference/v1-enrol-customers-for-badges.yaml POST /api_gateway/v1/badges/badgeMeta/customer/issueBulk",
+                "path": "reference/enrol-customers-for-badges",
+                "openapi": "api-reference/enrol-customers-for-badges.yaml POST /api_gateway/v1/badges/badgeMeta/customer/issueBulk",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Issue badge (earn)",
-                "path": "reference/v1-issue-badge-to-the-customer",
-                "openapi": "api-reference/v1-issue-badge-to-the-customer.yaml POST /api_gateway/v1/badges/customer/earn",
+                "path": "reference/issue-badge-to-the-customer",
+                "openapi": "api-reference/issue-badge-to-the-customer.yaml POST /api_gateway/v1/badges/customer/earn",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Issue badge to multiple customers",
-                "path": "reference/v1-issue-badge-to-multiple-customers",
-                "openapi": "api-reference/v1-issue-badge-to-multiple-customers.yaml POST /api_gateway/v1/badges/customer/earnBulk",
+                "path": "reference/issue-badge-to-multiple-customers",
+                "openapi": "api-reference/issue-badge-to-multiple-customers.yaml POST /api_gateway/v1/badges/customer/earnBulk",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Import earned (issued) badges of customer",
-                "path": "reference/v1-import-earned-badges-of-customer",
-                "openapi": "api-reference/v1-import-earned-badges-of-customer.yaml POST /api_gateway/v1/badges/import/customerBadges",
+                "path": "reference/import-earned-badges-of-customer",
+                "openapi": "api-reference/import-earned-badges-of-customer.yaml POST /api_gateway/v1/badges/import/customerBadges",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Revoke enrolled badges",
-                "path": "reference/v1-revoke-enrolment-of-a-badge",
-                "openapi": "api-reference/v1-revoke-enrolment-of-a-badge.yaml POST /api_gateway/v1/badges/badgeMeta/customer/revokeIssue",
+                "path": "reference/revoke-enrolment-of-a-badge",
+                "openapi": "api-reference/revoke-enrolment-of-a-badge.yaml POST /api_gateway/v1/badges/badgeMeta/customer/revokeIssue",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Revoke issued badge",
-                "path": "reference/v1-revoke-issual-of-a-badge",
-                "openapi": "api-reference/v1-revoke-issual-of-a-badge.yaml POST /badges/customer/revokeEarn",
+                "path": "reference/revoke-issual-of-a-badge",
+                "openapi": "api-reference/revoke-issual-of-a-badge.yaml POST /badges/customer/revokeEarn",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Get badges for customer",
-                "path": "reference/v1-get-badges-for-customer",
-                "openapi": "api-reference/v1-get-badges-for-customer.yaml GET /api_gateway/v1/badges/customer/{customerId}",
+                "path": "reference/get-badges-for-customer",
+                "openapi": "api-reference/get-badges-for-customer.yaml GET /api_gateway/v1/badges/customer/{customerId}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Get all customer badges",
-                "path": "reference/v1-get-all-customer-badges",
-                "openapi": "api-reference/v1-get-all-customer-badges.yaml GET /api_gateway/v1/badges/management/{customerId}",
+                "path": "reference/get-all-customer-badges",
+                "openapi": "api-reference/get-all-customer-badges.yaml GET /api_gateway/v1/badges/management/{customerId}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Get individual badge details of a customer",
-                "path": "reference/v1-get-individual-badge-details-of-a-customer",
-                "openapi": "api-reference/v1-get-individual-badge-details-of-a-customer.yaml GET /api_gateway/v1/badges/management/{customerId}/badge/{badgeId}",
+                "path": "reference/get-individual-badge-details-of-a-customer",
+                "openapi": "api-reference/get-individual-badge-details-of-a-customer.yaml GET /api_gateway/v1/badges/management/{customerId}/badge/{badgeId}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Get all groups",
-                "path": "reference/v1-get-all-groups",
-                "openapi": "api-reference/v1-get-all-groups.yaml GET /api_gateway/v1/badges/group",
+                "path": "reference/get-all-groups",
+                "openapi": "api-reference/get-all-groups.yaml GET /api_gateway/v1/badges/group",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Create badges group",
-                "path": "reference/v1-create-badges-group",
-                "openapi": "api-reference/v1-create-badges-group.yaml POST /api_gateway/v1/badges/group",
+                "path": "reference/create-badges-group",
+                "openapi": "api-reference/create-badges-group.yaml POST /api_gateway/v1/badges/group",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Update badges group",
-                "path": "reference/v1-update-badges-group",
-                "openapi": "api-reference/v1-update-badges-group.yaml PUT /api_gateway/v1/badges/{groupid}",
+                "path": "reference/update-badges-group",
+                "openapi": "api-reference/update-badges-group.yaml PUT /api_gateway/v1/badges/{groupid}",
                 "openapi-mode": "custom",
                 "method": "PUT"
               },
               {
                 "title": "Get group by ID",
-                "path": "reference/v1-get-group-by-id",
-                "openapi": "api-reference/v1-get-group-by-id.yaml GET /api_gateway/v1/badges/group/{groupId}",
+                "path": "reference/get-group-by-id",
+                "openapi": "api-reference/get-group-by-id.yaml GET /api_gateway/v1/badges/group/{groupId}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Get all badge custom fields",
-                "path": "reference/v1-get-all-custom-fields",
-                "openapi": "api-reference/v1-get-all-custom-fields.yaml GET /api_gateway/v1/badges/customField",
+                "path": "reference/get-all-custom-fields",
+                "openapi": "api-reference/get-all-custom-fields.yaml GET /api_gateway/v1/badges/customField",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Create custom field for badges",
-                "path": "reference/v1-create-custom-field",
-                "openapi": "api-reference/v1-create-custom-field.yaml POST /api_gateway/v1/badges/customField",
+                "path": "reference/create-custom-field",
+                "openapi": "api-reference/create-custom-field.yaml POST /api_gateway/v1/badges/customField",
                 "openapi-mode": "custom",
                 "method": "POST"
               },
               {
                 "title": "Get badge custom field by ID",
-                "path": "reference/v1-get-custom-field-by-id",
-                "openapi": "api-reference/v1-get-custom-field-by-id.yaml GET /api_gateway/v1/badges/customField/{customFieldId}",
+                "path": "reference/get-custom-field-by-id",
+                "openapi": "api-reference/get-custom-field-by-id.yaml GET /api_gateway/v1/badges/customField/{customFieldId}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Update badge custom field",
-                "path": "reference/v1-update-custom-field-badge",
-                "openapi": "api-reference/v1-update-custom-field-badge.yaml PUT /api_gateway/v1/badges/customField/{customFieldId}",
+                "path": "reference/update-custom-field-badge",
+                "openapi": "api-reference/update-custom-field-badge.yaml PUT /api_gateway/v1/badges/customField/{customFieldId}",
                 "openapi-mode": "custom",
                 "method": "PUT"
               },
               {
                 "title": "Get fixed window details",
-                "path": "reference/v1-get-fixed-window-details",
-                "openapi": "api-reference/v1-get-fixed-window-details.yaml GET /api_gateway/v1/badges/badgeMeta/getFixedWindowDetails",
+                "path": "reference/get-fixed-window-details",
+                "openapi": "api-reference/get-fixed-window-details.yaml GET /api_gateway/v1/badges/badgeMeta/getFixedWindowDetails",
                 "openapi-mode": "custom",
                 "method": "GET"
               }
@@ -999,7 +999,7 @@
                 "method": "GET"
               },
               {
-                "title": "Get Customer’s Earned and Expired Points by Year",
+                "title": "Get Customer\u2019s Earned and Expired Points by Year",
                 "path": "reference/v1-get-expired-points-for-a-customer",
                 "openapi": "api-reference/v1-get-expired-points-for-a-customer.yaml GET /das/getExpiredPointsByCustomerIdAndYear",
                 "openapi-mode": "custom",

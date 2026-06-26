@@ -10,7 +10,7 @@ For more information about how badges work in Capillary product suite, please re
 
 There are a few crucial elements of Badges lifecycle which a user would like to track and analyze. They include events such as earning a badge (without enrolment), the issual of badge (based on enrolment) and the promotions linked with the badge. The information of these events are stored in the form of fact and dimension tables based on star schema. The fact tables store the details of these events and the corresponding dimension tables contain the fields on the basis of which the entries in these fact tables can be grouped/filtered for reporting.
 
-## Badges - Entity Relationship Diagram (ERD)
+**Badges - Entity Relationship Diagram (ERD)**
 
 Zoom in the table for more clarity. Click the table title to view its details.
 
@@ -25,7 +25,7 @@ For example- When a customer registers, they automatically receive the "New Memb
 
 **Databricks Table Name:** badges_earn
 
-## Badges Earn Fact Table
+**Badges Earn Fact Table**
 
 | Column name | Data type | Description | Linked Table | Availability for Export in theBadges EarnTemplate |
 | --- | --- | :--- | :--- | :--- |
@@ -56,7 +56,7 @@ For example- A brand launches a campaign to ensure proactive engagement. In this
 
 **Databricks Table Name:** badges_issue
 
-## Badges Issue Fact Table
+**Badges Issue Fact Table**
 
 | Column Name | Data Type | Description | Linked Table | Availability for Export in the Badges Issue Template |
 | --- | --- | --- | :--- | :--- |
@@ -89,7 +89,7 @@ For example- A brand wants to run a campaign where customers who purchase items 
 
 **Databricks Table Name:** badges_earned_benefits
 
-## Badges Earned Benefits Fact Table
+**Badges Earned Benefits Fact Table**
 
 | Column Name | Data Type | Description | Linked Table | Availability for Export in the Badges Earned BenefitsTemplate |
 | --- | --- | --- | :--- | :--- |
