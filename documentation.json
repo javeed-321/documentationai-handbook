@@ -99,6 +99,10 @@
             "group": "Data Fields",
             "pages": [
               {
+                "title": "svg",
+                "path": "svg"
+              },
+              {
                 "title": "Home Page",
                 "path": "docs/Home",
                 "show-sidebar": false,
@@ -1693,7 +1697,7 @@
                     "method": "GET"
                   },
                   {
-                    "title": "Get Customer\u2019s Earned and Expired Points by Year",
+                    "title": "Get Customer’s Earned and Expired Points by Year",
                     "path": "reference/get-expired-points-for-a-customer",
                     "openapi": "api-reference/get-expired-points-for-a-customer.yaml GET /das/getExpiredPointsByCustomerIdAndYear",
                     "openapi-mode": "custom",
