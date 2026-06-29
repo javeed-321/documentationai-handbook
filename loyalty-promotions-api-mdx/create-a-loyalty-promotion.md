@@ -2,10 +2,6 @@
 title: Create a Loyalty Promotion
 ---
 
-> ## Documentation Index
-> Fetch the complete documentation index at: https://docs.capillarytech.com/llms.txt
-> Use this file to discover all available pages before exploring further.
-
 ## Create a Loyalty Promotion
 
 Endpoint for POST /v3/promotions
