@@ -58,7 +58,7 @@ For example- A brand launches a campaign to ensure proactive engagement. In this
 
 **Badges Issue Fact Table**
 
-| Column Name | Data Type | Description | Linked Table | Availability for Export in the Badges Issue Template |
+| Column Name | Data Type | Description | Linked Table | Availability for Export in the [Badges Issue](/docs/badges-standard-export-template#badges-issue) Template |
 | --- | --- | --- | :--- | :--- |
 | auto_update_time_badges_issue | bigint | Date and time when the badges_issue table was last updated. It is in the Unix timestamp format. The update takes place only when the badge deactivation occurs. | _ | Yes; Measure Name: Auto Update Time Badges Issue |
 | badges_issued_id | string | It is an unique identifier for the 'badges issued' fact table. As a primary key, it uniquely identifies each record or entry within the table. It allows tracking and analysis of individual badge issuance events. | _ | Yes; Measure Name: Badges Issued Id |
@@ -91,7 +91,7 @@ For example- A brand wants to run a campaign where customers who purchase items 
 
 **Badges Earned Benefits Fact Table**
 
-| Column Name | Data Type | Description | Linked Table | Availability for Export in the Badges Earned BenefitsTemplate |
+| Column Name | Data Type | Description | Linked Table | Availability for Export in the [Badges Earned Benefits](/docs/badges-standard-export-template#badges-earned-benefits) Template |
 | --- | --- | --- | :--- | :--- |
 | allocationStrategyId | bigint | Denotes the strategy selected to allocate points for badges. In case of tier-based allocation, points are allocated according to predefined tiers or categories. | _ | Yes: Measure Name: Allocationstrategyid |
 | auto_update_time_badges_benefits_earn | bigint | Date and time when the badges_benefits_earn table was last updated. It is in the Unix timestamp format. The update takes place only when the badge deactivation occurs. | _ | Yes: Measure Name: Auto Update Time Badges Benefits Earn |
@@ -122,7 +122,7 @@ For example- A brand wants to run a campaign where customers who purchase items 
 
 You can use Insights and perform the following:
 
-- Create a chart using Badges KPI and Dimensions
-- Create a custom report on Badges
-- Export Badges using standard Badges export templates
+- Create a chart [using Badges KPI and Dimensions](https://docs.capillarytech.com/docs/create-chart#example---creating-a-badges-earned-chart)
+- Create a [custom report on Badges](https://docs.capillarytech.com/docs/create#example-scenario-analysing-badge-earnings)
+- Export Badges using [standard Badges export templates](https://docs.capillarytech.com/docs/badges-standard-export-template)
 
