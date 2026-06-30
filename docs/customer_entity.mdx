@@ -2,7 +2,7 @@
 title: Customer entity
 ---
 
-## Customer entity
+# Customer entity
 
 This page provides you with information on customer entity
 
@@ -10,17 +10,17 @@ The Customer entity is the focal point around which all our data revolves. This 
 
 Within this framework, the source through which a customer is registered is called a customer data source. This source serves as the initial touchpoint, capturing the basic details that contribute to the making of a customer profile. Additionally, the channels available for communication with the customer are referred to as customer communication channels. These channels play a pivotal role in establishing meaningful connections and fostering effective communication with customers.
 
-### Related entities
+## Related entities
 
 A customer entity can have information related to other entities and similarly the other entities can include customer entity information. For example, card entity, and transaction entity can include information related to customer entity and vice-versa.
 
-## Supported objects and fields
+# Supported objects and fields
 
 The image below provides you with information about the supported objects and fields in the customer entity.
 
 <Image src="https://files.readme.io/d643219-Customer.jpg" width="150%" height="1080" alt="" />
 
-## Understanding data sources
+# Understanding data sources
 
 In our system, a "Source" refers to the origin or system from which customer information is integrated. Each source represents a unique system, integration, or data feed.
 
@@ -32,7 +32,7 @@ On Member Care, within the customer profile, you can view all the sources from w
 
 <Image src="https://files.readme.io/afc70c0-Customer_source.png" width="NaN" height="NaN" alt="" style="width: NaNpx; height: auto; cursor: pointer;" />
 
-### Supported data sources
+## Supported data sources
 
 The entity supports the following data sources:
 
@@ -60,12 +60,12 @@ The entity supports the following data sources:
 
 12. OAuth\_External
 
-## Understanding communication channels
+# Understanding communication channels
 
 A "Communication Channel" represents the medium through which customers receive messages. Examples include SMS, push notifications, web engagement, and POS (Point of Sale) systems.\
 Some sources may act as both a source and a communication channel. For instance, WeChat not only provides customer information but also serves as a communication channel. Communication channels can vary, and information may be collected from diverse sources. For instance, a customer's communication channel, such as WeChat, may exclusively come from the WeChat system. Overlapping scenarios may arise where the source and communication channel are the same, while in other cases, they can be different. The system is designed to handle these variations effectively.
 
-### Supported communication channels
+## Supported communication channels
 
 The entity supports the following communication channels:
 
@@ -85,7 +85,7 @@ The entity supports the following communication channels:
 
 8. Postmail
 
-## Managing customer lifecycle with customer status
+# Managing customer lifecycle with customer status
 
 > **Important**
 >
@@ -93,13 +93,13 @@ The entity supports the following communication channels:
 
 A customer status defines the relationship between a brand and a customer. For example, a customer who interacts often with the brand can be defined as an active customer. Further, these statuses can be used to run the loyalty program and assign coupons, reward points etc accordingly. For example, more offers can be offered to a customer to make an inactive customer to active customer..
 
-### Activating customer status
+## Activating customer status
 
 To activate customer status for your organisation, navigate to **Organisation settings> Miscellaneous> Customer Status configuration** and select the  **Enable customer status** check box.
 
 On enabling the customer status, the existing fraud status will be replaced by the customer status function.
 
-### Types of customer statuses
+## Types of customer statuses
 
 The various customer statuses available in the Capillary platform that you can configure are:
 
@@ -117,13 +117,13 @@ The various customer statuses available in the Capillary platform that you can c
 
 7. Pending deletion
 
-### Creating a custom label
+## Creating a custom label
 
 You can click the **Create new label** option in the customer label and enter a new label name to assign a custom name for the status. You can add multiple labels if required. The first status label that you create is set as the default status value.
 
 <Image src="https://files.readme.io/e70b5ed-H3fEa_kClhg1C9buCL58znQ3t4tvnHcb2g.png" width="1920" height="1080" alt="" />
 
-### Active customer status
+## Active customer status
 
 The active status can be used to indicate that the customer is active.
 
@@ -133,7 +133,7 @@ The active status can be used to indicate that the customer is active.
   - All customers are marked Active by default.
 </Callout>
 
-### Suspended, Fraud suspected, Fraud confirmed, and Internal customer status
+## Suspended, Fraud suspected, Fraud confirmed, and Internal customer status
 
 You can restrict the following operations for users with Suspended, Fraud Suspected, Fraud Confirmed, or Internal status.
 
@@ -156,7 +156,7 @@ To restrict access, select the individual status labels or all the created statu
 
 <Image src="https://files.readme.io/ccef7e2-lb5ZVDRSQL_JkADaNE0G9ONiVhqtT0GynQ.png" width="1920" height="1080" alt="" />
 
-### Request APIs
+## Request APIs
 
 - `POST /v1.1/request/add` — change mobile SMS, change email, goodwill SMS/email
 
@@ -170,7 +170,7 @@ To restrict access, select the individual status labels or all the created statu
 
 - `PUT /v2/goodwillRequest/{id}` — goodwill approval
 
-### Direct Communication APIs
+## Direct Communication APIs
 
 - `POST /v1.1/communications/email`
 
@@ -182,17 +182,17 @@ To restrict access, select the individual status labels or all the created statu
 
 - `POST /v2/communications/wechat`
 
-### OTP APIs
+## OTP APIs
 
 - `POST /v2/otp/generate`
 
 - `POST /v2/otp/validate`
 
-### Subscription API
+## Subscription API
 
 - `POST /v2/internal/subscription/configuration`
 
-### Deleted customer status
+## Deleted customer status
 
 The deleted status allows you to block every action for customers with this status. To configure restriction, from the **Block everything** drop-down, select the individual custom labels or select all labels created for Deleted. Click **Select** and then click **Update**.
 
@@ -218,11 +218,11 @@ The deleted status allows you to block every action for customers with this stat
   For full details, see [Performing Data Deletion](https://docs.capillarytech.com/docs/performing-data-deletion).
 </Callout>
 
-### Pending deletion customer status
+## Pending deletion customer status
 
 This status is used to indicate the status of customers for whom a deletion request is raised. For **Pending Deletion**, whenever a PII deletion request is triggered, a label Deletion\_pending is automatically created and assigned to the customer, regardless of any other label that may have been created and set as default.
 
-## Managing subscription
+# Managing subscription
 
 A subscription refers to the voluntary action taken by customers to either opt in or opt out of receiving promotional or transactional communications from specific sources within the organization.
 
@@ -230,7 +230,7 @@ You can configure the promotional and transactional subscription settings for a 
 
 You can also view and set the subscription statuses on the customer's profile on [Member Care](https://docs.capillarytech.com/docs/customer_overview#subscription-status).
 
-## Managing loyalty status
+# Managing loyalty status
 
 A customer can be of two types: a loyalty customer and a non-loyalty customer. A loyalty customer is a registered member of your organization's loyalty program, while non-loyalty customers are those who have not enrolled in your loyalty program but have subscribed using their mobile number or email ID with the organization. Transactions for these customers are tagged to their respective identifiers (mobile number/email ID).
 
@@ -238,11 +238,11 @@ You can define the loyalty type of a customer during [customer registration](htt
 
 The loyalty status of a customer is displayed on the [Customer status](https://docs.capillarytech.com/docs/customer_overview#customer-status-and-name) in the customer's Member Care profile.
 
-## Managing test and control status
+# Managing test and control status
 
 The customer list is split into a test and control group. Customers in the test audience group receive campaign communications, while those in the control audience group do not. The test and control statuses are displayed based on the group to which they belong. These statuses are maintained by the brands or auto-assigned and can be changed either through  [Member Care](https://docs.capillarytech.com/docs/customer_overview#customer-status-and-name) or [Connect+](https://docs.capillarytech.com/docs/test_and_control).
 
-## Managing fraud status
+# Managing fraud status
 
 You can configure the fraud management and the statuses as per your requirements. For more information on fraud management, refer to the [Fraud management documentation](https://docs.capillarytech.com/docs/fraud-detection).
 
@@ -250,13 +250,13 @@ You can configure the fraud management and the statuses as per your requirements
   If customer status is enabled, the fraud status will be superseded by the customer status.
 </Callout>
 
-## Getting started
+# Getting started
 
-### Setup customer fields
+## Setup customer fields
 
 Standard fields, Extended fields and Custom fields are the fields that are applicable for Customer entity. For more information on these, refer to the [documentation on fields](https://docs.capillarytech.com/docs/data-fields).
 
-### Setup customer configs
+## Setup customer configs
 
 > **Note**
 >
@@ -303,7 +303,7 @@ To configure customer registration, follow these steps.
 | CONF\_IDENTIFIERS\_SYNC\_ENABLED                   | Check this to synchronize identifiers such as mobile numbers, email addresses, and external IDs between Instore profiles and V2 profiles (external profiles such as WebEngage) within the system. \* *-*\* When the identifier change request is made from Membercare, any changes to identifiers (mobile/email, externalId) will update both the Instore profile and the corresponding V2 profile identifiers. \* \*Note: \*\*The Customer Unique Identifier (CUID) will not change in V2 profiles if this identifier exists. \* \*- \*\* To make changes to the external profile CUID, the following steps are performed after the identifier change request on Membercare: \* -Creation of a new payload with updated identifiers and pushing it to an S3 bucket. --Execution of` v2/integrations/customer/upsert API` with the source set to `WEB_ENGAGE `and the new payload. The upsert API ensures that the changes are reflected in all instances of the profile, including updating the CUID and communication channels. \* \*Default value: \*\*False. |
 | -CONF\_CLIENT\_DEFAULT\_COUNTRYCODE\_PASSED        | Check this to auto select country code to the mobile number entered on the registration screen. The validation sequence will be as follows. validates initial letters of mobile numbers for base or supported currency codes. inserts each country code and validates the number. First with base country code, followed by supported country codes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-#### Mobile number validation
+### Mobile number validation
 
 The platform validates mobile numbers based on the country configured during registration.
 
@@ -335,7 +335,7 @@ This allows international numbers only when the number does not meet Indian vali
 
 - You can use the append country config to automatically add the country code to mobile numbers during import. When enabled, this configuration appends the appropriate country code to numbers that do not already include it, based on the base country or supported country list. This helps ensure that imported numbers meet length and format requirements.
 
-## External ID configuration
+# External ID configuration
 
 You can use the below configurations to enable the generation of a customised external ID for customers. Once this configuration is enabled, the external ID in the customer add API payload will be replaced with the generated external ID.
 
@@ -358,7 +358,7 @@ You can use the below configurations to enable the generation of a customised ex
 | CONF\_CARD\_NUMBER\_SUFFIX (Optional) Defines the SUFFIX for the external ID number. This is only applicable for AUTO\_INC alogrithm.                                                                                                                                                                                                                                                        | Any integer value but prefix + suffix + system-generated number should not be more than 50.                                                                                                                                           |
 | CONF\_VALUES\_TO\_INCLUDE\_FOR\_CHECKSUM\_DIGIT (Optional) Specifies whether the prefix should be considered when generating the checksum value.                                                                                                                                                                                                                                             | PREFIX - Prefix is considered NONE - Prefix is not considered                                                                                                                                                                         |
 
-## Customer ingestion restriction configuration
+# Customer ingestion restriction configuration
 
 <Callout kind="danger" collapsed="false">
   There is no UI to enable this configuration. You need to raise a JIRA ticket ([sample ticket](https://capillarytech.atlassian.net/browse/CAP-97635)) to the sustenance team to enable these configurations. Turn around time is five days.
@@ -366,11 +366,11 @@ You can use the below configurations to enable the generation of a customised ex
 
 `CONF_RESTRICT_ORPHAN_V2_PROFILE` - This configuration prevents the ingestion of a WebEngage profile into the Capillary platform for a specific customer if they do not already have an existing Instore profile.
 
-### Setup customer status
+## Setup customer status
 
 For configuring customer status, refer to the [Activating customer status section](https://docs.capillarytech.com/docs/customer_entity#activating-customer-status).
 
-## Dual eligibility
+# Dual eligibility
 
 The Dual Eligibility feature allows you to register multiple users with the same secondary identifiers. When the Dual Eligibility feature is enabled, only one identifier is considered the primary identifier and the rest of the identifiers are considered for communication. The primary identifier for both of these profiles must be unique.
 
@@ -380,7 +380,7 @@ The Dual Eligibility feature allows you to register multiple users with the same
 
 - For the users registered with Dual Eligibility, the information about the user can be retrieved only using the primary identifier.
 
-### Use Case
+## Use Case
 
 **User John**:
 
@@ -404,7 +404,7 @@ The Dual Eligibility feature allows you to register multiple users with the same
 
   - Another is associated with **Employer B** (where John is a dependent under Jane’s profile).
 
-### Enabling dual eligibility
+## Enabling dual eligibility
 
 To enable dual eligibility for an organization, create a JIRA ticket to the Product Support team and enable the configuration CONF\_INSTORE\_V2\_ENABLED.
 
@@ -417,7 +417,7 @@ In addition, make sure that the below configurations are configured as per the t
 | **CONF\_ALLOW\_REGISTRATION\_FROM\_ANY\_IDENTIFIERS** | 0 - Disable                    |
 | **CONF\_USERS\_IS\_MOBILE\_REQUIRED**                 | 0 - Not required               |
 
-### FAQs
+## FAQs
 
 **Q: Is dual eligibility applicable for both loyalty and non-loyalty users?**\
 A: Dual eligibility is applicable only for Loyalty users.

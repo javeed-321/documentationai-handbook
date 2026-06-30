@@ -2,15 +2,15 @@
 title: Setup Cards
 ---
 
-## Setup Cards
+# Setup Cards
 
-### Introduction
+## Introduction
 
 A card series represents different types of cards. For example, you can have card series for Digital and Physical Card. A card series contains information such as card series name, card type, card number configuration details, and expiry details. You can also extended fields for cards. You can either have auto-generated cards or manually generated cards.
 
 Card linked loyalty program: Card-linked loyalty allows you to manage multiple card series within a single loyalty program. This is applicable only for MLP enabled orgs. If a loyalty program is created based on card series, you cannot create another program based on zone or concept.
 
-#### Features
+### Features
 
 The following are the features of the Card Series module.
 
@@ -21,7 +21,7 @@ The following are the features of the Card Series module.
 * Issue one or more cards to customers from a card series.
 * Create a separate [loyalty program for each card series](https://docs.capillarytech.com/docs/create-a-multi-loyalty-program).
 
-#### Terminologies in card module
+### Terminologies in card module
 
 There are a few terminologies that you need to know before starting card configuration.
 
@@ -61,7 +61,7 @@ There are a few terminologies that you need to know before starting card configu
   * A physical card generated in Capillary is issued to the customer.
   * A physical card not generated in Capillary is issued to the customer.
 
-### Card configurations (Org level)
+## Card configurations (Org level)
 
 You need to configure the following card-related settings before creating the card series.
 
@@ -108,7 +108,7 @@ d. Click on the newly created tag to make it the default tag. If only one tag(st
 
 </Callout>
 
-#### Counting Only Active Cards for Customer Limits
+### Counting Only Active Cards for Customer Limits
 
 To count only cards labeled as ACTIVE towards a customer's card limit, you can enable the configuration CONF_COUNT_ONLY_ACTIVE_LABEL_CARD. Once enabled, only cards marked as ACTIVE will count towards the limit, while cards with statuses such as SUSPENDED or ISSUED will be ignored.
 
@@ -123,7 +123,7 @@ By default this configuration is disabled.\
 
 </Callout>
 
-##### Use case - A customer’s card limit is set to 5.
+#### Use case - A customer’s card limit is set to 5.
 
 **When Configuration Disabled:**
 
@@ -133,11 +133,11 @@ By default this configuration is disabled.\
 
 * Only ACTIVE cards are counted. The customer now has 3 ACTIVE cards, so they can receive 2 more ACTIVE cards.
 
-### Prerequisite
+## Prerequisite
 
 Before configuring the card series, you need to set an [org-related card configuration](https://docs.capillarytech.com/docs/card#card-configurations-org-level).
 
-### Create card series
+## Create card series
 
 To create a card series, follow these steps.
 
@@ -207,7 +207,7 @@ The following are the configuration options.
 
 </Callout>
 
-### Generate cards
+## Generate cards
 
 You can generate the card numbers for a specific card series and download the list of card numbers in .txt format. At once the system can generate up to one lakh card numbers.
 
@@ -243,7 +243,7 @@ To generate and view card numbers, follow these steps.
 
 </Callout>
 
-### Modify Card Series
+## Modify Card Series
 
 To view and modify a card series, follow these steps.
 
@@ -260,7 +260,7 @@ To view and modify a card series, follow these steps.
 5. You can modify all the card series details except Series code, Series type, and Card generation type.
 6. Click **Update series**.
 
-### Delete card series
+## Delete card series
 
 To delete a card series, follow these steps
 
@@ -268,7 +268,7 @@ To delete a card series, follow these steps
 2. Click the **Cards** tab, navigate to the card series that you want to delete. You can use the **Search** option to get a specific card series.
 3. Click **Delete**. The card series is deactivated and removed from the system.
 
-#### Best practices
+### Best practices
 
 * Decide the card generation algorithm **before** issuing cards.
 * Avoid changing the algorithm for an active card series.
@@ -280,25 +280,25 @@ To delete a card series, follow these steps
 * When exhaustion occurs, only supported options are: Increase card length, or
   Create a new card series.
 
-### Card-based program
+## Card-based program
 
-### Card status validation for point redemption and transactions
+## Card status validation for point redemption and transactions
 
 When you use cards for loyalty point redemption or transactions, the system handles card status validation differently depending on the process:
 
-#### Point redemption
+### Point redemption
 
 * The system does not validate the card status during point redemption at the loyalty end.
 * You can redeem points using a card even if its status is SUSPENDED.
 * This means customers with suspended cards can still complete point redemption actions.
 
-#### Transactions (transactionAdd in InTouch)
+### Transactions (transactionAdd in InTouch)
 
 * The system validates the card status when you perform a transaction using transactionAdd in InTouch.
 * If you try to use a card with SUSPENDED status for a transaction, the system blocks the action.
 * You will receive an error with code 8087, indicating that the card status does not allow the transaction.
 
-##### Summary
+#### Summary
 
 * Point redemption does not block actions for suspended cards.
 * Transactions using transactionAdd in InTouch block actions for suspended cards and return error code 8087.
@@ -353,7 +353,7 @@ For any event such as transaction and customer update, first, the relevant progr
 
 Whenever any information such as Current points, tier, and a bulk call is required, either the calling module will pass the corresponding program or the system will identify the corresponding program from the configuration and pass the relevant value to the caller.
 
-#### Use Cases
+### Use Cases
 
 1. **Points Allocation Strategy**: Each program has its own points allocation strategies. A point allocation strategy can be created and used within a program. The allocation strategy of one program cannot be used in any other program, not even within the Default Program. To know how to create Points Allocation Strategies, click here.
 2. **Points Expiry strategy**: Each program has its own points expiry strategy. A point expiry strategy can be created and used within a program. The expiry strategy of one point cannot be used in any other program, not even in the Default Program. To know how to create Point Expiry Strategy, click here.
@@ -366,20 +366,20 @@ Whenever any information such as Current points, tier, and a bulk call is requir
 6. **Customer updates**: Customer update events will pass through all the programs which as associated with the till from where the event is fired. So if the Org wants to allocate points to a brand loyalty program or a Default program, then they have to write rules on the brand loyalty program and Default program as well.
 7. **Manage Tiers**: Tiers for each program can be created within the program and they work within the program only. Click here to know more.
 
-##### Configure for Transaction event
+#### Configure for Transaction event
 
 1. **New Transaction**: Once a transaction is made, the corresponding programs will be identified, and accordingly “new transactions” rules will execute.
 2. **Transaction Update**: Any transaction update event will only pass through the corresponding program that is configured for the till from which the update event is initiated. In case the transaction creates and transaction update tills are different then rules will run for the program where the transaction has originated.
 3. **Transaction Return**: For the Transaction return event, the rules will be executed from the program where the purchase was made, not where the return is made. For eg, the Customer transacted at till 1(Program 1) but return the products at till 3 (Program 2), in this case, the return rules will be executed from Program 1, not for Program 2.
 
-##### Configuring Rules/Sets
+#### Configuring Rules/Sets
 
 Rule and set configuration need to be configured at the program level depending on the requirement. The rules configured for lifetime purchases, current points, no. of transactions, etc are always in the context of the program. For example, lifetime purchases are the purchases made in that program.
 
 For example, let's assume a customer has made 6 transactions across the organization in different tills/stores.\
 If one writes a rule within program 1 on currentcustomer.lifetimepurchase, it will be evaluated on 1200, and on program 2 it will be evaluated on 900. Moreover, each program will have over customer KPIs such as Lifetime purchase, current points, lifetime points, trackers Visit count, and a number of transactions.
 
-##### One View of Customer
+#### One View of Customer
 
 One will be able to see program-wise (including Default Program) details of a customer with program-level KPIs in Member care and Binary. See the figure below. For eg, if a concept/till is not mapped in the Default program then the corresponding transaction/point will not be available in customer KPIs in Default Program.
 
@@ -387,7 +387,7 @@ One will be able to see program-wise (including Default Program) details of a cu
 
 <Image src="https://files.readme.io/49916f7-c209d3d-0TnYq7rCUagdwC9ARr3WXjTZNwBgS9h12w.png" width="1920" height="1080" alt="" />
 
-#### Limitations
+### Limitations
 
 1. Currently, programs can run either at concept or zone but not both
 2. One concept/zone can only have one loyalty program (excluding the default program)

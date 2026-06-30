@@ -2,15 +2,15 @@
 title: Overview
 ---
 
-## Overview
+# Overview
 
 The Search filter feature lets you define how you want to look up Customer or Transaction data.  After creating a search filter, you can use the [Copy cURL](https://docs.capillarytech.com/docs/performing-search-#/using-the-copy-curl-feature) feature to import it into the API tool and run it.
 
 <Image src="https://files.readme.io/f581149c5c788c345491795f1594a5a1d70eebcc530789cb17a6d169d185157e-Search.png" width="65%" height="1080" alt="" />
 
-## Core Concepts
+# Core Concepts
 
-### What is a Search Filter?
+## What is a Search Filter?
 
 A **search filter** is a set of one or more indexed fields used to quickly look up data. You define which fields to search on—this setup is called the **search filter** .
 
@@ -21,7 +21,7 @@ There are two types of filters:
 
 Once the filter is set, the system knows how to query the database efficiently. You can then use the [Search API](https://docs.capillarytech.com/reference/perform-search) to fetch the results.
 
-## Key Features
+# Key Features
 
 * Define the fields to search on—including custom and extended fields
 * Set the time range for the data you want to query
@@ -30,7 +30,7 @@ Once the filter is set, the system knows how to query the database efficiently. 
 * Compatible with the **[Vulcan]()** UI framework (but not limited to it)
 * Choose which fields appear in the search results; use **[Neo](https://docs.capillarytech.com/docs/extension)** for advanced customization
 
-### Understanding Cardinality
+## Understanding Cardinality
 
 When creating a search filter, the system first checks the **cardinality** of the fields you've selected. Filters with **high cardinality** are more likely to pass validation and be activated.
 
@@ -43,7 +43,7 @@ When creating a search filter, the system first checks the **cardinality** of th
 👉 **Note:** Cardinality is calculated based on all **mandatory fields** in your filter.\
 The filter must pass the **cardinality check** before it can be activated.
 
-## Search Filter Capabilities
+# Search Filter Capabilities
 
 | **Entity**  | **Filter Type** | **Filter Limit** | **Mandatory Fields Limit** | **Non-mandatory Fields Limit** | **Search Operators**                         | **Historical Data**                   |
 | ----------- | --------------- | ---------------- | -------------------------- | ------------------------------ | -------------------------------------------- | ------------------------------------- |
@@ -51,7 +51,7 @@ The filter must pass the **cardinality check** before it can be activated.
 | Customer    | AND             | 5                | 5                          | 6                              | `EQUALS`, `RANGE` (for date/datetime fields) | 10 years (based on registration date) |
 | Transaction | AND             | 5                | 5                          | 6                              | `EQUALS`, `RANGE` (for date/datetime fields) | 365 days (based on billing date)      |
 
-## Example Flow
+# Example Flow
 
 **Step 1:** Define Filter
 
@@ -64,7 +64,7 @@ The filter must pass the **cardinality check** before it can be activated.
 * Endpoint: `v2/search/entity`
 * Returns customer records that match any of the fields
 
-#### Note for customer search in new MemberCare
+### Note for customer search in new MemberCare
 
 Customer visibility in the new MemberCare depends on how the customer was registered and when the Cortex sync runs.
 
@@ -80,7 +80,7 @@ Customer visibility in the new MemberCare depends on how the customer was regist
 
 Use this timing to verify customer availability before retrying the search.
 
-### Search auto-enable for new orgs
+## Search auto-enable for new orgs
 
 When a new org is created, the system automatically enables search and creates a default search criteria. No manual configuration or Jira ticket is required.
 
@@ -95,7 +95,7 @@ Customers registered via API are immediately searchable in MemberCare using any 
 
 > **Note:** Customers registered through the Import Framework are not immediately searchable. They become available after the daily sync, which runs at 12:00 AM (cluster timezone).
 
-#### Customization options
+### Customization options
 
 The default criteria covers the most common search use cases. You can extend or replace it based on your org's requirements:
 
@@ -103,7 +103,7 @@ The default criteria covers the most common search use cases. You can extend or 
 * **Custom event transformation:** To modify how data is indexed before search (for example, stripping country codes from phone numbers), configure a [custom Neo event transformation](https://docs.capillarytech.com/reference/event-transformation-using-neo).
 * **Additional criteria:** You can create up to two OR (prefix) criteria and up to five AND (combination) criteria per org for the `CUSTOMER` entity.
 
-#### Verifying search is enabled
+### Verifying search is enabled
 
 To confirm the auto-created search criteria, use the [Retrieve search criteria details API](https://docs.capillarytech.com/reference/get-meta). If search does not appear to be enabled for your org, raise a ticket to product support.
 

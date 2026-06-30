@@ -2,9 +2,9 @@
 title: Extended Fields
 ---
 
-## Extended Fields
+# Extended Fields
 
-### Introduction
+## Introduction
 
 Extended fields are configurable, system-recognized fields designed to capture structured information specific to certain business verticals, such as food and beverage, hospitality, aviation, and retail. Unlike free-form custom fields, extended fields enforce data consistency through controlled inputs, making them ideal for operational and analytical use.
 
@@ -18,7 +18,7 @@ Each extended field is predefined with attributes such as:
 * Label name
 * Data type (Example: integer, double, enum, string)
 
-#### Key characteristics
+### Key characteristics
 
 * **Standardization**: Extended fields help standardize data capture across brands or organizations, reducing inconsistency often seen with custom fields.
 * **Controlled input**: Developers define field names, data types, enum values, and applicable scopes. Validation rules help maintain clean, usable data.
@@ -29,7 +29,7 @@ Each extended field is predefined with attributes such as:
 * **Reporting-friendly**: Since the values are consistent and structured, extended fields are readily available for reporting, filtering, and analytics.
 * **Null value handling for Integer fields**: For bill or lineitem entities, if you use Integer type extended fields, the system converts null values to 0 during ETL transformation. This supports numeric aggregations but does not preserve nulls. To retain null values, use String type for the extended field.
 
-#### Entity types
+### Entity types
 
 Entity types define the specific categories of objects or records to which an extended field can be attached. The supported entity types are:
 
@@ -43,7 +43,7 @@ Entity types define the specific categories of objects or records to which an ex
 * not_interested_lineitem
 * not_interested_return_lineitem
 
-#### Supported data types
+### Supported data types
 
 The following data types are supported for extended fields.
 
@@ -66,13 +66,13 @@ The following data types are supported for extended fields.
 | `STRING_SET`      | A set of unique string values.                                                                                                                                                                                                                                                                                                       |
 | `LIST`            | An ordered list of values. Each LIST field has metadata defining the element type (`TEXT`, `INTEGER`, or `DECIMAL`), optional allowed values, and optional minimum and maximum item counts. Values are passed as a comma-separated string (for example, `"RED,GREEN,BLUE"`) or a JSON array (for example, `["RED","GREEN","BLUE"]`). |
 
-#### Properties of extended fields
+### Properties of extended fields
 
 * Combination of name and entity type for extended fields must be unique.
 * Extended fields are not case-sensitive.
 * For Integer type extended fields on bill or lineitem entities, null values from the source are converted to 0 during ETL transformation. If you need to preserve nulls, use String type for the extended field.
 
-#### Mapping of extended fields
+### Mapping of extended fields
 
 Extended fields are mapped to vertical IDs that represent business domains. These vertical IDs are further linked to organization IDs, enabling standardized field usage across organizations within the same vertical.
 
@@ -80,7 +80,7 @@ The following diagram illustrates the mapping.
 
 <Image src="https://files.readme.io/36f8462-ZWDw6OuJQNhrsbLCLQt7UY4EBgvDDsWNkg.png" width="smart" height="1080" alt="" />
 
-#### Verticals and vertical IDs
+### Verticals and vertical IDs
 
 A vertical is a group that defines the nature of the business. An organization can have multiple verticals mapped to it.
 
@@ -91,7 +91,7 @@ Verticals have the following properties:
 * Each vertical is mapped to the relevant set of extended fields.
 * The vertical name should be unique across the table.
 
-#### Mapping extended fields and vertical IDs
+### Mapping extended fields and vertical IDs
 
 The following properties apply to mapping extended fields and vertical IDs:
 
@@ -99,7 +99,7 @@ The following properties apply to mapping extended fields and vertical IDs:
 * One vertical ID can be mapped to multiple extended fields.
 * An extended field with vertical ID `-1` is available for all organizations. These are global fields and can be used by any organization.
 
-#### Mapping vertical IDs and organizations
+### Mapping vertical IDs and organizations
 
 Here are the properties of vertical ID and organization ID mapping:
 
@@ -107,7 +107,7 @@ Here are the properties of vertical ID and organization ID mapping:
 * An organization cannot use an extended field that is not within the Verticals associated with it.
 * Any organization can use extended fields with the Vertical ID `-1`.
 
-#### Validation rules
+### Validation rules
 
 A validation rule can contain a logical or regex expression that evaluates the extended field values. Validation rules verify whether a field value meets the defined standards before saving it to the database.
 
@@ -120,7 +120,7 @@ You first create rules (`>`, `<`) and then map each rule to the extended fields.
 * Multiple rules can be applied to an extended field
 * One rule can be applied to different fields
 
-##### Configuration: CONF_ENABLE_TRANSACTION_EXTENDEDFIELD_SYNC_VALIDATOR
+#### Configuration: CONF_ENABLE_TRANSACTION_EXTENDEDFIELD_SYNC_VALIDATOR
 
 This configuration controls whether extended field values are validated and persisted reliably during transaction processing.
 
@@ -136,7 +136,7 @@ This configuration controls whether extended field values are validated and pers
 **Recommendation:**
 Enable CONF_ENABLE_TRANSACTION_EXTENDEDFIELD_SYNC_VALIDATOR to ensure extended field values are consistently validated and saved. Disabling this configuration may cause data loss or missing fields in user-facing applications.
 
-#### Other validations
+### Other validations
 
 In addition to rule validation, we also perform scope validation that is defined in the database tables.
 
@@ -144,11 +144,11 @@ In addition to rule validation, we also perform scope validation that is defined
 * An organization can use only extended fields that are mapped to it through vertical identifiers.
 * Any organization can use extended fields with vertical identifier mapping of `-1`.
 
-### Creating extended fields
+## Creating extended fields
 
 To create an extended field, contact the Capillary support team. Extended fields are available in your organization by default. You can hide unused extended fields in the user interface (UI).
 
-### Viewing extended fields
+## Viewing extended fields
 
 To view the default extended fields for your organization, do the following:
 
@@ -160,7 +160,7 @@ To view the default extended fields for your organization, do the following:
 
 <Image src="https://files.readme.io/aabb2dc-image.png" width="1920" height="1080" alt="" />
 
-### Updating extended fields
+## Updating extended fields
 
 You can update an extended field to show/hide it, set the position on the UI, choose whether mandatory or optional, and add enum values. The extended field format is `longtext`, which supports up to 4GB of text.
 
@@ -195,7 +195,7 @@ The table shows the editable values with their descriptions.
 
 The system updates the extended field.
 
-#### View extended fields of a vertical
+### View extended fields of a vertical
 
 To view extended fields of a vertical, click the respective + **icon**. For example, if you want to view the Generic section, click the plus icon.
 
@@ -217,7 +217,7 @@ To view extended fields of a vertical, click the respective + **icon**. For exam
 | Is PII data | Indicates if the extended field is classified as PII data. |
 | Is PSI data | Indicates if the extended field is classified as PSI data. Refer to the PSI data documentation for more [information on classifying PSI data](https://docs.capillarytech.com/docs/classify-potentially-sensitive-information-psi). |
 
-### Enabling and disabling extended fields for a vertical
+## Enabling and disabling extended fields for a vertical
 
 You can add or remove extended fields for a vertical. Do this from the **Extended Fields Vertical Mapping** tab. The **Disabled Verticals** section lists verticals that are available to your organization. The **Enabled Verticals** section lists verticals that are enabled for your organization.
 
@@ -239,13 +239,13 @@ To disable a vertical,
 
 The extended fields for the vertical are disabled for your organization.
 
-### Transformation Stats
+## Transformation Stats
 
 This feature is no longer in use and is marked as deprecated.
 
 <Image src="https://files.readme.io/ccdecfaaeb51683f02c21f0a710076eb5ed95a6710418a469321f42ac8c97e1a-Screenshot_2025-07-31_at_11.06.08_AM.png" width="1920" height="1080" alt="" />
 
-### Supported date formats in extended fields
+## Supported date formats in extended fields
 
 Extended fields support the following date formats:
 
@@ -285,14 +285,14 @@ fields follow a separate configuration (`CONF_DATE_EF_TZ_FIX_ENABLED`).
 
 <br />
 
-### Creating reports using extended fields
+## Creating reports using extended fields
 
 To display the extended fields on Insights and use this data to create reports, perform the following:
 
 * Create a JIRA ticket to the Sustenance team and create a vertical-level field on the Capillary platform.
 * Create a JIRA ticket to the Insights team and create an audience filter for the extended field.
 
-### Configuring org extended fields through API
+## Configuring org extended fields through API
 
 You can configure extended fields for your organization through the Configure organization extended fields API. See the [API documentation](https://docs.capillarytech.com/reference/configure-org-extended-field).
 

@@ -2,7 +2,7 @@
 title: Entities Management
 ---
 
-## Entities Management
+# Entities Management
 
 An entity refers to a specific object, like a customer, product, or transaction, that has its own unique details in a system or situation.
 
@@ -17,7 +17,7 @@ The different types of entities in Capillary platform are:
 7. **User Group**: The new user group (v2) solves the use cases of both B2B loyalty and B2C loyalty unlike the previous version which was designed for B2C cases. This entity contains APIs to manage user groups. See more about [User Group.](https://docs.capillarytech.com/reference/user-group-v2)
 8. **Leads**: A lead is a purchase an individual is interested in, especially for offline stores. Leads can be created for both loyalty and non-loyalty customers. This entity provides you the APIs to create, manage and fetch leads. See more about [Leads APIs.](https://docs.capillarytech.com/reference/leads).
 
-### Extended Fields
+## Extended Fields
 
 Extended Fields are proposed fields to standardize input values and keys across organizations. These fields make it easier for the Development and Analytics teams to get rid of the complex data that flows into the database, through existing custom fields. Developers control the field names, data types, enum values, and scopes for the extended fields and can capture values based on rules (logical or regex expressions).
 
@@ -31,13 +31,13 @@ Extended fields are created in the backend. You can just use whatever is require
 
 The following are the topics discussed in this article.
 
-##### Entity Types
+#### Entity Types
 
 * Supported Entity Types: customer, regular_transaction, return_transaction, not_interested_transaction, not_interested_return_transaction, regular_lineitem, return_lineitem, not_interested_lineitem, not_interested_return_lineitem.
 
 <Image src="https://files.readme.io/63975ea-NGP9ApbSolqFPXoYY3ZOwlUneaAG2HI61Q_1.png" width="smart" height="1080" alt="" />
 
-##### Data Type
+#### Data Type
 
 * Supported Data types:  integer, string, double, date-time, standard_enum, custom_enum
 
@@ -82,20 +82,20 @@ modified_by: -1
 modified_on: 2017-03-23 15:22:39
 ```
 
-##### Properties of Extended Fields
+#### Properties of Extended Fields
 
 Following are the properties of extended fields.
 
 * The combination of name and entity type for extended fields should be unique
 * Extended fields are not case-sensitive
 
-##### Mapping of Extended Fields
+#### Mapping of Extended Fields
 
 On a broader view, extended fields are mapped to vertical ids, and vertical ids are mapped to org ids as shown in the following diagram.
 
 <Image src="https://files.readme.io/36f8462-ZWDw6OuJQNhrsbLCLQt7UY4EBgvDDsWNkg.png" width="smart" height="1080" alt="" />
 
-##### Verticals and Vertical IDs
+#### Verticals and Vertical IDs
 
 A vertical is a group that defines the nature of the business. An org can have multiple verticals mapped to it.
 
@@ -106,7 +106,7 @@ Following are the properties of verticals:
 * Each vertical is mapped to the relevant set of extended fields
 * The vertical name should be unique across the table
 
-##### Mapping Extended Fields and Vertical Ids
+#### Mapping Extended Fields and Vertical Ids
 
 Following are the properties of extended fields and vertical ids mapping:
 
@@ -114,7 +114,7 @@ Following are the properties of extended fields and vertical ids mapping:
 * One vertical id can be mapped to multiple extended fields
 * An extended field with vertical id ‘-1’ is available for all the orgs. These are global fields and can be used by any org
 
-##### Mapping Vertical IDs and Org
+#### Mapping Vertical IDs and Org
 
 Following are the properties of vertical ids and org ids mapping table
 
@@ -122,7 +122,7 @@ Following are the properties of vertical ids and org ids mapping table
 * An org cannot use an extended field that is not within the verticals associated with it.
 * Any org can use extended fields with the vertical id ‘-1’ ( fields)
 
-##### Validation Rules
+#### Validation Rules
 
 A validation rule can contain a logical or regex expression that evaluates the extended field values. Validation rules verify whether a field value meets the defined standards before saving it to the Mongo DB.
 
@@ -135,7 +135,7 @@ We first create rules (`>`, `<`) and then map each rule to the extended fields. 
 * Multiple rules can be applied to an extended field
 * One rule can be applied to different fields
 
-##### Other Validations
+#### Other Validations
 
 Apart from the rules validation, scope validation is also performed which is defined in the DB tables
 
@@ -143,13 +143,13 @@ Apart from the rules validation, scope validation is also performed which is def
 * An org can use only extended fields that are mapped to it through vertical ids
 * Extended fields with vertical id mapping as -1 can be used by any org
 
-## Data fields
+# Data fields
 
 1. **Standard Fields**: These are fields created for a specific module to capture basic details. This could be fields at customer level, transaction level, line-item level, coupon level and so on. Standard fields are created by Capillary and are available by default for each module.
 2. **Extended Fields**: Extended Fields are proposed fields to standardize input values and keys across organizations. These fields make it easier for the Development and Analytics teams to get rid of the complex data that flows into the database, through existing custom fields. Developers control the field names, data types, enum values, and scopes for the extended fields and can capture values based on rules (logical or regex expressions). See more about [Extended fields](https://docs.capillarytech.com/docs/data-fields#extended-fields).
 3. **Custom Fields**: As the name suggests there are custom fields that orgs need to capture for a specific module. It could be of any datatype and value. Reporting is not possible on custom field values. See more about [Custom fields.](https://docs.capillarytech.com/docs/data-fields#custom-fields)
 
-## Extended Fields
+# Extended Fields
 
 Extended Fields are proposed fields to standardize input values and keys across organizations. These fields help you capture consistent data across different modules. You can define the field names, data types, enum values, and scopes for extended fields, and capture values based on rules (logical or regex expressions).
 
@@ -168,13 +168,13 @@ Extended fields are created at the backend. You can select the fields to be disp
 
 The following are the topics discussed in this article.
 
-##### Entity Types
+#### Entity Types
 
 * Supported Entity Types: customer, regular_transaction, return_transaction, not_interested_transaction, not_interested_return_transaction, regular_lineitem, return_lineitem, not_interested_lineitem, not_interested_return_lineitem.
 
 <Image src="https://files.readme.io/63975ea-NGP9ApbSolqFPXoYY3ZOwlUneaAG2HI61Q_1.png" width="smart" height="1080" alt="" />
 
-##### Data Type
+#### Data Type
 
 * Supported Data types:  integer, string, double, date-time, standard_enum, custom_enum
 
@@ -219,20 +219,20 @@ modified_by: -1
 modified_on: 2017-03-23 15:22:39
 ```
 
-##### Properties of Extended Fields
+#### Properties of Extended Fields
 
 Following are the properties of extended fields.
 
 * The combination of name and entity type for extended fields should be unique
 * Extended fields are not case-sensitive
 
-##### Mapping of Extended Fields
+#### Mapping of Extended Fields
 
 On a broader view, extended fields are mapped to vertical ids, and vertical ids are mapped to org ids as shown in the following diagram.
 
 <Image src="https://files.readme.io/36f8462-ZWDw6OuJQNhrsbLCLQt7UY4EBgvDDsWNkg.png" width="smart" height="1080" alt="" />
 
-##### Verticals and Vertical IDs
+#### Verticals and Vertical IDs
 
 A vertical is a group that defines the nature of the business. An org can have multiple verticals mapped to it.
 
@@ -243,7 +243,7 @@ Following are the properties of verticals:
 * Each vertical is mapped to the relevant set of extended fields
 * The vertical name should be unique across the table
 
-##### Mapping Extended Fields and Vertical Ids
+#### Mapping Extended Fields and Vertical Ids
 
 Following are the properties of extended fields and vertical ids mapping:
 
@@ -251,7 +251,7 @@ Following are the properties of extended fields and vertical ids mapping:
 * One vertical id can be mapped to multiple extended fields
 * An extended field with vertical id ‘-1’ is available for all the orgs. These are global fields and can be used by any org
 
-##### Mapping Vertical IDs and Org
+#### Mapping Vertical IDs and Org
 
 Following are the properties of vertical ids and org ids mapping table
 
@@ -259,7 +259,7 @@ Following are the properties of vertical ids and org ids mapping table
 * An org cannot use an extended field that is not within the verticals associated with it.
 * Any org can use extended fields with the vertical id ‘-1’ ( fields)
 
-##### Validation Rules
+#### Validation Rules
 
 A validation rule can contain a logical or regex expression that evaluates the extended field values. Validation rules verify whether a field value meets the defined standards before saving it to the Mongo DB.
 
@@ -272,7 +272,7 @@ We first create rules (`>`, `<`) and then map each rule to the extended fields. 
 * Multiple rules can be applied to an extended field
 * One rule can be applied to different fields
 
-##### Other Validations
+#### Other Validations
 
 Apart from the rules validation, scope validation is also performed which is defined in the DB tables
 

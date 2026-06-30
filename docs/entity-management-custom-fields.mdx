@@ -2,15 +2,15 @@
 title: Custom Fields
 ---
 
-## Custom Fields
+# Custom Fields
 
-### Introduction
+## Introduction
 
 Custom fields are user-defined attributes used to capture information not covered by standard or extended fields. They offer flexibility to store specialized data across entities such as customers, transactions, transaction line items, and coupons.
 
 While custom fields are useful for capturing non-standard information, they can pose challenges in maintaining data consistency, generating accurate reports, and conducting reliable analysis.
 
-#### Scope of custom fields
+### Scope of custom fields
 
 You can create custom fields for the following scopes:
 
@@ -25,7 +25,7 @@ You can create custom fields for the following scopes:
 * Customer preferences
 * Customer Card
 
-#### Key limitations
+### Key limitations
 
 * **Uncontrolled field values**<br />Custom fields often lack strict data entry rules, resulting in inconsistent or unclear data. For example, a gender field might have entries such as "M," "F," "Male," "Female," or "MF." These differences make it more challenging to filter, search, or report on the data, and often require manual effort to clean and standardize the values.
 * **Limited reporting and analytics support**<br />Custom fields are less suitable for reporting and analytics than extended fields.
@@ -35,7 +35,7 @@ You can create custom fields for the following scopes:
 
   The uncontrolled nature of custom field values can hinder their direct use in CDP-driven use cases like personalization, segmentation, and automated workflows unless rigorous validation and standardization practices are applied.
 
-### Creating a new custom field
+## Creating a new custom field
 
 <Callout kind="alert" title="Important">
 
@@ -81,7 +81,7 @@ The table shows the fields with their descriptions.
 
 The custom field is created.
 
-### Viewing a custom field
+## Viewing a custom field
 
 1. To view the new custom field, navigate to **Organization Settings** > **Master Data Management** > **Data Model** > **Custom Fields**.
 
@@ -93,7 +93,7 @@ The custom field is created.
 
 <Image src="https://files.readme.io/627aa87-image.png" width="1920" height="1080" alt="" />
 
-### Updating a custom field
+## Updating a custom field
 
 To update a custom field, perform the following:
 
@@ -109,11 +109,11 @@ To update a custom field, perform the following:
 4. Update the custom field according to your requirements.
 5. Click **Submit**.
 
-#### Updating custom fields via Data Import Framework
+### Updating custom fields via Data Import Framework
 
 When updating custom fields using the Data Import Framework, blank or null values in the import file will not clear the field. To clear or reset a custom field, enter a dash ('-') as the value in the import file. The system will interpret the dash as 'no data' and clear the field value.
 
-### Deleting a custom field
+## Deleting a custom field
 
 To delete a custom field, perform the following:
 
@@ -131,7 +131,7 @@ After you make changes in a custom field:
 * For Store Server, perform a complete sync from Settings or wait till the next auto-sync completes.
 * For Thin Client, restart your thin client and check if you are able to view the changes.
 
-### Converting custom field to extended field
+## Converting custom field to extended field
 
 To convert a custom field to an extended field, raise a ticket to the Platforms team requesting the conversion. The converted extended field is be used in reports and campaigns.
 

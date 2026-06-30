@@ -2,13 +2,13 @@
 title: Setup Behavioral events
 ---
 
-## Setup Behavioral events
+# Setup Behavioral events
 
-## Behavioral Events Overview
+# Behavioral Events Overview
 
 Events are activities of a customer either on an online store or at a physical store. Behavioural Event is a platform that lets you create standard and custom events to capture customer activities across channels. After you create an event, whenever it is triggered, the payload containing the defined attribute information is sent to the webhook. The Behavioral Event framework listens to this event, validates it, and sends it to the corresponding destination such as loyalty, journey, etc.
 
-## Objective
+# Objective
 
 The Behavioral Events data collected across sources can be used to develop personalized content, segment customers, or even incentivize customers.
 
@@ -26,7 +26,7 @@ For example:
 
 5. In the case of hospitality, you can send tailored messages to customers based on the stage of their purchase cycles such as inquiry, booking, check-in, and checkout.
 
-## Modules that consume Behavioral Events
+# Modules that consume Behavioral Events
 
 Currently, events data can be consumed by Insights+ and Loyalty+. By default, Insights+ consumes any event that you create on Behavioral Events. However, you need to manually set if you want to consume by Loyalty+.
 
@@ -37,7 +37,7 @@ Currently, events data can be consumed by Insights+ and Loyalty+. By default, In
 
 2. Insights+ (upcoming feature) to analyze events data. For example, most searched products frequently searched products during a festival season.
 
-## Types of Behavioral Events
+# Types of Behavioral Events
 
 The following are two types of Behavioral Events available.
 
@@ -63,48 +63,48 @@ The following table provides an understanding of choosing between standard and c
 | Delete custom attributes after publishing                            | No              | No            |
 | Add custom attributes (string, enum, double, date) before publishing | Yes             | Yes           |
 
-## New terminologies
+# New terminologies
 
-### Webhook
+## Webhook
 
 Enables syncing and relaying data between third-party applications and the Capillary Server facilitating automated calls and real-time updates.
 
-### WebEngage
+## WebEngage
 
 Multi-channel user engagement platform that lets you automate communications.
 
-### Transformer
+## Transformer
 
 Used to convert the payload sent by the third-party app to a payload understood by Capillary. In simple terms, it is a field mapping.
 
-### Webhook Adapter
+## Webhook Adapter
 
 Used to track real-time events data that consists of payload understandable by the Capillary system.
 
-### Integration
+## Integration
 
 Automates pushing event data from a third-party app or website to the Capillary system. There are two types of integrations-
 
 1. WebEngage to integrate Capillary Behavioural Events platform with WebEngage.
 2. Custom integration to integrate Capillary Behavioural Events platform to any other third-party apps.
 
-##### Source Account
+#### Source Account
 
 Source in which a customer is registered. Example: Facebook, WebEngage, WeChat, InStore, Martjack, TMall, Taobao, JD, Ecommerce, Website, and Line.
 
-### Event and Attribute
+## Event and Attribute
 
 Event is customer activity such as logging out, adding items to cart, and so on. Whereas, attributes are entries of an event that needs to be captured by our system. For example, for the event product review, you could have attributes like title and review message body.
 
-### Standard Event
+## Standard Event
 
 A predefined event with a defined set of attributes.
 
-### Custom Event
+## Custom Event
 
 A user-defined event that lets you define your own attributes that you want to capture.
 
-### Standard Attributes
+## Standard Attributes
 
 The standard attribute in a behavioural event system is a default attribute that will be applicable for all the events. There are two standard attributes,  `eventDateTime` and `storeUnitID`. These attributes need not be defined during the creation of an event and are applicable for all events by default.
 
@@ -139,7 +139,7 @@ The formats that are acceptable for the eventDateTime attribute are given below:
 
 </Callout>
 
-### Custom Attributes
+## Custom Attributes
 
 > Note
 >
@@ -168,7 +168,7 @@ These attributes can be of any of the following data types:
 * String
 * Double
 
-#### Attribute order for group-based behavioral events
+### Attribute order for group-based behavioral events
 
 When publishing a behavioral event that includes a groupId, the system must identify the customer before validating group membership. In the current validation flow, this also means that customer-related attributes need to be processed before group-related attributes.
 
@@ -198,11 +198,11 @@ When your event payload includes both customer identifiers and a group identifie
 
 Before publishing a group-based behavioral event, verify that the customer identifier is configured correctly for the event, the customer exists in the system, and the customer is added to the target group. This prevents group mismatch errors during event publishing.
 
-## Mapping
+# Mapping
 
 Also called attribute mapping that lets you map attributes of a behavioural event with the attributes of a third-party application.
 
-## Handling behavioural in connected organizations
+# Handling behavioural in connected organizations
 
 In a connected organization setup, behavioural events can be defined as one of the following:
 
@@ -210,7 +210,7 @@ In a connected organization setup, behavioural events can be defined as one of t
 * Child-specific event
 * Parent-only event
 
-### Common event for both parent and child
+## Common event for both parent and child
 
 When an event needs to trigger actions at both the parent and child levels, it is posted to the parent webhook along with the child organization context in the event payload.
 
@@ -221,7 +221,7 @@ After the child org processes the event, it is replayed to the parent organizati
 
 To enable this, while sending the event to the parent webhook, the event payload includes a custom attribute called `orgResolver`, which contains the `childOrgId`. The parent webhook uses this ID to route each event to the correct child organization.
 
-#### How it works
+### How it works
 
 1. The app sends all behavioural events to the **parent organization’s webhook**.
 2. The event payload includes a custom attribute named `orgResolver`, which contains the **child organization ID**.
@@ -242,7 +242,7 @@ To enable this, while sending the event to the parent webhook, the event payload
 }
 ```
 
-#### Example:
+### Example:
 
 A healthcare insurance firm operates a wellness app that is used by employees from multiple companies.
 Each company is set up as a **child organization**, while the insurance firm itself operates as the **parent organization**.
@@ -260,16 +260,16 @@ The event payload includes the `childOrgId`, which identifies the company where 
 * The parent webhook routes the event to the respective **child organization**, which processes the local reward rule.
 * The same event is **replayed at the parent organization**, triggering parent-level rewards and workflows.
 
-### Child-specific events
+## Child-specific events
 
 If the event is specific to a child (not shared or defined at parent level), it is posted directly to the child organization webhook.
 These events stay local and are not replayed to the parent.
 
-### Parent-specific events
+## Parent-specific events
 
 If the event is specific to a parent, it is posted directly to the parent organization webhook.
 
-## Limitations of Behavioral Events
+# Limitations of Behavioral Events
 
 The following are the limitations of Behavioral Events.
 
@@ -284,7 +284,7 @@ The following are the limitations of Behavioral Events.
 * Custom attribute names can have only up to 50 characters.
 * Custom attributes can have only enum, date, Boolean, integer, double, and string as data types.
 
-## Steps to configure and publish an event
+# Steps to configure and publish an event
 
 1. Create a Webhook integration for a WebEngage platform or any other third-party apps or platforms.
 2. Create a new custom event or add a standard event.
@@ -292,7 +292,7 @@ The following are the limitations of Behavioral Events.
 4. Run a sample test to validate whether the data is flowing correctly as desired.
 5. Publish the event.
 
-## Add Webhook Integration
+# Add Webhook Integration
 
 Webhook facilitates pushing real-time data from a third-party application or website to the Capillary database through a web callback or HTTP push API. A Webhook integration is a combination of a third-party app and Till code. For every Webhook integration you create, a unique URL is generated. The respective third-party apps need to make a POST call to the URL passing events data.
 
@@ -327,11 +327,11 @@ If an event has the Till Code attribute, then the till code tagged in the Webhoo
 
 </Callout>
 
-### Webhook Configuration for Behavioural Events in Connected Organizations
+## Webhook Configuration for Behavioural Events in Connected Organizations
 
 In a Connected organization setup, you only need to configure the webhook at the **parent organization** level. The system automatically routes events from both the parent and all connected child organizations to this webhook.
 
-#### Key Behaviours
+### Key Behaviours
 
 * **Single webhook setup -**  Configure the webhook only in the parent organization. No separate setup is required in the child organizations.
 
@@ -341,7 +341,7 @@ In a Connected organization setup, you only need to configure the webhook at the
 
 * **Child-only webhooks -** If a webhook is set up only in a child organization (outside the connected org setup), it processes events **locally**. These events are **not sent** to the parent webhook. If needed, you can enable listening to child events when [setting up the parent webhook](https://docs.capillarytech.com/reference/add-webhook#/).
 
-## Add and map custom event
+# Add and map custom event
 
 Create custom events if you want to capture specific details that are not available in standard events. You can use both standard and custom attributes to create custom events.
 
@@ -403,11 +403,11 @@ To create a custom event, follow these steps.
 
 </Callout>
 
-## Enabling uniqueness check
+# Enabling uniqueness check
 
 In behavioural events, you can enable uniqueness checks and avoid issuing reward points for duplicate events. After the uniqueness check, duplicate events are not deleted nor does the Behavioral Event framework reject it. The EMF identifies duplicate events by checking their uniqueness. If there is a duplicate event, it is not processed. This ensures that points are not provided for duplicate events.
 
-### Use case
+## Use case
 
 A behavioural event comes to Capillary from WebEngage and the timeout set for this request is 5 seconds at WebEngage. If Capillary fails to respond within 5 secs, WebEngage triggers the same request again. The uniqueness check enables to identify the duplicate events and avoids issuing reward points for duplicate events.
 
@@ -448,7 +448,7 @@ By default, the event name and customer identifier are part of the unique key an
 
 </Callout>
 
-### Map custom event to source event
+## Map custom event to source event
 
 There are some instances where events that come to Capillary's system are not in a format supported by Capillary. For example, the Capillary does not support an event name with a blank space. Suppose an event named Promotion Viewed is coming from WebEngage (source). You need to create a custom useevent - promotionViewed (custom event name) and map it to Promotion Viewed (source event name) using the event mapping process.
 
@@ -456,7 +456,7 @@ Behavioral Events lets you map a custom event to a source event.  You can do it 
 
 The following are the different stages of event publishing when you can map a custom event to a source event.
 
-##### Create custom event
+#### Create custom event
 
 To create a custom event, follow these steps.
 
@@ -464,7 +464,7 @@ To create a custom event, follow these steps.
 2. In the **All Events** tab, click + Add Event
 3. On the **Add Events** page, click + *Create New Event* to create, test, and publish a custom event with attributes.
 
-##### Map custom events and their attributes
+#### Map custom events and their attributes
 
 To map a custom event to a source event, follow these steps.
 
@@ -476,7 +476,7 @@ To map a custom event to a source event, follow these steps.
 6. Enter the source's event attribute to map the custom event and the source event attributes.
 7. Click **Save**.
 
-##### View and modify a custom event
+#### View and modify a custom event
 
 To view and edit mapping, follow these steps.
 
@@ -487,7 +487,7 @@ To view and edit mapping, follow these steps.
 5. Modify the mapping as You can modify the event name and event attributes - the event name and source attributes. The system does not allow to change the source.
 6. Click **Save**.
 
-## Add a Standard Event
+# Add a Standard Event
 
 1. In **Source**, select the source of the event. For now, only WebEngage is supported.
 2. In **Event Name,** specify your preferred name for the event.
@@ -502,7 +502,7 @@ The Publish button will be active only once the page is refreshed after pushing 
 
 6. Click **Publish** to publish the event
 
-## Test and Publish Event
+# Test and Publish Event
 
 By default, an event that is created will be in draft mode. Once the event is tested successfully and if the data is flowing as desired, you can publish the event to make it live.
 
@@ -557,7 +557,7 @@ Create a custom Webhook URL. When selecting the integration under the **Select I
 
 <Image src="https://files.readme.io/ad90225-image_3.png" width="500px" height="1080" alt="" />
 
-## Timezone in behavioural events
+# Timezone in behavioural events
 
 <details>
   <summary>Scenario 1: Behavioural Event payload without `eventDateTime` value. </summary>
@@ -574,7 +574,7 @@ Create a custom Webhook URL. When selecting the integration under the **Select I
 
 </details>
 
-## Reporting
+# Reporting
 
 Behavioural events created within the system are automatically onboarded into the Insights database once the data is pushed into the event. After an organization is onboarded to the automated Behavioral Events (BE) flow, the data corresponding to all the BEs will be available for reporting within 24 hours after completion of ETL sync. This would allow the users to create normal charts and migration charts powered on BE data.
 

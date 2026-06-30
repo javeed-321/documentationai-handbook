@@ -2,9 +2,9 @@
 title: Create a Search Filter
 ---
 
-## Create a Search Filter
+# Create a Search Filter
 
-#### 1. Navigate to the Search Filter Configuration Page
+### 1. Navigate to the Search Filter Configuration Page
 
 * Navigate to **Organization Settings** > **Master Data Management** > **Search Filters**.
 
@@ -15,7 +15,7 @@ title: Create a Search Filter
   Example for the Europe cluster:
   `https://eu.intouch.capillarytech.com/search-criteria/ui`
 
-#### 2. Start Creating a New Filter
+### 2. Start Creating a New Filter
 
 * Click **New Search Filter**.
 
@@ -23,7 +23,7 @@ title: Create a Search Filter
 
 ***
 
-#### 3. Configure Basic Filter Details
+### 3. Configure Basic Filter Details
 
 * **Entity**: Select either **Customer** or **Transaction**.
 
@@ -38,7 +38,7 @@ title: Create a Search Filter
   | Transaction | AND only                     | Combine fields (e.g., bill number **AND** bill date). You can mark fields as mandatory.                                                               |
   | Customer    | AND OR                       | **AND**: Combination searches like first name **AND** last name. <br />**OR**: Partial searches like the first few letters of a name or phone number. |
 
-#### 4. Set Search Duration
+### 4. Set Search Duration
 
 * Applicable only for **AND** condition.
 
@@ -54,7 +54,7 @@ title: Create a Search Filter
 > – **Customer**: Registration date
 > – **Transaction**: Billing date
 
-#### 5. Choose Searchable Fields
+### 5. Choose Searchable Fields
 
 Field options vary based on the entity and condition:
 
@@ -65,14 +65,14 @@ Field options vary based on the entity and condition:
 | **Custom Fields**     | Supported                                                                                     | Supported                          | Not supported                                                        |
 | **Extended Fields**   | Supported                                                                                     | Supported                          | Not supported                                                        |
 
-#### 6. Mark Mandatory Fields (Only for AND)
+### 6. Mark Mandatory Fields (Only for AND)
 
 * **AND filters**:\
   – At least one field must be indexed
   – Max 6 **mandatory** and 5 **non-mandatory** fields
 * **OR filters**: No mandatory fields required
 
-#### 7. Validate the Filter
+### 7. Validate the Filter
 
 * Click the **Validate** button.
 
@@ -84,7 +84,7 @@ Field options vary based on the entity and condition:
 
 * Filters with [high cardinality](https://docs.capillarytech.com/docs/overview-search-filter#understanding-cardinality) have a better chance of passing.
 
-#### 8. Activate the Filter
+### 8. Activate the Filter
 
 * Once validation is successful:
 
@@ -96,7 +96,7 @@ Field options vary based on the entity and condition:
 
 * Status changes from **Activation in progress** to **Active**.
 
-#### 9. Deactivating a Filter
+### 9. Deactivating a Filter
 
 * From the list page, select **Deactivate** from the filter's menu.
 
