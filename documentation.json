@@ -99,6 +99,10 @@
             "group": "Data Fields",
             "pages": [
               {
+                "title": "SVG All Links",
+                "path": "svg-all-links"
+              },
+              {
                 "title": "svg",
                 "path": "svg"
               },
