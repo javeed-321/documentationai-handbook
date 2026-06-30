@@ -8883,124 +8883,124 @@ Notifies when alternate currencies issued to the user are reversed. For example,
 <CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
   ```json "Webhook payload"
   data: {
-          customerIdentifiers: {
-            customerId: 386959475,
-            instore:{
+      customerIdentifiers: {
+          customerId: 386959475,
+          instore: {
               email: ruchi@gmail.com,
               mobile: 917237869215
-            }
-          },
-          entityInformation: {
-            entityId: 386959475
-            entityType:USER
-          },
-          loyaltyProgramDetails: {
-            id: 2645
-            isDefault:true
-            name: Test_OrgDefaultProgram
-            pointsToCurrencyRatio:1
-            tiers : [
+          }
+      },
+      entityInformation: {
+          entityId: 386959475,                              // added comma
+          entityType: USER
+      },
+      loyaltyProgramDetails: {
+          id: 2645,                                         // added comma
+          isDefault: true,                                  // added comma
+          name: Test_OrgDefaultProgram,                     // added comma
+          pointsToCurrencyRatio: 1,                         // added comma
+          tiers: [
               {
-                tierName:Default_tier
-                tierNumber:1
+                  tierName: Default_tier,                   // added comma
+                  tierNumber: 1
               },
               {
-                tierName:Silver_tier
-                tierNumber:2
+                  tierName: Silver_tier,                    // added comma
+                  tierNumber: 2
               },
               {
-                tierName:Gold_tier
-                tierNumber:2
+                  tierName: Gold_tier,                      // added comma
+                  tierNumber: 2
               }
-            ]
-          },
-          loyaltyProgramId: 2645,
-          alternateCurrencies": [
-            {
+          ]
+      },
+      loyaltyProgramId: 2645,
+      alternateCurrencies: [                                // removed stray "
+          {
               currentEventPromisedAlternateCurrenciesReturned: 10,
               currentEventRegularAlternateCurrenciesReturned: 10,
               currentEventTotalAlternateCurrenciesReturned: 130,
-              currentEventPromotionAlternateCurrenciesReturnedDetails: {
-                  promotionIdentifier: 528d181-7e91-4abe-86cd-598cee9b8ccf,
-                  promotionAlternateCurrencies:100,
-                  promotionType:BILL
-                },
-                {
-                  promotionIdentifier: a6cb5a7e-3d84-4f1f-87c6-5f26006f6392,
-                  promotionAlternateCurrencies:10,
-                  promotionType:BILL
-                }
-              }
+              currentEventPromotionAlternateCurrenciesReturnedDetails: [  // changed { to [
+                  {
+                      promotionIdentifier: 528d181-7e91-4abe-86cd-598cee9b8ccf,
+                      promotionAlternateCurrencies: 100,
+                      promotionType: BILL
+                  },
+                  {
+                      promotionIdentifier: a6cb5a7e-3d84-4f1f-87c6-5f26006f6392,
+                      promotionAlternateCurrencies: 10,
+                      promotionType: BILL
+                  }
+              ],                                            // changed } to ], added comma
               alternateCurrencyName: stars,
               alternateCurrencyIdentifier: dsgagg,
               programCurrentAlternateCurrencies: 0,
               programLifetimeAlternateCurrencies: 0,
-              promisedAlternateCurrenciesReversed: 10
-              promotionalAlternateCurrenciesReversed : [
-                {
-                  promotionIdentifier: 528d181-7e91-4abe-86cd-598cee9b8ccf,
-                  promotionAlternateCurrencies:100,
-                  promotionType:CUSTOMER_PROMOTION
-                },
-                {
-                  promotionIdentifier: a6cb5a7e-3d84-4f1f-87c6-5f26006f6392,
-                  promotionAlternateCurrencies:10,
-                  promotionType:CUSTOMER_PROMOTION
-                }
+              promisedAlternateCurrenciesReversed: 10,      // added comma
+              promotionalAlternateCurrenciesReversed: [
+                  {
+                      promotionIdentifier: 528d181-7e91-4abe-86cd-598cee9b8ccf,
+                      promotionAlternateCurrencies: 100,
+                      promotionType: CUSTOMER_PROMOTION
+                  },
+                  {
+                      promotionIdentifier: a6cb5a7e-3d84-4f1f-87c6-5f26006f6392,
+                      promotionAlternateCurrencies: 10,
+                      promotionType: CUSTOMER_PROMOTION
+                  }
               ],
-              regularAlternateCurrenciesReversed: 10
+              regularAlternateCurrenciesReversed: 10,       // added comma
               totalAlternateCurrenciesReversed: 130
-            },
-            {
+          },
+          {
               alternateCurrencyName: coins,
               alternateCurrencyIdentifier: gwggdg,
               programCurrentAlternateCurrencies: 0,
               programLifetimeAlternateCurrencies: 0,
-              promisedAlternateCurrenciesReversed: 10
-              promotionalAlternateCurrenciesReversed : [
-                {
-                  promotionIdentifier: 528d181-7e91-4abe-86cd-598cee9b8ccf,
-                  promotionAlternateCurrencies100,
-                  promotionType:BILL
-                },
-                {
-                  promotionIdentifier: a6cb5a7e-3d84-4f1f-87c6-5f26006f6392,
-                  promotionAlternateCurrencies:10,
-                  promotionType:BILL
-                }
+              promisedAlternateCurrenciesReversed: 10,      // added comma
+              promotionalAlternateCurrenciesReversed: [
+                  {
+                      promotionIdentifier: 528d181-7e91-4abe-86cd-598cee9b8ccf,
+                      promotionAlternateCurrencies: 100,    // added missing colon
+                      promotionType: BILL
+                  },
+                  {
+                      promotionIdentifier: a6cb5a7e-3d84-4f1f-87c6-5f26006f6392,
+                      promotionAlternateCurrencies: 10,
+                      promotionType: BILL
+                  }
               ],
-              regularAlternateCurrenciesReversed: 10
-              totalAlternateCurrenciesReversed: 130           
-            }
-          ],
-          triggeringActivity: {
-            additionalAttributes: {},
-            enteredBy: {
+              regularAlternateCurrenciesReversed: 10,       // added comma
+              totalAlternateCurrenciesReversed: 130
+          }
+      ],
+      triggeringActivity: {
+          additionalAttributes: {},
+          enteredBy: {
               id: 50672906
-            },
-            entityInformation: {
+          },
+          entityInformation: {
               entityId: 386959475,
               entityType: USER
-            },
-            identifiers: [
+          },
+          identifiers: [
               {
-                key: billId.
-                value: 0
+                  key: billId,                              // changed . to ,
+                  value: 0
               },
               {
-                key: billNumber,
-                value: 454545
+                  key: billNumber,
+                  value: 454545
               }
-            ],
-            name: ReturnBill
-          },
-          eventId: 1de73162-daf8-4c39-bc63-0af20bb4371e
-          eventName: issuedalternateCurrenciesReversed
-          loyaltyEventId: 1c1716568b10135aa4e59fda77935ea2014b3bfc
-          orgId: 51182
-          refId: 51182_1c1716568b10135aa4e59fda77935ea2014b3bfc
-             
-      }
+          ],
+          name: ReturnBill
+      },
+      eventId: 1de73162-daf8-4c39-bc63-0af20bb4371e,       // added comma
+      eventName: issuedalternateCurrenciesReversed,         // added comma
+      loyaltyEventId: 1c1716568b10135aa4e59fda77935ea2014b3bfc, // added comma
+      orgId: 51182,                                         // added comma
+      refId: 51182_1c1716568b10135aa4e59fda77935ea2014b3bfc
+  }
   ```
 
   ```json "Non webhook payload"
@@ -10100,4 +10100,4 @@ Notifies the merging of loyalty users.
   }
   ```
 </CodeGroup>
- 
+
