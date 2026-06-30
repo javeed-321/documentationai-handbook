@@ -1,6 +1,5 @@
----
-title: Loyalty
----
+# Loyalty
+
 # Milestone (Targets) and Streaks
 
 This section contains the schemas of various milestones (also called targets) related event notifications. These will be sent to the respective brand's webhooks which brands can consume and use at their end.
@@ -39,8 +38,8 @@ This section contains the schemas of various milestones (also called targets) re
 
 Notifies when a target achieved value has been updated. For example, a user purchases a line-item that updates the target value.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={["Tab 2"]}>
+  ```json
   {
     "eventId": "58aa15c9-1a08-422d-9272-f2a1cdc3f8c1",
     "eventType": "1000006_targetAchievedValueUpdated",
@@ -95,7 +94,7 @@ Notifies when a target achieved value has been updated. For example, a user purc
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json "Tab 2"
   {
     "eventName": "targetAchievedValueUpdated",
     "eventLogId": 6566,
@@ -328,8 +327,8 @@ Notifies when a target achieved value has been updated. For example, a user purc
 
 Notifies when a user achieves the set target.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "eventId": "59589150-8626-4841-bfc5-9f53f81af6ec",
     "eventType": "2013_targetValueAchieved",
@@ -381,7 +380,7 @@ Notifies when a user achieves the set target.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "targetValueAchieved",
     "eventLogId": 3397,
@@ -601,8 +600,8 @@ Notifies when a user achieves the set target.
 
 Notifies the completion of a target period for a user.
 
-<CodeGroup show-lines="true" tabs={["Non webhook payload"]}>
-  ```json "Non webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
           "eventName": "targetPeriodCompleted",
           "data": {
@@ -826,8 +825,8 @@ Notifies the completion of a target period for a user.
 
 Notifies when the target value associated with the user has been updated.
 
-<CodeGroup show-lines="true" tabs={["Non webhook payload"]}>
-  ```json "Non webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
           "eventName": "targetValueUpdated",
           "data": {
@@ -1010,8 +1009,8 @@ Notifies when the target value associated with the user has been updated.
 
 Notifies when a user achieves the set target for a unified target.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "event": {
       "body": {
@@ -1097,7 +1096,7 @@ Notifies when a user achieves the set target for a unified target.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "unifiedTargetsAchieved",
     "eventLogId": 6340,
@@ -1323,8 +1322,8 @@ Notifies when a user achieves the set target for a unified target.
 
 Notifies when a user does not meet the defined unified target within the time frame.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "event": {
       "body": {
@@ -1398,7 +1397,7 @@ Notifies when a user does not meet the defined unified target within the time fr
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "unifiedTargetsUnAchieved",
     "eventLogId": 3634,
@@ -1624,8 +1623,8 @@ Notifies when a user does not meet the defined unified target within the time fr
 
 Notifies when a user is enrolled on a target. You can send multiple event notifications to customers enrolled in a particular target.
 
-<CodeGroup show-lines="true" tabs={["Fixed window","Cyclic Window"]}>
-  ```json "Fixed window"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "targetCustomerEnrolment",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1657,7 +1656,7 @@ Notifies when a user is enrolled on a target. You can send multiple event notifi
   }
   ```
 
-  ```json "Cyclic Window"
+  ```json
   {
       "eventName": "targetCustomerEnrolment",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1694,8 +1693,8 @@ Notifies when a user is enrolled on a target. You can send multiple event notifi
 
 Notifies when a user is unenrolled from a target. You can send multiple event notifications to customers who are unenrolled from a particular target.
 
-<CodeGroup show-lines="true" tabs={["Fixed window","Cyclic window"]}>
-  ```json "Fixed window"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "targetCustomerUnenrolment",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1727,7 +1726,7 @@ Notifies when a user is unenrolled from a target. You can send multiple event no
   }
   ```
 
-  ```json "Cyclic window"
+  ```json
   {
       "eventName": "targetCustomerUnenrolment",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -1764,8 +1763,8 @@ Notifies when a user is unenrolled from a target. You can send multiple event no
 
 Notifies when the target evaluation period begins.
 
-<CodeGroup show-lines="true" tabs={["Non webhook payload"]}>
-  ```json "Non webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
           "eventName": "targetPeriodStarted",
           "data": {
@@ -1980,8 +1979,8 @@ Notifies when the target evaluation period begins.
 
 Notifies when a user has achieved a streak level.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "streakLevelAchieved",
       "data":
@@ -2040,7 +2039,7 @@ Notifies when a user has achieved a streak level.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "streakLevelAchieved",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -2267,8 +2266,8 @@ Notifies when a user has achieved a streak level.
 
 Notifies when a streak level has not been achieved within the time-frame.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventId": "462c3420-af0f-4300-b915-f5ea62461158",
       "eventType": "streakLevelUnAchieved",
@@ -2326,7 +2325,7 @@ Notifies when a streak level has not been achieved within the time-frame.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "streakLevelUnAchieved",
     "eventLogId": 9328,
@@ -2553,8 +2552,8 @@ Notifies when a streak level has not been achieved within the time-frame.
 
 Notifies when a user has been enrolled to a streak.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "streakCustomerEnrolment",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -2634,7 +2633,7 @@ Notifies when a user has been enrolled to a streak.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "streakCustomerEnrolment",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -2877,8 +2876,8 @@ Notifies when a user has been enrolled to a streak.
 
 This event is triggered when a user is unenrolled from a streak.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "streakCustomerUnEnrolment",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -2958,7 +2957,7 @@ This event is triggered when a user is unenrolled from a streak.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "streakCustomerUnEnrolment",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -3198,8 +3197,8 @@ This event is triggered when a user is unenrolled from a streak.
 
 Notifies when a streak has started for a user. A streak starts when a user begins a series of consecutive actions or engagements as defined by the brand.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "streakStart",
       "data":
@@ -3256,7 +3255,7 @@ Notifies when a streak has started for a user. A streak starts when a user begin
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "streakStart",
     "eventLogId": 3355,
@@ -3484,8 +3483,8 @@ Notifies when a streak has started for a user. A streak starts when a user begin
 
 Notifies when a streak has ended for a user.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "streakEnd",
       "data":
@@ -3547,7 +3546,7 @@ Notifies when a streak has ended for a user.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "streakEnd",
     "eventLogId": 6690,
@@ -3778,12 +3777,12 @@ As of now, whenever a customer makes a purchase, all the milestone values which 
 
 However, whenever a customer returns a transaction, the milestone value which previously increased because of that purchase will also be decreased accordingly. But there is no event notification for such instances. To understand with an example:
 
-Step 1: Milestone on lifetime purchases created, and milestone value is 10,000.
-Step 2: Customer made a transaction worth 3000.
-Step 3: Customer’s milestone achieved value increased from 0 → 3000
-Step 4: Brand will get an event notification about the above step.
-Step 5: After days, the customer returned the purchase of step-2.
-Step 6: Now the milestone achieved value will decrease from 3000 → 0.
+Step 1: Milestone on lifetime purchases created, and milestone value is 10,000.\
+Step 2: Customer made a transaction worth 3000.\
+Step 3: Customer’s milestone achieved value increased from 0 → 3000\
+Step 4: Brand will get an event notification about the above step.\
+Step 5: After days, the customer returned the purchase of step-2.\
+Step 6: Now the milestone achieved value will decrease from 3000 → 0.\
 Step 7: But brands/customers are not getting any event notification of the same.
 
 Now, with this latest enhancement, brands will get notified even in the case of return transactions about the decreased milestone value.
@@ -3853,8 +3852,8 @@ Notifies when points are issued to a user.
 
 Example of points Issued on Transaction/Add
 
-<CodeGroup show-lines="true" tabs={["via transaction","Non webhook payload","Good will points"]}>
-  ```json "via transaction"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "pointsIssued",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -3997,7 +3996,7 @@ Example of points Issued on Transaction/Add
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "pointsIssued",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -4244,7 +4243,7 @@ Example of points Issued on Transaction/Add
   }
   ```
 
-  ```json "Good will points"
+  ```json
   {
       "eventName": "pointsIssued",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -4384,8 +4383,8 @@ Notifies when a user has redeemed points.
 
 Sample schema of group program redemption.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "createdAt": 1773728555836,
     "data": {
@@ -4480,7 +4479,7 @@ Sample schema of group program redemption.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "pointsRedeemed",
     "eventLogId": 4586,
@@ -4712,8 +4711,8 @@ Sample schema of group program redemption.
 
 Sample schema of Participating Program Redemption
 
-<CodeGroup show-lines="true" tabs={["Webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
      "eventName":"pointsRedeemed",
      "eventId":"ABC-87484sdas&$",
@@ -4848,8 +4847,8 @@ Notifies when promised points are converted to current points in a loyalty progr
 | apiRequestId                | String           | Unique identifier for the API request.                                                            |
 | orgId                       | Integer          | Unique identifier for the organization.                                                           |
 
-<CodeGroup show-lines="true" tabs={["Points unlock API","Delayed accrual job","Via Transaction Add"]}>
-  ```json "Points unlock API"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "promisedToCurrentPointsConversion",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -4927,7 +4926,7 @@ Notifies when promised points are converted to current points in a loyalty progr
   }
   ```
 
-  ```json "Delayed accrual job"
+  ```json
   {
       "createdAt": 1739859870860,
       "loyaltyEventId": "mBbJnPSQ0XOIwF5",
@@ -4996,7 +4995,7 @@ Notifies when promised points are converted to current points in a loyalty progr
   }
   ```
 
-  ```json "Via Transaction Add"
+  ```json
   {
       "eventName": "promisedToCurrentPointsConversion",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -5111,8 +5110,8 @@ Notifies when points earned by a user has expired.
 | -- loyaltyProgramId       | Integer          | Unique identifier for the loyalty program.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | -- pointsExpired          | Integer          | Total points that have expired.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "createdAt": 1772715857571,
     "data": {
@@ -5173,7 +5172,7 @@ Notifies when points earned by a user has expired.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "pointsExpired",
     "eventLogId": 7946,
@@ -5425,8 +5424,8 @@ Notifies when a user's points are about to expire.
 | scheduledExpiryDateInMillis | String           | Date when the points are scheduled to expire in the Unix epoch timestamp.                                                                |
 | loyaltyEventId              | Null             | Unique identifier for the loyalty event (null if not applicable).                                                                        |
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "pointsExpiryReminder",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -5475,7 +5474,7 @@ Notifies when a user's points are about to expire.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "pointsExpiryReminder",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -5750,8 +5749,8 @@ Notifies when a points transfer for a user is initiated.
 | apiRequestId                             | String           | Unique identifier for the API request.                                                            |
 | orgId                                    | Integer          | Unique identifier for the organization                                                            |
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "eventId": "3c9d293a-f9bd-4a49-a54a-63d4af500b46",
     "eventLogId": 34805034,
@@ -5823,7 +5822,7 @@ Notifies when a points transfer for a user is initiated.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "pointsTransferredInitiated",
     "eventLogId": 9747,
@@ -6246,8 +6245,8 @@ Notifies when a points transfer request of a user is received. Points transfer a
 | apiRequestId                              | String           | Unique identifier for the API request.                                                            |
 | orgId                                     | Integer          | Unique identifier for the organization.                                                           |
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "eventId": "bb12e156-edfe-4a2d-9831-b1224ebb3d77",
     "eventLogId": 34805034,
@@ -6312,7 +6311,7 @@ Notifies when a points transfer request of a user is received. Points transfer a
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "pointsTransferredReceived",
     "eventLogId": 9573,
@@ -6742,8 +6741,8 @@ Notifies when redeemed points are reversed. Reversal of redeemed points occurs w
 | -- apiRequestId                         | String           | Unique identifier for the API request.                                                          |
 | -- orgId                                | Integer          | Unique identifier for the organization                                                          |
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "eventId": "a5058d77-370f-4544-a420-8337f9d5fbf1",
     "eventLogId": 34805097,
@@ -6832,7 +6831,7 @@ Notifies when redeemed points are reversed. Reversal of redeemed points occurs w
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "redeemedPointsReversed",
     "eventLogId": 8738,
@@ -7100,8 +7099,8 @@ Notifies when the points expiry date is updated under the Single Points Expiry f
 | --- apiRequestId          | String           | Unique identifier for the API request.                                                                                    |
 | --- orgId                 | Integer          | Unique identifier for the organization.                                                                                   |
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "singlePointsExpiryUpdated",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -7145,7 +7144,7 @@ Notifies when the points expiry date is updated under the Single Points Expiry f
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "singlePointsExpiryUpdated",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -7415,8 +7414,8 @@ Notifies when points issued for a user has been reversed. For example, a user ha
 | createdAt                                     | Integer          | Timestamp when the event was created (milliseconds since epoch).                                  |
 | loyaltyEventId                                | String           | Unique identifier for the loyalty event.                                                          |
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "eventName": "issuedPointsReversed",
     "eventId": "a9f1dd54-0477-4a4f-a509-ed5c35cbce7a",
@@ -7492,7 +7491,7 @@ Notifies when points issued for a user has been reversed. For example, a user ha
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "issuedPointsReversed",
     "eventLogId": 676,
@@ -7736,8 +7735,8 @@ Notifies when points issued for a user has been reversed. For example, a user ha
 
 Notifies whenever points are adjusted/deducted manually.
 
-<CodeGroup show-lines="true" tabs={["Non webhook payload"]}>
-  ```json "Non webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
           "eventName": "manualPointsAdjustment",
           "data": {
@@ -7954,8 +7953,8 @@ Notifies whenever points are adjusted/deducted manually.
 
 Notifies when a points expiry date changes.
 
-<CodeGroup show-lines="true" tabs={["Via thrift (API-Immediate)","via Points Expiry Batch (Scheduled job)"]}>
-  ```json "Via thrift (API-Immediate)"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "pointsExpiryChange",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -8014,7 +8013,7 @@ Notifies when a points expiry date changes.
   }
   ```
 
-  ```json "via Points Expiry Batch (Scheduled job)"
+  ```json
   {
       "eventName": "pointsExpiryChange",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -8124,8 +8123,8 @@ Notifies when a points expiry date changes.
 
 Notifies when a Promised/External Points are converted for a customer.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "createdAt": 1739857872597,
       "loyaltyEventId": "WAN63O3tpr",
@@ -8176,7 +8175,7 @@ Notifies when a Promised/External Points are converted for a customer.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "promisedToCurrentPointsConversion",
     "eventLogId": 7326,
@@ -8471,8 +8470,8 @@ An alternate currency is a type of reward currency, similar to points, that bran
 
 Notifies when alternate currencies are issued to a user.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "alternateCurrenciesIssued",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -8623,7 +8622,7 @@ Notifies when alternate currencies are issued to a user.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "alternateCurrenciesIssued",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -8880,9 +8879,9 @@ Notifies when alternate currencies are issued to a user.
 
 Notifies when alternate currencies issued to the user are reversed. For example, issued alternate currencies for a line-item is reversed when a customer returns the item.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
-  data: {
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
+  {
       customerIdentifiers: {
           customerId: 386959475,
           instore: {
@@ -8891,36 +8890,36 @@ Notifies when alternate currencies issued to the user are reversed. For example,
           }
       },
       entityInformation: {
-          entityId: 386959475,                              // added comma
+          entityId: 386959475,
           entityType: USER
       },
       loyaltyProgramDetails: {
-          id: 2645,                                         // added comma
-          isDefault: true,                                  // added comma
-          name: Test_OrgDefaultProgram,                     // added comma
-          pointsToCurrencyRatio: 1,                         // added comma
+          id: 2645,
+          isDefault: true,
+          name: Test_OrgDefaultProgram,
+          pointsToCurrencyRatio: 1,
           tiers: [
               {
-                  tierName: Default_tier,                   // added comma
+                  tierName: Default_tier,
                   tierNumber: 1
               },
               {
-                  tierName: Silver_tier,                    // added comma
+                  tierName: Silver_tier,
                   tierNumber: 2
               },
               {
-                  tierName: Gold_tier,                      // added comma
+                  tierName: Gold_tier,
                   tierNumber: 2
               }
           ]
       },
       loyaltyProgramId: 2645,
-      alternateCurrencies: [                                // removed stray "
+      alternateCurrencies: [
           {
               currentEventPromisedAlternateCurrenciesReturned: 10,
               currentEventRegularAlternateCurrenciesReturned: 10,
               currentEventTotalAlternateCurrenciesReturned: 130,
-              currentEventPromotionAlternateCurrenciesReturnedDetails: [  // changed { to [
+              currentEventPromotionAlternateCurrenciesReturnedDetails: [
                   {
                       promotionIdentifier: 528d181-7e91-4abe-86cd-598cee9b8ccf,
                       promotionAlternateCurrencies: 100,
@@ -8931,12 +8930,12 @@ Notifies when alternate currencies issued to the user are reversed. For example,
                       promotionAlternateCurrencies: 10,
                       promotionType: BILL
                   }
-              ],                                            // changed } to ], added comma
+              ],
               alternateCurrencyName: stars,
               alternateCurrencyIdentifier: dsgagg,
               programCurrentAlternateCurrencies: 0,
               programLifetimeAlternateCurrencies: 0,
-              promisedAlternateCurrenciesReversed: 10,      // added comma
+              promisedAlternateCurrenciesReversed: 10,
               promotionalAlternateCurrenciesReversed: [
                   {
                       promotionIdentifier: 528d181-7e91-4abe-86cd-598cee9b8ccf,
@@ -8949,7 +8948,7 @@ Notifies when alternate currencies issued to the user are reversed. For example,
                       promotionType: CUSTOMER_PROMOTION
                   }
               ],
-              regularAlternateCurrenciesReversed: 10,       // added comma
+              regularAlternateCurrenciesReversed: 10,
               totalAlternateCurrenciesReversed: 130
           },
           {
@@ -8957,11 +8956,11 @@ Notifies when alternate currencies issued to the user are reversed. For example,
               alternateCurrencyIdentifier: gwggdg,
               programCurrentAlternateCurrencies: 0,
               programLifetimeAlternateCurrencies: 0,
-              promisedAlternateCurrenciesReversed: 10,      // added comma
+              promisedAlternateCurrenciesReversed: 10,
               promotionalAlternateCurrenciesReversed: [
                   {
                       promotionIdentifier: 528d181-7e91-4abe-86cd-598cee9b8ccf,
-                      promotionAlternateCurrencies: 100,    // added missing colon
+                      promotionAlternateCurrencies: 100,
                       promotionType: BILL
                   },
                   {
@@ -8970,7 +8969,7 @@ Notifies when alternate currencies issued to the user are reversed. For example,
                       promotionType: BILL
                   }
               ],
-              regularAlternateCurrenciesReversed: 10,       // added comma
+              regularAlternateCurrenciesReversed: 10,
               totalAlternateCurrenciesReversed: 130
           }
       ],
@@ -8985,7 +8984,7 @@ Notifies when alternate currencies issued to the user are reversed. For example,
           },
           identifiers: [
               {
-                  key: billId,                              // changed . to ,
+                  key: billId,
                   value: 0
               },
               {
@@ -8995,15 +8994,15 @@ Notifies when alternate currencies issued to the user are reversed. For example,
           ],
           name: ReturnBill
       },
-      eventId: 1de73162-daf8-4c39-bc63-0af20bb4371e,       // added comma
-      eventName: issuedalternateCurrenciesReversed,         // added comma
-      loyaltyEventId: 1c1716568b10135aa4e59fda77935ea2014b3bfc, // added comma
-      orgId: 51182,                                         // added comma
+      eventId: 1de73162-daf8-4c39-bc63-0af20bb4371e,
+      eventName: issuedalternateCurrenciesReversed,
+      loyaltyEventId: 1c1716568b10135aa4e59fda77935ea2014b3bfc,
+      orgId: 51182,
       refId: 51182_1c1716568b10135aa4e59fda77935ea2014b3bfc
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "issuedAlternateCurrenciesReversed",
     "eventLogId": 4418,
@@ -9254,8 +9253,8 @@ Notifies when alternate currencies issued to the user are reversed. For example,
 
 Notifies when promised alternate currencies are issued to the user.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
       "eventName": "promisedToCurrentAlternateCurrencyConversion",
       "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -9374,7 +9373,7 @@ Notifies when promised alternate currencies are issued to the user.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "promisedToCurrentAlternateCurrencyConversion",
     "eventSearchKey": "data.customerIdentifiers.customerId",
@@ -9679,8 +9678,8 @@ Notifies when promised alternate currencies are issued to the user.
 
 Notifies the merging of loyalty users.
 
-<CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
-  ```json "Webhook payload"
+<CodeGroup show-lines="true" tabs={[]}>
+  ```json
   {
     "eventName": "loyaltyCustomerMerge",
     "data": {
@@ -9719,7 +9718,7 @@ Notifies the merging of loyalty users.
   }
   ```
 
-  ```json "Non webhook payload"
+  ```json
   {
     "eventName": "loyaltyCustomerMerge",
     "eventLogId": 859,
