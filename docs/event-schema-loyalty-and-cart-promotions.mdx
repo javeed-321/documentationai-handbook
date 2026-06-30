@@ -396,6 +396,15 @@ Notifies when a loyalty promotion is issued to a customer or user group. An even
 
 <CodeGroup show-lines="true" tabs={["Webhook payload","Non webhook payload"]}>
   ```json "Webhook payload"
+  Extensive detailing links 
+
+  Promotion Issual and Earning - here
+
+  Promotion Revokes - here
+
+  Promotion Issued
+
+  Payload
   {
       "eventName": "promotionIssued",
       "data":
@@ -455,6 +464,16 @@ Notifies when a loyalty promotion is issued to a customer or user group. An even
           "x-cap-lineage-start": "1762175962100"
       }
   }
+  Promotion Earned
+
+  Payload
+  Revoke Issued Promotion
+
+  Payload
+  Revoke Earned Promotion
+
+  Payload
+
   ```
 
   ```json "Non webhook payload"
@@ -1971,5 +1990,5 @@ Notifies whenever the user earns the cart promotion on meeting the defined crite
       "createdAt": 1759165512771
   }
   ```
-</CodeGroup> 
+</CodeGroup>
 
