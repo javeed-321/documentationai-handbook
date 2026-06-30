@@ -1,11 +1,11 @@
 ---
 title: Loyalty Promotions and Cart Promotions
 ---
-## Loyalty Promotions
+# Loyalty Promotions
 
 A loyalty promotion is a special program within a loyalty program that offers customers additional rewards—such as extra points, coupons, or benefits—on top of the standard loyalty program.
 
-### Creating loyalty promotion (promotionCreated)
+## Creating loyalty promotion (promotionCreated)
 
 Notifies when a loyalty promotion is created. An event notification is triggered when a loyalty promotion is created. These event notifications are triggered when a loyalty promotion is created using the UI and the create loyalty promotion API.
 
@@ -234,7 +234,7 @@ Notifies when a loyalty promotion is created. An event notification is triggered
 | -updatedBy          | Integer   | ID of the user who last updated it                          |
 | -loyaltyEventId     | String    | ID of the loyalty event tied to this promotion              |
 
-### Updating a loyalty promotion (promotionUpdated)
+## Updating a loyalty promotion (promotionUpdated)
 
 Notifies when loyalty promotion metadata is updated. An event notification is triggered when a loyalty promotion is updated.
 
@@ -390,7 +390,7 @@ Notifies when loyalty promotion metadata is updated. An event notification is tr
 | -updatedBy          | Integer   | ID of the user who last updated it                          |
 | -loyaltyEventId     | String    | ID of the loyalty event tied to this promotion              |
 
-### Issuing a loyalty promotion (promotionIssued)
+## Issuing a loyalty promotion (promotionIssued)
 
 Notifies when a loyalty promotion is issued to a customer or user group. An event notification is triggered when a loyalty promotion is issued.
 
@@ -746,7 +746,7 @@ Notifies when a loyalty promotion is issued to a customer or user group. An even
 | apiRequestId                      | String    | Unique ID of the API request                                                                                                                                                                          |
 | createdAt                         | Long      | Epoch timestamp of creation                                                                                                                                                                           |
 
-### Earned loyalty promotion (promotionEarned)
+## Earned loyalty promotion (promotionEarned)
 
 Notifies when a user earns a promotion.
 
@@ -1069,7 +1069,7 @@ Notifies when a user earns a promotion.
   ```
 </CodeGroup>
 
-### Revoke issued loyalty promotion (revokeIssuedPromotion)
+## Revoke issued loyalty promotion (revokeIssuedPromotion)
 
 Notifies when an issued promotion is revoked.
 
@@ -1368,7 +1368,7 @@ Notifies when an issued promotion is revoked.
   ```
 </CodeGroup>
 
-### Revoke earned loyalty promotion (revokeEarnedPromotion)
+## Revoke earned loyalty promotion (revokeEarnedPromotion)
 
 Notifies when an earned loyalty promotion has been revoked for a user.
 
@@ -1680,11 +1680,11 @@ Notifies when an earned loyalty promotion has been revoked for a user.
 
 ---
 
-## Cart Promotions
+# Cart Promotions
 
 A cart promotion is a type of promotion or discount that is applied to products in a customer's shopping cart, either during product search or at checkout.
 
-### Cart Promotion Issued Event (cartPromotionIssued)
+## Cart Promotion Issued Event (cartPromotionIssued)
 
 Notifies when a cart promotion is issued.
 
@@ -1713,7 +1713,7 @@ Notifies when a cart promotion is issued.
   ```
 </CodeGroup>
 
-### Cart Promotion Redeemed Event (cartPromotionRedeemed)
+## Cart Promotion Redeemed Event (cartPromotionRedeemed)
 
 Notifies whenever a cart promotion is redeemed by the user.
 
@@ -1770,7 +1770,7 @@ Notifies whenever a cart promotion is redeemed by the user.
   ```
 </CodeGroup>
 
-### Cart Promotion Revoked Event (cartPromotionRevoked)
+## Cart Promotion Revoked Event (cartPromotionRevoked)
 
 Notifies whenever a cart promotion is revoked from the user.
 
@@ -1943,7 +1943,7 @@ Notifies whenever a cart promotion is revoked from the user.
   ```
 </CodeGroup>
 
-### Cart Promotion Earned Event (cartPromotionEarned)
+## Cart Promotion Earned Event (cartPromotionEarned)
 
 Notifies whenever the user earns the cart promotion on meeting the defined criteria for the promotion.
 

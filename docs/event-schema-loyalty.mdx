@@ -1,7 +1,7 @@
 ---
 title: Loyalty
 ---
-## Milestone (Targets) and Streaks
+# Milestone (Targets) and Streaks
 
 This section contains the schemas of various milestones (also called targets) related event notifications. These will be sent to the respective brand's webhooks which brands can consume and use at their end.
 
@@ -35,7 +35,7 @@ This section contains the schemas of various milestones (also called targets) re
 
 14. Streak end
 
-### Target Achieved Value Updated event (targetAchievedValueUpdated)
+## Target Achieved Value Updated event (targetAchievedValueUpdated)
 
 Notifies when a target achieved value has been updated. For example, a user purchases a line-item that updates the target value.
 
@@ -324,7 +324,7 @@ Notifies when a target achieved value has been updated. For example, a user purc
   ```
 </CodeGroup>
 
-### Target Value Achieved Event
+## Target Value Achieved Event
 
 Notifies when a user achieves the set target.
 
@@ -597,7 +597,7 @@ Notifies when a user achieves the set target.
   ```
 </CodeGroup>
 
-### Target Period Completed Event
+## Target Period Completed Event
 
 Notifies the completion of a target period for a user.
 
@@ -822,7 +822,7 @@ Notifies the completion of a target period for a user.
   ```
 </CodeGroup>
 
-### Target Value Update Event
+## Target Value Update Event
 
 Notifies when the target value associated with the user has been updated.
 
@@ -1006,7 +1006,7 @@ Notifies when the target value associated with the user has been updated.
   ```
 </CodeGroup>
 
-### Unified Target Achieved Event
+## Unified Target Achieved Event
 
 Notifies when a user achieves the set target for a unified target.
 
@@ -1319,7 +1319,7 @@ Notifies when a user achieves the set target for a unified target.
   ```
 </CodeGroup>
 
-### Unified Target Unachieved Event
+## Unified Target Unachieved Event
 
 Notifies when a user does not meet the defined unified target within the time frame.
 
@@ -1620,7 +1620,7 @@ Notifies when a user does not meet the defined unified target within the time fr
   ```
 </CodeGroup>
 
-### Target Customer Enrolment Event (targetCustomerEnrolment)
+## Target Customer Enrolment Event (targetCustomerEnrolment)
 
 Notifies when a user is enrolled on a target. You can send multiple event notifications to customers enrolled in a particular target.
 
@@ -1690,7 +1690,7 @@ Notifies when a user is enrolled on a target. You can send multiple event notifi
   ```
 </CodeGroup>
 
-### Target Customer Unenrolment Event (targetCustomerUnenrolment)
+## Target Customer Unenrolment Event (targetCustomerUnenrolment)
 
 Notifies when a user is unenrolled from a target. You can send multiple event notifications to customers who are unenrolled from a particular target.
 
@@ -1760,7 +1760,7 @@ Notifies when a user is unenrolled from a target. You can send multiple event no
   ```
 </CodeGroup>
 
-### Target Period Started Event (targetPeriodStarted)
+## Target Period Started Event (targetPeriodStarted)
 
 Notifies when the target evaluation period begins.
 
@@ -1976,7 +1976,7 @@ Notifies when the target evaluation period begins.
   ```
 </CodeGroup>
 
-### Streak Level Achievement Event (streakLevelAchieved)
+## Streak Level Achievement Event (streakLevelAchieved)
 
 Notifies when a user has achieved a streak level.
 
@@ -2263,7 +2263,7 @@ Notifies when a user has achieved a streak level.
   ```
 </CodeGroup>
 
-### Streak Level Unachievement  Event (streakLevelUnAchieved)
+## Streak Level Unachievement  Event (streakLevelUnAchieved)
 
 Notifies when a streak level has not been achieved within the time-frame.
 
@@ -2549,7 +2549,7 @@ Notifies when a streak level has not been achieved within the time-frame.
   ```
 </CodeGroup>
 
-### Streak Enrolment Event (streakCustomerEnrolment)
+## Streak Enrolment Event (streakCustomerEnrolment)
 
 Notifies when a user has been enrolled to a streak.
 
@@ -2873,7 +2873,7 @@ Notifies when a user has been enrolled to a streak.
   ```
 </CodeGroup>
 
-### Streak unenrolment (streakCustomerUnEnrolment)
+## Streak unenrolment (streakCustomerUnEnrolment)
 
 This event is triggered when a user is unenrolled from a streak.
 
@@ -3194,7 +3194,7 @@ This event is triggered when a user is unenrolled from a streak.
   ```
 </CodeGroup>
 
-### Streak Start Event (streakStart)
+## Streak Start Event (streakStart)
 
 Notifies when a streak has started for a user. A streak starts when a user begins a series of consecutive actions or engagements as defined by the brand.
 
@@ -3480,7 +3480,7 @@ Notifies when a streak has started for a user. A streak starts when a user begin
   ```
 </CodeGroup>
 
-### Streak End Event (streakEnd)
+## Streak End Event (streakEnd)
 
 Notifies when a streak has ended for a user.
 
@@ -3772,7 +3772,7 @@ Notifies when a streak has ended for a user.
   ```
 </CodeGroup>
 
-### Event notification for the change in milestone achieved value on return of purchases
+## Event notification for the change in milestone achieved value on return of purchases
 
 As of now, whenever a customer makes a purchase, all the milestone values which can be impacted with that purchase will be impacted, and the information of the new milestone achieved value, etc.. will be sent as an event notification.
 
@@ -3792,13 +3792,13 @@ If the “Name” key is “ReturnBill”, it’s a return transaction where mil
 
 ---
 
-## Points
+# Points
 
 `eventLogId` lets you look up detailed points activity (like earning, spending, or adjustments) for a specific event using the [Points Ledger Explode API](https://docs.capillarytech.com/reference/get-points-ledger-explode-info). The following events include `eventLogId` in the payload:
 
 [PointsIssued](https://docs.capillarytech.com/docs/event-schema-payload#points-issued-event-pointsissued), [IssuedPointsReversed](https://docs.capillarytech.com/docs/event-schema-payload#issued-points-reversed-event-issuedpointsreversed), [PointsTransferredInitiated](https://docs.capillarytech.com/docs/event-schema-payload#points-transferred-initiated-event-pointstransferredinitiated), [PointsTransferredReceived](https://docs.capillarytech.com/docs/event-schema-payload#points-transferred-received-pointstransferredreceived), [PromisedToCurrentPointsConversion](https://docs.capillarytech.com/docs/event-schema-payload#promised-points-conversion-to-current-points-event-promisedtocurrentpointsconversion), [PointsRedeemed](https://docs.capillarytech.com/docs/event-schema-payload#points-redeemed-event-pointsredeemed), [RedeemedPointsReversed](https://docs.capillarytech.com/docs/event-schema-payload#redeemed-points-reversed-event-redeemedpointsreversed), [ManualPointsAdjustment](https://docs.capillarytech.com/docs/event-schema-payload#manual-points-adjustment-event-manualpointsadjustment), [AlternateCurrenciesIssued](https://docs.capillarytech.com/docs/event-schema-payload#alternate-currencies-issued-alternatecurrenciesissued), [IssuedAlternateCurrenciesReversed](https://docs.capillarytech.com/docs/event-schema-payload#issued-alternate-currency-reversed-issuedalternatecurrenciesreversed), [PromisedToCurrentAlternateCurrencyConversion](https://docs.capillarytech.com/docs/event-schema-payload#promised-alternate-currencies-issued-event-promisedtocurrentalternatecurrencyconversion), [promotionIssued](https://docs.capillarytech.com/docs/event-schema-payload#issued-loyalty-promotion-promotionissued), [pointsExpired](https://docs.capillarytech.com/docs/event-schema-payexpired-event-pointsexpired)
 
-### Points Issued Event (pointsIssued)
+## Points Issued Event (pointsIssued)
 
 Notifies when points are issued to a user.
 
@@ -4323,7 +4323,7 @@ Example of points Issued on Transaction/Add
   ```
 </CodeGroup>
 
-### Points Redeemed Event (pointsRedeemed)
+## Points Redeemed Event (pointsRedeemed)
 
 Notifies when a user has redeemed points.
 
@@ -4790,7 +4790,7 @@ Sample schema of Participating Program Redemption
   ```
 </CodeGroup>
 
-### Promised Points Conversion to Current Points Event (promisedToCurrentPointsConversion)
+## Promised Points Conversion to Current Points Event (promisedToCurrentPointsConversion)
 
 Notifies when promised points are converted to current points in a loyalty program.
 
@@ -5075,7 +5075,7 @@ Notifies when promised points are converted to current points in a loyalty progr
   ```
 </CodeGroup>
 
-### Points Expired Event (pointsExpired)
+## Points Expired Event (pointsExpired)
 
 Notifies when points earned by a user has expired.
 
@@ -5393,7 +5393,7 @@ Notifies when points earned by a user has expired.
   ```
 </CodeGroup>
 
-### Points Expired Reminder Event (pointsExpiryReminder)
+## Points Expired Reminder Event (pointsExpiryReminder)
 
 Notifies when a user's points are about to expire.
 
@@ -5699,7 +5699,7 @@ Notifies when a user's points are about to expire.
   ```
 </CodeGroup>
 
-### Points Transferred Initiated Event (pointsTransferredInitiated)
+## Points Transferred Initiated Event (pointsTransferredInitiated)
 
 Notifies when a points transfer for a user is initiated.
 
@@ -6199,7 +6199,7 @@ Notifies when a points transfer for a user is initiated.
   ```
 </CodeGroup>
 
-### Points Transferred Received (pointsTransferredReceived)
+## Points Transferred Received (pointsTransferredReceived)
 
 Notifies when a points transfer request of a user is received. Points transfer allows users to transfer their loyalty points to other users or user groups.
 
@@ -6684,7 +6684,7 @@ Notifies when a points transfer request of a user is received. Points transfer a
   ```
 </CodeGroup>
 
-### Redeemed Points Reversed Event (redeemedPointsReversed)
+## Redeemed Points Reversed Event (redeemedPointsReversed)
 
 Notifies when redeemed points are reversed. Reversal of redeemed points occurs when a user does not use points they have redeemed for a transaction, or when the transaction for which points were redeemed is returned.
 
@@ -7068,7 +7068,7 @@ Notifies when redeemed points are reversed. Reversal of redeemed points occurs w
   ```
 </CodeGroup>
 
-### Updated Single Points Expiry (singlePointsExpiryUpdated)
+## Updated Single Points Expiry (singlePointsExpiryUpdated)
 
 Notifies when the points expiry date is updated under the Single Points Expiry feature. Single Points Expiry is a feature in Capillary's Loyalty+ platform that allows points across all loyalty programs for different events to have a common expiry date.
 
@@ -7361,7 +7361,7 @@ Notifies when the points expiry date is updated under the Single Points Expiry f
   ```
 </CodeGroup>
 
-### Issued Points Reversed Event (issuedPointsReversed)
+## Issued Points Reversed Event (issuedPointsReversed)
 
 Notifies when points issued for a user has been reversed. For example, a user has returned a purchase and the points issued have been reversed.
 
@@ -7732,7 +7732,7 @@ Notifies when points issued for a user has been reversed. For example, a user ha
   ```
 </CodeGroup>
 
-### Manual Points Adjustment Event (manualPointsAdjustment)
+## Manual Points Adjustment Event (manualPointsAdjustment)
 
 Notifies whenever points are adjusted/deducted manually.
 
@@ -7950,7 +7950,7 @@ Notifies whenever points are adjusted/deducted manually.
   ```
 </CodeGroup>
 
-### Points Expiry Change Event (pointsExpiryChange)
+## Points Expiry Change Event (pointsExpiryChange)
 
 Notifies when a points expiry date changes.
 
@@ -8120,7 +8120,7 @@ Notifies when a points expiry date changes.
   ```
 </CodeGroup>
 
-### Promised/External Points Conversion Event
+## Promised/External Points Conversion Event
 
 Notifies when a Promised/External Points are converted for a customer.
 
@@ -8463,11 +8463,11 @@ Notifies when a Promised/External Points are converted for a customer.
 
 ---
 
-## Alternate currencies
+# Alternate currencies
 
 An alternate currency is a type of reward currency, similar to points, that brands can create and use within their loyalty programs to incentivise customer behavior.
 
-### Alternate currencies issued (alternateCurrenciesIssued)
+## Alternate currencies issued (alternateCurrenciesIssued)
 
 Notifies when alternate currencies are issued to a user.
 
@@ -8876,7 +8876,7 @@ Notifies when alternate currencies are issued to a user.
   ```
 </CodeGroup>
 
-### Issued Alternate Currency Reversed (issuedAlternateCurrenciesReversed)
+## Issued Alternate Currency Reversed (issuedAlternateCurrenciesReversed)
 
 Notifies when alternate currencies issued to the user are reversed. For example, issued alternate currencies for a line-item is reversed when a customer returns the item.
 
@@ -9250,7 +9250,7 @@ Notifies when alternate currencies issued to the user are reversed. For example,
   ```
 </CodeGroup>
 
-### Promised Alternate Currencies Issued Event (promisedToCurrentAlternateCurrencyConversion)
+## Promised Alternate Currencies Issued Event (promisedToCurrentAlternateCurrencyConversion)
 
 Notifies when promised alternate currencies are issued to the user.
 
@@ -9673,9 +9673,9 @@ Notifies when promised alternate currencies are issued to the user.
 
 ---
 
-## Loyalty customer
+# Loyalty customer
 
-### Loyalty Customer Merge Event (loyaltyCustomerMerge)
+## Loyalty Customer Merge Event (loyaltyCustomerMerge)
 
 Notifies the merging of loyalty users.
 
