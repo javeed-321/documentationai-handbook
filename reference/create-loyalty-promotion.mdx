@@ -2284,7 +2284,12 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
       </ParamField>
 
       <ParamField body="promotionType" param-type="string enum" required="false" deprecated="false" show-location="true">
-        The type of promotion. Determines the enrollment and earning model in combination with enrolmentMethod and loyaltyEarningType. GENERIC: Neither opt-in nor enrollment is active. The promotion is triggered automatically by customer transactions. Use with enrolmentMethod: TRANSACTION and loyaltyEarningType: null. LOYALTY: Enrollment is active, opt-in is disabled. Focuses on loyalty membership status rather than a specific earning mechanism. Use with enrolmentMethod: IMPORT and loyaltyEarningType: null. LOYALTY\_EARNING with loyaltyEarningType ISSUE\_AND\_EARN: Both enrollment and opt-in are active. Customers sign up (enroll) and then earn rewards upon qualifying events. Use with enrolmentMethod: IMPORT. LOYALTY\_EARNING with loyaltyEarningType DIRECT\_EARN: Opt-in is active, enrollment is disabled. Customers earn rewards directly through participation without a formal enrollment step. Use with enrolmentMethod: IMPORT.
+        The type of promotion. Determines the enrollment and earning model in combination with enrolmentMethod and loyaltyEarningType:
+
+        - `GENERIC` — Neither opt-in nor enrollment is active. The promotion is triggered automatically by customer transactions. Use with enrolmentMethod: TRANSACTION and loyaltyEarningType: null.
+        - `LOYALTY` — Enrollment is active, opt-in is disabled. Focuses on loyalty membership status rather than a specific earning mechanism. Use with enrolmentMethod: IMPORT and loyaltyEarningType: null.
+        - `LOYALTY_EARNING` with loyaltyEarningType `ISSUE_AND_EARN` — Both enrollment and opt-in are active. Customers sign up (enroll) and then earn rewards upon qualifying events. Use with enrolmentMethod: IMPORT.
+        - `LOYALTY_EARNING` with loyaltyEarningType `DIRECT_EARN` — Opt-in is active, enrollment is disabled. Customers earn rewards directly through participation without a formal enrollment step. Use with enrolmentMethod: IMPORT.
       </ParamField>
 
       <ParamField body="status" param-type="string enum" required="false" deprecated="false" show-location="true">
@@ -2320,7 +2325,12 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
       </ParamField>
 
       <ParamField body="loyaltyEarningType" param-type="string enum" required="false" deprecated="false" show-location="true">
-        Defines the earning model. DIRECT\_EARN: points are awarded immediately on the qualifying event. ISSUE\_AND\_EARN: points are held pending and earned after a subsequent redemption event. Set to null for default earning behavior.
+        Defines the earning model:
+
+        - `DIRECT_EARN` — points are awarded immediately on the qualifying event.
+        - `ISSUE_AND_EARN` — points are held pending and earned after a subsequent redemption event.
+
+        Set to null for default earning behavior.
       </ParamField>
 
       <ParamField body="promotionMetadata" param-type="string[]" required="false" deprecated="false" show-location="true">
@@ -2332,7 +2342,11 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
   <ParamField body="customerEnrolment" param-type="object" required="false" deprecated="false" show-location="true">
     <Expandable title="customerEnrolment properties" default-open="false">
       <ParamField body="enrolmentMethod" param-type="string enum" required="false" deprecated="false" show-location="true">
-        Defines how customers are enrolled in the promotion. TRANSACTION: auto-enrolled upon completing a qualifying transaction. IMPORT: enrolled via bulk data import. AUDIENCE\_FILTER: enrolled by matching a defined audience segment.
+        Defines how customers are enrolled in the promotion:
+
+        - `TRANSACTION` — auto-enrolled upon completing a qualifying transaction.
+        - `IMPORT` — enrolled via bulk data import.
+        - `AUDIENCE_FILTER` — enrolled by matching a defined audience segment.
       </ParamField>
     </Expandable>
   </ParamField>
@@ -2344,7 +2358,10 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
       </ParamField>
 
       <ParamField body="type" param-type="string enum" required="false" deprecated="false" show-location="true">
-        The activity type. SINGLE: a standalone activity that tracks one event with optional milestones. GROUP: a container that groups multiple child activities using AND/OR logic defined by combinationType.
+        The activity type:
+
+        - `SINGLE` — a standalone activity that tracks one event with optional milestones.
+        - `GROUP` — a container that groups multiple child activities using AND/OR logic defined by combinationType.
       </ParamField>
 
       <ParamField body="name" param-type="string" required="false" deprecated="false" show-location="true">
@@ -2368,15 +2385,38 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
           </ParamField>
 
           <ParamField body="trackingType" param-type="string enum" required="false" deprecated="false" show-location="true">
-            How progress is tracked for this milestone. DEFAULT: standard linear tracking. CAPPING: tracks up to a defined cap. UNIFIED: tracks progress across multiple activities together. STREAKS: tracks consecutive cycle completions. NON\_CONTINUOUS\_STREAKS: tracks non-consecutive streak completions.
+            How progress is tracked for this milestone:
+
+            - `DEFAULT` — standard linear tracking.
+            - `CAPPING` — tracks up to a defined cap.
+            - `UNIFIED` — tracks progress across multiple activities together.
+            - `STREAKS` — tracks consecutive cycle completions.
+            - `NON_CONTINUOUS_STREAKS` — tracks non-consecutive streak completions.
           </ParamField>
 
           <ParamField body="targetType" param-type="string enum" required="false" deprecated="false" show-location="true">
-            The metric being measured. COUNT: number of qualifying events. SALES: net transaction value. GROSS\_SALES: gross transaction value. QUANTITY: item quantity. VISIT: number of store visits. REGULAR\_POINTS: regular points earned. PROMOTIONAL\_POINTS: promotional points earned. ALL\_POINTS: all points combined. EXTENDED\_FIELD: value from a transaction extended field. EVENT\_ATTRIBUTE: value from a custom event attribute.
+            The metric being measured:
+
+            - `COUNT` — number of qualifying events.
+            - `SALES` — net transaction value.
+            - `GROSS_SALES` — gross transaction value.
+            - `QUANTITY` — item quantity.
+            - `VISIT` — number of store visits.
+            - `REGULAR_POINTS` — regular points earned.
+            - `PROMOTIONAL_POINTS` — promotional points earned.
+            - `ALL_POINTS` — all points combined.
+            - `EXTENDED_FIELD` — value from a transaction extended field.
+            - `EVENT_ATTRIBUTE` — value from a custom event attribute.
           </ParamField>
 
           <ParamField body="targetEntity" param-type="string enum" required="false" deprecated="false" show-location="true">
-            The entity level at which the target is tracked. TRANSACTION: counts at the full transaction level. LINEITEM: counts at the individual line item level. POINTS: tracks point values. EVENT: counts custom events. ALTERNATE\_CURRENCIES: tracks alternate loyalty currency values.
+            The entity level at which the target is tracked:
+
+            - `TRANSACTION` — counts at the full transaction level.
+            - `LINEITEM` — counts at the individual line item level.
+            - `POINTS` — tracks point values.
+            - `EVENT` — counts custom events.
+            - `ALTERNATE_CURRENCIES` — tracks alternate loyalty currency values.
           </ParamField>
 
           <ParamField body="defaultValue" param-type="string" required="false" deprecated="false" show-location="true">
@@ -2384,11 +2424,24 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
           </ParamField>
 
           <ParamField body="targetEvaluationType" param-type="string enum" required="false" deprecated="false" show-location="true">
-            The window type used to evaluate this milestone. FIXED\_CALENDAR\_WINDOW: evaluates within fixed calendar periods (e.g., weekly, monthly) set by frequencyType — the system auto-generates cycles within the promotion date range. CYCLIC\_WINDOW: uses recurring cycles of a fixed length. PERIOD\_AGNOSTIC\_WINDOW: evaluates over the entire promotion duration with no cycle boundaries. CALENDAR\_CYCLIC\_WINDOW: combines calendar alignment with cyclic repetition.
+            The window type used to evaluate this milestone:
+
+            - `FIXED_CALENDAR_WINDOW` — evaluates within fixed calendar periods (e.g., weekly, monthly) set by frequencyType — the system auto-generates cycles within the promotion date range.
+            - `CYCLIC_WINDOW` — uses recurring cycles of a fixed length.
+            - `PERIOD_AGNOSTIC_WINDOW` — evaluates over the entire promotion duration with no cycle boundaries.
+            - `CALENDAR_CYCLIC_WINDOW` — combines calendar alignment with cyclic repetition.
           </ParamField>
 
           <ParamField body="frequencyType" param-type="string enum" required="false" deprecated="false" show-location="true">
-            The cycle frequency when targetEvaluationType is FIXED\_CALENDAR\_WINDOW. The system automatically divides the promotion period into cycles of this length. DAILY: one cycle per day. WEEKLY: one cycle per week (Mon–Sun). MONTHLY: one cycle per calendar month. QUARTERLY: one cycle per quarter. HALF\_YEARLY: one cycle per half-year. YEARLY: one cycle per year. CUSTOM: boundaries defined manually in cycleActionMapping.
+            The cycle frequency when targetEvaluationType is FIXED\_CALENDAR\_WINDOW. The system automatically divides the promotion period into cycles of this length:
+
+            - `DAILY` — one cycle per day.
+            - `WEEKLY` — one cycle per week (Mon–Sun).
+            - `MONTHLY` — one cycle per calendar month.
+            - `QUARTERLY` — one cycle per quarter.
+            - `HALF_YEARLY` — one cycle per half-year.
+            - `YEARLY` — one cycle per year.
+            - `CUSTOM` — boundaries defined manually in cycleActionMapping.
           </ParamField>
 
           <ParamField body="sameActionsForEveryCycle" param-type="boolean" required="false" deprecated="false" show-location="true">
@@ -2450,7 +2503,14 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
               </ParamField>
 
               <ParamField body="actionName" param-type="string" required="false" deprecated="false" show-location="true">
-                The reward action to execute. The corresponding implementation class must be set in delegateActionClass inside mandatoryPropertiesValues. Points and currency: ADVANCE\_CURRENCY\_ALLOCATION\_ACTION, AWARD\_POINTS\_ACTION, AWARD\_TARGET\_POINTS\_ACTION, BILL\_POINTS\_ACTION, DELAYED\_ACCRUAL\_ACTION, TRIGGER\_BASED\_DELAYED\_ACCRUAL\_ACTION, REDEEM\_POINTS\_ACTION, POINTS\_REDEMPTION\_REVERSAL\_ACTION, POINTS\_TRANSFER\_ACTION, POINTS\_GROUP\_TRANSFER\_ACTION, POINTS\_GROUP\_REDEMPTION\_ACTION, POINTS\_CONTRIBUTION\_TO\_GROUP\_ACTION, AWARD\_REFERRER\_POINTS\_ACTION, AWARD\_REFEREE\_POINTS\_ACTION. Tier and slab: UPGRADE\_SLAB\_ACTION, UPGRADE\_SLAB\_ACTION\_SLAB, UPGRADE\_SLAB\_ACTION\_STRATEGY, RENEW\_SLAB\_ACTION, TIER\_ACTION\_V2, UPGRADE\_TIER\_BASED\_ON\_PARTNER\_PROGRAM, RENEW\_TIER\_BASED\_ON\_PARTNER\_PROGRAM. Voucher, promotion, and reward: PE\_ISSUE\_VOUCHER\_ACTION, ISSUE\_PROMOTION\_ACTION, EARN\_PROMOTION\_ACTION, CONVERT\_POINTS\_TO\_REWARD\_ACTION, BADGE\_EARN\_ACTION. Communication: SEND\_COMMUNICATION\_ACTION, PE\_EMAIL\_ACTION, PE\_SMS\_ACTION, PE\_MOBILE\_PUSH\_ACTION, PE\_FACEBOOK\_ACTION, PE\_WECHAT\_MESSAGE\_ACTION, PE\_MESSAGE\_ACTION, EBILL\_ACTION. Customer and status: TAG\_CUSTOMER\_ACTION, STATUS\_LABEL\_UPDATE\_ACTION, INITIATE\_SUPPLEMENTARY\_MEMBERSHIP. Other: TRACKER\_EVALUATION\_ACTION, RETURN\_BILL\_ACTION, REEVALUATE\_REGULAR\_BILL, FORWARD, NO\_OP\_ACTION (placeholder, performs no reward).
+                The reward action to execute. The corresponding implementation class must be set in delegateActionClass inside mandatoryPropertiesValues:
+
+                - Points and currency — `ADVANCE_CURRENCY_ALLOCATION_ACTION`, `AWARD_POINTS_ACTION`, `AWARD_TARGET_POINTS_ACTION`, `BILL_POINTS_ACTION`, `DELAYED_ACCRUAL_ACTION`, `TRIGGER_BASED_DELAYED_ACCRUAL_ACTION`, `REDEEM_POINTS_ACTION`, `POINTS_REDEMPTION_REVERSAL_ACTION`, `POINTS_TRANSFER_ACTION`, `POINTS_GROUP_TRANSFER_ACTION`, `POINTS_GROUP_REDEMPTION_ACTION`, `POINTS_CONTRIBUTION_TO_GROUP_ACTION`, `AWARD_REFERRER_POINTS_ACTION`, `AWARD_REFEREE_POINTS_ACTION`.
+                - Tier and slab — `UPGRADE_SLAB_ACTION`, `UPGRADE_SLAB_ACTION_SLAB`, `UPGRADE_SLAB_ACTION_STRATEGY`, `RENEW_SLAB_ACTION`, `TIER_ACTION_V2`, `UPGRADE_TIER_BASED_ON_PARTNER_PROGRAM`, `RENEW_TIER_BASED_ON_PARTNER_PROGRAM`.
+                - Voucher, promotion, and reward — `PE_ISSUE_VOUCHER_ACTION`, `ISSUE_PROMOTION_ACTION`, `EARN_PROMOTION_ACTION`, `CONVERT_POINTS_TO_REWARD_ACTION`, `BADGE_EARN_ACTION`.
+                - Communication — `SEND_COMMUNICATION_ACTION`, `PE_EMAIL_ACTION`, `PE_SMS_ACTION`, `PE_MOBILE_PUSH_ACTION`, `PE_FACEBOOK_ACTION`, `PE_WECHAT_MESSAGE_ACTION`, `PE_MESSAGE_ACTION`, `EBILL_ACTION`.
+                - Customer and status — `TAG_CUSTOMER_ACTION`, `STATUS_LABEL_UPDATE_ACTION`, `INITIATE_SUPPLEMENTARY_MEMBERSHIP`.
+                - Other — `TRACKER_EVALUATION_ACTION`, `RETURN_BILL_ACTION`, `REEVALUATE_REGULAR_BILL`, `FORWARD`, `NO_OP_ACTION` (placeholder, performs no reward).
               </ParamField>
 
               <ParamField body="actionClass" param-type="string" required="false" deprecated="false" show-location="true">
@@ -2462,7 +2522,18 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
               </ParamField>
 
               <ParamField body="mandatoryPropertiesValues" param-type="object" required="false" deprecated="false" show-location="true">
-                Key-value map of configuration properties for this action. All values are strings. Supported keys: delegateActionClass — The specific action implementation class. Set this to the class that corresponds to the actionName. For example, ADVANCE\_CURRENCY\_ALLOCATION\_ACTION uses com.capillary.shopbook.pointsengine.endpoint.impl.action.AdvanceCurrencyAllocationActionImpl. PointType — The point category to award. Valid values are the point type names configured for the org (e.g., Main, Promotional). Defaults to the main point type if omitted. Currency — The currency type to award. POINTS for standard loyalty points. Any org-configured alternate currency identifier (e.g., MILES, CASHBACK) is also valid. Event Name — The event name that this action responds to. Must match the event field of the parent activity (e.g., TransactionAdd, TargetCompleted). PointsRoundingStrategy — How the final points amount is rounded. ACTUAL (default): rounds half-up. FLOOR: always rounds down. ROUND: rounds to nearest. ROUND\_TO\_NEAREST: rounds to nearest (half-down variant). SourceValueRoundingStrategy — How the source value (e.g., bill amount) is rounded before points are calculated. ACTUAL (default): no rounding. FLOOR: always rounds down. ROUND: rounds to nearest. ROUND\_TO\_NEAREST: rounds to nearest (half-down variant). DelayStrategy — Controls when points are accrued. AS\_DEFINED\_IN\_ALLOCATION\_STRATEGY (default): follows the allocation strategy. FIXED\_DELAY\_FROM\_ITEM\_RETURN\_PERIOD: accrues after the item return period. ON\_EXTERNAL\_TRIGGER: accrues only when an external trigger fires. FIXED\_DELAY\_FROM\_TXN\_ITEM\_EXT\_FIELD: delay read from a transaction/line item extended field. ACCRUAL\_DATE\_AS\_PER\_BE\_ATTRIBUTE: uses a backend attribute for the accrual date. ACCRUAL\_DATE\_FROM\_TXN\_ITEM\_EXT\_FIELD: reads accrual date from a transaction/line item extended field. FIXED\_DELAY\_FROM\_BE\_ATTRIBUTE: delays by a fixed duration from a backend attribute. ProRateOnSourceValue — The base value used when prorating points. EVENT\_DEFAULT\_VALUE (default): the event's default value (e.g., bill amount). AMOUNT: transaction or line item amount. QUANTITY: item quantity. LINEITEM\_AMOUNT: individual line item amount. LINEITEM\_QUANTITY: individual line item quantity. DEFINED\_TARGET: the defined milestone target value. ACHIEVED\_VALUE: value achieved towards a target. ACHIEVED\_VALUE\_MINUS\_DEFINED\_TARGET: achieved minus target. TRACKED\_VALUE: a tracker's current tracked value. TRACKER\_EVALUATION: the tracker evaluation result. CURRENT\_AGGREGATE / PREVIOUS\_AGGREGATE: tracker aggregate values. GENERIC\_EVENT\_FIELD\_VALUE: a named field from the event. TRANSACTION\_EXTENDED\_FIELD / LINEITEM\_EXTENDED\_FIELD / CUSTOMER\_EXTENDED\_FIELD / CUSTOMER\_CUSTOM\_FIELD: extended or custom attribute values. GAP\_TO\_UPGRADE: gap between next slab threshold and current tracker value before the event. GAP\_TO\_UPGRADE\_AFTER\_EVENT: same gap computed after the event. CURRENT\_EVENT\_TRACKED\_VALUE: value tracked in the current event. EXCESS\_AFTER\_UPGRADE: amount by which the current event exceeds the upgrade gap. EvaluatedEntity — The entity the action is evaluated against. USER (default): the individual customer. USERGROUP2: a user group. USER\_ENTITY\_REFERENCE: same as USERGROUP2. ProrateFieldName — The exact field name to use when ProRateOnSourceValue is a field-based value (e.g., TRANSACTION\_EXTENDED\_FIELD). Leave as an empty string if not applicable.
+                Key-value map of configuration properties for this action. All values are strings. Supported keys:
+
+                - `delegateActionClass` — The specific action implementation class. Set this to the class that corresponds to the actionName. For example, ADVANCE\_CURRENCY\_ALLOCATION\_ACTION uses com.capillary.shopbook.pointsengine.endpoint.impl.action.AdvanceCurrencyAllocationActionImpl.
+                - `PointType` — The point category to award. Valid values are the point type names configured for the org (e.g., Main, Promotional). Defaults to the main point type if omitted.
+                - `Currency` — The currency type to award. POINTS for standard loyalty points. Any org-configured alternate currency identifier (e.g., MILES, CASHBACK) is also valid.
+                - `Event Name` — The event name that this action responds to. Must match the event field of the parent activity (e.g., TransactionAdd, TargetCompleted).
+                - `PointsRoundingStrategy` — How the final points amount is rounded. ACTUAL (default): rounds half-up. FLOOR: always rounds down. ROUND: rounds to nearest. ROUND\_TO\_NEAREST: rounds to nearest (half-down variant).
+                - `SourceValueRoundingStrategy` — How the source value (e.g., bill amount) is rounded before points are calculated. ACTUAL (default): no rounding. FLOOR: always rounds down. ROUND: rounds to nearest. ROUND\_TO\_NEAREST: rounds to nearest (half-down variant).
+                - `DelayStrategy` — Controls when points are accrued. AS\_DEFINED\_IN\_ALLOCATION\_STRATEGY (default): follows the allocation strategy. FIXED\_DELAY\_FROM\_ITEM\_RETURN\_PERIOD: accrues after the item return period. ON\_EXTERNAL\_TRIGGER: accrues only when an external trigger fires. FIXED\_DELAY\_FROM\_TXN\_ITEM\_EXT\_FIELD: delay read from a transaction/line item extended field. ACCRUAL\_DATE\_AS\_PER\_BE\_ATTRIBUTE: uses a backend attribute for the accrual date. ACCRUAL\_DATE\_FROM\_TXN\_ITEM\_EXT\_FIELD: reads accrual date from a transaction/line item extended field. FIXED\_DELAY\_FROM\_BE\_ATTRIBUTE: delays by a fixed duration from a backend attribute.
+                - `ProRateOnSourceValue` — The base value used when prorating points. EVENT\_DEFAULT\_VALUE (default): the event's default value (e.g., bill amount). AMOUNT: transaction or line item amount. QUANTITY: item quantity. LINEITEM\_AMOUNT: individual line item amount. LINEITEM\_QUANTITY: individual line item quantity. DEFINED\_TARGET: the defined milestone target value. ACHIEVED\_VALUE: value achieved towards a target. ACHIEVED\_VALUE\_MINUS\_DEFINED\_TARGET: achieved minus target. TRACKED\_VALUE: a tracker's current tracked value. TRACKER\_EVALUATION: the tracker evaluation result. CURRENT\_AGGREGATE / PREVIOUS\_AGGREGATE: tracker aggregate values. GENERIC\_EVENT\_FIELD\_VALUE: a named field from the event. TRANSACTION\_EXTENDED\_FIELD / LINEITEM\_EXTENDED\_FIELD / CUSTOMER\_EXTENDED\_FIELD / CUSTOMER\_CUSTOM\_FIELD: extended or custom attribute values. GAP\_TO\_UPGRADE: gap between next slab threshold and current tracker value before the event. GAP\_TO\_UPGRADE\_AFTER\_EVENT: same gap computed after the event. CURRENT\_EVENT\_TRACKED\_VALUE: value tracked in the current event. EXCESS\_AFTER\_UPGRADE: amount by which the current event exceeds the upgrade gap.
+                - `EvaluatedEntity` — The entity the action is evaluated against. USER (default): the individual customer. USERGROUP2: a user group. USER\_ENTITY\_REFERENCE: same as USERGROUP2.
+                - `ProrateFieldName` — The exact field name to use when ProRateOnSourceValue is a field-based value (e.g., TRANSACTION\_EXTENDED\_FIELD). Leave as an empty string if not applicable.
               </ParamField>
 
               <ParamField body="mandatoryComplexPropertiesValues" param-type="object" required="false" deprecated="false" show-location="true">
@@ -2482,7 +2553,10 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
   <ParamField body="limits" param-type="object[]" required="false" deprecated="false" show-location="true">
     <Expandable title="limits properties" default-open="false">
       <ParamField body="entityScope" param-type="string enum" required="false" deprecated="false" show-location="true">
-        The scope at which this limit is enforced. PROGRAM: applies across the entire loyalty program. PROMOTION: scoped to this promotion only.
+        The scope at which this limit is enforced:
+
+        - `PROGRAM` — applies across the entire loyalty program.
+        - `PROMOTION` — scoped to this promotion only.
       </ParamField>
 
       <ParamField body="entityId" param-type="integer" required="false" deprecated="false" show-location="true">
@@ -2490,11 +2564,23 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
       </ParamField>
 
       <ParamField body="granularity" param-type="string enum" required="false" deprecated="false" show-location="true">
-        The level at which the limit is tracked. USER: limit is applied per individual customer. OVERALL: limit is applied across all customers combined. PER\_ACTIVITY: limit is tracked per activity within the promotion.
+        The level at which the limit is tracked:
+
+        - `USER` — limit is applied per individual customer.
+        - `OVERALL` — limit is applied across all customers combined.
+        - `PER_ACTIVITY` — limit is tracked per activity within the promotion.
       </ParamField>
 
       <ParamField body="actionType" param-type="string enum" required="false" deprecated="false" show-location="true">
-        The type of reward action this limit constrains. Supported values: AWARD\_CURRENCY (points/currency), AWARD\_BADGE, ISSUE\_COUPON, ISSUE\_REWARD, UPGRADE\_TIER, RENEW\_TIER, DOWNGRADE\_TIER.
+        The type of reward action this limit constrains. Supported values:
+
+        - `AWARD_CURRENCY` (points/currency)
+        - `AWARD_BADGE`
+        - `ISSUE_COUPON`
+        - `ISSUE_REWARD`
+        - `UPGRADE_TIER`
+        - `RENEW_TIER`
+        - `DOWNGRADE_TIER`
       </ParamField>
 
       <ParamField body="actionSubTypeId" param-type="string" required="false" deprecated="false" show-location="true">
@@ -2502,7 +2588,10 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
       </ParamField>
 
       <ParamField body="limitType" param-type="string enum" required="false" deprecated="false" show-location="true">
-        How the limit is measured. SUM: caps the total value awarded (e.g., max 10,000 points per month). COUNT: caps the number of times the reward action fires (e.g., max 5 reward events).
+        How the limit is measured:
+
+        - `SUM` — caps the total value awarded (e.g., max 10,000 points per month).
+        - `COUNT` — caps the number of times the reward action fires (e.g., max 5 reward events).
       </ParamField>
 
       <ParamField body="limitValue" param-type="integer" required="false" deprecated="false" show-location="true">
@@ -2512,7 +2601,12 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
       <ParamField body="period" param-type="object" required="false" deprecated="false" show-location="true">
         <Expandable title="period properties" default-open="false">
           <ParamField body="periodType" param-type="string enum" required="false" deprecated="false" show-location="true">
-            Defines the time window for this limit. NON\_PERIOD\_BASED: limit applies for the lifetime of the promotion with no reset. FIXED\_CALENDAR\_WINDOW: resets on a fixed calendar cycle (e.g., monthly on the 1st). MOVING\_WINDOW: a rolling window relative to the current date (e.g., last 30 days). FIXED\_WINDOW: a specific fixed date range.
+            Defines the time window for this limit:
+
+            - `NON_PERIOD_BASED` — limit applies for the lifetime of the promotion with no reset.
+            - `FIXED_CALENDAR_WINDOW` — resets on a fixed calendar cycle (e.g., monthly on the 1st).
+            - `MOVING_WINDOW` — a rolling window relative to the current date (e.g., last 30 days).
+            - `FIXED_WINDOW` — a specific fixed date range.
           </ParamField>
 
           <ParamField body="periodUnit" param-type="string enum" required="false" deprecated="false" show-location="true">
@@ -2542,7 +2636,11 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
 
         <Expandable title="enrolment properties" default-open="false">
           <ParamField body="basedOn" param-type="string enum" required="false" deprecated="false" show-location="true">
-            The enrollment trigger. ACTIVITY: customers are enrolled upon completing a defined activity. AUDIENCE: all customers in the specified audience groups are enrolled. EXTERNAL\_TRIGGER: enrollment is triggered by an external system call.
+            The enrollment trigger:
+
+            - `ACTIVITY` — customers are enrolled upon completing a defined activity.
+            - `AUDIENCE` — all customers in the specified audience groups are enrolled.
+            - `EXTERNAL_TRIGGER` — enrollment is triggered by an external system call.
           </ParamField>
 
           <ParamField body="audienceMapping" param-type="object[]" required="false" deprecated="false" show-location="true">
@@ -2592,7 +2690,11 @@ curl --location 'https://eu.api.capillarytech.com/v3/promotions' \
 
         <Expandable title="optin properties" default-open="false">
           <ParamField body="basedOn" param-type="string enum" required="false" deprecated="false" show-location="true">
-            The opt-in trigger. ACTIVITY: opt-in is based on completing a defined activity. AUDIENCE: customers in specified audience groups are auto-opted in. EXTERNAL\_TRIGGER: opt-in is triggered by an external system call.
+            The opt-in trigger:
+
+            - `ACTIVITY` — opt-in is based on completing a defined activity.
+            - `AUDIENCE` — customers in specified audience groups are auto-opted in.
+            - `EXTERNAL_TRIGGER` — opt-in is triggered by an external system call.
           </ParamField>
 
           <ParamField body="audienceMapping" param-type="object[]" required="false" deprecated="false" show-location="true">

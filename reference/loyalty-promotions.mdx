@@ -175,15 +175,26 @@ The Loyalty Promotion are of three types:
 
 <ExpandableGroup>
   <Expandable title="Available without issue" default-open="false">
-    Accessible to all customers and automatically triggered based on predefined rules, behavioural events, or milestone completions. Benefits such as points, tier upgrades, coupons, or badges are directly provided when customers meet the defined criteria.
+    **Auto-applied to all customers — no issuance step required.**
+
+    - Triggered automatically by predefined rules, behavioural events, or milestone completions.
+    - Benefits (points, tier upgrades, coupons, or badges) are granted the moment customers meet the defined criteria.
   </Expandable>
 
   <Expandable title="Direct issue" default-open="false">
-    A specific promotion is issued to customers based on their behaviour or transactions. Customers must meet the criteria during a future transaction to receive the benefits. This process is initiated through workflows like TransactionAdd or Behavioral events.
+    **Issued to specific customers, then earned on a future transaction.**
+
+    - Targeted to customers based on their behaviour or transactions.
+    - Customers must meet the criteria during a later transaction to receive the benefits.
+    - Initiated through workflows like `TransactionAdd` or Behavioural events.
   </Expandable>
 
   <Expandable title="Enroll & Issue" default-open="false">
-    Requires customers to opt in or enrol before receiving a promotion. Involves three steps: enrollment, completing specific actions, and receiving benefits. These promotions engage customers through an interactive approach, targeting specific audiences.
+    **Customers opt in first, then complete actions to earn rewards.**
+
+    - Requires customers to enrol before the promotion applies.
+    - Three steps: enrolment → completing specific actions → receiving benefits.
+    - Designed for interactive, audience-targeted engagement.
   </Expandable>
 </ExpandableGroup>
 

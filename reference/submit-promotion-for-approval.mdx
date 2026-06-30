@@ -141,7 +141,13 @@ A successful request returns the updated promotion object with `metadata.status`
 
 <Expandable title="Request Body" default-open="false">
   <ParamField body="promotionStatus" param-type="string enum" required="true" deprecated="false" show-location="true">
-    The target status for the promotion. Valid values depend on existingStatus: PENDING\_APPROVAL (from DRAFT), REVOKE (from PENDING\_APPROVAL), PAUSE (from ACTIVE), STOP (from ACTIVE or PAUSED), RESUME (from PAUSED).
+    The target status for the promotion. Valid values depend on the current `existingStatus`:
+
+    - `PENDING_APPROVAL` — from `DRAFT`
+    - `REVOKE` — from `PENDING_APPROVAL`
+    - `PAUSE` — from `ACTIVE`
+    - `STOP` — from `ACTIVE` or `PAUSED`
+    - `RESUME` — from `PAUSED`
   </ParamField>
 </Expandable>
 
