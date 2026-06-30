@@ -1,8 +1,12 @@
 
+<Expandable title="Request Body" default-open="false">
+  <ParamField body="promotionStatus" param-type="string enum" required="true" deprecated="false" show-location="true">
+    The target status for the promotion. Valid values depend on the current `existingStatus`:
 
-
-
-<SVG src="https://blob-cdn.documentation.ai/org-33a37b13-6e8e-4740-8784-efe392e052a1/doc-f5d2fac6-45c6-4928-b76b-06e4ff784712/1782798890362-emurfnlogvt-journeys-fact-table-erd.svg" />
-
-<SVG src="https://blob-cdn.documentation.ai/org-33a37b13-6e8e-4740-8784-efe392e052a1/doc-f5d2fac6-45c6-4928-b76b-06e4ff784712/1782801757300-2pv17mp0fzc-daily-till-summary-fact-table-erd.svg?rasterize-bypass=true" />
-
+    - `PENDING_APPROVAL` — from `DRAFT`
+    - `REVOKE` — from `PENDING_APPROVAL`
+    - `PAUSE` — from `ACTIVE`
+    - `STOP` — from `ACTIVE` or `PAUSED`
+    - `RESUME` — from `PAUSED`
+  </ParamField>
+</Expandable>
