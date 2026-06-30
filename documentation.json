@@ -13,7 +13,7 @@
               },
               {
                 "title": "Create a Loyalty Promotion",
-                "path": "reference/create-loyalty-promotion",
+                "path": "reference/create-a-loyalty-promotion",
                 "openapi": "api-reference/1.-create-unified-promo.yaml POST /v3/promotions",
                 "openapi-mode": "custom",
                 "method": "POST"
@@ -48,14 +48,14 @@
               },
               {
                 "title": "Get Details of Loyalty Promotion using ID",
-                "path": "reference/get-loyalty-promotion-by-id",
+                "path": "reference/get-loyalty-promotion-id",
                 "openapi": "api-reference/3.-get-unified-promo-with-id.yaml GET /v3/promotions/{promotionId}",
                 "openapi-mode": "custom",
                 "method": "GET"
               },
               {
                 "title": "Get Details of all Loyalty Promotions",
-                "path": "reference/get-loyalty-promotions",
+                "path": "reference/get-loyalty-promotion-all",
                 "openapi": "api-reference/4.-get-unified-promo.yaml GET /v3/promotions",
                 "openapi-mode": "custom",
                 "method": "GET"
@@ -69,7 +69,7 @@
               },
               {
                 "title": "Get Member Promotion Explode Details",
-                "path": "reference/get-member-promotion-explode",
+                "path": "reference/list-member-promotions-explode",
                 "openapi": "api-reference/summary-get-member-promotions-explode.yaml GET /v3/members/{memberId}/promotions/{promotionId}",
                 "openapi-mode": "custom",
                 "method": "GET"
@@ -83,7 +83,7 @@
               },
               {
                 "title": "Revoke a Loyalty Promotion",
-                "path": "reference/revoke-loyalty-promotion",
+                "path": "reference/revoke-a-loyalty-promotion",
                 "openapi": "api-reference/revoke-a-loyalty-promotion.yaml POST /v3/promotions/revoke",
                 "openapi-mode": "custom",
                 "method": "POST"
