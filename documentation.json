@@ -99,14 +99,6 @@
             "group": "Data Fields",
             "pages": [
               {
-                "title": "SVG All Links",
-                "path": "svg-all-links"
-              },
-              {
-                "title": "svg",
-                "path": "svg"
-              },
-              {
                 "title": "Home Page",
                 "path": "docs/Home",
                 "show-sidebar": false,
